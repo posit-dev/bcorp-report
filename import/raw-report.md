@@ -1,0 +1,334 @@
+# A Message from our CEO
+
+Posit endeavors to create free and open-source software for data
+science, scientific research, and technical communication in a
+sustainable way, because it benefits everyone when the essential tools
+to produce and consume knowledge are available to all, regardless of
+economic means.
+
+We believe corporations should fulfill a purpose beneficial to the
+public and be run for the benefit of all stakeholders including
+employees, customers, and the community at large.
+
+As a Delaware Public Benefit Corporation (PBC) and a Certified B
+Corporation®, Posit's open-source mission and commitment to a beneficial
+public purpose are codified in our charter, requiring our corporate
+decisions to balance the interests of community, customers, employees,
+and shareholders.
+
+B Corps^TM^ meet the highest verified standards of social and
+environmental performance, transparency, and account- ability. Posit
+measures its public benefit by utilizing the non-profit B Lab®'s "Impact
+Assessment", a rigorous assessment of a company's impact on its workers,
+customers, community, and environment.
+
+In 2019, Posit (then RStudio) met the B Corporation certification
+requirements set by the B Lab. In 2023, our certification was renewed,
+and we are proud to share that our B Lab Impact Assessment score rose
+from 86.1 to 92.5 with this renewal. The B Lab certification process
+uses credible, comprehensive, transparent,and independent standards of
+social and environmental performance. Details of these assessments can
+be found at \[web link\].
+
+As a PBC, Posit publishes a report at least once every two years that
+describes the public benefit we have created, along with how we seek to
+provide public benefits in the future. This is the fourth of these
+reports. Previous published reports are available at \[here\].
+
+To fulfill its beneficial purposes, Posit intends to remain an
+independent company over the long term. With the support of our
+customers, employees, and the community, we remain excited to contribute
+useful solutions to the important problems of knowledge they face.
+
+J.J. Allaire, CEO, Posit PBC
+
+# Introduction 
+
+Posit's mission is to create free and open-source software for data
+science, scientific research, and technical communication. We do this to
+enhance the production and consumption of knowledge by everyone,
+regardless of economic means, and to facilitate collaboration and
+reproducible research, both of which are critical to the integrity and
+efficacy of work in science, education, government, and industry.
+
+In addition to our open source products, Posit produces a modular
+platform of commercial software products that enable teams to adopt R,
+Python, and other open-source data science software at scale, along with
+online services to make it easier to learn and use them over the web.
+
+Together, Posit\'s open-source software and commercial software form a
+virtuous cycle. In most companies, a \"customer\" is someone who pays
+you. For us, the definition of a customer must include the open source
+community, with whom we exchange the currencies of attention, respect,
+and love. When we deliver value to our open source users, they are
+likely to bring our software into their professional environments, which
+opens up the possibility of commercial partnerships. To keep this cycle
+flowing, our open source developers have to know and care about the
+integrations with proprietary solutions that matter to our enterprise
+customers. It also means that Posit\'s commercial teams need to
+consistently provide value to individuals who may never spend a dollar
+with us directly.
+
+Posit's approach is not typical. Traditionally, scientific and technical
+computing companies created exclusively proprietary software. While it
+can provide a robust foundation for investing in product development,
+proprietary software can also create excessive dependency that is not
+good for data science practitioners and the community. In contrast,
+Posit provides core productivity tools, packages, protocols, and file
+formats as open-source software so that customers aren't overly
+dependent on a single software vendor. Additionally, while our
+commercial products enhance the development and use of our open-source
+software, they are not fundamentally required for those without the need
+or the ability to pay for them.
+
+In 2023, Posit spent [\[33%?\]]{.mark} of its engineering resources on
+open-source software development, and led contributions to over
+[\[xx\]]{.mark} open-source projects. Posit-led projects targeted a
+broad range of areas including the RStudio IDE; infrastructure libraries
+for R and Python; numerous packages and tools to streamline data
+manipulation, exploration and visualization, modeling, and machine
+learning; and integration with external data sources. Posit also
+sponsors or contributes to many open-source and community projects led
+by others, including NumFOCUS, the R Consortium, the Python Software
+Foundation, DuckDB, Pandoc, pyodide, and prose mirror, as well as dozens
+of smaller projects via the Open Source Collective or directly on
+Github. Additional information about our products and company
+contributions for the past two years can be found in our \"Year In
+Review\'\' blog posts. \[available here\].
+
+Today, millions of people download and use Posit open-source products in
+their daily lives. Additionally, more than [\[how many paying
+customers?\]]{.mark} organizations that purchase our professional
+products help us sustain and grow our mission. It is an inspiration to
+consider that we are helping many participate in global economies that
+increasingly reward data literacy, and that our tools help produce
+insights essential to navigating our complex world.
+
+# Posit\'s Statement of Public Benefit and B Lab® Impact Assessment Results
+
+## Posit\'s Charter
+
+We want Posit to serve a meaningful public purpose, and we run the
+company for the benefit of our customers, employees, and the community
+at large. That's why we're organized as a Public Benefit Corporation
+(PBC).
+
+What makes a PBC different from other types of corporations?
+
+> *"A 'public benefit corporation' is a for-profit corporation organized
+> under and subject to the requirements of this chapter that is intended
+> to produce a public benefit or public benefits and to operate in a
+> responsible and sustainable manner.\" \[link to source:
+> [[https://delcode.delaware.gov/title8/c001/sc15/]{.underline}](https://delcode.delaware.gov/title8/c001/sc15/)\].*
+
+As a PBC and Certified B Corporation, we must meet the highest verified
+standards of social and environmental performance, transparency, and
+accountability. Our directors and officers have a fiduciary
+responsibility to address social, economic, and environmental needs
+while still overseeing our business goals.
+
+## Posit\'s Statement of Public Benefit
+
+Creation of free and open source software for data science, scientific
+research, and technical communication:
+
+> 1\) To enhance the production and consumption of knowledge by
+> everyone, regardless of economic means.
+>
+> 2\) To facilitate collaboration and reproducible research, both of
+> which are critical for ensuring the integrity and efficacy of
+> scientific work.
+
+## Our primary obligations as a PBC and Certified B Corporation
+
++-----------------------------------+-----------------------------------+
+| Public Benefit Corporation:       | Certified B Corp:                 |
+|                                   |                                   |
+| *How we built our company         | *How we hold ourselves            |
+| charter*                          | accountable to our charter*       |
++===================================+===================================+
+| -   The board of directors shall  | -   Demonstrate high social and   |
+|     manage or direct the business |     environmental performance by  |
+|     and affairs of the public     |     achieving a B Lab Impact      |
+|     benefit corporation in a      |     Assessment score of 80 or     |
+|     manner that balances the      |     above and passing the risk    |
+|     pecuniary interests of the    |     review.                       |
+|     stockholders, the best        |                                   |
+|     interests of those materially | -   Make a legal commitment by    |
+|     affected by the corporation's |     changing our corporate        |
+|     conduct, and the specific     |     governance structure to be    |
+|     public benefit or public      |     accountable to all            |
+|     benefits identified in its    |     stakeholders, not just        |
+|     certificate of incorporation. |     shareholders, and achieve     |
+|                                   |     benefit corporation status if |
+| -   A public benefit corporation  |     available in our              |
+|     shall no less than biennially |     jurisdiction.                 |
+|     provide its stockholders with |                                   |
+|     a statement as to the         | -   Exhibit transparency by       |
+|     corporation's promotion of    |     allowing information about    |
+|     the public benefit or public  |     our performance measured      |
+|     benefits identified in the    |     against B Lab's standards to  |
+|     certificate of incorporation  |     be publicly available on our  |
+|     and of the best interests of  |     B Corp profile on B Lab's     |
+|     those materially affected by  |     website.                      |
+|     the corporation's conduct.    |                                   |
++-----------------------------------+-----------------------------------+
+
+## Posit\'s B Lab Impact Assessment Results
+
+The BLab Impact Assessment is composed of questions in five Impact
+Areas: Governance, Workers, Community, Environment, and Customers.
+Posit\'s assessment results are available to the public \[here\]. We
+completed our first Impact Assessment in 2019 with our initial B Lab
+certification, and earned an overall score of **86.1.** We are proud to
+report that our latest score from our recertification process in 2023,
+is **92.5**. To put this in context, the threshold for B Lab
+certification is a score of 80 or higher, and the median score for
+ordinary businesses who take the assessment is 50.9. Posit seeks to
+continually improve our internal governance, increase our workforce
+diversity and employee development efforts, expand our stewardship of
+the environment, deepen our engagement in our communities, and better
+serve our customers, so that our public benefit will continue to improve
+each year.
+
+In our initial assessment, we received high marks for incorporating as a
+benefit corporation; the health, wellness, safety, and financial
+security of our employees; and for educating and serving customers. We
+identified formal goal setting, career development, diversity, equity &
+inclusion, civic engagement & giving, and air & climate as areas for
+improvement.
+
+## Summary of Score Improvements Since 2019
+
+The B Lab's Impact assessment standards have evolved since 2019 (we are
+now on version 6 of the assessment). New questions were added, and
+thresholds for performance were raised in other cases. Of the scored
+questions we responded to in our most recent assessment, 38 were
+unchanged from 2019, 71 were modified from 2019 wording, and 22 were
+brand new questions. On the questions that were unchanged or modified,
+we have gained points in the areas listed below.
+
+  -----------------------------------------------------------------------
+  **Impact Area**  **Topic**                 **% Achievement Gain since
+                                             2019**
+  ---------------- ------------------------- ----------------------------
+  Community        Civic Engagement & Giving 39%
+
+                   Diversity, Equity, &      60%
+                   Inclusion                 
+
+  Customers        Customer Stewardship      28%
+
+  Environment      Air & Climate             75%
+
+  Governance       Ethics & Transparency     37%
+
+  Workers          Career Development        62%
+
+                   Engagement & Satisfaction 50%
+
+                   Financial Security        58%
+  -----------------------------------------------------------------------
+
+### 
+
+### COMMUNITY
+
+#### Open Source Development  
+
+#### Civic Engagement and Giving
+
+In addition to the open-source software we make freely available, and
+the open source data science package development produced by Posit
+engineers, Posit recognizes the importance of contributing financially
+to other valuable open-source and community initiatives. To date, Posit
+has givenover \$1.9M to projects led by others. Current commitments
+include contributing to NumFOCUS, the R Consortium, the R Foundation,
+DuckDB, the Eclipse Foundation, and the authors and maintainers of
+several other open-source projects.
+
+Posit's financial support also extends beyond the world of open source
+data science. Since 2020, Posit and its employees have given over \$60k
+to over 135 nonprofits. Our donations reach a range of community-based
+causes, including organizations dedicated to racial equality, equal
+justice, LGBTQ+ support, and access to education. Alongside our
+donations to open source software development, this pool of charitable
+contributions contribute to the important work many are doing to
+increase the accessibility of data science for all. Our scoring in this
+area of the B Lab assessment has increased by 39.5% since 2019.
+
+#### Diversity, Equity, and Inclusion
+
+Since our initial B Lab assessment in 2019, Posit has continued to focus
+on increasing the strength of our team by utilizing talent practices
+that encourage diverse people to apply, join, and thrive at Posit.
+Specific changes made in recent years include the formation of a DEIA
+(diversity, equity, inclusion, and accessibility) Council, as well as
+the sponsoring of employee resource groups (ERG's). We report our
+progress on our diversity metrics, as defined in the B Lab Assessment,
+in each quarter's board meeting. We also pay close attention to issues
+of equity in compensation, hiring and interviewing, and employee
+experience. Our efforts to date have yielded increases in the
+percentages of women and those with minority racial or ethnic identities
+in both management and the employee population as a whole -- and our
+recent assessment results reflect these gains.
+
+### CUSTOMERS
+
+We have made meaningful improvements in our care for customers in the
+past few years -- particularly in our standards for managing customer
+data and privacy. Since 2019, we have formalized our approach to data
+privacy and compliance -- we now conduct thorough internal and external
+audits, and train all employees on the essentials of guarding customer
+data. These changes have increased our assessment performance by 28%
+since 2019.
+
+### ENVIRONMENT
+
+We are happy to share that our assessment scores for Air and Climate
+impacts have improved by 75% since 2019. In November of 2020, Posit
+achieved carbon neutrality via the purchase of carbon offsets that
+counter the environmental impact of business travel (primarily for our
+annual conference and internal meetings). As a remote-first
+organization, we do not generate meaningful greenhouse gas emissions
+outside of air travel. By offsetting this impact through the funding of
+reforestation work in both South America and closer to home in
+Massachusetts, we hope to neutralize Posit's potential damage to our
+planet.
+
+### GOVERNANCE
+
+A company's positive governance impact is measured by the extent to
+which the company is accountable to stakeholders, and the extent to
+which its decision-making is transparent to all constituents. In 2019,
+RStudio scored 16.1 points out of a possible 21.9+ points in the
+Governance Impact Area, including 10 points awarded for the specific
+legal structures we have put in place as a Benefit Corporation that
+preserve our mission and consider our stakeholders regardless of company
+ownership.
+
+In our latest assessment, our governance score improved by 37% via
+improvements in ethics and transparency areas, including anti-corruption
+and code of ethics training for employees, and more rigorous financial
+controls and financial transparency with employees. Looking ahead, we
+plan to incorporate more social and community benefit metrics in our
+corporate reporting, including board meeting updates, so that all of our
+stakeholders are aware of our ongoing progress and can help support our
+success.
+
+### WORKERS
+
+We have made significant strides in our Worker assessment category since
+2019, with scores increasing by 50% or more in areas such as career
+development, engagement and satisfaction, and financial security for our
+employees. Investments in employee career development include in-house
+management training programs, tooling and education to support
+constructive feedback, and documentation of job levels, pay ranges, and
+career paths within our major functions. In 2021, we initiated an annual
+organizational health survey, which allows us to collect and respond to
+employee feedback. We have also augmented our benefits to include a
+"lifestyle savings account" (LSA) funded by Posit that each individual
+can choose to apply to home office, professional development, wellness,
+or financial health expenses as they see fit. All together, we are
+working to continuously improve the value offered to our workers as our
+company grows.
