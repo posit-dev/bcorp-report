@@ -1,10 +1,16 @@
 //   Custom title page
+#let posit_blue = rgb("#447099")
+#let posit_grey = rgb("#404041")
+#let posit_orange = rgb("#EE6331")
+#let posit_dark_blue_2 = rgb("#213D4F")
+
+
 #let title_page(title, subtitle)={
     page(margin: 0in)[
         #set text(fill: white)
         #place(center + horizon, dy: -2in)[
             #set align(center + horizon)
-            #block(width: 100%, fill: rgb("#444444"), outset: 2em)[
+            #block(width: 100%, fill: posit_dark_blue_2, outset: 2em)[
                 #heading(level: 1, title)
                 #heading(level: 2, subtitle)
             ]
@@ -29,6 +35,8 @@
   toc: false,
   doc,
 ) = {
+  
+
   set page(
     paper: paper,
     margin: margin,
@@ -38,10 +46,13 @@
   set text(lang: lang,
            region: region,
            font: font,
-           size: fontsize)
+           size: fontsize,
+           fill: posit_grey)
 
   set heading(numbering: sectionnumbering)
 
+  show heading.where(level: 1): set text(weight: "light", size: 24pt)
+  
   if title != none {
     title_page(title, subtitle)
   }
