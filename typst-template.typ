@@ -51,8 +51,9 @@
   
   show heading.where(level: 1): it => {
     pagebreak()
-    set block(width: 100%, below: 2em, inset: (bottom: 1em), stroke: (bottom: 1pt))
+    set block(width: 100%, below: 1em)
     it
+    block(line(length: 100%, stroke: 1pt), below: 2em)
   }
 
   show heading.where(level: 2): it => {
