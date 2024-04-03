@@ -171,7 +171,7 @@ research, and technical communication:
 |                                   |                                   |
 | *How we built our company         | *How we hold ourselves            |
 | charter*                          | accountable to our charter*       |
-+===================================+===================================+
++:==================================+:==================================+
 | -   The board of directors shall  | -   Demonstrate high social and   |
 |     manage or direct the business |     environmental performance by  |
 |     and affairs of the public     |     achieving a B Lab Impact      |

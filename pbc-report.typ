@@ -299,7 +299,7 @@ Creation of free and open source software for data science, scientific research,
 #figure(
 align(center)[#table(
   columns: 2,
-  align: (col, row) => (auto,auto,).at(col),
+  align: (col, row) => (left,left,).at(col),
   inset: 6pt,
   [Public Benefit Corporation:
 
