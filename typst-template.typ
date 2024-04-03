@@ -1,9 +1,10 @@
-//   Custom title page
+
 #let posit_blue = rgb("#447099")
 #let posit_grey = rgb("#404041")
 #let posit_orange = rgb("#EE6331")
 #let posit_dark_blue_2 = rgb("#213D4F")
 
+//  Pages with a blue background
 #let page_blue(content)={
     set page(fill: posit_blue)
     set line(stroke: 1pt + white)
@@ -11,7 +12,7 @@
     content
   }
 
-
+//   Custom title page
 #let title_page(title, subtitle)={
     page(margin: 0in)[
         #set text(fill: white)
@@ -41,7 +42,7 @@
   set page(
     paper: paper,
     margin: margin,
-    numbering: "1",
+    numbering: none,
   )
 
   set text(lang: lang,
