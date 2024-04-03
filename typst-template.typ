@@ -44,9 +44,20 @@
            fill: posit_grey)
 
   show heading.where(level: 1): set text(weight: "light", size: 24pt)
-  
+
   if title != none {
     title_page(title, subtitle)
+  }
+  
+  show heading.where(level: 1): it => {
+    pagebreak()
+    set block(width: 100%, below: 2em, inset: (bottom: 1em), stroke: (bottom: 1pt))
+    it
+  }
+
+  show heading.where(level: 2): it => {
+    set block(below: 1.5em)
+    upper(it)
   }
 
   doc
