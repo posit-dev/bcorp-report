@@ -155,6 +155,13 @@
 #let posit_orange = rgb("#EE6331")
 #let posit_dark_blue_2 = rgb("#213D4F")
 
+#let page_blue(content)={
+    set page(fill: posit_blue)
+    set line(stroke: 1pt + white)
+    set text(fill: white)
+    content
+  }
+
 
 #let title_page(title, subtitle)={
     page(margin: 0in)[
@@ -199,7 +206,9 @@
   if title != none {
     title_page(title, subtitle)
   }
-  
+
+  set line(stroke: 1pt + posit_orange)
+
   show heading.where(level: 1): it => {
     pagebreak()
     set block(width: 100%, below: 1em)
@@ -214,6 +223,7 @@
 
   doc
 }
+
 #show: doc => posit(
   title: [Posit Benefit Corporation],
   subtitle: [2024 Annual Report],
@@ -222,9 +232,7 @@
 )
 
 
-#set page(fill: posit_blue)
-#set line(stroke: 1pt + white)
-#set text(fill: white)
+#page_blue()[
 = A Message from our CEO
 <a-message-from-our-ceo>
 Posit endeavors to create free and open-source software for data science, scientific research, and technical communication in a sustainable way, because it benefits everyone when the essential tools to produce and consume knowledge are available to all, regardless of economic means.
@@ -246,9 +254,7 @@ To fulfill its beneficial purposes, Posit intends to remain an independent compa
 
   CEO, Posit PBC
 ]
-#set page(fill: white)
-#set text(fill: posit_grey)
-#set line(stroke: 1pt + posit_orange)
+]
 = Introduction
 <introduction>
 Posit’s mission is to create free and open-source software for data science, scientific research, and technical communication. We do this to enhance the production and consumption of knowledge by everyone, regardless of economic means, and to facilitate collaboration and reproducible research, both of which are critical to the integrity and efficacy of work in science, education, government, and industry.

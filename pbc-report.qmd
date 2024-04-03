@@ -8,16 +8,14 @@ format:
     template-partials:
       - typst-template.typ
       - typst-show.typ
+    filters: 
+      - posit.lua
 keep-typ: true
 ---
 
-```{=typst}
-#set page(fill: posit_blue)
-#set line(stroke: 1pt + white)
-#set text(fill: white)
-```
+::: {.page-blue}
 
-# A Message from our CEO
+# A Message from our CEO 
 
 Posit endeavors to create free and open-source software for data
 science, scientific research, and technical communication in a
@@ -67,12 +65,7 @@ useful solutions to the important problems of knowledge they face.
 ]
 ```
 
-
-```{=typst}
-#set page(fill: white)
-#set text(fill: posit_grey)
-#set line(stroke: 1pt + posit_orange)
-```
+:::
 
 # Introduction 
 

@@ -4,6 +4,13 @@
 #let posit_orange = rgb("#EE6331")
 #let posit_dark_blue_2 = rgb("#213D4F")
 
+#let page_blue(content)={
+    set page(fill: posit_blue)
+    set line(stroke: 1pt + white)
+    set text(fill: white)
+    content
+  }
+
 
 #let title_page(title, subtitle)={
     page(margin: 0in)[
@@ -48,7 +55,9 @@
   if title != none {
     title_page(title, subtitle)
   }
-  
+
+  set line(stroke: 1pt + posit_orange)
+
   show heading.where(level: 1): it => {
     pagebreak()
     set block(width: 100%, below: 1em)
@@ -63,3 +72,4 @@
 
   doc
 }
+
