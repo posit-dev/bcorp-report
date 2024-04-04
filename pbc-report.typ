@@ -263,10 +263,10 @@ We believe corporations should fulfill a purpose beneficial to the public and be
 
 As a Delaware Public Benefit Corporation \(PBC) and a Certified B Corporation®, Posit’s open-source mission and commitment to a beneficial public purpose are codified in our charter, requiring our corporate decisions to balance the interests of community, customers, employees, and shareholders.
 
-B Corps#super[TM] meet the highest verified standards of social and environmental performance, transparency, and account- ability. Posit measures its public benefit by utilizing the non-profit B Lab®’s "Impact Assessment", a rigorous assessment of a company’s impact on its workers, customers, community, and environment.
+B Corps#super[TM] meet the highest verified standards of social and environmental performance, transparency, and accountability. Posit measures its public benefit by utilizing the non-profit B Lab®’s "Impact Assessment", a rigorous assessment of a company’s impact on its workers, customers, community, and environment.
 
 #colbreak()
-In 2019, Posit \(then RStudio) met the B Corporation certification requirements set by the B Lab. In 2023, our certification was renewed, and we are proud to share that our B Lab Impact Assessment score rose from 86.1 to 92.5 with this renewal. The B Lab certification process uses credible, comprehensive, transparent,and independent standards of social and environmental performance. Details of these assessments can be found at \[web link\].
+In 2019, Posit \(then RStudio) met the B Corporation certification requirements set by the B Lab. In 2023, our certification was renewed, and we are proud to share that our B Lab Impact Assessment score rose from 86.1 to 92.5 with this renewal. The B Lab certification process uses credible, comprehensive, transparent, and independent standards of social and environmental performance. Details of these assessments can be found at \[web link\].
 
 As a PBC, Posit publishes a report at least once every two years that describes the public benefit we have created, along with how we seek to provide public benefits in the future. This is the fourth of these reports. Previous published reports are available at \[here\].
 

@@ -17,7 +17,7 @@ decisions to balance the interests of community, customers, employees,
 and shareholders.
 
 B Corps^TM^ meet the highest verified standards of social and
-environmental performance, transparency, and account- ability. Posit
+environmental performance, transparency, and accountability. Posit
 measures its public benefit by utilizing the non-profit B Lab®'s "Impact
 Assessment", a rigorous assessment of a company's impact on its workers,
 customers, community, and environment.
@@ -26,7 +26,7 @@ In 2019, Posit (then RStudio) met the B Corporation certification
 requirements set by the B Lab. In 2023, our certification was renewed,
 and we are proud to share that our B Lab Impact Assessment score rose
 from 86.1 to 92.5 with this renewal. The B Lab certification process
-uses credible, comprehensive, transparent,and independent standards of
+uses credible, comprehensive, transparent, and independent standards of
 social and environmental performance. Details of these assessments can
 be found at \[web link\].
 
