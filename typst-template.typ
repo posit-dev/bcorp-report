@@ -27,7 +27,8 @@
 
 //   Custom title page
 #let title_page(title, subtitle)={
-    page(margin: 0in, fill: posit_colors.blue)[
+    page(margin: 0in, fill: posit_colors.dark_blue_2, 
+        background: image("assets/images/nikola-YXv0q7-hIgU-unsplash.jpg", height: 100%, fit: "cover"))[
         #set text(fill: white)
 
         #place(center + horizon, dy: -2in)[
