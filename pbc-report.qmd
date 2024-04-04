@@ -17,6 +17,7 @@ keep-typ: true
 
 # A Message from our CEO 
 
+::: {.cols-2}
 Posit endeavors to create free and open-source software for data
 science, scientific research, and technical communication in a
 sustainable way, because it benefits everyone when the essential tools
@@ -38,6 +39,10 @@ environmental performance, transparency, and account- ability. Posit
 measures its public benefit by utilizing the non-profit B Lab®'s "Impact
 Assessment", a rigorous assessment of a company's impact on its workers,
 customers, community, and environment.
+
+```{=typst}
+#colbreak()
+```
 
 In 2019, Posit (then RStudio) met the B Corporation certification
 requirements set by the B Lab. In 2023, our certification was renewed,
@@ -64,10 +69,13 @@ useful solutions to the important problems of knowledge they face.
   CEO, Posit PBC
 ]
 ```
+::: 
 
 :::
 
 # Introduction 
+
+::: {.cols-2}
 
 Posit's mission is to create free and open-source software for data
 science, scientific research, and technical communication. We do this to
@@ -121,6 +129,10 @@ Github. Additional information about our products and company
 contributions for the past two years can be found in our \"Year In
 Review\'\' blog posts. \[available here\].
 
+```{=typst}
+#colbreak()
+```
+
 Today, millions of people download and use Posit open-source products in
 their daily lives. Additionally, more than [\[how many paying
 customers?\]]{.mark} organizations that purchase our professional
@@ -129,7 +141,11 @@ consider that we are helping many participate in global economies that
 increasingly reward data literacy, and that our tools help produce
 insights essential to navigating our complex world.
 
+::: 
+
 # Posit\'s Statement of Public Benefit and B Lab® Impact Assessment Results
+
+::: {.cols-2}
 
 ## Posit\'s Charter
 
@@ -163,6 +179,8 @@ research, and technical communication:
 > 2\) To facilitate collaboration and reproducible research, both of
 > which are critical for ensuring the integrity and efficacy of
 > scientific work.
+
+:::
 
 ## Our primary obligations as a PBC and Certified B Corporation
 
@@ -199,6 +217,12 @@ research, and technical communication:
 |     the corporation's conduct.    |                                   |
 +-----------------------------------+-----------------------------------+
 
+```{=typst}
+#pagebreak()
+```
+
+::: {.cols-2}
+
 ## Posit\'s B Lab Impact Assessment Results
 
 The BLab Impact Assessment is composed of questions in five Impact
@@ -216,12 +240,18 @@ the environment, deepen our engagement in our communities, and better
 serve our customers, so that our public benefit will continue to improve
 each year.
 
+```{=typst}
+#colbreak()
+```
+
 In our initial assessment, we received high marks for incorporating as a
 benefit corporation; the health, wellness, safety, and financial
 security of our employees; and for educating and serving customers. We
 identified formal goal setting, career development, diversity, equity &
 inclusion, civic engagement & giving, and air & climate as areas for
 improvement.
+
+:::
 
 ## Summary of Score Improvements Since 2019
 
@@ -256,6 +286,8 @@ we have gained points in the areas listed below.
   -----------------------------------------------------------------------
 
 ### 
+
+::: {.cols-2}
 
 ### COMMUNITY
 
@@ -357,3 +389,5 @@ can choose to apply to home office, professional development, wellness,
 or financial health expenses as they see fit. All together, we are
 working to continuously improve the value offered to our workers as our
 company grows.
+
+:::

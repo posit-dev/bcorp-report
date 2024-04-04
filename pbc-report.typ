@@ -163,6 +163,10 @@
     content
   }
 
+#let col-2(content)={
+   columns(2, content)
+} 
+
 //   Custom title page
 #let title_page(title, subtitle)={
     page(margin: 0in)[
@@ -236,6 +240,7 @@
 #page_blue()[
 = A Message from our CEO
 <a-message-from-our-ceo>
+#col-2()[
 Posit endeavors to create free and open-source software for data science, scientific research, and technical communication in a sustainable way, because it benefits everyone when the essential tools to produce and consume knowledge are available to all, regardless of economic means.
 
 We believe corporations should fulfill a purpose beneficial to the public and be run for the benefit of all stakeholders including employees, customers, and the community at large.
@@ -244,6 +249,7 @@ As a Delaware Public Benefit Corporation \(PBC) and a Certified B Corporation®,
 
 B Corps#super[TM] meet the highest verified standards of social and environmental performance, transparency, and account- ability. Posit measures its public benefit by utilizing the non-profit B Lab®’s "Impact Assessment", a rigorous assessment of a company’s impact on its workers, customers, community, and environment.
 
+#colbreak()
 In 2019, Posit \(then RStudio) met the B Corporation certification requirements set by the B Lab. In 2023, our certification was renewed, and we are proud to share that our B Lab Impact Assessment score rose from 86.1 to 92.5 with this renewal. The B Lab certification process uses credible, comprehensive, transparent,and independent standards of social and environmental performance. Details of these assessments can be found at \[web link\].
 
 As a PBC, Posit publishes a report at least once every two years that describes the public benefit we have created, along with how we seek to provide public benefits in the future. This is the fourth of these reports. Previous published reports are available at \[here\].
@@ -256,8 +262,10 @@ To fulfill its beneficial purposes, Posit intends to remain an independent compa
   CEO, Posit PBC
 ]
 ]
+]
 = Introduction
 <introduction>
+#col-2()[
 Posit’s mission is to create free and open-source software for data science, scientific research, and technical communication. We do this to enhance the production and consumption of knowledge by everyone, regardless of economic means, and to facilitate collaboration and reproducible research, both of which are critical to the integrity and efficacy of work in science, education, government, and industry.
 
 In addition to our open source products, Posit produces a modular platform of commercial software products that enable teams to adopt R, Python, and other open-source data science software at scale, along with online services to make it easier to learn and use them over the web.
@@ -268,10 +276,13 @@ Posit’s approach is not typical. Traditionally, scientific and technical compu
 
 In 2023, Posit spent \[33%?\] of its engineering resources on open-source software development, and led contributions to over \[xx\] open-source projects. Posit-led projects targeted a broad range of areas including the RStudio IDE; infrastructure libraries for R and Python; numerous packages and tools to streamline data manipulation, exploration and visualization, modeling, and machine learning; and integration with external data sources. Posit also sponsors or contributes to many open-source and community projects led by others, including NumFOCUS, the R Consortium, the Python Software Foundation, DuckDB, Pandoc, pyodide, and prose mirror, as well as dozens of smaller projects via the Open Source Collective or directly on Github. Additional information about our products and company contributions for the past two years can be found in our \"Year In Review\'\' blog posts. \[available here\].
 
+#colbreak()
 Today, millions of people download and use Posit open-source products in their daily lives. Additionally, more than \[how many paying customers?\] organizations that purchase our professional products help us sustain and grow our mission. It is an inspiration to consider that we are helping many participate in global economies that increasingly reward data literacy, and that our tools help produce insights essential to navigating our complex world.
 
+]
 = Posit\'s Statement of Public Benefit and B Lab® Impact Assessment Results
 <posits-statement-of-public-benefit-and-b-lab-impact-assessment-results>
+#col-2()[
 == Posit\'s Charter
 <posits-charter>
 We want Posit to serve a meaningful public purpose, and we run the company for the benefit of our customers, employees, and the community at large. That’s why we’re organized as a Public Benefit Corporation \(PBC).
@@ -294,6 +305,7 @@ Creation of free and open source software for data science, scientific research,
 2) To facilitate collaboration and reproducible research, both of which are critical for ensuring the integrity and efficacy of scientific work.
 ]
 
+]
 == Our primary obligations as a PBC and Certified B Corporation
 <our-primary-obligations-as-a-pbc-and-certified-b-corporation>
 #figure(
@@ -325,12 +337,16 @@ align(center)[#table(
 )]
 )
 
+#pagebreak()
+#col-2()[
 == Posit\'s B Lab Impact Assessment Results
 <posits-b-lab-impact-assessment-results>
 The BLab Impact Assessment is composed of questions in five Impact Areas: Governance, Workers, Community, Environment, and Customers. Posit\'s assessment results are available to the public \[here\]. We completed our first Impact Assessment in 2019 with our initial B Lab certification, and earned an overall score of #strong[86.1.] We are proud to report that our latest score from our recertification process in 2023, is #strong[92.5];. To put this in context, the threshold for B Lab certification is a score of 80 or higher, and the median score for ordinary businesses who take the assessment is 50.9. Posit seeks to continually improve our internal governance, increase our workforce diversity and employee development efforts, expand our stewardship of the environment, deepen our engagement in our communities, and better serve our customers, so that our public benefit will continue to improve each year.
 
+#colbreak()
 In our initial assessment, we received high marks for incorporating as a benefit corporation; the health, wellness, safety, and financial security of our employees; and for educating and serving customers. We identified formal goal setting, career development, diversity, equity & inclusion, civic engagement & giving, and air & climate as areas for improvement.
 
+]
 == Summary of Score Improvements Since 2019
 <summary-of-score-improvements-since-2019>
 The B Lab’s Impact assessment standards have evolved since 2019 \(we are now on version 6 of the assessment). New questions were added, and thresholds for performance were raised in other cases. Of the scored questions we responded to in our most recent assessment, 38 were unchanged from 2019, 71 were modified from 2019 wording, and 22 were brand new questions. On the questions that were unchanged or modified, we have gained points in the areas listed below.
@@ -370,6 +386,7 @@ align(center)[#table(
 
 === 
 <section>
+#col-2()[
 === COMMUNITY
 <community>
 ==== Open Source Development
@@ -401,3 +418,8 @@ In our latest assessment, our governance score improved by 37% via improvements 
 === WORKERS
 <workers>
 We have made significant strides in our Worker assessment category since 2019, with scores increasing by 50% or more in areas such as career development, engagement and satisfaction, and financial security for our employees. Investments in employee career development include in-house management training programs, tooling and education to support constructive feedback, and documentation of job levels, pay ranges, and career paths within our major functions. In 2021, we initiated an annual organizational health survey, which allows us to collect and respond to employee feedback. We have also augmented our benefits to include a "lifestyle savings account" \(LSA) funded by Posit that each individual can choose to apply to home office, professional development, wellness, or financial health expenses as they see fit. All together, we are working to continuously improve the value offered to our workers as our company grows.
+
+]
+
+
+

@@ -12,6 +12,10 @@
     content
   }
 
+#let col-2(content)={
+   columns(2, content)
+} 
+
 //   Custom title page
 #let title_page(title, subtitle)={
     page(margin: 0in)[
