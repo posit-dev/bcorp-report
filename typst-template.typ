@@ -3,12 +3,14 @@
 #let posit_grey = rgb("#404041")
 #let posit_orange = rgb("#EE6331")
 #let posit_dark_blue_2 = rgb("#213D4F")
+#let posit_dark_blue_3 = rgb("#17212B")
+#let posit_light_blue_1 = rgb("#D1DBE5")
 
 //  Pages with a blue background
 #let page_blue(content)={
-    set page(fill: posit_blue)
+    set page(fill: posit_dark_blue_3)
     set line(stroke: 1pt + white)
-    set text(fill: white)
+    set text(fill: posit_light_blue_1)
     content
   }
 
