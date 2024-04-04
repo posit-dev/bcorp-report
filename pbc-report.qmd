@@ -3,7 +3,7 @@ title: "Posit Benefit Corporation"
 subtitle: 2024 Annual Report
 format: 
   typst:
-    font-paths: fonts
+    font-paths: assets/fonts
     mainfont: Open Sans
     template-partials:
       - typst-template.typ
@@ -253,6 +253,8 @@ improvement.
 
 :::
 
+::: {.banner}
+
 ## Summary of Score Improvements Since 2019
 
 The B Lab's Impact assessment standards have evolved since 2019 (we are
@@ -262,6 +264,8 @@ questions we responded to in our most recent assessment, 38 were
 unchanged from 2019, 71 were modified from 2019 wording, and 22 were
 brand new questions. On the questions that were unchanged or modified,
 we have gained points in the areas listed below.
+
+::: 
 
   -----------------------------------------------------------------------
   **Impact Area**  **Topic**                 **% Achievement Gain since
@@ -389,5 +393,31 @@ can choose to apply to home office, professional development, wellness,
 or financial health expenses as they see fit. All together, we are
 working to continuously improve the value offered to our workers as our
 company grows.
+
+:::
+
+::: {.page-blue}
+
+```{=typst}
+#set text(fill: white)
+#show par: set block(spacing: 0.5em)
+#place(bottom + center)[
+  #block(height: 48pt)[
+            #box(height: 36pt, baseline: -8pt, image("assets/images/posit-logo-white-TM.svg"))
+            #box(inset: (x: 24pt), line(length: 100%, angle: 90deg, stroke: 0.5pt + white))
+            #box(image("assets/images/B-Corp-Logo-White-RGB.png"))
+          ]
+  
+  The open source data science company
+
+  #text(size: 24pt, link("http://posit.co/")[posit.co])
+  #v(2em)
+  #set text(size: 10pt)
+  
+  Trademark language here
+
+  Published with #box(height: 12pt, baseline: 20% , image("assets/images/quarto-logo-trademark.svg"))
+]
+```
 
 :::

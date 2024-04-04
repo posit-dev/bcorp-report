@@ -149,37 +149,53 @@
         block(fill: white, width: 100%, inset: 8pt, body)))
 }
 
-
-#let posit_blue = rgb("#447099")
-#let posit_grey = rgb("#404041")
-#let posit_orange = rgb("#EE6331")
-#let posit_dark_blue_2 = rgb("#213D4F")
-#let posit_dark_blue_3 = rgb("#17212B")
-#let posit_light_blue_1 = rgb("#D1DBE5")
+#let posit_colors = (
+  blue: rgb("#447099"),
+  grey: rgb("#404041"),
+  orange: rgb("#EE6331"),
+  dark_blue_2: rgb("#213D4F"),
+  dark_blue_3: rgb("#17212B"),
+  light_blue_1: rgb("#D1DBE5"),
+  light_blue_2: rgb("#A2B8CB")
+)
 
 //  Pages with a blue background
 #let page_blue(content)={
-    set page(fill: posit_dark_blue_3)
-    set line(stroke: 1pt + white)
-    set text(fill: posit_light_blue_1)
+    set page(fill: posit_colors.dark_blue_3)
+    set text(fill: posit_colors.light_blue_1)
+    show heading: set text(fill: posit_colors.light_blue_2)
     content
   }
 
 #let col-2(content)={
-   columns(2, content)
+    columns(2, content)
 } 
+
+#let banner(content)={
+    set text(fill: white)
+    block(width: 100%, outset: (x: 1.25in), inset: (y: 2em), fill: posit_colors.blue, content)
+}
 
 //   Custom title page
 #let title_page(title, subtitle)={
-    page(margin: 0in)[
+    page(margin: 0in, fill: posit_colors.blue)[
         #set text(fill: white)
+
         #place(center + horizon, dy: -2in)[
             #set align(center + horizon)
-            #block(width: 100%, fill: posit_dark_blue_2, outset: 2em)[
-                #heading(level: 1, title)
-                #heading(level: 2, subtitle)
+            #block(width: 100%, fill: posit_colors.blue, outset: 2em)[
+                #text(weight: "light", size: 36pt, title)
+
+                #text(weight: "bold", size: 24pt, subtitle)
             ]
-        ] 
+        ]
+        #place(center + bottom, dy: -36pt)[
+          #block(height: 36pt)[
+            #box(height: 24pt, baseline: -6pt, image("assets/images/posit-logo-white-TM.svg"))
+            #box(inset: (x: 12pt), line(length: 100%, angle: 90deg, stroke: 0.5pt + white))
+            #box(image("assets/images/B-Corp-Logo-White-RGB.png"))
+          ]
+        ]
     ]
 }
 
@@ -206,21 +222,19 @@
            region: region,
            font: font,
            size: fontsize,
-           fill: posit_grey)
+           fill: posit_colors.grey)
 
-  show heading.where(level: 1): set text(weight: "light", size: 24pt)
 
   if title != none {
     title_page(title, subtitle)
   }
 
-  set line(stroke: 1pt + posit_orange)
-
+  show heading.where(level: 1): set text(weight: "light", size: 36pt)
+  
   show heading.where(level: 1): it => {
     pagebreak()
     set block(width: 100%, below: 1em)
     it
-    block(line(length: 100%, stroke: 1pt), below: 2em)
   }
 
   show heading.where(level: 2): it => {
@@ -349,10 +363,12 @@ The BLab Impact Assessment is composed of questions in five Impact Areas: Govern
 In our initial assessment, we received high marks for incorporating as a benefit corporation; the health, wellness, safety, and financial security of our employees; and for educating and serving customers. We identified formal goal setting, career development, diversity, equity & inclusion, civic engagement & giving, and air & climate as areas for improvement.
 
 ]
+#banner()[
 == Summary of Score Improvements Since 2019
 <summary-of-score-improvements-since-2019>
 The B Lab’s Impact assessment standards have evolved since 2019 \(we are now on version 6 of the assessment). New questions were added, and thresholds for performance were raised in other cases. Of the scored questions we responded to in our most recent assessment, 38 were unchanged from 2019, 71 were modified from 2019 wording, and 22 were brand new questions. On the questions that were unchanged or modified, we have gained points in the areas listed below.
 
+]
 #figure(
 align(center)[#table(
   columns: 3,
@@ -421,6 +437,27 @@ In our latest assessment, our governance score improved by 37% via improvements 
 <workers>
 We have made significant strides in our Worker assessment category since 2019, with scores increasing by 50% or more in areas such as career development, engagement and satisfaction, and financial security for our employees. Investments in employee career development include in-house management training programs, tooling and education to support constructive feedback, and documentation of job levels, pay ranges, and career paths within our major functions. In 2021, we initiated an annual organizational health survey, which allows us to collect and respond to employee feedback. We have also augmented our benefits to include a "lifestyle savings account" \(LSA) funded by Posit that each individual can choose to apply to home office, professional development, wellness, or financial health expenses as they see fit. All together, we are working to continuously improve the value offered to our workers as our company grows.
 
+]
+#page_blue()[
+#set text(fill: white)
+#show par: set block(spacing: 0.5em)
+#place(bottom + center)[
+  #block(height: 48pt)[
+            #box(height: 36pt, baseline: -8pt, image("assets/images/posit-logo-white-TM.svg"))
+            #box(inset: (x: 24pt), line(length: 100%, angle: 90deg, stroke: 0.5pt + white))
+            #box(image("assets/images/B-Corp-Logo-White-RGB.png"))
+          ]
+  
+  The open source data science company
+
+  #text(size: 24pt, link("http://posit.co/")[posit.co])
+  #v(2em)
+  #set text(size: 10pt)
+  
+  Trademark language here
+
+  Published with #box(height: 12pt, baseline: 20% , image("assets/images/quarto-logo-trademark.svg"))
+]
 ]
 
 
