@@ -13,6 +13,10 @@
     set page(fill: posit_colors.dark_blue_3)
     set text(fill: posit_colors.light_blue_1)
     show heading: set text(fill: posit_colors.light_blue_2)
+    show heading.where(level: 1): it => {
+      pagebreak()  
+      it
+    }
     content
   }
 
@@ -23,6 +27,15 @@
 #let banner(content)={
     set text(fill: white)
     block(width: 100%, outset: (x: 1.25in), inset: (y: 2em), fill: posit_colors.blue, content)
+}
+
+#let conclusion(content)={
+  set page(fill: posit_colors.dark_blue_3,
+    background: image("assets/images/nikola-YXv0q7-hIgU-unsplash.jpg", height: 100%, fit: "cover"))
+  set text(fill: white)
+  place(horizon, dy: -1in)[
+    #block(fill: posit_colors.blue, outset: 1.25in, content)
+  ]
 }
 
 //   Custom title page
@@ -48,6 +61,32 @@
         ]
     ]
 }
+
+#let back_page(content)={
+  page_blue()[
+      #set text(fill: white)
+      #show par: set block(spacing: 0.5em)
+      #place(bottom + center)[
+        #block(height: 48pt)[
+                  #box(height: 36pt, baseline: -8pt, image("assets/images/posit-logo-white-TM.svg"))
+                  #box(inset: (x: 24pt), line(length: 100%, angle: 90deg, stroke: 0.5pt + white))
+                  #box(image("assets/images/B-Corp-Logo-White-RGB.png"))
+                ]
+        
+        The open source data science company
+
+        #text(size: 24pt, link("http://posit.co/")[posit.co])
+        #v(2em)
+        #set text(size: 10pt)
+        
+        #(content)
+
+        Published with #box(height: 12pt, baseline: 20% , image("assets/images/quarto-logo-trademark.svg"))
+        ]
+      ]
+}
+
+
 
 #let posit(
   title: none,
@@ -80,12 +119,9 @@
   }
 
   show heading.where(level: 1): set text(weight: "light", size: 36pt)
+  show heading.where(level: 1): set block(width: 100%, below: 1em)
   
-  show heading.where(level: 1): it => {
-    pagebreak()
-    set block(width: 100%, below: 1em)
-    it
-  }
+  
 
   show heading.where(level: 2): it => {
     set block(below: 1.5em)

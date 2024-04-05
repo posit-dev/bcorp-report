@@ -164,6 +164,10 @@
     set page(fill: posit_colors.dark_blue_3)
     set text(fill: posit_colors.light_blue_1)
     show heading: set text(fill: posit_colors.light_blue_2)
+    show heading.where(level: 1): it => {
+      pagebreak()  
+      it
+    }
     content
   }
 
@@ -174,6 +178,15 @@
 #let banner(content)={
     set text(fill: white)
     block(width: 100%, outset: (x: 1.25in), inset: (y: 2em), fill: posit_colors.blue, content)
+}
+
+#let conclusion(content)={
+  set page(fill: posit_colors.dark_blue_3,
+    background: image("assets/images/nikola-YXv0q7-hIgU-unsplash.jpg", height: 100%, fit: "cover"))
+  set text(fill: white)
+  place(horizon, dy: -1in)[
+    #block(fill: posit_colors.blue, outset: 1.25in, content)
+  ]
 }
 
 //   Custom title page
@@ -199,6 +212,32 @@
         ]
     ]
 }
+
+#let back_page(content)={
+  page_blue()[
+      #set text(fill: white)
+      #show par: set block(spacing: 0.5em)
+      #place(bottom + center)[
+        #block(height: 48pt)[
+                  #box(height: 36pt, baseline: -8pt, image("assets/images/posit-logo-white-TM.svg"))
+                  #box(inset: (x: 24pt), line(length: 100%, angle: 90deg, stroke: 0.5pt + white))
+                  #box(image("assets/images/B-Corp-Logo-White-RGB.png"))
+                ]
+        
+        The open source data science company
+
+        #text(size: 24pt, link("http://posit.co/")[posit.co])
+        #v(2em)
+        #set text(size: 10pt)
+        
+        #(content)
+
+        Published with #box(height: 12pt, baseline: 20% , image("assets/images/quarto-logo-trademark.svg"))
+        ]
+      ]
+}
+
+
 
 #let posit(
   title: none,
@@ -231,12 +270,9 @@
   }
 
   show heading.where(level: 1): set text(weight: "light", size: 36pt)
+  show heading.where(level: 1): set block(width: 100%, below: 1em)
   
-  show heading.where(level: 1): it => {
-    pagebreak()
-    set block(width: 100%, below: 1em)
-    it
-  }
+  
 
   show heading.where(level: 2): it => {
     set block(below: 1.5em)
@@ -273,9 +309,8 @@ As a PBC, Posit publishes a report at least once every two years that describes 
 
 To fulfill its beneficial purposes, Posit intends to remain an independent company over the long term. With the support of our customers, employees, and the community, we remain excited to contribute useful solutions to the important problems of knowledge they face.
 
-#align(right)[
-  *J.J. Allaire*
-
+#place(right, dy: 3em)[
+  *J.J. Allaire* \
   CEO, Posit PBC
 ]
 ]
@@ -297,6 +332,7 @@ In 2023, Posit spent \[33%?\] of its engineering resources on open-source softwa
 Today, millions of people download and use Posit open-source products in their daily lives. Additionally, more than \[how many paying customers?\] organizations that purchase our professional products help us sustain and grow our mission. It is an inspiration to consider that we are helping many participate in global economies that increasingly reward data literacy, and that our tools help produce insights essential to navigating our complex world.
 
 ]
+#pagebreak()
 = Posit\'s Statement of Public Benefit and B Lab® Impact Assessment Results
 <posits-statement-of-public-benefit-and-b-lab-impact-assessment-results>
 #col-2()[
@@ -358,18 +394,19 @@ align(center)[#table(
 #col-2()[
 == Posit\'s B Lab Impact Assessment Results
 <posits-b-lab-impact-assessment-results>
-The BLab Impact Assessment is composed of questions in five Impact Areas: Governance, Workers, Community, Environment, and Customers. Posit\'s assessment results are available to the public \[here\]. We completed our first Impact Assessment in 2019 with our initial B Lab certification, and earned an overall score of #strong[86.1.] We are proud to report that our latest score from our recertification process in 2023, is #strong[92.5];. To put this in context, the threshold for B Lab certification is a score of 80 or higher, and the median score for ordinary businesses who take the assessment is 50.9. Posit seeks to continually improve our internal governance, increase our workforce diversity and employee development efforts, expand our stewardship of the environment, deepen our engagement in our communities, and better serve our customers, so that our public benefit will continue to improve each year.
+The BLab Impact Assessment is composed of questions in five Impact Areas: Governance, Workers, Community, Environment, and Customers. Posit\'s assessment results are available to the public \[here\]. We completed our first Impact Assessment in 2019 with our initial B Lab certification, and earned an overall score of #strong[86.1.] We are proud to report that our latest score from our recertification process in 2023, is #strong[92.5];. To put this in context, the threshold for B Lab certification is a score of 80 or higher, and the median score for ordinary businesses who take the assessment is 50.9.
 
 #colbreak()
+Posit seeks to continually improve our internal governance, increase our workforce diversity and employee development efforts, expand our stewardship of the environment, deepen our engagement in our communities, and better serve our customers, so that our public benefit will continue to improve each year.
+
 In our initial assessment, we received high marks for incorporating as a benefit corporation; the health, wellness, safety, and financial security of our employees; and for educating and serving customers. We identified formal goal setting, career development, diversity, equity & inclusion, civic engagement & giving, and air & climate as areas for improvement.
 
 ]
-#banner()[
+#pagebreak()
 == Summary of Score Improvements Since 2019
 <summary-of-score-improvements-since-2019>
 The B Lab’s Impact assessment standards have evolved since 2019 \(we are now on version 6 of the assessment). New questions were added, and thresholds for performance were raised in other cases. Of the scored questions we responded to in our most recent assessment, 38 were unchanged from 2019, 71 were modified from 2019 wording, and 22 were brand new questions. On the questions that were unchanged or modified, we have gained points in the areas listed below.
 
-]
 #figure(
 align(center)[#table(
   columns: 3,
@@ -439,26 +476,14 @@ In our latest assessment, our governance score improved by 37% via improvements 
 We have made significant strides in our Worker assessment category since 2019, with scores increasing by 50% or more in areas such as career development, engagement and satisfaction, and financial security for our employees. Investments in employee career development include in-house management training programs, tooling and education to support constructive feedback, and documentation of job levels, pay ranges, and career paths within our major functions. In 2021, we initiated an annual organizational health survey, which allows us to collect and respond to employee feedback. We have also augmented our benefits to include a "lifestyle savings account" \(LSA) funded by Posit that each individual can choose to apply to home office, professional development, wellness, or financial health expenses as they see fit. All together, we are working to continuously improve the value offered to our workers as our company grows.
 
 ]
-#page_blue()[
-#set text(fill: white)
-#show par: set block(spacing: 0.5em)
-#place(bottom + center)[
-  #block(height: 48pt)[
-            #box(height: 36pt, baseline: -8pt, image("assets/images/posit-logo-white-TM.svg"))
-            #box(inset: (x: 24pt), line(length: 100%, angle: 90deg, stroke: 0.5pt + white))
-            #box(image("assets/images/B-Corp-Logo-White-RGB.png"))
-          ]
-  
-  The open source data science company
+#conclusion()[
+= Conclusion
+<conclusion>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
 
-  #text(size: 24pt, link("http://posit.co/")[posit.co])
-  #v(2em)
-  #set text(size: 10pt)
-  
-  Trademark language here
-
-  Published with #box(height: 12pt, baseline: 20% , image("assets/images/quarto-logo-trademark.svg"))
 ]
+#back_page()[
+  Trademark language here
 ]
 
 

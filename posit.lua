@@ -23,4 +23,20 @@ function Div(el)
     blocks:insert(pandoc.RawBlock('typst', ']\n'))
     return blocks
   end
+  if el.classes:includes('conclusion') then
+    local blocks = pandoc.List({
+      pandoc.RawBlock('typst', '#conclusion()[')
+    })
+    blocks:extend(el.content)
+    blocks:insert(pandoc.RawBlock('typst', ']\n'))
+    return blocks
+  end
+  if el.classes:includes('back-page') then
+    local blocks = pandoc.List({
+      pandoc.RawBlock('typst', '#back_page()[')
+    })
+    blocks:extend(el.content)
+    blocks:insert(pandoc.RawBlock('typst', ']\n'))
+    return blocks
+  end
 end

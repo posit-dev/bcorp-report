@@ -10,6 +10,10 @@ format:
       - typst-show.typ
     filters: 
       - posit.lua
+  html: 
+    shift-heading-level-by: 1
+shortcodes:
+  - colbreak.lua
 keep-typ: true
 ---
 
@@ -40,9 +44,7 @@ measures its public benefit by utilizing the non-profit B Lab®'s "Impact
 Assessment", a rigorous assessment of a company's impact on its workers,
 customers, community, and environment.
 
-```{=typst}
-#colbreak()
-```
+{{< colbreak >}}
 
 In 2019, Posit (then RStudio) met the B Corporation certification
 requirements set by the B Lab. In 2023, our certification was renewed,
@@ -63,9 +65,8 @@ customers, employees, and the community, we remain excited to contribute
 useful solutions to the important problems of knowledge they face.
 
 ```{=typst}
-#align(right)[
-  *J.J. Allaire*
-
+#place(right, dy: 3em)[
+  *J.J. Allaire* \
   CEO, Posit PBC
 ]
 ```
@@ -143,6 +144,8 @@ insights essential to navigating our complex world.
 
 ::: 
 
+{{< pagebreak >}}
+
 # Posit\'s Statement of Public Benefit and B Lab® Impact Assessment Results
 
 ::: {.cols-2}
@@ -217,9 +220,7 @@ research, and technical communication:
 |     the corporation's conduct.    |                                   |
 +-----------------------------------+-----------------------------------+
 
-```{=typst}
-#pagebreak()
-```
+{{< pagebreak >}}
 
 ::: {.cols-2}
 
@@ -233,16 +234,19 @@ certification, and earned an overall score of **86.1.** We are proud to
 report that our latest score from our recertification process in 2023,
 is **92.5**. To put this in context, the threshold for B Lab
 certification is a score of 80 or higher, and the median score for
-ordinary businesses who take the assessment is 50.9. Posit seeks to
+ordinary businesses who take the assessment is 50.9. 
+
+```{=typst}
+#colbreak()
+```
+
+Posit seeks to
 continually improve our internal governance, increase our workforce
 diversity and employee development efforts, expand our stewardship of
 the environment, deepen our engagement in our communities, and better
 serve our customers, so that our public benefit will continue to improve
 each year.
 
-```{=typst}
-#colbreak()
-```
 
 In our initial assessment, we received high marks for incorporating as a
 benefit corporation; the health, wellness, safety, and financial
@@ -253,7 +257,7 @@ improvement.
 
 :::
 
-::: {.banner}
+{{< pagebreak >}}
 
 ## Summary of Score Improvements Since 2019
 
@@ -265,7 +269,6 @@ unchanged from 2019, 71 were modified from 2019 wording, and 22 were
 brand new questions. On the questions that were unchanged or modified,
 we have gained points in the areas listed below.
 
-::: 
 
   -----------------------------------------------------------------------
   **Impact Area**  **Topic**                 **% Achievement Gain since
@@ -396,28 +399,18 @@ company grows.
 
 :::
 
-::: {.page-blue}
+
+::: {.conclusion}
+
+# Conclusion
+
+{{< lipsum 1 >}}
+
+::: 
+
 
 ```{=typst}
-#set text(fill: white)
-#show par: set block(spacing: 0.5em)
-#place(bottom + center)[
-  #block(height: 48pt)[
-            #box(height: 36pt, baseline: -8pt, image("assets/images/posit-logo-white-TM.svg"))
-            #box(inset: (x: 24pt), line(length: 100%, angle: 90deg, stroke: 0.5pt + white))
-            #box(image("assets/images/B-Corp-Logo-White-RGB.png"))
-          ]
-  
-  The open source data science company
-
-  #text(size: 24pt, link("http://posit.co/")[posit.co])
-  #v(2em)
-  #set text(size: 10pt)
-  
+#back_page()[
   Trademark language here
-
-  Published with #box(height: 12pt, baseline: 20% , image("assets/images/quarto-logo-trademark.svg"))
 ]
 ```
-
-:::
