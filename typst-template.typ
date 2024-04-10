@@ -30,8 +30,8 @@
 }
 
 #let conclusion(content)={
-  set page(fill: posit_colors.dark_blue_3,
-    background: image("assets/images/nikola-YXv0q7-hIgU-unsplash.jpg", height: 100%, fit: "cover"))
+  set page(fill: posit_colors.blue,
+    background: image("assets/images/Conf-2023-Crowd.jpg", height: 100%, fit: "cover"))
   set text(fill: white)
   place(horizon, dy: -1in)[
     #block(fill: posit_colors.blue, outset: 1.25in, content)
@@ -41,12 +41,12 @@
 //   Custom title page
 #let title_page(title, subtitle)={
     page(margin: 0in, fill: posit_colors.dark_blue_2, 
-        background: image("assets/images/nikola-YXv0q7-hIgU-unsplash.jpg", height: 100%, fit: "cover"))[
+        background: image("assets/images/Hex-Stickers.jpg", height: 100%, fit: "cover"))[
         #set text(fill: white)
 
-        #place(center + horizon, dy: -2in)[
+        #place(center + horizon, dy: -2.5in)[
             #set align(center + horizon)
-            #block(width: 100%, fill: posit_colors.blue, outset: 2em)[
+            #block(width: 100%, fill: posit_colors.dark_blue_3, outset: 4em)[
                 #text(weight: "light", size: 36pt, title)
 
                 #text(weight: "bold", size: 24pt, subtitle)
@@ -64,6 +64,8 @@
 
 #let back_page(content)={
   page_blue()[
+      #set page(
+        background: image("assets/images/hexes-blue.png", height: 100%, fit: "cover"))
       #set text(fill: white)
       #show par: set block(spacing: 0.5em)
       #place(bottom + center)[

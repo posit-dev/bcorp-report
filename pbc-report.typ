@@ -181,8 +181,8 @@
 }
 
 #let conclusion(content)={
-  set page(fill: posit_colors.dark_blue_3,
-    background: image("assets/images/nikola-YXv0q7-hIgU-unsplash.jpg", height: 100%, fit: "cover"))
+  set page(fill: posit_colors.blue,
+    background: image("assets/images/Conf-2023-Crowd.jpg", height: 100%, fit: "cover"))
   set text(fill: white)
   place(horizon, dy: -1in)[
     #block(fill: posit_colors.blue, outset: 1.25in, content)
@@ -192,12 +192,12 @@
 //   Custom title page
 #let title_page(title, subtitle)={
     page(margin: 0in, fill: posit_colors.dark_blue_2, 
-        background: image("assets/images/nikola-YXv0q7-hIgU-unsplash.jpg", height: 100%, fit: "cover"))[
+        background: image("assets/images/Hex-Stickers.jpg", height: 100%, fit: "cover"))[
         #set text(fill: white)
 
-        #place(center + horizon, dy: -2in)[
+        #place(center + horizon, dy: -2.5in)[
             #set align(center + horizon)
-            #block(width: 100%, fill: posit_colors.blue, outset: 2em)[
+            #block(width: 100%, fill: posit_colors.dark_blue_3, outset: 4em)[
                 #text(weight: "light", size: 36pt, title)
 
                 #text(weight: "bold", size: 24pt, subtitle)
@@ -215,6 +215,8 @@
 
 #let back_page(content)={
   page_blue()[
+      #set page(
+        background: image("assets/images/hexes-blue.png", height: 100%, fit: "cover"))
       #set text(fill: white)
       #show par: set block(spacing: 0.5em)
       #place(bottom + center)[
@@ -479,7 +481,7 @@ We have made significant strides in our Worker assessment category since 2019, w
 #conclusion()[
 = Conclusion
 <conclusion>
-Duis urna urna, pellentesque eu urna ut, malesuada bibendum dolor. Suspendisse potenti. Vivamus ornare, arcu quis molestie ultrices, magna est accumsan augue, auctor vulputate erat quam quis neque. Nullam scelerisque odio vel ultricies facilisis. Ut porta arcu non magna sagittis lacinia. Cras ornare vulputate lectus a tristique. Pellentesque ac arcu congue, rhoncus mi id, dignissim ligula.
+Maecenas turpis velit, ultricies non elementum vel, luctus nec nunc. Nulla a diam interdum, faucibus sapien viverra, finibus metus. Donec non tortor diam. In ut elit aliquet, bibendum sem et, aliquam tortor. Donec congue, sem at rhoncus ultrices, nunc augue cursus erat, quis porttitor mauris libero ut ex. Nullam quis leo urna. Donec faucibus ligula eget pellentesque interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus interdum erat ut ultricies. Aenean tempus ex non elit suscipit, quis dignissim enim efficitur. Proin laoreet enim massa, vitae laoreet nulla mollis quis.
 
 ]
 #back_page()[
