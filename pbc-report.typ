@@ -161,7 +161,7 @@
 
 //  Pages with a blue background
 #let page_blue(content)={
-    set page(fill: posit_colors.dark_blue_3)
+    set page(background: image("assets/images/hexes-8.5x11-#17212B.png", height: 100%, fit: "cover"))
     set text(fill: posit_colors.light_blue_1)
     show heading: set text(fill: posit_colors.light_blue_2)
     show heading.where(level: 1): it => {
@@ -192,7 +192,7 @@
 //   Custom title page
 #let title_page(title, subtitle)={
     page(margin: 0in, fill: posit_colors.dark_blue_2, 
-        background: image("assets/images/Hex-Stickers.jpg", height: 100%, fit: "cover"))[
+        background: image("assets/images/Hex-Stickers-high-res-uncropped.jpg", height: 100%, fit: "cover"))[
         #set text(fill: white)
 
         #place(center + horizon, dy: -2.5in)[
@@ -216,7 +216,7 @@
 #let back_page(content)={
   page_blue()[
       #set page(
-        background: image("assets/images/hexes-blue.png", height: 100%, fit: "cover"))
+        background: image("assets/images/hexes-8.5x11-#447099.png", height: 100%, fit: "cover"))
       #set text(fill: white)
       #show par: set block(spacing: 0.5em)
       #place(bottom + center)[
@@ -481,7 +481,7 @@ We have made significant strides in our Worker assessment category since 2019, w
 #conclusion()[
 = Conclusion
 <conclusion>
-Maecenas turpis velit, ultricies non elementum vel, luctus nec nunc. Nulla a diam interdum, faucibus sapien viverra, finibus metus. Donec non tortor diam. In ut elit aliquet, bibendum sem et, aliquam tortor. Donec congue, sem at rhoncus ultrices, nunc augue cursus erat, quis porttitor mauris libero ut ex. Nullam quis leo urna. Donec faucibus ligula eget pellentesque interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus interdum erat ut ultricies. Aenean tempus ex non elit suscipit, quis dignissim enim efficitur. Proin laoreet enim massa, vitae laoreet nulla mollis quis.
+Etiam maximus accumsan gravida. Maecenas at nunc dignissim, euismod enim ac, bibendum ipsum. Maecenas vehicula velit in nisl aliquet ultricies. Nam eget massa interdum, maximus arcu vel, pretium erat. Maecenas sit amet tempor purus, vitae aliquet nunc. Vivamus cursus urna velit, eleifend dictum magna laoreet ut. Duis eu erat mollis, blandit magna id, tincidunt ipsum. Integer massa nibh, commodo eu ex vel, venenatis efficitur ligula. Integer convallis lacus elit, maximus eleifend lacus ornare ac. Vestibulum scelerisque viverra urna id lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean eget enim at diam bibendum tincidunt eu non purus. Nullam id magna ultrices, sodales metus viverra, tempus turpis.
 
 ]
 #back_page()[

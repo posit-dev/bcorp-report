@@ -10,7 +10,7 @@
 
 //  Pages with a blue background
 #let page_blue(content)={
-    set page(fill: posit_colors.dark_blue_3)
+    set page(background: image("assets/images/hexes-8.5x11-#17212B.png", height: 100%, fit: "cover"))
     set text(fill: posit_colors.light_blue_1)
     show heading: set text(fill: posit_colors.light_blue_2)
     show heading.where(level: 1): it => {
@@ -41,7 +41,7 @@
 //   Custom title page
 #let title_page(title, subtitle)={
     page(margin: 0in, fill: posit_colors.dark_blue_2, 
-        background: image("assets/images/Hex-Stickers.jpg", height: 100%, fit: "cover"))[
+        background: image("assets/images/Hex-Stickers-high-res-uncropped.jpg", height: 100%, fit: "cover"))[
         #set text(fill: white)
 
         #place(center + horizon, dy: -2.5in)[
@@ -65,7 +65,7 @@
 #let back_page(content)={
   page_blue()[
       #set page(
-        background: image("assets/images/hexes-blue.png", height: 100%, fit: "cover"))
+        background: image("assets/images/hexes-8.5x11-#447099.png", height: 100%, fit: "cover"))
       #set text(fill: white)
       #show par: set block(spacing: 0.5em)
       #place(bottom + center)[
