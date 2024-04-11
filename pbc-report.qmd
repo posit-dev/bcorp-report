@@ -66,8 +66,12 @@ useful solutions to the important problems of knowledge they face.
 
 ```{=typst}
 #place(right, dy: 3em)[
-  *J.J. Allaire* \
-  CEO, Posit PBC
+```
+
+*J.J. Allaire* \
+CEO, Posit PBC
+
+```{=typst}
 ]
 ```
 ::: 
