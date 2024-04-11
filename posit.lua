@@ -7,6 +7,14 @@ function Div(el)
     blocks:insert(pandoc.RawBlock('typst', ']\n'))
     return blocks
   end
+  if el.classes:includes('page-impact') then
+    local blocks = pandoc.List({
+      pandoc.RawBlock('typst', '#page_impact()[')
+    })
+    blocks:extend(el.content)
+    blocks:insert(pandoc.RawBlock('typst', ']\n'))
+    return blocks
+  end
   if el.classes:includes('cols-2') then
     local blocks = pandoc.List({
       pandoc.RawBlock('typst', '#col-2()[')

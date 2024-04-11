@@ -226,6 +226,8 @@ research, and technical communication:
 
 {{< pagebreak >}}
 
+::: {.page-impact}
+
 ::: {.cols-2}
 
 ## Posit\'s B Lab Impact Assessment Results
@@ -403,6 +405,7 @@ company grows.
 
 :::
 
+:::
 
 ::: {.conclusion}
 

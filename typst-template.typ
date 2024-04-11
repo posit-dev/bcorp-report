@@ -20,6 +20,22 @@
     content
   }
 
+// Page with Impact Assessment header
+#let page_impact(content)={
+  set page(
+    margin: (top: 2in),
+    header: [
+      #set text(fill: white)
+      #block(width: 100%, height: 100%, outset: (x: 1.25in), inset: (y: 2em), fill: posit_colors.blue)[
+        #place(right + horizon)[
+          #image("assets/images/BLab_B_Impact_Assessment-white.png", height: 50%)
+        ]
+      ]
+    ]
+  )
+  content
+}
+
 #let col-2(content)={
     columns(2, content)
 } 

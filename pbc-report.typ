@@ -171,6 +171,22 @@
     content
   }
 
+// Page with Impact Assessment header
+#let page_impact(content)={
+  set page(
+    margin: (top: 2in),
+    header: [
+      #set text(fill: white)
+      #block(width: 100%, height: 100%, outset: (x: 1.25in), inset: (y: 2em), fill: posit_colors.blue)[
+        #place(right + horizon)[
+          #image("assets/images/BLab_B_Impact_Assessment-white.png", height: 50%)
+        ]
+      ]
+    ]
+  )
+  content
+}
+
 #let col-2(content)={
     columns(2, content)
 } 
@@ -192,7 +208,7 @@
 //   Custom title page
 #let title_page(title, subtitle)={
     page(margin: 0in, fill: posit_colors.dark_blue_2, 
-        background: image("assets/images/Hex-Stickers-highres-cropped.jpg", height: 100%, fit: "cover"))[
+        background: image("assets/images/Hex-Stickers-high-res-uncropped.jpg", height: 100%, fit: "cover"))[
         #set text(fill: white)
 
         #place(center + horizon, dy: -2.5in)[
@@ -394,6 +410,7 @@ align(center)[#table(
 )
 
 #pagebreak()
+#page_impact()[
 #col-2()[
 == Posit\'s B Lab Impact Assessment Results
 <posits-b-lab-impact-assessment-results>
@@ -479,10 +496,11 @@ In our latest assessment, our governance score improved by 37% via improvements 
 We have made significant strides in our Worker assessment category since 2019, with scores increasing by 50% or more in areas such as career development, engagement and satisfaction, and financial security for our employees. Investments in employee career development include in-house management training programs, tooling and education to support constructive feedback, and documentation of job levels, pay ranges, and career paths within our major functions. In 2021, we initiated an annual organizational health survey, which allows us to collect and respond to employee feedback. We have also augmented our benefits to include a "lifestyle savings account" \(LSA) funded by Posit that each individual can choose to apply to home office, professional development, wellness, or financial health expenses as they see fit. All together, we are working to continuously improve the value offered to our workers as our company grows.
 
 ]
+]
 #conclusion()[
 = Conclusion
 <conclusion>
-Nullam dapibus cursus dolor sit amet consequat. Nulla facilisi. Curabitur vel nulla non magna lacinia tincidunt. Duis porttitor quam leo, et blandit velit efficitur ut. Etiam auctor tincidunt porttitor. Phasellus sed accumsan mi. Fusce ut erat dui. Suspendisse eu augue eget turpis condimentum finibus eu non lorem. Donec finibus eros eu ante condimentum, sed pharetra sapien sagittis. Phasellus non dolor ac ante mollis auctor nec et sapien. Pellentesque vulputate at nisi eu tincidunt. Vestibulum at dolor aliquam, hendrerit purus eu, eleifend massa. Morbi consectetur eros id tincidunt gravida. Fusce ut enim quis orci hendrerit lacinia sed vitae enim.
+Nulla eget cursus ipsum. Vivamus porttitor leo diam, sed volutpat lectus facilisis sit amet. Maecenas et pulvinar metus. Ut at dignissim tellus. In in tincidunt elit. Etiam vulputate lobortis arcu, vel faucibus leo lobortis ac. Aliquam erat volutpat. In interdum orci ac est euismod euismod. Nunc eleifend tristique risus, at lacinia odio commodo in. Sed aliquet ligula odio, sed tempor neque ultricies sit amet.
 
 ]
 #back_page()[
