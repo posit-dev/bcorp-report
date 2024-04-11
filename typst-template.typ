@@ -83,7 +83,7 @@
         
         #(content)
 
-        Published with #box(height: 12pt, baseline: 20% , image("assets/images/quarto-logo-trademark.svg"))
+        Published with #box(height: 12pt, baseline: 20% , image("assets/images/quarto-logo-trademark-white.svg"))
         ]
       ]
 }
