@@ -76,7 +76,8 @@ rstudio_dls <- rstudio_dls %>% mutate(
     str_detect(filename, regex("^rstudio-", ignore_case = TRUE)) ~ "desktop",
     str_detect(filename, "^desktop") ~ "desktop",
     #RZ additions
-    str_detect(filename, "electron") ~ "desktop"
+    str_detect(filename, "electron") ~ "desktop",
+    str_detect(filename, "quarto-") ~ "quarto"
   )
 )
 
@@ -86,3 +87,11 @@ rstudio_open_source_downloads %>%
   group_by(date) %>%
   summarise(downloads = sum(downloads)) -> rsdf
 write.csv(rsdf, "rstudio_os_dls.csv", row.names = FALSE)
+
+## get quarto downloads from when it was hosted on rstudio.com
+rstudio_dls %>% 
+  filter(type %in% c("quarto")) %>% 
+  group_by(date) %>%
+  summarize(downloads = sum(downloads)) -> quarto_rstudio_dls
+write.csv(quarto_rstudio_dls, "quarto_rstudio_dls.csv", row.names = FALSE)
+

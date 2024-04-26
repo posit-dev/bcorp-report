@@ -17,8 +17,19 @@ tidymdf <- read.csv("tidymodels_pkgs.csv", col.names = c("date", "downloads", "p
 rlibdf <- read.csv("rlib_pkgs.csv", col.names = c("date", "downloads", "pkg"))
 rcondf <- read.csv("rcon_pkgs.csv", col.names = c("date", "downloads", "pkg"))
 
+
 rstudiodf <- read.csv("rstudio_os_dls.csv", col.names = c("date", "downloads"))
 rstudiodf$pkg <- "RStudio"
+
+quarto_rstudio_dls <- read.csv("quarto_rstudio_dls.csv", col.names = c("date", "downloads"))
+quarto_rstudio_dls$pkg <- "quarto"
+
+quarto_gh_dls <- read.csv("quarto_gh_downloads.csv", col.names = c("date", "name", "downloads"))
+quarto_gh_dls$date <- as.Date(quarto_gh_dls$date)
+
+
+
+
 
 singlepltfunc <- function(df, package) {
   
@@ -35,7 +46,7 @@ singlepltfunc <- function(df, package) {
 ```{r}
 #| echo: false
 
-#singlepltfunc(pydf, "siuba")
+#singlepltfunc(quarto_rstudio_dls, "quarto")
 ```
 
 ## Shiny
