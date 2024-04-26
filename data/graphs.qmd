@@ -10,12 +10,12 @@ options(scipen = 999)
 
 library(ggplot2)
 library(tidyverse)
-pydf <- read.csv("data/pypi_stats.csv", col.names = c("date", "downloads", "pkg"))
-rdf <- read.csv("data/rpkgs.csv", col.names = c("date", "downloads", "pkg"))
-tidyvdf <- read.csv("data/tidyverse_pkgs.csv", col.names = c("date", "downloads", "pkg"))
-tidymdf <- read.csv("data/tidymodels_pkgs.csv", col.names = c("date", "downloads", "pkg"))
-rlibdf <- read.csv("data/rlib_pkgs.csv", col.names = c("date", "downloads", "pkg"))
-rcondf <- read.csv("data/rlib_pkgs.csv", col.names = c("date", "downloads", "pkg"))
+pydf <- read.csv("pypi_stats.csv", col.names = c("date", "downloads", "pkg"))
+rdf <- read.csv("rpkgs.csv", col.names = c("date", "downloads", "pkg"))
+tidyvdf <- read.csv("tidyverse_pkgs.csv", col.names = c("date", "downloads", "pkg"))
+tidymdf <- read.csv("tidymodels_pkgs.csv", col.names = c("date", "downloads", "pkg"))
+rlibdf <- read.csv("rlib_pkgs.csv", col.names = c("date", "downloads", "pkg"))
+rcondf <- read.csv("rlib_pkgs.csv", col.names = c("date", "downloads", "pkg"))
 
 singlepltfunc <- function(df, package) {
   
@@ -28,14 +28,15 @@ singlepltfunc <- function(df, package) {
 ```
 
 ## Quarto
+
 ```{r}
 #| echo: false
 
 #singlepltfunc(pydf, "siuba")
 ```
 
-
 ## Shiny
+
 ```{r}
 #| echo: false
 #TODO: should we stack these into a single graph?
@@ -44,6 +45,7 @@ singlepltfunc(rdf, "shiny")
 ```
 
 ## gt / great tables
+
 ```{r}
 #| echo: false
 #TODO: stack these into a single graph? clean up x axis date range
@@ -52,6 +54,7 @@ singlepltfunc(rdf, "gt")
 ```
 
 ## Vetiver
+
 ```{r}
 #| echo: false
 #TODO: stack these into a single graph? clean up x axis date range
@@ -74,6 +77,7 @@ singlepltfunc(pydf, "siuba")
 ```
 
 ## Rstudio
+
 ```{r}
 #| echo: false
 
@@ -81,6 +85,7 @@ singlepltfunc(pydf, "siuba")
 ```
 
 ## Tidyverse
+
 ```{r}
 #| echo: false
 
@@ -88,6 +93,7 @@ singlepltfunc(pydf, "siuba")
 ```
 
 ## Tidymodels
+
 ```{r}
 #| echo: false
 
@@ -95,6 +101,7 @@ singlepltfunc(pydf, "siuba")
 ```
 
 ## Connectivity
+
 ```{r}
 #| echo: false
 
@@ -102,6 +109,7 @@ singlepltfunc(pydf, "siuba")
 ```
 
 ## R-lib
+
 ```{r}
 #| echo: false
 
