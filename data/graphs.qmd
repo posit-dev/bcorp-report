@@ -1,0 +1,106 @@
+---
+title: "2024 B-corp graphs"
+format: html
+editor: visual
+---
+
+```{r}
+#| echo: false
+options(scipen = 999)
+library(ggplot2)
+library(tidyverse)
+pydf <- read.csv("data/pypi_stats.csv")
+rdf <- read.csv("data/rpkgs.csv", col.names = c("date", "downloads", "pkg"))
+tidyvdf <- read.csv("data/tidyverse_pkgs.csv", col.names = c("date", "downloads", "pkg"))
+tidymdf <- read.csv("data/tidymodels_pkgs.csv", col.names = c("date", "downloads", "pkg"))
+
+singlepltfunc <- function(df, package) {
+  
+  return(
+    df %>% 
+    filter(pkg == package) %>%
+    ggplot(aes(x=as.Date(date), y=cumsum(downloads))) + geom_line() +  scale_x_date(labels=scales::label_date_short()) + xlab("Date") + ylab("Cumulative Downloads (PyPI)") + ggtitle(package) + theme_minimal() + scale_y_continuous(labels = scales::comma)
+  )
+}
+```
+
+## Quarto
+```{r}
+#| echo: false
+
+#singlepltfunc(pydf, "siuba")
+```
+
+
+## Shiny
+```{r}
+#| echo: false
+#TODO: should we stack these into a single graph?
+singlepltfunc(pydf, "shiny")
+singlepltfunc(rdf, "shiny")
+```
+
+## gt / great tables
+```{r}
+#| echo: false
+#TODO: stack these into a single graph, clean up x axis date range
+singlepltfunc(pydf, "great_tables")
+singlepltfunc(rdf, "gt")
+```
+
+## Vetiver
+```{r}
+#| echo: false
+#TODO: stack these into a single graph, clean up x axis date range
+singlepltfunc(pydf, "vetiver")
+singlepltfunc(rdf, "vetiver")
+```
+
+## Plotnine
+
+```{r}
+#| echo: false
+singlepltfunc(pydf, "plotnine")
+```
+
+## Siuba
+
+```{r}
+#| echo: false
+singlepltfunc(pydf, "siuba")
+```
+
+## Rstudio
+```{r}
+#| echo: false
+
+#singlepltfunc(pydf, "siuba")
+```
+
+## Tidyverse
+```{r}
+#| echo: false
+
+#singlepltfunc(pydf, "siuba")
+```
+
+## Tidymodels
+```{r}
+#| echo: false
+
+#singlepltfunc(pydf, "siuba")
+```
+
+## Connectivity
+```{r}
+#| echo: false
+
+#singlepltfunc(pydf, "siuba")
+```
+
+## R-lib
+```{r}
+#| echo: false
+
+#singlepltfunc(pydf, "siuba")
+```
