@@ -53,5 +53,33 @@ rcondf <- cran_downloads(c("sparklyr", "tensorflow", "keras", "odbc", "reticulat
 #write.csv(rcondf, "rcon_pkgs.csv", row.names = FALSE)
 
 
-#----RStudio downloads
+#----RStudio and Quarto downloads
+#RZ: not adding all the boilerplate to do this from the code, downloaded via browser
+#not committing file to git due to size
+#code originally came from Garrett for 2021 report, but simplifying it greatly here
+#DOWNLOAD_URL <- "https://www.rstudio.org/internal/metrics/downloads.csv.gz"
 
+rstudio_dls <- read.csv("downloads.csv.gz", header = FALSE, col.names = c("filename", "date", "downloads"))  %>% 
+  filter(date >= ymd("2017-01-01"))
+
+rstudio_dls <- rstudio_dls %>% mutate(
+  type = case_when(
+    str_detect(filename, "docs|admin-guide") ~ "docs",
+    str_detect(filename, "-monitor-") ~ "monitor",
+    
+    str_detect(filename, "rstudio-server-pro")  ~ "RSP",
+    str_detect(filename, "rstudio-server")  ~ "RS-os",
+    str_detect(filename, "rstudio-connect")  ~ "RSC",
+    str_detect(filename, "shiny-server-commercial") ~ "SSP",
+    str_detect(filename, "shiny-server") ~ "SS-os",
+    str_detect(filename, "rstudio-pm") ~ "RSPM",
+    str_detect(filename, regex("^rstudio-", ignore_case = TRUE)) ~ "desktop",
+    str_detect(filename, "^desktop") ~ "desktop",
+    #RZ additions
+    str_detect(filename, "electron") ~ "desktop"
+  )
+)
+
+## Need to remove all the pro products from this list.
+rstudio_open_source_downloads <- rstudio_dls %>% filter(type %in% c("RS-os", "desktop"))
+write.csv(rstudio_open_source_downloads, "rstudio_dls.csv", row.names = FALSE)
