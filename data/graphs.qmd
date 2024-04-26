@@ -25,7 +25,7 @@ quarto_rstudio_dls <- read.csv("quarto_rstudio_dls.csv", col.names = c("date", "
 quarto_rstudio_dls$pkg <- "quarto"
 
 quarto_gh_dls <- read.csv("quarto_gh_downloads.csv", col.names = c("date", "name", "downloads"))
-quarto_gh_dls$date <- as.Date(quarto_gh_dls$date)
+quarto_gh_dls$date <- as.character(as.Date(quarto_gh_dls$date))
 
 
 
@@ -46,7 +46,18 @@ singlepltfunc <- function(df, package) {
 ```{r}
 #| echo: false
 
-#singlepltfunc(quarto_rstudio_dls, "quarto")
+quarto_gh_dls %>% 
+  group_by(date) %>% 
+  summarise(downloads = sum(downloads)) %>% mutate(pkg = "quarto") %>%
+  bind_rows(quarto_rstudio_dls) -> quarto_dls
+
+quarto_dls %>% 
+  group_by(date) %>% 
+  summarise(downloads = sum(downloads)) %>% 
+  mutate(pkg = "quarto") %>%
+
+singlepltfunc("quarto")
+
 ```
 
 ## Shiny
