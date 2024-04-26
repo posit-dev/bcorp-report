@@ -15,14 +15,17 @@ rdf <- read.csv("rpkgs.csv", col.names = c("date", "downloads", "pkg"))
 tidyvdf <- read.csv("tidyverse_pkgs.csv", col.names = c("date", "downloads", "pkg"))
 tidymdf <- read.csv("tidymodels_pkgs.csv", col.names = c("date", "downloads", "pkg"))
 rlibdf <- read.csv("rlib_pkgs.csv", col.names = c("date", "downloads", "pkg"))
-rcondf <- read.csv("rlib_pkgs.csv", col.names = c("date", "downloads", "pkg"))
+rcondf <- read.csv("rcon_pkgs.csv", col.names = c("date", "downloads", "pkg"))
+
+rstudiodf <- read.csv("rstudio_os_dls.csv", col.names = c("date", "downloads"))
+rstudiodf$pkg <- "RStudio"
 
 singlepltfunc <- function(df, package) {
   
   return(
     df %>% 
     filter(pkg == package) %>%
-    ggplot(aes(x=as.Date(date), y=cumsum(downloads))) + geom_line() +  scale_x_date(labels=scales::label_date_short()) + xlab("Date") + ylab("Cumulative Downloads (PyPI)") + ggtitle(package) + theme_minimal() + scale_y_continuous(labels = scales::comma)
+    ggplot(aes(x=as.Date(date), y=cumsum(downloads))) + geom_line() +  scale_x_date(labels=scales::label_date_short()) + xlab("Date") + ylab("Cumulative Downloads") + ggtitle(package) + theme_minimal() + scale_y_continuous(labels = scales::comma)
   )
 }
 ```
@@ -80,24 +83,31 @@ singlepltfunc(pydf, "siuba")
 
 ```{r}
 #| echo: false
-
-#singlepltfunc(pydf, "siuba")
+singlepltfunc(rstudiodf, "RStudio")
 ```
 
 ## Tidyverse
 
 ```{r}
 #| echo: false
-
-#singlepltfunc(pydf, "siuba")
+tidyvdf %>% 
+  group_by(date) %>% 
+  summarise(downloads = sum(downloads)) -> tidyvdf
+tidyvdf$pkg <- "Tidyverse"
+  
+singlepltfunc(tidyvdf, "Tidyverse")
 ```
 
 ## Tidymodels
 
 ```{r}
 #| echo: false
-
-#singlepltfunc(pydf, "siuba")
+tidymdf %>% 
+  group_by(date) %>% 
+  summarise(downloads = sum(downloads)) -> tidymdf
+tidymdf$pkg <- "Tidymodels"
+  
+singlepltfunc(tidymdf, "Tidymodels")
 ```
 
 ## Connectivity
@@ -105,7 +115,12 @@ singlepltfunc(pydf, "siuba")
 ```{r}
 #| echo: false
 
-#singlepltfunc(pydf, "siuba")
+rcondf %>% 
+  group_by(date) %>% 
+  summarise(downloads = sum(downloads)) -> rcondf
+rcondf$pkg <- "R Connectivity"
+  
+singlepltfunc(rcondf, "R Connectivity")
 ```
 
 ## R-lib
@@ -113,5 +128,10 @@ singlepltfunc(pydf, "siuba")
 ```{r}
 #| echo: false
 
-#singlepltfunc(pydf, "siuba")
+rlibdf %>% 
+  group_by(date) %>% 
+  summarise(downloads = sum(downloads)) -> rlibdf
+rlibdf$pkg <- "R-Lib"
+  
+singlepltfunc(rlibdf, "R-Lib")
 ```

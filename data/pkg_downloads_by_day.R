@@ -80,6 +80,9 @@ rstudio_dls <- rstudio_dls %>% mutate(
   )
 )
 
-## Need to remove all the pro products from this list.
+## Just keep open-source/desktop rstudio dls.
 rstudio_open_source_downloads <- rstudio_dls %>% filter(type %in% c("RS-os", "desktop"))
-write.csv(rstudio_open_source_downloads, "rstudio_dls.csv", row.names = FALSE)
+rstudio_open_source_downloads %>%
+  group_by(date) %>%
+  summarise(downloads = sum(downloads)) -> rsdf
+write.csv(rsdf, "rstudio_os_dls.csv", row.names = FALSE)
