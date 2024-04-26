@@ -7,12 +7,15 @@ editor: visual
 ```{r}
 #| echo: false
 options(scipen = 999)
+
 library(ggplot2)
 library(tidyverse)
-pydf <- read.csv("data/pypi_stats.csv")
+pydf <- read.csv("data/pypi_stats.csv", col.names = c("date", "downloads", "pkg"))
 rdf <- read.csv("data/rpkgs.csv", col.names = c("date", "downloads", "pkg"))
 tidyvdf <- read.csv("data/tidyverse_pkgs.csv", col.names = c("date", "downloads", "pkg"))
 tidymdf <- read.csv("data/tidymodels_pkgs.csv", col.names = c("date", "downloads", "pkg"))
+rlibdf <- read.csv("data/rlib_pkgs.csv", col.names = c("date", "downloads", "pkg"))
+rcondf <- read.csv("data/rlib_pkgs.csv", col.names = c("date", "downloads", "pkg"))
 
 singlepltfunc <- function(df, package) {
   
@@ -43,7 +46,7 @@ singlepltfunc(rdf, "shiny")
 ## gt / great tables
 ```{r}
 #| echo: false
-#TODO: stack these into a single graph, clean up x axis date range
+#TODO: stack these into a single graph? clean up x axis date range
 singlepltfunc(pydf, "great_tables")
 singlepltfunc(rdf, "gt")
 ```
@@ -51,7 +54,7 @@ singlepltfunc(rdf, "gt")
 ## Vetiver
 ```{r}
 #| echo: false
-#TODO: stack these into a single graph, clean up x axis date range
+#TODO: stack these into a single graph? clean up x axis date range
 singlepltfunc(pydf, "vetiver")
 singlepltfunc(rdf, "vetiver")
 ```
