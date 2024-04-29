@@ -9,7 +9,7 @@ format:
       - typst-template.typ
       - typst-show.typ
     filters: 
-      - posit.lua
+      - layout.lua
       - mark.lua
   html: 
     shift-heading-level-by: 1
