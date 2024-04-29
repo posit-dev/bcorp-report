@@ -1,7 +1,7 @@
 function Span(el)
   if el.classes:includes('mark') then 
     local inlines = pandoc.List({
-      pandoc.RawInline('typst', '#mark()[')
+      pandoc.RawInline('typst', '#highlight()[')
     })
     inlines:extend(el.content)
     inlines:insert(pandoc.RawInline('typst', ']\n'))
