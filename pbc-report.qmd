@@ -26,6 +26,23 @@ execute:
 library(ggplot2)
 library(tidyverse)
 library(here)
+library(thematic)
+library(ragg)
+
+posit_colors <- list(
+  blue = "#447099",
+  grey = "#404041",
+  orange = "#EE6331",
+  dark_blue_2 = "#213D4F",
+  dark_blue_3 = "#17212B",
+  light_blue_1 = "#D1DBE5",
+  light_blue_2 = "#A2B8CB"
+)
+
+
+theme_set(theme_classic())
+thematic_on(bg = "white", fg = posit_colors$grey, accent = posit_colors$blue,
+  font = "Open Sans")
 
 pydf <- read.csv(here("data", "pypi_stats.csv"), col.names = c("date", "downloads", "pkg"))
 rdf <- read.csv(here("data","rpkgs.csv"), col.names = c("date", "downloads", "pkg"))
@@ -48,15 +65,17 @@ singlepltfunc <- function(df, package) {
     df %>% 
     filter(pkg == package) %>%
     ggplot(aes(x=as.Date(date), y=cumsum(as.numeric(downloads)))) + 
-    geom_line() +  
+    geom_line(color = posit_colors$blue) +  
     scale_x_date(labels=scales::label_date_short()) + 
-    scale_y_continuous(labels = scales::comma) +
+    scale_y_continuous(
+      labels = scales::label_number(scale_cut = scales::cut_short_scale())
+    ) +
     xlab("Date") + 
     ylab("Cumulative Downloads") + 
-    ggtitle(package) + 
-    theme_minimal() 
+    ggtitle(package) 
   )
 }
+
 ```
 
 ::: {.page-blue}
@@ -209,8 +228,8 @@ What makes a PBC different from other types of corporations?
 > *"A 'public benefit corporation' is a for-profit corporation organized
 > under and subject to the requirements of this chapter that is intended
 > to produce a public benefit or public benefits and to operate in a
-> responsible and sustainable manner.\"* *[\[link to source:
-> [[https://delcode.delaware.gov/title8/c001/sc15/]{.underline}](https://delcode.delaware.gov/title8/c001/sc15/)\].]{.mark}*
+> responsible and sustainable manner.\"* 
+> --- [Delaware Public Benefit Corporations Laws](https://delcode.delaware.gov/title8/c001/sc15/)
 
 As a PBC and Certified B Corporation, we must meet the highest verified
 standards of social and environmental performance, transparency, and
@@ -414,12 +433,12 @@ quarto_by_version <- quarto_gh_dls %>%
 quarto_by_version %>%
   ggplot(aes(minor_version, cumsum(total))) +
     geom_line(aes(group = 1)) + 
-    scale_y_continuous(labels = scales::comma) +
+    scale_y_continuous(
+      labels = scales::label_number(scale_cut = scales::cut_short_scale())
+    ) +
     xlab("Minor Version") +
     ylab("Cumulative Downloads") +
-    ggtitle("Quarto") + 
-    theme_minimal()
-    
+    ggtitle("Quarto")
 ```
 
 #### Shiny
@@ -451,8 +470,8 @@ open-source Shiny and Shiny Server products as of [December
 
 ```{r}
 #TODO: should we stack these into a single graph?
-singlepltfunc(pydf, "shiny")
-singlepltfunc(rdf, "shiny")
+singlepltfunc(pydf, "shiny") + ggtitle("Shiny for Python")
+singlepltfunc(rdf, "shiny") + ggtitle("Shiny for R")
 ```
 
 #### Posit Public Package Manager
@@ -505,8 +524,8 @@ documentation by extracting some information about the generated model.
 
 ```{r}
 #TODO: stack these into a single graph? clean up x axis date range
-singlepltfunc(pydf, "vetiver")
-singlepltfunc(rdf, "vetiver")
+singlepltfunc(pydf, "vetiver") + ggtitle("vetiver for Python")
+singlepltfunc(rdf, "vetiver") + ggtitle("vetiver for R")
 ```
 
 
