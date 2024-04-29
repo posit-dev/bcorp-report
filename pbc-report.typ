@@ -255,7 +255,9 @@
       ]
 }
 
-
+#let mark(content) = {
+  box(fill: yellow, content)
+}
 
 #let posit(
   title: none,
@@ -321,9 +323,11 @@ As a Delaware Public Benefit Corporation (PBC) and a Certified B Corporation®, 
 B Corps#super[TM] meet the highest verified standards of social and environmental performance, transparency, and accountability. Posit measures its public benefit by utilizing the non-profit B Lab®’s "Impact Assessment", a rigorous assessment of a company’s impact on its workers, customers, community, and environment.
 
 #colbreak()
-In 2019, Posit (then RStudio) met the B Corporation certification requirements set by the B Lab. In 2023, our certification was renewed, and we are proud to share that our B Lab Impact Assessment score rose from 86.1 to 92.5 with this renewal. The B Lab certification process uses credible, comprehensive, transparent, and independent standards to measure social and environmental performance. Details of these assessments can be found at \[web link\].
+In 2019, Posit (then RStudio) met the B Corporation certification requirements set by the B Lab. In 2023, our certification was renewed, and we are proud to share that our B Lab Impact Assessment score rose from 86.1 to 92.5 with this renewal. The B Lab certification process uses credible, comprehensive, transparent, and independent standards to measure social and environmental performance. Details of these assessments can be found at #mark()[\[web link\]]
+.
 
-As a PBC, Posit publishes a report at least once every two years describing the public benefit we have created and how we seek to provide public benefits in the future. This is the fourth of these reports. Previously published reports are available at \[here\].
+As a PBC, Posit publishes a report at least once every two years describing the public benefit we have created and how we seek to provide public benefits in the future. This is the fourth of these reports. Previously published reports are available at #mark()[\[here\]]
+.
 
 To fulfill its beneficial purposes, Posit intends to remain an independent company over the long term. With the support of our customers, employees, and the community, we remain excited to contribute useful solutions to the important problems of knowledge they face.
 
@@ -345,10 +349,14 @@ Together, Posit\'s open-source software and commercial software form a virtuous 
 
 Posit’s approach is not typical. Traditionally, scientific and technical computing companies create exclusively proprietary software. While it can provide a robust foundation for investing in product development, proprietary software can also create excessive dependency that is not good for data science practitioners and the community. In contrast, Posit provides core productivity tools, packages, protocols, and file formats as open-source software so customers aren’t overly dependent on a single software vendor. Additionally, while our commercial products enhance the development and use of our open-source software, they are not fundamentally required for those without the need or the ability to pay for them.
 
-In 2023, Posit spent \[33%?\] of its engineering resources on open-source software development, and led contributions to over \[xx\] open-source projects. Posit-led projects targeted a broad range of areas including the RStudio IDE; infrastructure libraries for R and Python; numerous packages and tools to streamline data manipulation, exploration and visualization, modeling, and machine learning; and integration with external data sources. Posit also sponsors or contributes to many open-source and community projects led by others, including NumFOCUS, the R Consortium, the Python Software Foundation, DuckDB, Pandoc, pyodide, and prose mirror, as well as dozens of smaller projects via the Open Source Collective or directly on Github. Additional information about our products and company contributions for the past two years can be found in our #underline[\"Year In Review\'\' blog posts];. \[available here\].
+In 2023, Posit spent #mark()[\[33%?\]]
+of its engineering resources on open-source software development, and led contributions to over #mark()[\[xx\]]
+open-source projects. Posit-led projects targeted a broad range of areas including the RStudio IDE; infrastructure libraries for R and Python; numerous packages and tools to streamline data manipulation, exploration and visualization, modeling, and machine learning; and integration with external data sources. Posit also sponsors or contributes to many open-source and community projects led by others, including NumFOCUS, the R Consortium, the Python Software Foundation, DuckDB, Pandoc, pyodide, and prose mirror, as well as dozens of smaller projects via the Open Source Collective or directly on Github. Additional information about our products and company contributions for the past two years can be found in our #underline[\"Year In Review\'\' blog posts];. #mark()[\[available here\]]
+.
 
 #colbreak()
-Today, millions of people download and use Posit open-source products in their daily lives. Additionally, more than \[how many paying customers?\] organizations that purchase our professional products help us sustain and grow our mission. It is inspiring to help so many people participate in global economies that increasingly reward data literacy, and know that our tools help produce insights essential to navigating our complex world.
+Today, millions of people download and use Posit open-source products in their daily lives. Additionally, more than #mark()[\[how many paying customers?\]]
+organizations that purchase our professional products help us sustain and grow our mission. It is inspiring to help so many people participate in global economies that increasingly reward data literacy, and know that our tools help produce insights essential to navigating our complex world.
 
 ]
 #pagebreak()
@@ -362,7 +370,8 @@ We want Posit to serve a meaningful public purpose, and we run the company for t
 What makes a PBC different from other types of corporations?
 
 #quote(block: true)[
-#emph[“A 'public benefit corporation' is a for-profit corporation organized under and subject to the requirements of this chapter that is intended to produce a public benefit or public benefits and to operate in a responsible and sustainable manner.\"] #emph[\[link to source: #link("https://delcode.delaware.gov/title8/c001/sc15/")[#underline[https:\/\/delcode.delaware.gov/title8/c001/sc15/];];\].]
+#emph[“A 'public benefit corporation' is a for-profit corporation organized under and subject to the requirements of this chapter that is intended to produce a public benefit or public benefits and to operate in a responsible and sustainable manner.\"] #emph[#mark()[\[link to source: #link("https://delcode.delaware.gov/title8/c001/sc15/")[#underline[https:\/\/delcode.delaware.gov/title8/c001/sc15/];];\].]
+]
 ]
 
 As a PBC and Certified B Corporation, we must meet the highest verified standards of social and environmental performance, transparency, and accountability. Our directors and officers have a fiduciary responsibility to address social, economic, and environmental needs while still overseeing our business goals.
@@ -414,7 +423,8 @@ Creation of free and open source software for data science, scientific research,
 #col-2()[
 == Posit\'s B Lab Impact Assessment Results
 <posits-b-lab-impact-assessment-results>
-The BLab Impact Assessment is composed of questions in five Impact Areas: Governance, Workers, Community, Environment, and Customers. Posit\'s assessment results are available to the public #underline[here];. We completed our first Impact Assessment in 2019 and earned an overall score of #strong[86.1.] We are proud to report that our latest score from our recertification process in 2023, is #strong[92.5];. To put this in context, the threshold for B Lab certification is a score of 80 or higher, and the median score for ordinary businesses who take the assessment is 50.9.
+The BLab Impact Assessment is composed of questions in five Impact Areas: Governance, Workers, Community, Environment, and Customers. Posit\'s assessment results are available to the public #mark()[#underline[here];]
+. We completed our first Impact Assessment in 2019 and earned an overall score of #strong[86.1.] We are proud to report that our latest score from our recertification process in 2023, is #strong[92.5];. To put this in context, the threshold for B Lab certification is a score of 80 or higher, and the median score for ordinary businesses who take the assessment is 50.9.
 
 #colbreak()
 Posit seeks to continually improve our internal governance, increase our workforce diversity and employee development efforts, expand our stewardship of the environment, deepen our engagement in our communities, and better serve our customers so that our public benefit will continue to improve each year.
@@ -468,7 +478,9 @@ Shiny has been a mainstay in the R community since its launch in 2012, providing
 
 Shiny applications can be shared with others via an open-source #link("https://posit.co/products/open-source/shinyserver/")[#underline[Shiny Server];];, the hosted #link("http://shinyapps.io")[#underline[shinyapps.io];] service, or with #link("https://posit.co/products/enterprise/connect/")[#underline[Posit Connect];];. Shiny and related packages include shiny (#link("https://shiny.posit.co/py/")[#underline[Python];];, #link("https://shiny.posit.co/r/getstarted")[#underline[R];];), #link("https://rstudio.github.io/bslib/")[#underline[bslib];];, #link("https://rstudio.github.io/shinytest/")[#underline[shinytest];];, #link("https://rstudio.github.io/shinyloadtest/")[#underline[shinyloadtest];];, #link("https://rstudio.github.io/shinydashboard/")[#underline[shinydashboard];];, #link("https://rstudio.github.io/leaflet/")[#underline[leaflet];];, and #link("https://rstudio.github.io/crosstalk/")[#underline[crosstalk];];.
 
-There are 7 full time equivalent (FTE) employees developing the open-source Shiny and Shiny Server products as of December 2021.
+There are #mark()[7 full time equivalent (FTE)]
+employees developing the open-source Shiny and Shiny Server products as of #mark()[December 2021]
+.
 
 #box(image("pbc-report_files/figure-typst/unnamed-chunk-3-1.svg"))
 
@@ -524,7 +536,9 @@ To that end, the #link("https://gt.rstudio.com/")[#underline[gt];] and #link("ht
 <rstudio-integrated-development-environment>
 #link("https://posit.co/products/open-source/rstudio/")[#underline[RStudio];] is a multi-language IDE designed for Data Science with R and Python. It augments the standard code console with an editor that can display Notebooks, launch apps, highlight code syntax, spot code errors, and directly execute code. Built into the IDE are tools for debugging, plotting, browsing files, and managing project histories and workspaces. Together these tools make data scientists and developers much more efficient.
 
-There are 5 full time equivalent (FTE) employees developing the RStudio IDE open-source desktop and server products as of December 2023.
+There are #mark()[5 full time equivalent (FTE) employees]
+developing the RStudio IDE open-source desktop and server products as of #mark()[December 2023]
+.
 
 #box(image("pbc-report_files/figure-typst/unnamed-chunk-8-1.svg"))
 
@@ -532,7 +546,9 @@ There are 5 full time equivalent (FTE) employees developing the RStudio IDE open
 <tidyverse>
 The #link("https://www.tidyverse.org/")[#underline[tidyverse];] is an opinionated collection of R packages designed for data science. All packages share an underlying design philosophy, grammar and data structures.
 
-The tidyverse consists of nine core packages (including ggplot2, tidyr and readr) and 31 packages overall. There are approximately 6.5 full time equivalent Posit employees developing Tidyverse and related open-source products as of December 2023.
+The tidyverse consists of nine core packages (including ggplot2, tidyr and readr) and 31 packages overall. There are approximately #mark()[6.5 full time equivalent]
+Posit employees developing Tidyverse and related open-source products as of #mark()[December 2023]
+.
 
 #box(image("pbc-report_files/figure-typst/unnamed-chunk-9-1.svg"))
 
@@ -542,7 +558,8 @@ The tidyverse consists of nine core packages (including ggplot2, tidyr and readr
 
 There are currently 42 tidymodels packages on CRAN. Popular tidymodels packages include parsnip, rsample, recipes, tune and yardstick.
 
-There are 3.5 full time equivalent (FTE) Posit employees developing Tidymodels and related open-source products as of December 2023
+There are #mark()[3.5 full time equivalent (FTE)]
+Posit employees developing Tidymodels and related open-source products as of #mark()[December 2023]
 
 #box(image("pbc-report_files/figure-typst/unnamed-chunk-10-1.svg"))
 
@@ -551,7 +568,9 @@ There are 3.5 full time equivalent (FTE) Posit employees developing Tidymodels a
 Posit increases the efficiency of customers by making open-source packages that connect data scientists to spreadsheets, databases, distributed storage frameworks for big data, machine learning platforms, and the programming environments of other languages, like python.
 
 Connectivity packages include: #link("https://spark.posit.co/")[#underline[sparklyr];];, #link("https://tensorflow.rstudio.com/")[#underline[tensorflow for R];];, #link("https://keras.posit.co/")[#underline[keras];];, #link("https://solutions.posit.co/connections/db/r-packages/odbc/")[#underline[odbc];];, and #link("https://rstudio.github.io/reticulate/")[#underline[reticulate];];. \
-There are 4 full time equivalent Posit-funded developers creating connectivity-related open-source packages as of December 2021.
+There are #mark()[4 full time equivalent Posit-funded developers]
+creating connectivity-related open-source packages as of #mark()[December 2021]
+.
 
 #box(image("pbc-report_files/figure-typst/unnamed-chunk-11-1.svg"))
 
@@ -559,9 +578,12 @@ There are 4 full time equivalent Posit-funded developers creating connectivity-r
 <r-infrastructure-tools-r-lib>
 R-lib is a large collection of R packages that make it easier to build, find, and use effective tools for data analysis.
 
-There are currently 111 R-lib packages. Popular packages include #link("https://devtools.r-lib.org/")[#underline[devtools];];, #link("https://testthat.r-lib.org/")[#underline[testthat];];, #link("https://roxygen2.r-lib.org/")[#underline[roxygen2];];, #link("https://pkgdown.r-lib.org/")[#underline[pkgdown];] and #link("https://usethis.r-lib.org/")[#underline[usethis];];.
+There are currently #mark()[111]
+R-lib packages. Popular packages include #link("https://devtools.r-lib.org/")[#underline[devtools];];, #link("https://testthat.r-lib.org/")[#underline[testthat];];, #link("https://roxygen2.r-lib.org/")[#underline[roxygen2];];, #link("https://pkgdown.r-lib.org/")[#underline[pkgdown];] and #link("https://usethis.r-lib.org/")[#underline[usethis];];.
 
-There are 2 full time equivalent (FTE) Posit employees developing r-lib and related open-source packages as of December 2023.
+There are #mark()[2 full time equivalent (FTE)]
+Posit employees developing r-lib and related open-source packages as of #mark()[December 2023]
+.
 
 #box(image("pbc-report_files/figure-typst/unnamed-chunk-12-1.svg"))
 
@@ -598,7 +620,7 @@ We have made significant strides in our Worker assessment category since 2019, w
 #conclusion()[
 = Conclusion
 <conclusion>
-Duis ornare ex ac iaculis pretium. Maecenas sagittis odio id erat pharetra, sit amet consectetur quam sollicitudin. Vivamus pharetra quam purus, nec sagittis risus pretium at. Nullam feugiat, turpis ac accumsan interdum, sem tellus blandit neque, id vulputate diam quam semper nisl. Donec sit amet enim at neque porttitor aliquet. Phasellus facilisis nulla eget placerat eleifend. Vestibulum non egestas eros, eget lobortis ipsum. Nulla rutrum massa eget enim aliquam, id porttitor erat luctus. Nunc sagittis quis eros eu sagittis. Pellentesque dictum, erat at pellentesque sollicitudin, justo augue pulvinar metus, quis rutrum est mi nec felis. Vestibulum efficitur mi lorem, at elementum purus tincidunt a. Aliquam finibus enim magna, vitae pellentesque erat faucibus at. Nulla mauris tellus, imperdiet id lobortis et, dignissim condimentum ipsum. Morbi nulla orci, varius at aliquet sed, facilisis id tortor. Donec ut urna nisi.
+Praesent ornare dolor turpis, sed tincidunt nisl pretium eget. Curabitur sed iaculis ex, vitae tristique sapien. Quisque nec ex dolor. Quisque ut nisl a libero egestas molestie. Nulla vel porta nulla. Phasellus id pretium arcu. Etiam sed mi pellentesque nibh scelerisque elementum sed at urna. Ut congue molestie nibh, sit amet pretium ligula consectetur eu. Integer consectetur augue justo, at placerat erat posuere at. Ut elementum urna lectus, vitae bibendum neque pulvinar quis. Suspendisse vulputate cursus eros id maximus. Duis pulvinar facilisis massa, et condimentum est viverra congue. Curabitur ornare convallis nisl. Morbi dictum scelerisque turpis quis pellentesque. Etiam lectus risus, luctus lobortis risus ut, rutrum vulputate justo. Nulla facilisi.
 
 ]
 #back_page()[

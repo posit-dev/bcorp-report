@@ -104,7 +104,9 @@
       ]
 }
 
-
+#let mark(content) = {
+  box(fill: yellow, content)
+}
 
 #let posit(
   title: none,

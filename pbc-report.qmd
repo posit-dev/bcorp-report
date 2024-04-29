@@ -10,6 +10,7 @@ format:
       - typst-show.typ
     filters: 
       - posit.lua
+      - mark.lua
   html: 
     shift-heading-level-by: 1
 shortcodes:
