@@ -15,7 +15,48 @@ format:
 shortcodes:
   - colbreak.lua
 keep-typ: true
+execute:
+  echo: false
 ---
+
+```{r}
+#| label: setup
+#| include: false
+library(ggplot2)
+library(tidyverse)
+library(here)
+
+pydf <- read.csv(here("data", "pypi_stats.csv"), col.names = c("date", "downloads", "pkg"))
+rdf <- read.csv(here("data","rpkgs.csv"), col.names = c("date", "downloads", "pkg"))
+tidyvdf <- read.csv(here("data","tidyverse_pkgs.csv"), col.names = c("date", "downloads", "pkg"))
+tidymdf <- read.csv(here("data", "tidymodels_pkgs.csv"), col.names = c("date", "downloads", "pkg"))
+rlibdf <- read.csv(here("data","rlib_pkgs.csv"), col.names = c("date", "downloads", "pkg"))
+rcondf <- read.csv(here("data","rcon_pkgs.csv"), col.names = c("date", "downloads", "pkg"))
+
+rstudiodf <- read.csv(here("data","rstudio_os_dls.csv"), col.names = c("date", "downloads"))
+rstudiodf$pkg <- "RStudio"
+
+quarto_rstudio_dls <- read.csv(here("data", "quarto_rstudio_dls.csv"), col.names = c("date", "downloads"))
+quarto_rstudio_dls$pkg <- "quarto"
+
+quarto_gh_dls <- read.csv(here("data", "quarto_gh_downloads.csv"), col.names = c("date", "name", "downloads"))
+quarto_gh_dls$date <- as.character(as.Date(quarto_gh_dls$date))
+
+singlepltfunc <- function(df, package) { 
+  return(
+    df %>% 
+    filter(pkg == package) %>%
+    ggplot(aes(x=as.Date(date), y=cumsum(as.numeric(downloads)))) + 
+    geom_line() +  
+    scale_x_date(labels=scales::label_date_short()) + 
+    scale_y_continuous(labels = scales::comma) +
+    xlab("Date") + 
+    ylab("Cumulative Downloads") + 
+    ggtitle(package) + 
+    theme_minimal() 
+  )
+}
+```
 
 ::: {.page-blue}
 
@@ -298,8 +339,6 @@ gained points in the areas listed below.
                    Financial Security        58%
   -----------------------------------------------------------------------
 
-### 
-
 ::: {.cols-2}
 
 ### COMMUNITY
@@ -326,8 +365,6 @@ community. Where metrics are published, please note these represent a
 *lower bound* on the actual number, as it is difficult-to-impossible to
 account for every install and usage in the world.
 
-#### 
-
 #### Quarto
 
 In July 2022, [[Posit
@@ -352,7 +389,37 @@ the
 [[quartodoc]{.underline}](https://machow.github.io/quartodoc/get-started/overview.html)
 project for developing API documentation.
 
-\<show download growth graph\>
+```{r}
+#| label: quarto
+quarto_rstudio_by_version <- quarto_rstudio_dls %>% 
+  summarise(downloads = sum(downloads)) %>%
+  mutate(minor_version = "0.9")
+
+quarto_by_version <- quarto_gh_dls %>% 
+  filter(!str_detect(name, "changelog"), !str_detect(name, "checksums")) %>%
+  mutate(
+    version = str_extract(name, "[01]\\.[0-9]\\.[0-9]+"),
+    minor_version = str_extract(version, "[01]\\.[0-9]")
+  ) %>% 
+  bind_rows(quarto_rstudio_by_version) %>%
+  group_by(minor_version) %>%
+  summarise(
+    total = sum(downloads),
+    min_date = min(as.Date(date)),
+    max_date = max(as.Date(date))
+  ) %>%
+  mutate(minor_version = if_else(minor_version == 1.5, "1.5\nPre-release", minor_version))
+
+quarto_by_version %>%
+  ggplot(aes(minor_version, cumsum(total))) +
+    geom_line(aes(group = 1)) + 
+    scale_y_continuous(labels = scales::comma) +
+    xlab("Minor Version") +
+    ylab("Cumulative Downloads") +
+    ggtitle("Quarto") + 
+    theme_minimal()
+    
+```
 
 #### Shiny
 
@@ -381,7 +448,11 @@ There are [7 full time equivalent (FTE)]{.mark} employees developing the
 open-source Shiny and Shiny Server products as of [December
 2021]{.mark}.
 
-\<show stacked download growth graph for R and Python\>
+```{r}
+#TODO: should we stack these into a single graph?
+singlepltfunc(pydf, "shiny")
+singlepltfunc(rdf, "shiny")
+```
 
 #### Posit Public Package Manager
 
@@ -415,7 +486,12 @@ packages have defined a "grammar of tables" to solve this problem (in R
 and Python, respectively), analogous to the "grammar of graphics" for
 specifying charts.
 
-\<show stacked download growth graph for R and Python\>
+```{r}
+#TODO: stack these into a single graph? clean up x axis date range
+singlepltfunc(pydf, "great_tables")
+singlepltfunc(rdf, "gt")
+```
+
 
 #### Vetiver
 
@@ -426,7 +502,12 @@ via generics that support many common types of models. Vetiver also
 provides the "model cards" functionality, which can help to generate
 documentation by extracting some information about the generated model.
 
-\<show stacked download growth graph for R and Python\>
+```{r}
+#TODO: stack these into a single graph? clean up x axis date range
+singlepltfunc(pydf, "vetiver")
+singlepltfunc(rdf, "vetiver")
+```
+
 
 #### webR
 
@@ -448,7 +529,10 @@ Built upon the ubiquitous
 custom (and otherwise complex) plots are easy to reason about and build
 incrementally, while the simple plots remain simple to create.
 
-\<show download growth graph\>
+```{r}
+singlepltfunc(pydf, "plotnine")
+```
+
 
 #### Siuba
 
@@ -459,7 +543,9 @@ select, mutate and summarize. Siuba supports several backends including
 pandas, [[DuckDB]{.underline}](https://duckdb.org/) and SQL, providing a
 "write once, run many" freedom for your analytics code.
 
-\<show download growth graph\>
+```{r}
+singlepltfunc(pydf, "siuba")
+```
 
 #### RStudio Integrated Development Environment
 
@@ -476,7 +562,9 @@ There are [5 full time equivalent (FTE) employees]{.mark} developing the
 RStudio IDE open-source desktop and server products as of [December
 2023]{.mark}.
 
-\<show download growth graph\>
+```{r}
+singlepltfunc(rstudiodf, "RStudio")
+```
 
 #### Tidyverse
 
@@ -490,7 +578,14 @@ and readr) and 31 packages overall. There are approximately [6.5 full
 time equivalent]{.mark} Posit employees developing Tidyverse and related
 open-source products as of [December 2023]{.mark}.
 
-\<show cumulative downloads graph\>
+```{r}
+tidyvdf %>% 
+  group_by(date) %>% 
+  summarise(downloads = sum(downloads)) -> tidyvdf
+tidyvdf$pkg <- "Tidyverse"
+  
+singlepltfunc(tidyvdf, "Tidyverse")
+```
 
 #### Tidymodels
 
@@ -507,7 +602,14 @@ There are [3.5 full time equivalent (FTE)]{.mark} Posit employees
 developing Tidymodels and related open-source products as of [December
 2023]{.mark}
 
-\<show cumulative downloads graph\>
+```{r}
+tidymdf %>% 
+  group_by(date) %>% 
+  summarise(downloads = sum(downloads)) -> tidymdf
+tidymdf$pkg <- "Tidymodels"
+  
+singlepltfunc(tidymdf, "Tidymodels")
+```
 
 #### Connectivity Packages 
 
@@ -526,7 +628,14 @@ There are [4 full time equivalent Posit-funded developers]{.mark}
 creating connectivity-related open-source packages as of [December
 2021]{.mark}.
 
-\<show cumulative downloads graph\>
+```{r}
+rcondf %>% 
+  group_by(date) %>% 
+  summarise(downloads = sum(downloads)) -> rcondf
+rcondf$pkg <- "R Connectivity"
+  
+singlepltfunc(rcondf, "R Connectivity")
+```
 
 #### R Infrastructure Tools (r-lib)
 
@@ -544,7 +653,15 @@ There are [2 full time equivalent (FTE)]{.mark} Posit employees
 developing r-lib and related open-source packages as of [December
 2023]{.mark}.
 
-\<show cumulative downloads graph\>
+```{r}
+rlibdf %>% 
+  group_by(date) %>% 
+  summarise(downloads = sum(downloads)) -> rlibdf
+rlibdf$pkg <- "R-Lib"
+  
+singlepltfunc(rlibdf, "R-Lib")
+```
+
 
 #### Civic Engagement and Giving
 
