@@ -485,6 +485,7 @@ open-source Shiny and Shiny Server products as of [December
 :::
 
 ```{r}
+#| label: shiny
 #| fig-height: 2.75
 singlepltfunc(pydf, "shiny") + ggtitle("Shiny for Python")
 singlepltfunc(rdf, "shiny") + ggtitle("Shiny for R")
@@ -513,6 +514,7 @@ specifying charts.
 :::
 
 ```{r}
+#| label: gt
 #TODO: stack these into a single graph? clean up x axis date range
 singlepltfunc(pydf, "great_tables")
 singlepltfunc(rdf, "gt")
@@ -535,6 +537,7 @@ documentation by extracting some information about the generated model.
 ::: 
 
 ```{r}
+#| label: vetiver
 #TODO: stack these into a single graph? clean up x axis date range
 singlepltfunc(pydf, "vetiver") + ggtitle("vetiver for Python")
 singlepltfunc(rdf, "vetiver") + ggtitle("vetiver for R")
@@ -598,6 +601,7 @@ incrementally, while the simple plots remain simple to create.
 :::
 
 ```{r}
+#| label: plotnine
 singlepltfunc(pydf, "plotnine")
 ```
 
@@ -616,6 +620,7 @@ pandas, [[DuckDB]{.underline}](https://duckdb.org/) and SQL, providing a
 ::: 
 
 ```{r}
+#| label: siuba
 singlepltfunc(pydf, "siuba")
 ```
 
@@ -643,6 +648,7 @@ RStudio IDE open-source desktop and server products as of [December
 :::
 
 ```{r}
+#| label: rstudio
 singlepltfunc(rstudiodf, "RStudio")
 ```
 
@@ -669,6 +675,7 @@ open-source products as of [December 2023]{.mark}.
 :::
 
 ```{r}
+#| label: tidyverse
 tidyvdf %>% 
   group_by(date) %>% 
   summarise(downloads = sum(downloads)) -> tidyvdf
@@ -702,6 +709,7 @@ developing Tidymodels and related open-source products as of [December
 :::
 
 ```{r}
+#| label: tidymodels
 tidymdf %>% 
   group_by(date) %>% 
   summarise(downloads = sum(downloads)) -> tidymdf
@@ -736,6 +744,7 @@ creating connectivity-related open-source packages as of [December
 :::
 
 ```{r}
+#| label: connectivity
 rcondf %>% 
   group_by(date) %>% 
   summarise(downloads = sum(downloads)) -> rcondf
@@ -769,6 +778,7 @@ developing r-lib and related open-source packages as of [December
 :::
 
 ```{r}
+#| label: rlibs
 rlibdf %>% 
   group_by(date) %>% 
   summarise(downloads = sum(downloads)) -> rlibdf

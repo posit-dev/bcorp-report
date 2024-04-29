@@ -485,10 +485,10 @@ employees developing the open-source Shiny and Shiny Server products as of #high
 .
 
 ]
-#box(image("pbc-report_files/figure-typst/unnamed-chunk-3-1.svg"))
+#box(image("pbc-report_files/figure-typst/shiny-1.svg"))
 
 #block[
-#box(image("pbc-report_files/figure-typst/unnamed-chunk-3-2.svg"))
+#box(image("pbc-report_files/figure-typst/shiny-2.svg"))
 
 ]
 #pagebreak()
@@ -501,10 +501,10 @@ When presenting an analysis, a table can often convey the results more concisely
 To that end, the #link("https://gt.rstudio.com/")[#underline[gt];] and #link("https://posit-dev.github.io/great-tables/articles/intro.html")[#underline[Great Tables];] packages have defined a "grammar of tables" to solve this problem (in R and Python, respectively), analogous to the "grammar of graphics" for specifying charts.
 
 ]
-#box(image("pbc-report_files/figure-typst/unnamed-chunk-4-1.svg"))
+#box(image("pbc-report_files/figure-typst/gt-1.svg"))
 
 #block[
-#box(image("pbc-report_files/figure-typst/unnamed-chunk-4-2.svg"))
+#box(image("pbc-report_files/figure-typst/gt-2.svg"))
 
 ]
 #pagebreak()
@@ -514,10 +514,10 @@ To that end, the #link("https://gt.rstudio.com/")[#underline[gt];] and #link("ht
 #link("https://vetiver.posit.co/")[#underline[Vetiver];] solves the issues around versioning, sharing, deploying and monitoring predictive models served via APIs. Available for both R and Python, vetiver is extensible via generics that support many common types of models. #colbreak() Vetiver also provides the "model cards" functionality, which can help to generate documentation by extracting some information about the generated model.
 
 ]
-#box(image("pbc-report_files/figure-typst/unnamed-chunk-5-1.svg"))
+#box(image("pbc-report_files/figure-typst/vetiver-1.svg"))
 
 #block[
-#box(image("pbc-report_files/figure-typst/unnamed-chunk-5-2.svg"))
+#box(image("pbc-report_files/figure-typst/vetiver-2.svg"))
 
 ]
 #pagebreak()
@@ -543,7 +543,7 @@ As part of our commitment to improving the quality and availability of open sour
 #link("https://plotnine.org/")[#underline[Plotnine];] is an implementation of the grammar of graphics in Python, heavily influenced by ggplot2 in R. Built upon the ubiquitous #link("https://matplotlib.org/")[#underline[matplotlib];] plotting library, #colbreak() custom (and otherwise complex) plots are easy to reason about and build incrementally, while the simple plots remain simple to create.
 
 ]
-#box(image("pbc-report_files/figure-typst/unnamed-chunk-6-1.svg"))
+#box(image("pbc-report_files/figure-typst/plotnine-1.svg"))
 
 ==== Siuba
 <siuba>
@@ -551,7 +551,7 @@ As part of our commitment to improving the quality and availability of open sour
 #link("https://siuba.org/")[#underline[Siuba];] is a port of dplyr and other R libraries. It’s aim is to make data science faster through a consistent interface of verbs for working with real-world data: filter, arrange, select, mutate and summarize. #colbreak() Siuba supports several backends including pandas, #link("https://duckdb.org/")[#underline[DuckDB];] and SQL, providing a "write once, run many" freedom for your analytics code.
 
 ]
-#box(image("pbc-report_files/figure-typst/unnamed-chunk-7-1.svg"))
+#box(image("pbc-report_files/figure-typst/siuba-1.svg"))
 
 #pagebreak()
 ==== RStudio Integrated Development Environment
@@ -565,7 +565,7 @@ developing the RStudio IDE open-source desktop and server products as of #highli
 .
 
 ]
-#box(image("pbc-report_files/figure-typst/unnamed-chunk-8-1.svg"))
+#box(image("pbc-report_files/figure-typst/rstudio-1.svg"))
 
 #pagebreak()
 ==== Tidyverse
@@ -581,7 +581,7 @@ Posit employees developing Tidyverse and related open-source products as of #hig
 .
 
 ]
-#box(image("pbc-report_files/figure-typst/unnamed-chunk-9-1.svg"))
+#box(image("pbc-report_files/figure-typst/tidyverse-1.svg"))
 
 #pagebreak()
 ==== Tidymodels
@@ -596,7 +596,7 @@ There are #highlight()[3.5 full time equivalent (FTE)]
 Posit employees developing Tidymodels and related open-source products as of #highlight()[December 2023]
 
 ]
-#box(image("pbc-report_files/figure-typst/unnamed-chunk-10-1.svg"))
+#box(image("pbc-report_files/figure-typst/tidymodels-1.svg"))
 
 #pagebreak()
 ==== Connectivity Packages
@@ -611,7 +611,7 @@ creating connectivity-related open-source packages as of #highlight()[December 2
 .
 
 ]
-#box(image("pbc-report_files/figure-typst/unnamed-chunk-11-1.svg"))
+#box(image("pbc-report_files/figure-typst/connectivity-1.svg"))
 
 #pagebreak()
 ==== R Infrastructure Tools (r-lib)
@@ -628,7 +628,7 @@ Posit employees developing r-lib and related open-source packages as of #highlig
 .
 
 ]
-#box(image("pbc-report_files/figure-typst/unnamed-chunk-12-1.svg"))
+#box(image("pbc-report_files/figure-typst/rlibs-1.svg"))
 
 #pagebreak()
 #col-2()[
@@ -664,7 +664,7 @@ We have made significant strides in our Worker assessment category since 2019, w
 #conclusion()[
 = Conclusion
 <conclusion>
-Proin sodales neque erat, varius cursus diam tincidunt sit amet. Etiam scelerisque fringilla nisl eu venenatis. Donec sem ipsum, scelerisque ac venenatis quis, hendrerit vel mauris. Praesent semper erat sit amet purus condimentum, sit amet auctor mi feugiat. In hac habitasse platea dictumst. Nunc ac mauris in massa feugiat bibendum id in dui. Praesent accumsan urna at lacinia aliquet. Proin ultricies eu est quis pellentesque. In vel lorem at nisl rhoncus cursus eu quis mi. In eu rutrum ante, quis placerat justo. Etiam euismod nibh nibh, sed elementum nunc imperdiet in. Praesent gravida nunc vel odio lacinia, at tempus nisl placerat. Aenean id ipsum sed est sagittis hendrerit non in tortor.
+Nulla eget cursus ipsum. Vivamus porttitor leo diam, sed volutpat lectus facilisis sit amet. Maecenas et pulvinar metus. Ut at dignissim tellus. In in tincidunt elit. Etiam vulputate lobortis arcu, vel faucibus leo lobortis ac. Aliquam erat volutpat. In interdum orci ac est euismod euismod. Nunc eleifend tristique risus, at lacinia odio commodo in. Sed aliquet ligula odio, sed tempor neque ultricies sit amet.
 
 ]
 #back_page()[
