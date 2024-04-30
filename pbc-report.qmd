@@ -30,6 +30,7 @@ library(tidyverse)
 library(here)
 library(thematic)
 library(ragg)
+library(showtext)
 
 posit_colors <- list(
   blue = "#447099",
