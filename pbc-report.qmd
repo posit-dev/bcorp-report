@@ -228,8 +228,9 @@ What makes a PBC different from other types of corporations?
 > *"A 'public benefit corporation' is a for-profit corporation organized
 > under and subject to the requirements of this chapter that is intended
 > to produce a public benefit or public benefits and to operate in a
-> responsible and sustainable manner.\"* 
-> --- [Delaware Public Benefit Corporations Laws](https://delcode.delaware.gov/title8/c001/sc15/)
+> responsible and sustainable manner."* 
+> --- [[Delaware Public Benefit Corporations
+> Law]{.underline}](https://delcode.delaware.gov/title8/c001/sc15/)
 
 As a PBC and Certified B Corporation, we must meet the highest verified
 standards of social and environmental performance, transparency, and
@@ -359,7 +360,7 @@ gained points in the areas listed below.
 
 ::: {.cols-2}
 
-### COMMUNITY
+### Community
 
 #### Open Source Development 
 
@@ -829,7 +830,7 @@ percentages of women and those with minority racial or ethnic identities
 in both management and the employee population as a whole -- and our
 recent assessment results reflect these gains.
 
-### CUSTOMERS
+### Customers
 
 We have made meaningful improvements in our care for customers in the
 past few years -- particularly in our standards for managing customer
@@ -839,7 +840,7 @@ audits and train all employees on the essentials of guarding customer
 data. These changes have increased our assessment performance by 28%
 since 2019.
 
-### ENVIRONMENT
+### Environment
 
 We are happy to share that our assessment scores for Air and Climate
 impacts have improved by 75% since 2019. In November 2020, Posit
@@ -851,7 +852,7 @@ By offsetting this impact through the funding of reforestation work in
 both South America and closer to home in Massachusetts, we hope to
 neutralize Posit's potential damage to our planet.
 
-### GOVERNANCE
+### Governance
 
 A company's positive governance impact is measured by the extent to
 which the company is accountable to stakeholders, and the extent to
@@ -871,7 +872,7 @@ corporate reporting, including board meeting updates, so that all of our
 stakeholders are aware of our ongoing progress and can help support our
 success.
 
-### WORKERS
+### Workers
 
 We have made significant strides in our Worker assessment category since
 2019, with scores increasing by 50% or more in areas such as career

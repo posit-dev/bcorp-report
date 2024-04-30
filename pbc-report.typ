@@ -366,7 +366,7 @@ We want Posit to serve a meaningful public purpose, and we run the company for t
 What makes a PBC different from other types of corporations?
 
 #quote(block: true)[
-#emph[“A 'public benefit corporation' is a for-profit corporation organized under and subject to the requirements of this chapter that is intended to produce a public benefit or public benefits and to operate in a responsible and sustainable manner.\"] — #link("https://delcode.delaware.gov/title8/c001/sc15/")[Delaware Public Benefit Corporations Laws]
+#emph["A 'public benefit corporation' is a for-profit corporation organized under and subject to the requirements of this chapter that is intended to produce a public benefit or public benefits and to operate in a responsible and sustainable manner."] — #link("https://delcode.delaware.gov/title8/c001/sc15/")[#underline[Delaware Public Benefit Corporations Law];]
 ]
 
 As a PBC and Certified B Corporation, we must meet the highest verified standards of social and environmental performance, transparency, and accountability. Our directors and officers have a fiduciary responsibility to address social, economic, and environmental needs while still overseeing our business goals.
@@ -450,7 +450,7 @@ The B Lab’s Impact assessment standards have evolved since 2019 (we are now on
   )
 
 #col-2()[
-=== COMMUNITY
+=== Community
 <community>
 ==== Open Source Development
 <open-source-development>
@@ -642,21 +642,21 @@ Posit’s financial support also extends beyond the world of open source data sc
 <diversity-equity-and-inclusion>
 Since our initial B Lab assessment in 2019, Posit has continued to focus on increasing the strength of our team by utilizing talent practices that encourage diverse people to apply, join, and thrive at Posit. Specific changes made in recent years include the formation of a diversity, equity, inclusion, and accessibility council (DEIA Council), as well as the sponsoring of employee resource groups (ERG’s). We report our progress on our diversity metrics, as defined in the B Lab Assessment, in each quarter’s board meeting. We also pay close attention to issues of equity in compensation, hiring and interviewing, and employee experience. Our efforts to date have yielded increases in the percentages of women and those with minority racial or ethnic identities in both management and the employee population as a whole – and our recent assessment results reflect these gains.
 
-=== CUSTOMERS
+=== Customers
 <customers>
 We have made meaningful improvements in our care for customers in the past few years – particularly in our standards for managing customer data and privacy. Since 2019, we have formalized our approach to data privacy and compliance – we now conduct thorough internal and external audits and train all employees on the essentials of guarding customer data. These changes have increased our assessment performance by 28% since 2019.
 
-=== ENVIRONMENT
+=== Environment
 <environment>
 We are happy to share that our assessment scores for Air and Climate impacts have improved by 75% since 2019. In November 2020, Posit achieved carbon neutrality by purchasing carbon offsets that counter the environmental impact of business travel (primarily for our annual conference and internal meetings). As a remote-first organization, we do not generate meaningful greenhouse gas emissions outside of air travel. By offsetting this impact through the funding of reforestation work in both South America and closer to home in Massachusetts, we hope to neutralize Posit’s potential damage to our planet.
 
-=== GOVERNANCE
+=== Governance
 <governance>
 A company’s positive governance impact is measured by the extent to which the company is accountable to stakeholders, and the extent to which its decision-making is transparent to all constituents. In 2019, RStudio scored 16.1 points out of a possible 21.9+ points in the Governance Impact Area, including 10 points awarded for the specific legal structures we have established as a Benefit Corporation that preserve our mission and consider our stakeholders regardless of company ownership.
 
 In our latest assessment, our governance score improved by 37% via improvements in ethics and transparency areas, including anti-corruption and code of ethics training for employees, and more rigorous financial controls and financial transparency with employees. Looking ahead, we plan to incorporate more social and community benefit metrics in our corporate reporting, including board meeting updates, so that all of our stakeholders are aware of our ongoing progress and can help support our success.
 
-=== WORKERS
+=== Workers
 <workers>
 We have made significant strides in our Worker assessment category since 2019, with scores increasing by 50% or more in areas such as career development, engagement and satisfaction, and financial security for our employees. Investments in employee career development include in-house management training programs, tooling and education to support constructive feedback, and documentation of job levels, pay ranges, and career paths within our major functions. In 2021, we initiated an annual organizational health survey, which allows us to collect and respond to employee feedback. We have also augmented our benefits to include a "lifestyle savings account" (LSA) funded by Posit that each individual can choose to apply to home office, professional development, wellness, or financial health expenses as they see fit. All together, we are working to continuously improve the value offered to our workers as our company grows.
 
@@ -664,7 +664,7 @@ We have made significant strides in our Worker assessment category since 2019, w
 #conclusion()[
 = Conclusion
 <conclusion>
-Nulla eget cursus ipsum. Vivamus porttitor leo diam, sed volutpat lectus facilisis sit amet. Maecenas et pulvinar metus. Ut at dignissim tellus. In in tincidunt elit. Etiam vulputate lobortis arcu, vel faucibus leo lobortis ac. Aliquam erat volutpat. In interdum orci ac est euismod euismod. Nunc eleifend tristique risus, at lacinia odio commodo in. Sed aliquet ligula odio, sed tempor neque ultricies sit amet.
+Nullam dapibus cursus dolor sit amet consequat. Nulla facilisi. Curabitur vel nulla non magna lacinia tincidunt. Duis porttitor quam leo, et blandit velit efficitur ut. Etiam auctor tincidunt porttitor. Phasellus sed accumsan mi. Fusce ut erat dui. Suspendisse eu augue eget turpis condimentum finibus eu non lorem. Donec finibus eros eu ante condimentum, sed pharetra sapien sagittis. Phasellus non dolor ac ante mollis auctor nec et sapien. Pellentesque vulputate at nisi eu tincidunt. Vestibulum at dolor aliquam, hendrerit purus eu, eleifend massa. Morbi consectetur eros id tincidunt gravida. Fusce ut enim quis orci hendrerit lacinia sed vitae enim.
 
 ]
 #back_page()[
