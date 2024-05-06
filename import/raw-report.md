@@ -1,14 +1,13 @@
 # A Message from our CEO
 
-Posit endeavors to create free and open-source software for data
-science, scientific research, and technical communication in a
-sustainable way, because it benefits everyone when the essential tools
-to produce and consume knowledge are available to all, regardless of
-economic means.
+Posit aims to create free and open-source software for data science,
+scientific research, and technical communication in a sustainable way,
+because it benefits everyone when the essential tools to produce and
+consume knowledge are available to all, regardless of economic means.
 
 We believe corporations should fulfill a purposeful benefit to the
 public and be run for the benefit of all stakeholders including
-employees, customers, and the larger community .
+employees, customers, and the larger community.
 
 As a Delaware Public Benefit Corporation (PBC) and a Certified B
 Corporation®, Posit's open-source mission and commitment to a beneficial
@@ -28,12 +27,17 @@ and we are proud to share that our B Lab Impact Assessment score rose
 from 86.1 to 92.5 with this renewal. The B Lab certification process
 uses credible, comprehensive, transparent, and independent standards to
 measure social and environmental performance. Details of these
-assessments can be found at [\[web link\]]{.mark}.
+assessments can be found on our [[B Lab company
+page]{.underline}](https://www.bcorporation.net/en-us/find-a-b-corp/company/rstudio/).
 
 As a PBC, Posit publishes a report at least once every two years
 describing the public benefit we have created and how we seek to provide
-public benefits in the future. This is the fourth of these reports.
-Previously published reports are available at [\[here\]]{.mark}.
+public benefits in the future. This is the fourth of these reports. The
+first report for 2019 [[may be found
+here]{.underline}](https://posit.co/wp-content/uploads/2022/11/RStudio-Benefit-Corporation-2019-Annual-Report.pdf).
+The second report for 2020 [[may be found
+here]{.underline}](https://posit.co/wp-content/uploads/2022/11/RStudio-Benefit-Corporation-2020-Annual-Report.pdf),
+and our 2021 report may be found here.
 
 To fulfill its beneficial purposes, Posit intends to remain an
 independent company over the long term. With the support of our
@@ -91,11 +95,12 @@ manipulation, exploration and visualization, modeling, and machine
 learning; and integration with external data sources. Posit also
 sponsors or contributes to many open-source and community projects led
 by others, including NumFOCUS, the R Consortium, the Python Software
-Foundation, DuckDB, Pandoc, pyodide, and prose mirror, as well as dozens
+Foundation, DuckDB, Pandoc, pyodide, and ProseMirror, as well as dozens
 of smaller projects via the Open Source Collective or directly on
 Github. Additional information about our products and company
-contributions for the past two years can be found in our [\"Year In
-Review\'\' blog posts]{.underline}. [\[available here\]]{.mark}.
+contributions for the past two years can be found in our [[\"Year In
+Review\'\' blog
+posts]{.underline}](https://posit.co/blog/2023-posit-year-in-review/#:~:text=Posit%20Package%20Manager&text=This%20year%2C%20Package%20Manager%20enabled,R%20Application%20Network%20(MRAN).).
 
 Today, millions of people download and use Posit open-source products in
 their daily lives. Additionally, more than [\[how many paying
@@ -105,7 +110,7 @@ so many people participate in global economies that increasingly reward
 data literacy, and know that our tools help produce insights essential
 to navigating our complex world.
 
-# Posit\'s Statement of Public Benefit and B Lab® Impact Assessment Results
+# Posit\'s Charter and Statement of Public Benefit
 
 ## Posit\'s Charter
 
@@ -176,72 +181,13 @@ research, and technical communication:
 |     the corporation's conduct.    |                                   |
 +-----------------------------------+-----------------------------------+
 
-## Posit\'s B Lab Impact Assessment Results
+# Posit's Open Source Development Projects
 
-The BLab Impact Assessment is composed of questions in five Impact
-Areas: Governance, Workers, Community, Environment, and Customers.
-Posit\'s assessment results are available to the public
-[[here]{.underline}]{.mark}. We completed our first Impact Assessment in
-2019 and earned an overall score of **86.1.** We are proud to report
-that our latest score from our recertification process in 2023, is
-**92.5**. To put this in context, the threshold for B Lab certification
-is a score of 80 or higher, and the median score for ordinary businesses
-who take the assessment is 50.9. Posit seeks to continually improve our
-internal governance, increase our workforce diversity and employee
-development efforts, expand our stewardship of the environment, deepen
-our engagement in our communities, and better serve our customers so
-that our public benefit will continue to improve each year.
-
-In our initial assessment, we received high marks for incorporating as a
-benefit corporation, the health, wellness, safety, and financial
-security of our employees, and for educating and serving customers. We
-identified formal goal setting, career development, diversity, equity &
-inclusion, civic engagement & giving, and air & climate as areas for
-improvement.
-
-## Summary of Score Improvements Since 2019
-
-The B Lab's Impact assessment standards have evolved since 2019 (we are
-now on version 6 of the assessment). New questions were added, and
-thresholds for performance were raised in other cases. Of the scored
-questions we responded to in our most recent assessment, 38 were
-unchanged from 2019, 71 were modified from 2019 wording, and 22 were
-brand new questions. On the unchanged or modified questions, we have
-gained points in the areas listed below.
-
-  -----------------------------------------------------------------------
-  **Impact Area**  **Topic**                 **% Achievement Gain since
-                                             2019**
-  ---------------- ------------------------- ----------------------------
-  Community        Civic Engagement & Giving 39%
-
-                   Diversity, Equity, &      60%
-                   Inclusion                 
-
-  Customers        Customer Stewardship      28%
-
-  Environment      Air & Climate             75%
-
-  Governance       Ethics & Transparency     37%
-
-  Workers          Career Development        62%
-
-                   Engagement & Satisfaction 50%
-
-                   Financial Security        58%
-  -----------------------------------------------------------------------
-
-### 
-
-### Community
-
-#### Open Source Development 
-
-Before the company re-branded, Posit (then RStudio) was often thought of
-as an "R company" in the data community because of its dedication to
-developing and maintaining some of the most used R libraries in the
-world. However, Posit has always been better described as a *scientific
-software* company. Supporting Python (via the
+Before the company re-branded in 2022, Posit (then RStudio) was often
+thought of as an "R company" in the data community because of its
+dedication to developing and maintaining some of the most used R
+libraries in the world. However, Posit has always been better described
+as a *scientific software* company. Supporting Python (via the
 [[reticulate]{.underline}](https://github.com/rstudio/reticulate)
 package, RStudio language support), working with relational databases
 and data platforms such as Apache Spark (a cross-platform data frame
@@ -256,8 +202,6 @@ selected Posit software projects of interest to the broad data science
 community. Where metrics are published, please note these represent a
 *lower bound* on the actual number, as it is difficult-to-impossible to
 account for every install and usage in the world.
-
-#### 
 
 #### Quarto
 
@@ -476,6 +420,70 @@ developing r-lib and related open-source packages as of [December
 2023]{.mark}.
 
 \<show cumulative downloads graph\>
+
+## 
+
+#  B Lab® Impact Assessment Results
+
+## 
+
+The BLab Impact Assessment is composed of questions in five Impact
+Areas: Governance, Workers, Community, Environment, and Customers.
+Posit\'s assessment results are available to the public
+[[[here]{.underline}]{.mark}](https://www.bcorporation.net/en-us/find-a-b-corp/company/rstudio/).
+We completed our first Impact Assessment in 2019 and earned an overall
+score of **86.1.** We are proud to report that our latest score from our
+recertification process in 2023, is **92.5**. To put this in context,
+the threshold for B Lab certification is a score of 80 or higher, and
+the median score for ordinary businesses who take the assessment is
+50.9. Posit seeks to continually improve our internal governance,
+increase our workforce diversity and employee development efforts,
+expand our stewardship of the environment, deepen our engagement in our
+communities, and better serve our customers so that our public benefit
+will continue to improve each year.
+
+In our initial assessment, we received high marks for incorporating as a
+benefit corporation, the health, wellness, safety, and financial
+security of our employees, and for educating and serving customers. We
+identified formal goal setting, career development, diversity, equity &
+inclusion, civic engagement & giving, and air & climate as areas for
+improvement.
+
+## Summary of Score Improvements Since 2019
+
+The B Lab's Impact assessment standards have evolved since 2019 (we are
+now on version 6 of the assessment). New questions were added, and
+thresholds for performance were raised in other cases. Of the scored
+questions we responded to in our most recent assessment, 38 were
+unchanged from 2019, 71 were modified from 2019 wording, and 22 were
+brand new questions. On the unchanged or modified questions, we have
+gained points in the areas listed below.
+
+  -----------------------------------------------------------------------
+  **Impact Area**  **Topic**                 **% Achievement Gain since
+                                             2019**
+  ---------------- ------------------------- ----------------------------
+  Community        Civic Engagement & Giving 39%
+
+                   Diversity, Equity, &      60%
+                   Inclusion                 
+
+  Customers        Customer Stewardship      28%
+
+  Environment      Air & Climate             75%
+
+  Governance       Ethics & Transparency     37%
+
+  Workers          Career Development        62%
+
+                   Engagement & Satisfaction 50%
+
+                   Financial Security        58%
+  -----------------------------------------------------------------------
+
+### 
+
+### Community
 
 #### Civic Engagement and Giving
 
