@@ -164,8 +164,8 @@ Python, and other open-source data science software at scale. Posit also
 offers online services that make it easier to learn and use data science
 tools over the web.
 
-Together, Posit\'s open-source software and commercial software form a
-virtuous cycle. In most companies, a \"customer\" is someone who pays
+Together, Posit's open-source software and commercial software form a
+virtuous cycle. In most companies, a "customer" is someone who pays
 you. For us, the definition of a customer must include the open source
 community, with whom we exchange the currencies of attention, respect,
 and love. When we deliver value to our open source users, they will
@@ -173,7 +173,7 @@ likely bring our software into their professional environments, which
 opens up the possibility of commercial partnerships. To keep this cycle
 flowing, our open source developers must know and care about the
 integrations with proprietary solutions that matter to our enterprise
-customers. It also means that Posit\'s commercial teams consistently
+customers. It also means that Posit's commercial teams consistently
 provide value to individuals who may never directly spend a dollar with
 us.
 
@@ -201,9 +201,9 @@ by others, including NumFOCUS, the R Consortium, the Python Software
 Foundation, DuckDB, Pandoc, pyodide, and ProseMirror, as well as dozens
 of smaller projects via the Open Source Collective or directly on
 Github. Additional information about our products and company
-contributions for the past two years can be found in our [[\"Year In
-Review\'\' blog
-posts]{.underline}](https://posit.co/blog/2023-posit-year-in-review/#:~:text=Posit%20Package%20Manager&text=This%20year%2C%20Package%20Manager%20enabled,R%20Application%20Network%20(MRAN).).
+contributions for the past two years can be found in our [["Year In
+Review" blog
+posts]{.underline}](https://posit.co/blog/2023-posit-year-in-review/).
 
 {{< colbreak >}}
 
@@ -223,7 +223,7 @@ to navigating our complex world.
 
 ::: {.cols-2}
 
-## Posit\'s Charter
+## Posit's Charter
 
 We want Posit to serve a meaningful public purpose, and we run the
 company for the benefit of our customers, employees, and the community
@@ -740,7 +740,7 @@ singlepltfunc(rlibdf, "R-Lib")
 
 The BLab Impact Assessment is composed of questions in five Impact
 Areas: Governance, Workers, Community, Environment, and Customers.
-Posit\'s assessment results are available to the public
+Posit's assessment results are available to the public
 [[[here]{.underline}]{.mark}](https://www.bcorporation.net/en-us/find-a-b-corp/company/rstudio/).
 We completed our first Impact Assessment in 2019 and earned an overall
 score of **86.1.** We are proud to report that our latest score from our
