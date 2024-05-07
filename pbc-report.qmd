@@ -772,27 +772,61 @@ unchanged from 2019, 71 were modified from 2019 wording, and 22 were
 brand new questions. On the unchanged or modified questions, we have
 gained points in the areas listed below.
 
-  -----------------------------------------------------------------------
-  **Impact Area**  **Topic**                 **% Achievement Gain since
-                                             2019**
-  ---------------- ------------------------- ----------------------------
-  Community        Civic Engagement & Giving 39%
-
-                   Diversity, Equity, &      60%
-                   Inclusion                 
-
-  Customers        Customer Stewardship      28%
-
-  Environment      Air & Climate             75%
-
-  Governance       Ethics & Transparency     37%
-
-  Workers          Career Development        62%
-
-                   Engagement & Satisfaction 50%
-
-                   Financial Security        58%
-  -----------------------------------------------------------------------
+```{=html}
+<table class="table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 35%">
+<col style="width: 39%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Impact Area</strong></th>
+<th style="text-align: left;"><strong>Topic</strong></th>
+<th style="text-align: left;"><strong>% Achievement Gain since 2019</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;" rowspan="2">Community</td>
+<td style="text-align: left;">Civic Engagement &amp; Giving</td>
+<td style="text-align: left;">39%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Diversity, Equity, &amp; Inclusion</td>
+<td style="text-align: left;">60%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Customers</td>
+<td style="text-align: left;">Customer Stewardship</td>
+<td style="text-align: left;">28%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Environment</td>
+<td style="text-align: left;">Air &amp; Climate</td>
+<td style="text-align: left;">75%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Governance</td>
+<td style="text-align: left;">Ethics &amp; Transparency</td>
+<td style="text-align: left;">37%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;" rowspan="3">Workers</td>
+<td style="text-align: left;">Career Development</td>
+<td style="text-align: left;">62%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Engagement &amp; Satisfaction</td>
+<td style="text-align: left;">50%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Financial Security</td>
+<td style="text-align: left;">58%</td>
+</tr>
+</tbody>
+</table>
+```
 
 ::: {.cols-2}
 

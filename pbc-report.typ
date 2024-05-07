@@ -608,24 +608,26 @@ In our initial assessment, we received high marks for incorporating as a benefit
 <summary-of-score-improvements-since-2019>
 The B Lab’s Impact assessment standards have evolved since 2019 (we are now on version 6 of the assessment). New questions were added, and thresholds for performance were raised in other cases. Of the scored questions we responded to in our most recent assessment, 38 were unchanged from 2019, 71 were modified from 2019 wording, and 22 were brand new questions. On the unchanged or modified questions, we have gained points in the areas listed below.
 
+#block[
 #figure(
   align(center)[#table(
-    columns: (22.97%, 35.14%, 39.19%),
+    columns: (22%, 35%, 39%),
     align: (left,left,left,),
-    table.header([#strong[Impact Area];], [#strong[Topic];], [#strong[% Achievement Gain since 2019];],),
+    table.header(table.cell(align: left)[#strong[Impact Area];], table.cell(align: left)[#strong[Topic];], table.cell(align: left)[#strong[% Achievement Gain since 2019];],),
     table.hline(),
-    [Community], [Civic Engagement & Giving], [39%],
-    [], [Diversity, Equity, & Inclusion], [60%],
-    [Customers], [Customer Stewardship], [28%],
-    [Environment], [Air & Climate], [75%],
-    [Governance], [Ethics & Transparency], [37%],
-    [Workers], [Career Development], [62%],
-    [], [Engagement & Satisfaction], [50%],
-    [], [Financial Security], [58%],
+    table.cell(align: left, rowspan: 2)[Community], table.cell(align: left)[Civic Engagement & Giving], table.cell(align: left)[39%],
+    table.cell(align: left)[Diversity, Equity, & Inclusion], table.cell(align: left)[60%],
+    table.cell(align: left)[Customers], table.cell(align: left)[Customer Stewardship], table.cell(align: left)[28%],
+    table.cell(align: left)[Environment], table.cell(align: left)[Air & Climate], table.cell(align: left)[75%],
+    table.cell(align: left)[Governance], table.cell(align: left)[Ethics & Transparency], table.cell(align: left)[37%],
+    table.cell(align: left, rowspan: 3)[Workers], table.cell(align: left)[Career Development], table.cell(align: left)[62%],
+    table.cell(align: left)[Engagement & Satisfaction], table.cell(align: left)[50%],
+    table.cell(align: left)[Financial Security], table.cell(align: left)[58%],
   )]
   , kind: table
   )
 
+]
 #col-2()[
 === Community
 <community>
@@ -661,7 +663,7 @@ We have made significant strides in our Worker assessment category since 2019, w
 #conclusion()[
 = Conclusion
 <conclusion>
-Duis ornare ex ac iaculis pretium. Maecenas sagittis odio id erat pharetra, sit amet consectetur quam sollicitudin. Vivamus pharetra quam purus, nec sagittis risus pretium at. Nullam feugiat, turpis ac accumsan interdum, sem tellus blandit neque, id vulputate diam quam semper nisl. Donec sit amet enim at neque porttitor aliquet. Phasellus facilisis nulla eget placerat eleifend. Vestibulum non egestas eros, eget lobortis ipsum. Nulla rutrum massa eget enim aliquam, id porttitor erat luctus. Nunc sagittis quis eros eu sagittis. Pellentesque dictum, erat at pellentesque sollicitudin, justo augue pulvinar metus, quis rutrum est mi nec felis. Vestibulum efficitur mi lorem, at elementum purus tincidunt a. Aliquam finibus enim magna, vitae pellentesque erat faucibus at. Nulla mauris tellus, imperdiet id lobortis et, dignissim condimentum ipsum. Morbi nulla orci, varius at aliquet sed, facilisis id tortor. Donec ut urna nisi.
+Praesent ornare dolor turpis, sed tincidunt nisl pretium eget. Curabitur sed iaculis ex, vitae tristique sapien. Quisque nec ex dolor. Quisque ut nisl a libero egestas molestie. Nulla vel porta nulla. Phasellus id pretium arcu. Etiam sed mi pellentesque nibh scelerisque elementum sed at urna. Ut congue molestie nibh, sit amet pretium ligula consectetur eu. Integer consectetur augue justo, at placerat erat posuere at. Ut elementum urna lectus, vitae bibendum neque pulvinar quis. Suspendisse vulputate cursus eros id maximus. Duis pulvinar facilisis massa, et condimentum est viverra congue. Curabitur ornare convallis nisl. Morbi dictum scelerisque turpis quis pellentesque. Etiam lectus risus, luctus lobortis risus ut, rutrum vulputate justo. Nulla facilisi.
 
 ]
 #back_page()[
