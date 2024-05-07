@@ -43,7 +43,7 @@ posit_colors <- list(
 )
 
 
-theme_set(theme_classic())
+# theme_set(theme_classic())
 thematic_on(bg = "white", fg = posit_colors$grey, accent = posit_colors$blue,
   font = "Open Sans")
 
@@ -219,7 +219,7 @@ to navigating our complex world.
 
 {{< pagebreak >}}
 
-# Posit\'s Charter and Statement of Public Benefit
+# Posit's Charter and Statement of Public Benefit
 
 ::: {.cols-2}
 
@@ -245,7 +245,9 @@ accountability. Our directors and officers have a fiduciary
 responsibility to address social, economic, and environmental needs
 while still overseeing our business goals.
 
-## Posit\'s Statement of Public Benefit
+{{< colbreak >}}
+
+## Posit's Statement of Public Benefit
 
 Creation of free and open source software for data science, scientific
 research, and technical communication:
@@ -258,6 +260,8 @@ research, and technical communication:
 > scientific work.
 
 :::
+
+{{< pagebreak >}}
 
 ## Our primary obligations as a PBC and Certified B Corporation
 
@@ -928,19 +932,10 @@ or financial health expenses as they see fit. All together, we are
 working to continuously improve the value offered to our workers as our
 company grows.
 
-:::
-
-::: {.conclusion}
-
-# Conclusion
-
-{{< lipsum 1 >}}
-
 ::: 
 
 
 ```{=typst}
 #back_page()[
-  Trademark language here
 ]
 ```

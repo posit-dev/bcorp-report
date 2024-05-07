@@ -37,7 +37,7 @@
 }
 
 #let col-2(content)={
-    columns(2, content)
+    columns(2, gutter: 3em, content)
 } 
 
 #let banner(content)={
@@ -112,7 +112,7 @@
   lang: "en",
   region: "US",
   font: (),
-  fontsize: 11pt,
+  fontsize: 10pt,
   doc,
 ) = {
   
@@ -130,11 +130,15 @@
            fill: posit_colors.grey)
 
 
+  set par(
+    leading: 0.8em
+  )
+
   if title != none {
     title_page(title, subtitle)
   }
 
-  show heading.where(level: 1): set text(weight: "light", size: 36pt)
+  show heading.where(level: 1): set text(weight: "light", size: 24pt)
   show heading.where(level: 1): set block(width: 100%, below: 1em)
   
   
