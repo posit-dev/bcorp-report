@@ -265,38 +265,29 @@ research, and technical communication:
 
 ## Our primary obligations as a PBC and Certified B Corporation
 
-+-----------------------------------+-----------------------------------+
-| Public Benefit Corporation:       | Certified B Corp:                 |
-|                                   |                                   |
-| *How we built our company         | *How we hold ourselves            |
-| charter*                          | accountable to our charter*       |
-+:==================================+:==================================+
-| -   The board of directors shall  | -   Demonstrate high social and   |
-|     manage or direct the business |     environmental performance by  |
-|     and affairs of the public     |     achieving a B Lab Impact      |
-|     benefit corporation in a      |     Assessment score of 80 or     |
-|     manner that balances the      |     above and passing the risk    |
-|     pecuniary interests of the    |     review.                       |
-|     stockholders, the best        |                                   |
-|     interests of those materially | -   Make a legal commitment by    |
-|     affected by the corporation's |     changing our corporate        |
-|     conduct, and the specific     |     governance structure to be    |
-|     public benefit or public      |     accountable to all            |
-|     benefits identified in its    |     stakeholders, not just        |
-|     certificate of incorporation. |     shareholders, and achieve     |
-|                                   |     benefit corporation status if |
-| -   A public benefit corporation  |     available in our              |
-|     shall no less than biennially |     jurisdiction.                 |
-|     provide its stockholders with |                                   |
-|     a statement as to the         | -   Exhibit transparency by       |
-|     corporation's promotion of    |     allowing information about    |
-|     the public benefit or public  |     our performance measured      |
-|     benefits identified in the    |     against B Lab's standards to  |
-|     certificate of incorporation  |     be publicly available on our  |
-|     and of the best interests of  |     B Corp profile on B Lab's     |
-|     those materially affected by  |     website.                      |
-|     the corporation's conduct.    |                                   |
-+-----------------------------------+-----------------------------------+
+::: {.cols-2}
+
+### Public Benefit Corporation:
+
+*How we built our company charter*
+
+-   The board of directors shall manage or direct the business and affairs of the public benefit corporation in a manner that balances the pecuniary interests of the stockholders, the best interests of those materially affected by the corporation's conduct, and the specific public benefit or public benefits identified in its certificate of incorporation.
+
+-   A public benefit corporation shall no less than biennially provide its stockholders with a statement as to the corporation's promotion of the public benefit or public benefits identified in the certificate of incorporation and of the best interests of those materially affected by the corporation's conduct.
+
+{{< colbreak >}}
+
+### Certified B Corp:
+
+*How we hold ourselves accountable to our charter*
+
+-   Demonstrate high social and environmental performance by achieving a B Lab Impact Assessment score of 80 or above and passing the risk review.
+
+-   Make a legal commitment by changing our corporate governance structure to be accountable to all stakeholders, not just shareholders, and achieve benefit corporation status if available in our jurisdiction.
+
+-   Exhibit transparency by allowing information about our performance measured against B Lab's standards to be publicly available on our B Corp profile on B Lab's website.
+
+:::
 
 {{< pagebreak >}}
 
