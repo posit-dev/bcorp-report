@@ -31,7 +31,7 @@
 
 //   Custom title page
 #let title_page(title, subtitle)={
-    page(margin: 0in, fill: posit_colors.dark_blue_2, 
+    page(margin: 0in,
         background: image("assets/images/Hex-Stickers-high-res-uncropped.jpg", height: 100%, fit: "cover"))[
         #set text(fill: white)
 
@@ -55,8 +55,9 @@
 
 #let back_page(content)={
   page_blue()[
-      #set page(background: hex_background)
+      #set page(background: hex_background, numbering: none)
       #set text(fill: white)
+      #show link: set text(fill: white)
       #show par: set block(spacing: 0.5em)
       #place(bottom + center)[
         #block(height: 48pt)[
@@ -132,6 +133,8 @@
       indent: 1.5em
     );
   ]
+
+  set page(numbering: "1")
 
   doc
 }

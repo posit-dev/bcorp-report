@@ -83,6 +83,10 @@ singlepltfunc <- function(df, package) {
 
 ::: {.page-blue}
 
+```{=typst}
+#counter(page).update(1)
+```
+
 # A Message from our CEO 
 
 ::: {.cols-2}
