@@ -16,6 +16,7 @@
 #let page_blue(content)={
     set page(background: hex_background)
     set text(fill: posit_colors.light_blue_1)
+    show link: set text(fill: posit_colors.light_blue_2)
     show heading: set text(fill: posit_colors.light_blue_2)
     show heading.where(level: 1): it => {
       pagebreak()  
@@ -122,7 +123,9 @@
     upper(it)
   }
 
-
+  show link: underline
+  show link: set underline(stroke: 1pt, offset: 2pt)
+  show link: set text(fill: posit_colors.blue)
 
   doc
 }
