@@ -8,9 +8,13 @@
   light_blue_2: rgb("#A2B8CB")
 )
 
+#let hex_background={
+  image("assets/images/hexes-8.5x11-#17212B.png", height: 100%, fit: "cover")
+} 
+
 //  Pages with a blue background
 #let page_blue(content)={
-    set page(background: image("assets/images/hexes-8.5x11-#17212B.png", height: 100%, fit: "cover"))
+    set page(background: hex_background)
     set text(fill: posit_colors.light_blue_1)
     show heading: set text(fill: posit_colors.light_blue_2)
     show heading.where(level: 1): it => {
@@ -20,39 +24,9 @@
     content
   }
 
-// Page with Impact Assessment header
-#let page_impact(content)={
-  set page(
-    margin: (top: 2in),
-    header: [
-      #set text(fill: white)
-      #block(width: 100%, height: 100%, outset: (x: 1.25in), inset: (y: 2em), fill: posit_colors.blue)[
-        #place(right + horizon)[
-          #image("assets/images/BLab_B_Impact_Assessment-white.png", height: 50%)
-        ]
-      ]
-    ]
-  )
-  content
-}
-
 #let col-2(content)={
     columns(2, gutter: 3em, content)
 } 
-
-#let banner(content)={
-    set text(fill: white)
-    block(width: 100%, outset: (x: 1.25in), inset: (y: 2em), fill: posit_colors.blue, content)
-}
-
-#let conclusion(content)={
-  set page(fill: posit_colors.blue,
-    background: image("assets/images/Conf-2023-Crowd.jpg", height: 100%, fit: "cover"))
-  set text(fill: white)
-  place(horizon, dy: -1in)[
-    #block(fill: posit_colors.blue, outset: 1.25in, content)
-  ]
-}
 
 //   Custom title page
 #let title_page(title, subtitle)={
@@ -80,8 +54,7 @@
 
 #let back_page(content)={
   page_blue()[
-      #set page(
-        background: image("assets/images/hexes-8.5x11-#447099.png", height: 100%, fit: "cover"))
+      #set page(background: hex_background)
       #set text(fill: white)
       #show par: set block(spacing: 0.5em)
       #place(bottom + center)[
@@ -116,7 +89,6 @@
   doc,
 ) = {
   
-
   set page(
     paper: paper,
     margin: margin,
@@ -133,6 +105,10 @@
   set par(
     leading: 0.8em
   )
+  
+  set table(
+    align: left
+  )
 
   if title != none {
     title_page(title, subtitle)
@@ -141,12 +117,12 @@
   show heading.where(level: 1): set text(weight: "light", size: 24pt)
   show heading.where(level: 1): set block(width: 100%, below: 1em)
   
-  
-
   show heading.where(level: 2): it => {
     set block(below: 1.5em)
     upper(it)
   }
+
+
 
   doc
 }
