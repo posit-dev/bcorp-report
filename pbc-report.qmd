@@ -130,7 +130,7 @@ first report for 2019 [may be found
 here](https://posit.co/wp-content/uploads/2022/11/RStudio-Benefit-Corporation-2019-Annual-Report.pdf).
 The second report for 2020 [may be found
 here](https://posit.co/wp-content/uploads/2022/11/RStudio-Benefit-Corporation-2020-Annual-Report.pdf),
-and our 2021 report may be found here.
+and our 2021 report [may be found here](https://posit.co/wp-content/uploads/2022/09/RStudio-BenefitCorporation-2021-Annual-Report.pdf).
 
 To fulfill its beneficial purposes, Posit intends to remain an
 independent company over the long term. With the support of our
@@ -756,7 +756,7 @@ singlepltfunc(rlibdf, "R-Lib")
 The BLab Impact Assessment is composed of questions in five Impact
 Areas: Governance, Workers, Community, Environment, and Customers.
 Posit's assessment results are available to the public
-[[here]{.mark}](https://www.bcorporation.net/en-us/find-a-b-corp/company/rstudio/).
+[here](https://www.bcorporation.net/en-us/find-a-b-corp/company/rstudio/).
 We completed our first Impact Assessment in 2019 and earned an overall
 score of **86.1.** We are proud to report that our latest score from our
 recertification process in 2023, is **92.5**. To put this in context,

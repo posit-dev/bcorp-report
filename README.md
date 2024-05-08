@@ -13,6 +13,8 @@
     ``` bash
     git format-patch HEAD^ --stdout > patch
     ```
+    
+    Edit header to point at `pbc-report.qmd`
 
 4.  Apply patch:
     
