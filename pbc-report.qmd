@@ -221,6 +221,15 @@ to navigating our complex world.
 
 ::: 
 
+```{=typst}
+#place(bottom, dy: 1.25in,
+  align(center, 
+    image("assets/images/Conf-2023-Crowd.jpg", 
+      width: 100% + 2.5in, fit: "cover")
+  )
+)
+```
+
 {{< pagebreak >}}
 
 # Posit's Charter and Statement of Public Benefit
@@ -322,6 +331,17 @@ community. Where metrics are published, please note these represent a
 account for every install and usage in the world.
 
 :::
+
+```{=typst}
+#align(center,
+  place(bottom, dy: 1.25in,
+    block(height: 4in, width: 100% + 2.5in,
+      image("assets/images/Hex-Stickers-high-res-2.jpg",
+        width: 100% + 2.5in, fit: "cover")
+    )
+  )
+)
+```
 
 {{< pagebreak >}}
 
