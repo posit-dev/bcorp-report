@@ -127,6 +127,12 @@
   show link: set underline(stroke: 1pt, offset: 2pt)
   show link: set text(fill: posit_colors.blue)
 
+  block(above: 0em, below: 2em)[
+    #outline(
+      indent: 1.5em
+    );
+  ]
+
   doc
 }
 
