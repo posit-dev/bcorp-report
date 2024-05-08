@@ -53,7 +53,7 @@
     ]
 }
 
-#let back_page(content)={
+#let back_page(repo: none, content)={
   page_blue()[
       #set page(background: hex_background, numbering: none)
       #set text(fill: white)
@@ -75,6 +75,10 @@
         #(content)
 
         Published with #box(height: 12pt, baseline: 20% , image("assets/images/quarto-logo-trademark-white.svg"))
+        
+        #if repo != none {
+          [Source code available at #link(repo)]
+        }
         ]
       ]
 }
