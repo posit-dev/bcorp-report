@@ -271,7 +271,7 @@ research, and technical communication:
 
 ::: {.cols-2}
 
-### Public Benefit Corporation:
+### Public Benefit Corporation
 
 *How we built our company charter*
 
@@ -281,7 +281,7 @@ research, and technical communication:
 
 {{< colbreak >}}
 
-### Certified B Corp:
+### Certified B Corp
 
 *How we hold ourselves accountable to our charter*
 
@@ -774,9 +774,9 @@ gained points in the areas listed below.
 ```{=html}
 <table class="table">
 <colgroup>
-<col style="width: 22%">
+<col style="width: 25%">
 <col style="width: 35%">
-<col style="width: 39%">
+<col style="width: 40%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -825,6 +825,10 @@ gained points in the areas listed below.
 </tr>
 </tbody>
 </table>
+```
+
+```{=typst}
+#v(1em)
 ```
 
 ::: {.cols-2}

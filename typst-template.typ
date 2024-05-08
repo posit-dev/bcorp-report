@@ -109,7 +109,9 @@
   )
   
   set table(
-    align: left
+    align: left,
+    inset: 7pt,
+    stroke: (x: none, y: 0.5pt)
   )
 
   if title != none {
