@@ -152,8 +152,6 @@
 #let posit_colors = (
   blue: rgb("#447099"),
   grey: rgb("#404041"),
-  orange: rgb("#EE6331"),
-  dark_blue_2: rgb("#213D4F"),
   dark_blue_3: rgb("#17212B"),
   light_blue_1: rgb("#D1DBE5"),
   light_blue_2: rgb("#A2B8CB")
@@ -183,12 +181,12 @@
 //   Custom title page
 #let title_page(title, subtitle)={
     page(margin: 0in,
-        background: image("assets/images/Hex-Stickers-high-res-uncropped.jpg", height: 100%, fit: "cover"))[
+        background: image("assets/images/09.17.23PositDayOne2.jpg", height: 100%, fit: "cover"))[
         #set text(fill: white)
 
         #place(center + horizon, dy: -2.5in)[
             #set align(center + horizon)
-            #block(width: 100%, fill: posit_colors.dark_blue_3, outset: 4em)[
+            #block(width: 100%, fill: posit_colors.dark_blue_3, outset: 5em)[
                 #text(weight: "light", size: 36pt, title)
 
                 #text(weight: "bold", size: 24pt, subtitle)
@@ -232,6 +230,23 @@
         }
         ]
       ]
+}
+
+// Page with image in header
+#let page_banner(image_paths: none, image_height: 100%, image_location: right + horizon, fill: posit_colors.light_blue_1, content)={
+  set page(
+    margin: (top: 2in),
+    header: [
+      #set text(fill: white)
+      #block(width: 100%, height: 100%, outset: (x: 1.25in), inset: (y: 2em), fill: fill)[
+        #if (image_paths != none){
+          set image(height: image_height)
+          place(image_location, stack(dir: ltr, ..image_paths.map(image)))
+        }
+      ]
+    ]
+  )
+  content
 }
 
 #let posit(
@@ -353,7 +368,7 @@ organizations that purchase our professional products help us sustain and grow o
 ]
 #place(bottom, dy: 1.25in,
   align(center, 
-    image("assets/images/Conf-2023-Crowd.jpg", 
+    image("assets/images/1-1547.jpg", 
       width: 100% + 2.5in, fit: "cover")
   )
 )
@@ -419,15 +434,17 @@ Before the company re-branded in 2022, Posit (then RStudio) was often thought of
 Since the 2021 PBC report, Posit has released several new packages in the Python and R ecosystems and continues to maintain and grow the libraries previously developed. The following subsections highlight selected Posit software projects of interest to the broad data science community. Where metrics are published, please note these represent a #emph[lower bound] on the actual number, as it is difficult-to-impossible to account for every install and usage in the world.
 
 ]
-#align(center,
-  place(bottom, dy: 1.25in,
-    block(height: 4in, width: 100% + 2.5in,
-      image("assets/images/Hex-Stickers-high-res-2.jpg",
-        width: 100% + 2.5in, fit: "cover")
-    )
+#place(bottom, dy: 1.25in,
+  align(center, 
+    image("assets/images/2-0616.jpg", 
+      width: 100% + 2.5in, fit: "cover")
   )
 )
 #pagebreak()
+#page_banner(
+image_paths:("assets/images/quarto-logo-dark.svg",),
+image_height:50%,
+[
 == Quarto
 <quarto>
 #col-2()[
@@ -439,7 +456,12 @@ Quarto allows users to choose from multiple computational engines (Knitr, Jupyte
 ]
 #box(image("pbc-report_files/figure-typst/quarto-1.svg"))
 
-#pagebreak()
+])
+
+#page_banner(
+image_paths:("assets/images/shiny-logo.png",),
+image_height:50%,
+[
 == Shiny
 <shiny>
 #col-2()[
@@ -459,7 +481,12 @@ employees developing the open-source Shiny and Shiny Server products as of #high
 #box(image("pbc-report_files/figure-typst/shiny-2.svg"))
 
 ]
+])
+
 #pagebreak()
+#page_banner(
+image_paths:("assets/images/hexes/gt.svg",),
+[
 == gt / Great Tables
 <gt-great-tables>
 #col-2()[
@@ -475,7 +502,11 @@ To that end, the #link("https://gt.rstudio.com/")[gt] and #link("https://posit-d
 #box(image("pbc-report_files/figure-typst/gt-2.svg"))
 
 ]
-#pagebreak()
+])
+
+#page_banner(
+image_paths:("assets/images/hexes/vetiver.svg",),
+[
 == Vetiver
 <vetiver>
 #col-2()[
@@ -488,7 +519,10 @@ To that end, the #link("https://gt.rstudio.com/")[gt] and #link("https://posit-d
 #box(image("pbc-report_files/figure-typst/vetiver-2.svg"))
 
 ]
-#pagebreak()
+])
+
+#page_banner(
+[
 == Posit Public Package Manager
 <posit-public-package-manager>
 #col-2()[
@@ -498,6 +532,8 @@ WIth the ubiquity of open source software in our daily lives, one area that most
 As part of our commitment to improving the quality and availability of open source software for all, Posit hosts a public instance of Posit Package Manager called #link("https://packagemanager.posit.co/client/#/")[Posit Public Package Manager] that mirrors CRAN, PyPI and Bioconductor. This mirror served nearly 40 million downloads per month in Q1 2024.
 
 ]
+#v(6em)
+#place(right, dy: -3em, image("assets/images/hexes/webr.svg", height: 5em))
 == webR
 <webr>
 #col-2()[
@@ -513,7 +549,11 @@ As part of our commitment to improving the quality and availability of open sour
 ]
 #box(image("pbc-report_files/figure-typst/plotnine-1.svg"))
 
-#pagebreak()
+])
+
+#page_banner(
+image_paths:("assets/images/hexes/siuba.svg",),
+[
 == Siuba
 <siuba>
 #col-2()[
@@ -522,7 +562,11 @@ As part of our commitment to improving the quality and availability of open sour
 ]
 #box(image("pbc-report_files/figure-typst/siuba-1.svg"))
 
-#pagebreak()
+])
+
+#page_banner(
+image_paths:("assets/images/hexes/RStudio.svg",),
+[
 == RStudio Integrated Development Environment
 <rstudio-integrated-development-environment>
 #col-2()[
@@ -536,7 +580,11 @@ developing the RStudio IDE open-source desktop and server products as of #highli
 ]
 #box(image("pbc-report_files/figure-typst/rstudio-1.svg"))
 
-#pagebreak()
+])
+
+#page_banner(
+image_paths:("assets/images/hexes/tidyverse.svg", ),
+[
 == Tidyverse
 <tidyverse>
 #col-2()[
@@ -552,7 +600,11 @@ Posit employees developing Tidyverse and related open-source products as of #hig
 ]
 #box(image("pbc-report_files/figure-typst/tidyverse-1.svg"))
 
-#pagebreak()
+])
+
+#page_banner(
+image_paths:("assets/images/hexes/tidymodels.svg", ),
+[
 == Tidymodels
 <tidymodels>
 #col-2()[
@@ -567,7 +619,11 @@ Posit employees developing Tidymodels and related open-source products as of #hi
 ]
 #box(image("pbc-report_files/figure-typst/tidymodels-1.svg"))
 
-#pagebreak()
+])
+
+#page_banner(
+image_paths:("assets/images/hexes/sparklyr.svg", "assets/images/hexes/reticulate.svg", "assets/images/hexes/tensorflow.svg"),
+[
 == Connectivity Packages
 <connectivity-packages>
 #col-2()[
@@ -582,7 +638,11 @@ creating connectivity-related open-source packages as of #highlight()[December 2
 ]
 #box(image("pbc-report_files/figure-typst/connectivity-1.svg"))
 
-#pagebreak()
+])
+
+#page_banner(
+image_paths:("assets/images/hexes/devtools.svg","assets/images/hexes/usethis.svg", "assets/images/hexes/roxygen2.svg", "assets/images/hexes/testthat.svg", "assets/images/hexes/pkgdown.svg"),
+[
 == R Infrastructure Tools (r-lib)
 <r-infrastructure-tools-r-lib>
 #col-2()[
@@ -599,7 +659,13 @@ Posit employees developing r-lib and related open-source packages as of #highlig
 ]
 #box(image("pbc-report_files/figure-typst/rlibs-1.svg"))
 
-#pagebreak()
+])
+
+#page_banner(
+fill:posit_colors.blue,
+image_paths:("assets/images/BLab_B_Impact_Assessment-white.png",),
+image_height:75%,
+[
 = B Lab® Impact Assessment Results
 <b-lab-impact-assessment-results>
 #col-2()[
@@ -664,9 +730,17 @@ In our latest assessment, our governance score improved by 37% via improvements 
 
 == Workers
 <workers>
-We have made significant strides in our Worker assessment category since 2019, with scores increasing by 50% or more in areas such as career development, engagement and satisfaction, and financial security for our employees. Investments in employee career development include in-house management training programs, tooling and education to support constructive feedback, and documentation of job levels, pay ranges, and career paths within our major functions. In 2021, we initiated an annual organizational health survey, which allows us to collect and respond to employee feedback. We have also augmented our benefits to include a "lifestyle savings account" (LSA) funded by Posit that each individual can choose to apply to home office, professional development, wellness, or financial health expenses as they see fit. All together, we are working to continuously improve the value offered to our workers as our company grows.
+We have made significant strides in our Worker assessment category since 2019, with scores increasing by 50% or more in areas such as career development, engagement and satisfaction, and financial security for our employees. #colbreak() Investments in employee career development include in-house management training programs, tooling and education to support constructive feedback, and documentation of job levels, pay ranges, and career paths within our major functions. In 2021, we initiated an annual organizational health survey, which allows us to collect and respond to employee feedback. We have also augmented our benefits to include a "lifestyle savings account" (LSA) funded by Posit that each individual can choose to apply to home office, professional development, wellness, or financial health expenses as they see fit. All together, we are working to continuously improve the value offered to our workers as our company grows.
 
 ]
+#place(bottom, dy: 1.25in,
+  align(center, 
+    image("assets/images/Conf-2023-Crowd.jpg", 
+      width: 100% + 2.5in, fit: "cover")
+  )
+)
+])
+
 #back_page(repo: "https://github.com/posit-dev/bcorp-report/")[
   
 ]

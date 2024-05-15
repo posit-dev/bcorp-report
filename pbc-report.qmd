@@ -223,7 +223,7 @@ to navigating our complex world.
 ```{=typst}
 #place(bottom, dy: 1.25in,
   align(center, 
-    image("assets/images/Conf-2023-Crowd.jpg", 
+    image("assets/images/1-1547.jpg", 
       width: 100% + 2.5in, fit: "cover")
   )
 )
@@ -332,12 +332,10 @@ account for every install and usage in the world.
 :::
 
 ```{=typst}
-#align(center,
-  place(bottom, dy: 1.25in,
-    block(height: 4in, width: 100% + 2.5in,
-      image("assets/images/Hex-Stickers-high-res-2.jpg",
-        width: 100% + 2.5in, fit: "cover")
-    )
+#place(bottom, dy: 1.25in,
+  align(center, 
+    image("assets/images/2-0616.jpg", 
+      width: 100% + 2.5in, fit: "cover")
   )
 )
 ```
@@ -578,6 +576,7 @@ incrementally, while the simple plots remain simple to create.
 singlepltfunc(pydf, "plotnine")
 ```
 
+
 :::
 
 ::: {.page-banner image_paths='("assets/images/hexes/siuba.svg",)'}
@@ -774,6 +773,8 @@ singlepltfunc(rlibdf, "R-Lib")
 
 ::: 
 
+::: {.page-banner fill="posit_colors.blue" image_paths='("assets/images/BLab_B_Impact_Assessment-white.png",)' image_height="75%"}
+
 #  B Lab® Impact Assessment Results
 
 ::: {.cols-2}
@@ -964,7 +965,7 @@ success.
 We have made significant strides in our Worker assessment category since
 2019, with scores increasing by 50% or more in areas such as career
 development, engagement and satisfaction, and financial security for our
-employees. Investments in employee career development include in-house
+employees. {{< colbreak >}} Investments in employee career development include in-house
 management training programs, tooling and education to support
 constructive feedback, and documentation of job levels, pay ranges, and
 career paths within our major functions. In 2021, we initiated an annual
@@ -978,6 +979,16 @@ company grows.
 
 ::: 
 
+```{=typst}
+#place(bottom, dy: 1.25in,
+  align(center, 
+    image("assets/images/Conf-2023-Crowd.jpg", 
+      width: 100% + 2.5in, fit: "cover")
+  )
+)
+```
+
+:::
 
 ```{=typst}
 #back_page(repo: "https://github.com/posit-dev/bcorp-report/")[
