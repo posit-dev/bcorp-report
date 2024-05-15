@@ -86,8 +86,8 @@ enhance the development and use of our open-source software, they are
 not fundamentally required for those without the need or the ability to
 pay for them.
 
-In 2023, Posit spent [\[33%?\]]{.mark} of its engineering resources on
-open-source software development, and led contributions to over
+As of May 2024, Posit is spending \~38% of its engineering resources on
+open-source software development, and is leading contributions to over
 [\[xx\]]{.mark} open-source projects. Posit-led projects targeted a
 broad range of areas including the RStudio IDE; infrastructure libraries
 for R and Python; numerous packages and tools to streamline data
@@ -98,17 +98,15 @@ by others, including NumFOCUS, the R Consortium, the Python Software
 Foundation, DuckDB, Pandoc, pyodide, and ProseMirror, as well as dozens
 of smaller projects via the Open Source Collective or directly on
 Github. Additional information about our products and company
-contributions for the past two years can be found in our [[\"Year In
-Review\'\' blog
-posts]{.underline}](https://posit.co/blog/2023-posit-year-in-review/#:~:text=Posit%20Package%20Manager&text=This%20year%2C%20Package%20Manager%20enabled,R%20Application%20Network%20(MRAN).).
+contributions for the past two years can be found in our [\"Year In
+Review\'\' blog posts]{.underline}.
 
 Today, millions of people download and use Posit open-source products in
-their daily lives. Additionally, more than [\[how many paying
-customers?\]]{.mark} organizations that purchase our professional
-products help us sustain and grow our mission. It is inspiring to help
-so many people participate in global economies that increasingly reward
-data literacy, and know that our tools help produce insights essential
-to navigating our complex world.
+their daily lives. Additionally, more than 10,000 customers that
+purchase our professional products help us sustain and grow our mission.
+It is inspiring to help so many people participate in global economies
+that increasingly reward data literacy, and know that our tools help
+produce insights essential to navigating our complex world.
 
 # Posit\'s Charter and Statement of Public Benefit
 
@@ -227,6 +225,9 @@ the
 [[quartodoc]{.underline}](https://machow.github.io/quartodoc/get-started/overview.html)
 project for developing API documentation.
 
+There are 5 full time equivalent (FTE) employees developing open-source
+Quarto products as of May 2024.
+
 \<show download growth graph\>
 
 #### Shiny
@@ -252,9 +253,8 @@ Shiny and related packages include shiny
 [[leaflet]{.underline}](https://rstudio.github.io/leaflet/), and
 [[crosstalk]{.underline}](https://rstudio.github.io/crosstalk/).
 
-There are [7 full time equivalent (FTE)]{.mark} employees developing the
-open-source Shiny and Shiny Server products as of [December
-2021]{.mark}.
+There are 5 FTE Posit employees developing the open-source Shiny and
+Shiny Server products as of May 2024.
 
 \<show stacked download growth graph for R and Python\>
 
@@ -290,6 +290,9 @@ packages have defined a "grammar of tables" to solve this problem (in R
 and Python, respectively), analogous to the "grammar of graphics" for
 specifying charts.
 
+As of May 2024, there is 1 FTE Posit employee developing gt / Great
+Tables open-source packages.
+
 \<show stacked download growth graph for R and Python\>
 
 #### Vetiver
@@ -313,6 +316,9 @@ are infeasible or undesirable for using server-side processing (such as
 not wanting to send personal data over the internet). Also, by making
 the most of the user's device capabilities, webR can improve performance
 and lower app hosting costs.
+
+There is 1 FTE Posit employee developing webR open-source products as of
+May 2024.
 
 #### Plotnine
 
@@ -347,9 +353,8 @@ plotting, browsing files, and managing project histories and workspaces.
 Together these tools make data scientists and developers much more
 efficient.
 
-There are [5 full time equivalent (FTE) employees]{.mark} developing the
-RStudio IDE open-source desktop and server products as of [December
-2023]{.mark}.
+There are 5 FTE Posit employees developing the RStudio IDE open-source
+desktop and server products as of May 2024.
 
 \<show download growth graph\>
 
@@ -361,9 +366,10 @@ packages share an underlying design philosophy, grammar and data
 structures.
 
 The tidyverse consists of nine core packages (including ggplot2, tidyr
-and readr) and 31 packages overall. There are approximately [6.5 full
-time equivalent]{.mark} Posit employees developing Tidyverse and related
-open-source products as of [December 2023]{.mark}.
+and readr) and 31 packages overall.
+
+There are 9 FTE Posit employees developing Tidyverse and related
+open-source products as of May 2024.
 
 \<show cumulative downloads graph\>
 
@@ -378,9 +384,8 @@ Tidyverse packages.
 There are currently 42 tidymodels packages on CRAN. Popular tidymodels
 packages include parsnip, rsample, recipes, tune and yardstick.
 
-There are [3.5 full time equivalent (FTE)]{.mark} Posit employees
-developing Tidymodels and related open-source products as of [December
-2023]{.mark}
+There are 3 FTE Posit employees developing Tidymodels and related
+open-source products as of May 2024.
 
 \<show cumulative downloads graph\>
 
@@ -396,10 +401,10 @@ Connectivity packages include:
 R]{.underline}](https://tensorflow.rstudio.com/),
 [[keras]{.underline}](https://keras.posit.co/),
 [[odbc]{.underline}](https://solutions.posit.co/connections/db/r-packages/odbc/),
-and [[reticulate]{.underline}](https://rstudio.github.io/reticulate/).\
-There are [4 full time equivalent Posit-funded developers]{.mark}
-creating connectivity-related open-source packages as of [December
-2021]{.mark}.
+and [[reticulate]{.underline}](https://rstudio.github.io/reticulate/).
+
+There are 3 FTE Posit employees creating connectivity-related
+open-source packages as of May 2024.
 
 \<show cumulative downloads graph\>
 
@@ -415,10 +420,6 @@ include [[devtools]{.underline}](https://devtools.r-lib.org/),
 [[pkgdown]{.underline}](https://pkgdown.r-lib.org/) and
 [[usethis]{.underline}](https://usethis.r-lib.org/).
 
-There are [2 full time equivalent (FTE)]{.mark} Posit employees
-developing r-lib and related open-source packages as of [December
-2023]{.mark}.
-
 \<show cumulative downloads graph\>
 
 ## 
@@ -430,7 +431,7 @@ developing r-lib and related open-source packages as of [December
 The BLab Impact Assessment is composed of questions in five Impact
 Areas: Governance, Workers, Community, Environment, and Customers.
 Posit\'s assessment results are available to the public
-[[[here]{.underline}]{.mark}](https://www.bcorporation.net/en-us/find-a-b-corp/company/rstudio/).
+[[here]{.underline}](https://www.bcorporation.net/en-us/find-a-b-corp/company/rstudio/).
 We completed our first Impact Assessment in 2019 and earned an overall
 score of **86.1.** We are proud to report that our latest score from our
 recertification process in 2023, is **92.5**. To put this in context,
