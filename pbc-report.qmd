@@ -42,8 +42,6 @@ posit_colors <- list(
   light_blue_2 = "#A2B8CB"
 )
 
-
-# theme_set(theme_classic())
 thematic_on(bg = "white", fg = posit_colors$grey, accent = posit_colors$blue,
   font = "Open Sans")
 
@@ -345,6 +343,8 @@ account for every install and usage in the world.
 
 {{< pagebreak >}}
 
+::: {.page-banner fill="posit_colors.light_blue_1" image_paths='("assets/images/quarto-logo-dark.svg",)'}
+
 ## Quarto
 
 ::: {.cols-2}
@@ -407,7 +407,9 @@ quarto_by_version %>%
     ggtitle("Quarto")
 ```
 
-{{< pagebreak >}}
+::: 
+
+::: {.page-banner fill="posit_colors.light_blue_1" image_paths='("assets/images/shiny-logo.png",)'}
 
 ## Shiny
 
@@ -449,6 +451,8 @@ singlepltfunc(pydf, "shiny") + ggtitle("Shiny for Python")
 singlepltfunc(rdf, "shiny") + ggtitle("Shiny for R")
 ```
 
+::: 
+
 {{< pagebreak >}}
 
 ## gt / Great Tables
@@ -473,7 +477,6 @@ specifying charts.
 
 ```{r}
 #| label: gt
-#TODO: stack these into a single graph? clean up x axis date range
 singlepltfunc(pydf, "great_tables")
 singlepltfunc(rdf, "gt")
 ```
@@ -496,7 +499,6 @@ documentation by extracting some information about the generated model.
 
 ```{r}
 #| label: vetiver
-#TODO: stack these into a single graph? clean up x axis date range
 singlepltfunc(pydf, "vetiver") + ggtitle("vetiver for Python")
 singlepltfunc(rdf, "vetiver") + ggtitle("vetiver for R")
 ```
@@ -713,7 +715,7 @@ rcondf$pkg <- "R Connectivity"
 singlepltfunc(rcondf, "R Connectivity")
 ```
 
-{{< pagebreak >}}
+::: {.page-banner fill="posit_colors.light_blue_1" image_paths='("assets/images/hexes/devtools.svg","assets/images/hexes/usethis.svg")' image_height="75%"}
 
 ## R Infrastructure Tools (r-lib)
 
@@ -747,7 +749,7 @@ rlibdf$pkg <- "R-Lib"
 singlepltfunc(rlibdf, "R-Lib")
 ```
 
-{{< pagebreak >}}
+::: 
 
 #  B Lab® Impact Assessment Results
 

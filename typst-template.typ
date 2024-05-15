@@ -1,8 +1,6 @@
 #let posit_colors = (
   blue: rgb("#447099"),
   grey: rgb("#404041"),
-  orange: rgb("#EE6331"),
-  dark_blue_2: rgb("#213D4F"),
   dark_blue_3: rgb("#17212B"),
   light_blue_1: rgb("#D1DBE5"),
   light_blue_2: rgb("#A2B8CB")
@@ -81,6 +79,23 @@
         }
         ]
       ]
+}
+
+// Page with image in header
+#let page_banner(image_paths: none, image_height: 50%, image_location: right + horizon, fill: posit_colors.light_blue_1, content)={
+  set page(
+    margin: (top: 2in),
+    header: [
+      #set text(fill: white)
+      #block(width: 100%, height: 100%, outset: (x: 1.25in), inset: (y: 2em), fill: fill)[
+        #if (image_paths != none){
+          set image(height: image_height)
+          place(image_location, stack(dir: ltr, ..image_paths.map(image)))
+        }
+      ]
+    ]
+  )
+  content
 }
 
 #let posit(
