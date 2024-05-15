@@ -82,7 +82,7 @@
 }
 
 // Page with image in header
-#let page_banner(image_paths: none, image_height: 50%, image_location: right + horizon, fill: posit_colors.light_blue_1, content)={
+#let page_banner(image_paths: none, image_height: 100%, image_location: right + horizon, fill: posit_colors.light_blue_1, content)={
   set page(
     margin: (top: 2in),
     header: [
