@@ -152,8 +152,6 @@
 #let posit_colors = (
   blue: rgb("#447099"),
   grey: rgb("#404041"),
-  orange: rgb("#EE6331"),
-  dark_blue_2: rgb("#213D4F"),
   dark_blue_3: rgb("#17212B"),
   light_blue_1: rgb("#D1DBE5"),
   light_blue_2: rgb("#A2B8CB")
@@ -232,6 +230,23 @@
         }
         ]
       ]
+}
+
+// Page with image in header
+#let page_banner(image_paths: none, image_height: 100%, image_location: right + horizon, fill: posit_colors.light_blue_1, content)={
+  set page(
+    margin: (top: 2in),
+    header: [
+      #set text(fill: white)
+      #block(width: 100%, height: 100%, outset: (x: 1.25in), inset: (y: 2em), fill: fill)[
+        #if (image_paths != none){
+          set image(height: image_height)
+          place(image_location, stack(dir: ltr, ..image_paths.map(image)))
+        }
+      ]
+    ]
+  )
+  content
 }
 
 #let posit(
@@ -342,13 +357,11 @@ Together, Posit’s open-source software and commercial software form a virtuous
 
 Posit’s approach is not typical. Traditionally, scientific and technical computing companies create exclusively proprietary software. While it can provide a robust foundation for investing in product development, proprietary software can also create excessive dependency that is not good for data science practitioners and the community. In contrast, Posit provides core productivity tools, packages, protocols, and file formats as open-source software so customers aren’t overly dependent on a single software vendor. Additionally, while our commercial products enhance the development and use of our open-source software, they are not fundamentally required for those without the need or the ability to pay for them.
 
-In 2023, Posit spent #highlight()[\[33%?\]]
-of its engineering resources on open-source software development, and led contributions to over #highlight()[\[xx\]]
+As of May 2024, Posit is spending \~38% of its engineering resources on open-source software development, and is leading contributions to over #highlight()[\[xx\]]
 open-source projects. Posit-led projects targeted a broad range of areas including the RStudio IDE; infrastructure libraries for R and Python; numerous packages and tools to streamline data manipulation, exploration and visualization, modeling, and machine learning; and integration with external data sources. Posit also sponsors or contributes to many open-source and community projects led by others, including NumFOCUS, the R Consortium, the Python Software Foundation, DuckDB, Pandoc, pyodide, and ProseMirror, as well as dozens of smaller projects via the Open Source Collective or directly on Github. Additional information about our products and company contributions for the past two years can be found in our #link("https://posit.co/blog/2023-posit-year-in-review/")["Year In Review" blog posts];.
 
 #colbreak()
-Today, millions of people download and use Posit open-source products in their daily lives. Additionally, more than #highlight()[\[how many paying customers?\]]
-organizations that purchase our professional products help us sustain and grow our mission. It is inspiring to help so many people participate in global economies that increasingly reward data literacy, and know that our tools help produce insights essential to navigating our complex world.
+Today, millions of people download and use Posit open-source products in their daily lives. Additionally, more than 10,000 customers that purchase our professional products help us sustain and grow our mission. It is inspiring to help so many people participate in global economies that increasingly reward data literacy, and know that our tools help produce insights essential to navigating our complex world.
 
 ]
 #place(bottom, dy: 1.25in,
@@ -428,6 +441,10 @@ Since the 2021 PBC report, Posit has released several new packages in the Python
   )
 )
 #pagebreak()
+#page_banner(
+image_paths:("assets/images/quarto-logo-dark.svg",),
+image_height:50%,
+[
 == Quarto
 <quarto>
 #col-2()[
@@ -436,10 +453,17 @@ In July 2022, #link("https://posit.co/blog/announcing-quarto-a-new-scientific-an
 #colbreak()
 Quarto allows users to choose from multiple computational engines (Knitr, Jupyter, and Observable), which makes it easy to use Quarto with R, Python, Julia, JavaScript and many other languages. It also allows users to author documents as plain text markdown or Jupyter Notebooks, and publish to numerous outputs such as HTML, PDF, MS Word, ePub and more. Finally, the community has already extended Quarto , as shown by the #link("https://machow.github.io/quartodoc/get-started/overview.html")[quartodoc] project for developing API documentation.
 
+There are 5 full time equivalent (FTE) employees developing open-source Quarto products as of May 2024.
+
 ]
 #box(image("pbc-report_files/figure-typst/quarto-1.svg"))
 
-#pagebreak()
+])
+
+#page_banner(
+image_paths:("assets/images/shiny-logo.png",),
+image_height:50%,
+[
 == Shiny
 <shiny>
 #col-2()[
@@ -448,9 +472,7 @@ Shiny has been a mainstay in the R community since its launch in 2012, providing
 #colbreak()
 Shiny applications can be shared with others via an open-source #link("https://posit.co/products/open-source/shinyserver/")[Shiny Server];, the hosted #link("http://shinyapps.io")[shinyapps.io] service, or with #link("https://posit.co/products/enterprise/connect/")[Posit Connect];. Shiny and related packages include shiny (#link("https://shiny.posit.co/py/")[Python];, #link("https://shiny.posit.co/r/getstarted")[R];), #link("https://rstudio.github.io/bslib/")[bslib];, #link("https://rstudio.github.io/shinytest/")[shinytest];, #link("https://rstudio.github.io/shinyloadtest/")[shinyloadtest];, #link("https://rstudio.github.io/shinydashboard/")[shinydashboard];, #link("https://rstudio.github.io/leaflet/")[leaflet];, and #link("https://rstudio.github.io/crosstalk/")[crosstalk];.
 
-There are #highlight()[7 full time equivalent (FTE)]
-employees developing the open-source Shiny and Shiny Server products as of #highlight()[December 2021]
-.
+There are 5 FTE Posit employees developing the open-source Shiny and Shiny Server products as of May 2024.
 
 ]
 #box(image("pbc-report_files/figure-typst/shiny-1.svg"))
@@ -459,7 +481,12 @@ employees developing the open-source Shiny and Shiny Server products as of #high
 #box(image("pbc-report_files/figure-typst/shiny-2.svg"))
 
 ]
+])
+
 #pagebreak()
+#page_banner(
+image_paths:("assets/images/hexes/gt.svg",),
+[
 == gt / Great Tables
 <gt-great-tables>
 #col-2()[
@@ -468,6 +495,8 @@ When presenting an analysis, a table can often convey the results more concisely
 #colbreak()
 To that end, the #link("https://gt.rstudio.com/")[gt] and #link("https://posit-dev.github.io/great-tables/articles/intro.html")[Great Tables] packages have defined a "grammar of tables" to solve this problem (in R and Python, respectively), analogous to the "grammar of graphics" for specifying charts.
 
+As of May 2024, there is 1 FTE Posit employee developing gt / Great Tables open-source packages.
+
 ]
 #box(image("pbc-report_files/figure-typst/gt-1.svg"))
 
@@ -475,7 +504,11 @@ To that end, the #link("https://gt.rstudio.com/")[gt] and #link("https://posit-d
 #box(image("pbc-report_files/figure-typst/gt-2.svg"))
 
 ]
-#pagebreak()
+])
+
+#page_banner(
+image_paths:("assets/images/hexes/vetiver.svg",),
+[
 == Vetiver
 <vetiver>
 #col-2()[
@@ -488,7 +521,10 @@ To that end, the #link("https://gt.rstudio.com/")[gt] and #link("https://posit-d
 #box(image("pbc-report_files/figure-typst/vetiver-2.svg"))
 
 ]
-#pagebreak()
+])
+
+#page_banner(
+[
 == Posit Public Package Manager
 <posit-public-package-manager>
 #col-2()[
@@ -498,10 +534,14 @@ WIth the ubiquity of open source software in our daily lives, one area that most
 As part of our commitment to improving the quality and availability of open source software for all, Posit hosts a public instance of Posit Package Manager called #link("https://packagemanager.posit.co/client/#/")[Posit Public Package Manager] that mirrors CRAN, PyPI and Bioconductor. This mirror served nearly 40 million downloads per month in Q1 2024.
 
 ]
+#v(6em)
+#place(right, dy: -3em, image("assets/images/hexes/webr.svg", height: 5em))
 == webR
 <webr>
 #col-2()[
 #link("https://docs.r-wasm.org/webr/latest/")[WebR] has the ambitious goal of bringing the R language to the browser, removing the need for a backend server for computation. It also allows for computation to be done on the client machine, supporting use cases that are infeasible or undesirable for using server-side processing (such as not wanting to send personal data over the internet). #colbreak() Also, by making the most of the user’s device capabilities, webR can improve performance and lower app hosting costs.
+
+There is 1 FTE Posit employee developing webR open-source products as of May 2024.
 
 ]
 #pagebreak()
@@ -513,7 +553,11 @@ As part of our commitment to improving the quality and availability of open sour
 ]
 #box(image("pbc-report_files/figure-typst/plotnine-1.svg"))
 
-#pagebreak()
+])
+
+#page_banner(
+image_paths:("assets/images/hexes/siuba.svg",),
+[
 == Siuba
 <siuba>
 #col-2()[
@@ -522,21 +566,27 @@ As part of our commitment to improving the quality and availability of open sour
 ]
 #box(image("pbc-report_files/figure-typst/siuba-1.svg"))
 
-#pagebreak()
+])
+
+#page_banner(
+image_paths:("assets/images/hexes/RStudio.svg",),
+[
 == RStudio Integrated Development Environment
 <rstudio-integrated-development-environment>
 #col-2()[
 #link("https://posit.co/products/open-source/rstudio/")[RStudio] is a multi-language IDE designed for Data Science with R and Python. It augments the standard code console with an editor that can display Notebooks, launch apps, highlight code syntax, spot code errors, and directly execute code. Built into the IDE are tools for debugging, plotting, browsing files, and managing project histories and workspaces. Together these tools make data scientists and developers much more efficient.
 
 #colbreak()
-There are #highlight()[5 full time equivalent (FTE) employees]
-developing the RStudio IDE open-source desktop and server products as of #highlight()[December 2023]
-.
+There are 5 FTE Posit employees developing the RStudio IDE open-source desktop and server products as of May 2024.
 
 ]
 #box(image("pbc-report_files/figure-typst/rstudio-1.svg"))
 
-#pagebreak()
+])
+
+#page_banner(
+image_paths:("assets/images/hexes/tidyverse.svg", ),
+[
 == Tidyverse
 <tidyverse>
 #col-2()[
@@ -545,14 +595,16 @@ The #link("https://www.tidyverse.org/")[tidyverse] is an opinionated collection 
 The tidyverse consists of nine core packages (including ggplot2, tidyr and readr) and 31 packages overall.
 
 #colbreak()
-There are approximately #highlight()[6.5 full time equivalent]
-Posit employees developing Tidyverse and related open-source products as of #highlight()[December 2023]
-.
+There are 9 FTE Posit employees developing Tidyverse and related open-source products as of May 2024.
 
 ]
 #box(image("pbc-report_files/figure-typst/tidyverse-1.svg"))
 
-#pagebreak()
+])
+
+#page_banner(
+image_paths:("assets/images/hexes/tidymodels.svg", ),
+[
 == Tidymodels
 <tidymodels>
 #col-2()[
@@ -561,45 +613,47 @@ Posit employees developing Tidyverse and related open-source products as of #hig
 #colbreak()
 There are currently 42 tidymodels packages on CRAN. Popular tidymodels packages include parsnip, rsample, recipes, tune and yardstick.
 
-There are #highlight()[3.5 full time equivalent (FTE)]
-Posit employees developing Tidymodels and related open-source products as of #highlight()[December 2023]
+There are 3 FTE Posit employees developing Tidymodels and related open-source products as of May 2024.
 
 ]
 #box(image("pbc-report_files/figure-typst/tidymodels-1.svg"))
 
-#pagebreak()
+])
+
+#page_banner(
+image_paths:("assets/images/hexes/sparklyr.svg", "assets/images/hexes/reticulate.svg", "assets/images/hexes/tensorflow.svg"),
+[
 == Connectivity Packages
 <connectivity-packages>
 #col-2()[
 Posit increases the efficiency of customers by making open-source packages that connect data scientists to spreadsheets, databases, distributed storage frameworks for big data, machine learning platforms, and the programming environments of other languages, like python.
 
 #colbreak()
-Connectivity packages include: #link("https://spark.posit.co/")[sparklyr];, #link("https://tensorflow.rstudio.com/")[tensorflow for R];, #link("https://keras.posit.co/")[keras];, #link("https://solutions.posit.co/connections/db/r-packages/odbc/")[odbc];, and #link("https://rstudio.github.io/reticulate/")[reticulate];. \
-There are #highlight()[4 full time equivalent Posit-funded developers]
-creating connectivity-related open-source packages as of #highlight()[December 2021]
-.
+Connectivity packages include: #link("https://spark.posit.co/")[sparklyr];, #link("https://tensorflow.rstudio.com/")[tensorflow for R];, #link("https://keras.posit.co/")[keras];, #link("https://solutions.posit.co/connections/db/r-packages/odbc/")[odbc];, and #link("https://rstudio.github.io/reticulate/")[reticulate];.
+
+There are 3 FTE Posit employees creating connectivity-related open-source packages as of May 2024.
 
 ]
 #box(image("pbc-report_files/figure-typst/connectivity-1.svg"))
 
-#pagebreak()
+])
+
+#page_banner(
+image_paths:("assets/images/hexes/devtools.svg","assets/images/hexes/usethis.svg", "assets/images/hexes/roxygen2.svg", "assets/images/hexes/testthat.svg", "assets/images/hexes/pkgdown.svg"),
+[
 == R Infrastructure Tools (r-lib)
 <r-infrastructure-tools-r-lib>
 #col-2()[
 R-lib is a large collection of R packages that make it easier to build, find, and use effective tools for data analysis.
 
-There are currently #highlight()[111]
-R-lib packages. Popular packages include #link("https://devtools.r-lib.org/")[devtools];, #link("https://testthat.r-lib.org/")[testthat];, #link("https://roxygen2.r-lib.org/")[roxygen2];, #link("https://pkgdown.r-lib.org/")[pkgdown] and #link("https://usethis.r-lib.org/")[usethis];.
-
 #colbreak()
-There are #highlight()[2 full time equivalent (FTE)]
-Posit employees developing r-lib and related open-source packages as of #highlight()[December 2023]
-.
+There are currently 114 R-lib packages. Popular packages include #link("https://devtools.r-lib.org/")[devtools];, #link("https://testthat.r-lib.org/")[testthat];, #link("https://roxygen2.r-lib.org/")[roxygen2];, #link("https://pkgdown.r-lib.org/")[pkgdown] and #link("https://usethis.r-lib.org/")[usethis];.
 
 ]
 #box(image("pbc-report_files/figure-typst/rlibs-1.svg"))
 
-#pagebreak()
+])
+
 = B Lab® Impact Assessment Results
 <b-lab-impact-assessment-results>
 #col-2()[

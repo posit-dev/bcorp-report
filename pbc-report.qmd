@@ -66,7 +66,7 @@ singlepltfunc <- function(df, package) {
     df %>% 
     filter(pkg == package) %>%
     ggplot(aes(x=as.Date(date), y=cumsum(as.numeric(downloads)))) + 
-    geom_line(color = posit_colors$blue, linewidth = 1) +  
+    geom_line(color = posit_colors$blue, linewidth = 0.75) +  
     scale_x_date(labels=scales::label_date_short()) + 
     scale_y_continuous(
       labels = scales::label_number(scale_cut = scales::cut_short_scale())
@@ -401,7 +401,7 @@ quarto_by_version <- quarto_gh_dls %>%
 
 quarto_by_version %>%
   ggplot(aes(minor_version, cumsum(total))) +
-    geom_line(aes(group = 1), color = posit_colors$blue, linewidth = 1) + 
+    geom_line(aes(group = 1), color = posit_colors$blue, linewidth = 0.75) + 
     scale_y_continuous(
       labels = scales::label_number(scale_cut = scales::cut_short_scale())
     ) +
