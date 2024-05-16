@@ -30,12 +30,12 @@
 //   Custom title page
 #let title_page(title, subtitle)={
     page(margin: 0in,
-        background: image("assets/images/Hex-Stickers-high-res-uncropped.jpg", height: 100%, fit: "cover"))[
+        background: image("assets/images/09.17.23PositDayOne2.jpg", height: 100%, fit: "cover"))[
         #set text(fill: white)
 
         #place(center + horizon, dy: -2.5in)[
             #set align(center + horizon)
-            #block(width: 100%, fill: posit_colors.dark_blue_3, outset: 4em)[
+            #block(width: 100%, fill: posit_colors.dark_blue_3, outset: 5em)[
                 #text(weight: "light", size: 36pt, title)
 
                 #text(weight: "bold", size: 24pt, subtitle)

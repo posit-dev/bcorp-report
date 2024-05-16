@@ -181,12 +181,12 @@
 //   Custom title page
 #let title_page(title, subtitle)={
     page(margin: 0in,
-        background: image("assets/images/Hex-Stickers-high-res-uncropped.jpg", height: 100%, fit: "cover"))[
+        background: image("assets/images/09.17.23PositDayOne2.jpg", height: 100%, fit: "cover"))[
         #set text(fill: white)
 
         #place(center + horizon, dy: -2.5in)[
             #set align(center + horizon)
-            #block(width: 100%, fill: posit_colors.dark_blue_3, outset: 4em)[
+            #block(width: 100%, fill: posit_colors.dark_blue_3, outset: 5em)[
                 #text(weight: "light", size: 36pt, title)
 
                 #text(weight: "bold", size: 24pt, subtitle)
@@ -366,7 +366,7 @@ Today, millions of people download and use Posit open-source products in their d
 ]
 #place(bottom, dy: 1.25in,
   align(center, 
-    image("assets/images/Conf-2023-Crowd.jpg", 
+    image("assets/images/1-1547.jpg", 
       width: 100% + 2.5in, fit: "cover")
   )
 )
@@ -432,12 +432,10 @@ Before the company re-branded in 2022, Posit (then RStudio) was often thought of
 Since the 2021 PBC report, Posit has released several new packages in the Python and R ecosystems and continues to maintain and grow the libraries previously developed. The following subsections highlight selected Posit software projects of interest to the broad data science community. Where metrics are published, please note these represent a #emph[lower bound] on the actual number, as it is difficult-to-impossible to account for every install and usage in the world.
 
 ]
-#align(center,
-  place(bottom, dy: 1.25in,
-    block(height: 4in, width: 100% + 2.5in,
-      image("assets/images/Hex-Stickers-high-res-2.jpg",
-        width: 100% + 2.5in, fit: "cover")
-    )
+#place(bottom, dy: 1.25in,
+  align(center, 
+    image("assets/images/2-0616.jpg", 
+      width: 100% + 2.5in, fit: "cover")
   )
 )
 #pagebreak()
@@ -654,6 +652,11 @@ There are currently 114 R-lib packages. Popular packages include #link("https://
 
 ])
 
+#page_banner(
+fill:posit_colors.blue,
+image_paths:("assets/images/BLab_B_Impact_Assessment-white.png",),
+image_height:75%,
+[
 = B Lab® Impact Assessment Results
 <b-lab-impact-assessment-results>
 #col-2()[
@@ -718,9 +721,17 @@ In our latest assessment, our governance score improved by 37% via improvements 
 
 == Workers
 <workers>
-We have made significant strides in our Worker assessment category since 2019, with scores increasing by 50% or more in areas such as career development, engagement and satisfaction, and financial security for our employees. Investments in employee career development include in-house management training programs, tooling and education to support constructive feedback, and documentation of job levels, pay ranges, and career paths within our major functions. In 2021, we initiated an annual organizational health survey, which allows us to collect and respond to employee feedback. We have also augmented our benefits to include a "lifestyle savings account" (LSA) funded by Posit that each individual can choose to apply to home office, professional development, wellness, or financial health expenses as they see fit. All together, we are working to continuously improve the value offered to our workers as our company grows.
+We have made significant strides in our Worker assessment category since 2019, with scores increasing by 50% or more in areas such as career development, engagement and satisfaction, and financial security for our employees. #colbreak() Investments in employee career development include in-house management training programs, tooling and education to support constructive feedback, and documentation of job levels, pay ranges, and career paths within our major functions. In 2021, we initiated an annual organizational health survey, which allows us to collect and respond to employee feedback. We have also augmented our benefits to include a "lifestyle savings account" (LSA) funded by Posit that each individual can choose to apply to home office, professional development, wellness, or financial health expenses as they see fit. All together, we are working to continuously improve the value offered to our workers as our company grows.
 
 ]
+#place(bottom, dy: 1.25in,
+  align(center, 
+    image("assets/images/Conf-2023-Crowd.jpg", 
+      width: 100% + 2.5in, fit: "cover")
+  )
+)
+])
+
 #back_page(repo: "https://github.com/posit-dev/bcorp-report/")[
   
 ]
