@@ -666,7 +666,8 @@ The BLab Impact Assessment is composed of questions in five Impact Areas: Govern
 In our initial assessment, we received high marks for incorporating as a benefit corporation, the health, wellness, safety, and financial security of our employees, and for educating and serving customers. We identified formal goal setting, career development, diversity, equity & inclusion, civic engagement & giving, and air & climate as areas for improvement.
 
 ]
-#pagebreak()
+])
+
 == Summary of Score Improvements Since 2019
 <summary-of-score-improvements-since-2019>
 The B Lab’s Impact assessment standards have evolved since 2019 (we are now on version 6 of the assessment). New questions were added, and thresholds for performance were raised in other cases. Of the scored questions we responded to in our most recent assessment, 38 were unchanged from 2019, 71 were modified from 2019 wording, and 22 were brand new questions. On the unchanged or modified questions, we have gained points in the areas listed below.
@@ -730,8 +731,6 @@ We have made significant strides in our Worker assessment category since 2019, w
       width: 100% + 2.5in, fit: "cover")
   )
 )
-])
-
 #back_page(repo: "https://github.com/posit-dev/bcorp-report/")[
   
 ]

@@ -813,7 +813,7 @@ improvement.
 
 :::
 
-{{< pagebreak >}}
+::: 
 
 ## Summary of Score Improvements Since 2019
 
@@ -985,7 +985,7 @@ or financial health expenses as they see fit. All together, we are
 working to continuously improve the value offered to our workers as our
 company grows.
 
-::: 
+:::
 
 ```{=typst}
 #place(bottom, dy: 1.25in,
@@ -995,8 +995,6 @@ company grows.
   )
 )
 ```
-
-:::
 
 ```{=typst}
 #back_page(repo: "https://github.com/posit-dev/bcorp-report/")[
