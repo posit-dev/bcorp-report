@@ -558,7 +558,11 @@ As part of our commitment to improving the quality and availability of open sour
 There is 1 FTE Posit employee developing webR open-source products as of May 2024.
 
 ]
-#pagebreak()
+])
+
+#page_banner(
+image_paths:("assets/images/hexes/plotnine.png",),
+[
 == Plotnine
 <plotnine>
 #col-2()[

@@ -554,7 +554,9 @@ May 2024.
 
 :::
 
-{{< pagebreak >}}
+:::
+
+::: {.page-banner image_paths='("assets/images/hexes/plotnine.png",)'}
 
 ## Plotnine
 
