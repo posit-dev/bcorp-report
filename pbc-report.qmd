@@ -74,7 +74,8 @@ singlepltfunc <- function(df, package) {
     xlab("") + 
     ylab("Cumulative Downloads") + 
     ggtitle(package)+
-    theme(panel.background = element_rect(fill = "#EDF0F5"))
+    theme(panel.background = element_rect(fill = "#EDF0F5"),
+      plot.margin = margin(5.5, 8.5, 5.5, 5.5))
   )
 }
 
@@ -167,7 +168,7 @@ likely bring our software into their professional environments, which
 opens up the possibility of commercial partnerships. To keep this cycle
 flowing, our open source developers must know and care about the
 integrations with proprietary solutions that matter to our enterprise
-customers. It also means that Posit's commercial teams consistently
+customers. {{< colbreak >}} It also means that Posit's commercial teams consistently
 provide value to individuals who may never directly spend a dollar with
 us.
 
