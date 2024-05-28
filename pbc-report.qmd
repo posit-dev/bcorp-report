@@ -122,15 +122,6 @@ measure social and environmental performance. Details of these
 assessments can be found on our [B Lab company
 page](https://www.bcorporation.net/en-us/find-a-b-corp/company/rstudio/).
 
-As a PBC, Posit publishes a report at least once every two years
-describing the public benefit we have created and how we seek to provide
-public benefits in the future. This is the fourth of these reports. The
-first report for 2019 [may be found
-here](https://posit.co/wp-content/uploads/2022/11/RStudio-Benefit-Corporation-2019-Annual-Report.pdf).
-The second report for 2020 [may be found
-here](https://posit.co/wp-content/uploads/2022/11/RStudio-Benefit-Corporation-2020-Annual-Report.pdf),
-and our 2021 report [may be found here](https://posit.co/wp-content/uploads/2022/09/RStudio-BenefitCorporation-2021-Annual-Report.pdf).
-
 To fulfill its beneficial purposes, Posit intends to remain an
 independent company over the long term. With the support of our
 customers, employees, and the community, we remain excited to contribute
@@ -194,7 +185,7 @@ pay for them.
 
 As of May 2024, Posit is spending \~38% of its engineering resources on
 open-source software development, and is leading contributions to over
-[\[xx\]]{.mark} open-source projects. Posit-led projects targeted a
+350 open-source projects. Posit-led projects targeted a
 broad range of areas including the RStudio IDE; infrastructure libraries
 for R and Python; numerous packages and tools to streamline data
 manipulation, exploration and visualization, modeling, and machine

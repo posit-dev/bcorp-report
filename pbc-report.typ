@@ -61,6 +61,54 @@
 
 }
 
+// Subfloats
+// This is a technique that we adapted from https://github.com/tingerrr/subpar/
+#let quartosubfloatcounter = counter("quartosubfloatcounter")
+
+#let quarto_super(
+  kind: str,
+  caption: none,
+  label: none,
+  supplement: str,
+  position: none,
+  subrefnumbering: "1a",
+  subcapnumbering: "(a)",
+  body,
+) = {
+  context {
+    let figcounter = counter(figure.where(kind: kind))
+    let n-super = figcounter.get().first() + 1
+    set figure.caption(position: position)
+    [#figure(
+      kind: kind,
+      supplement: supplement,
+      caption: caption,
+      {
+        show figure.where(kind: kind): set figure(numbering: _ => numbering(subrefnumbering, n-super, quartosubfloatcounter.get().first() + 1))
+        show figure.where(kind: kind): set figure.caption(position: position)
+
+        show figure: it => {
+          let num = numbering(subcapnumbering, n-super, quartosubfloatcounter.get().first() + 1)
+          show figure.caption: it => {
+            num.slice(2) // I don't understand why the numbering contains output that it really shouldn't, but this fixes it shrug?
+            [ ]
+            it.body
+          }
+
+          quartosubfloatcounter.step()
+          it
+          counter(figure.where(kind: it.kind)).update(n => n - 1)
+        }
+
+        quartosubfloatcounter.update(0)
+        body
+      }
+    )#label]
+  }
+}
+
+// callout rendering
+// this is a figure show rule because callouts are crossreferenceable
 #show figure: it => {
   if type(it.kind) != "string" {
     return it
@@ -97,35 +145,6 @@
     new_title_block +
     old_callout.body.children.at(1))
 }
-
-#show ref: it => locate(loc => {
-  let suppl = it.at("supplement", default: none)
-  if suppl == none or suppl == auto {
-    it
-    return
-  }
-
-  let sup = it.supplement.text.matches(regex("^45127368-afa1-446a-820f-fc64c546b2c5%(.*)")).at(0, default: none)
-  if sup != none {
-    let target = query(it.target, loc).first()
-    let parent_id = sup.captures.first()
-    let parent_figure = query(label(parent_id), loc).first()
-    let parent_location = parent_figure.location()
-
-    let counters = numbering(
-      parent_figure.at("numbering"), 
-      ..parent_figure.at("counter").at(parent_location))
-      
-    let subcounter = numbering(
-      target.at("numbering"),
-      ..target.at("counter").at(target.location()))
-    
-    // NOTE there's a nonbreaking space in the block below
-    link(target.location(), [#parent_figure.at("supplement") #counters#subcounter])
-  } else {
-    it
-  }
-})
 
 // 2023-10-09: #fa-icon("fa-info") is not working, so we'll eval "#fa-info()" instead
 #let callout(body: [], title: "Callout", background_color: rgb("#dddddd"), icon: none, icon_color: black) = {
@@ -335,8 +354,6 @@ B Corps#super[TM] meet the highest verified standards of social and environmenta
 #colbreak()
 In 2019, Posit (then RStudio) met the B Corporation certification requirements set by the B Lab. In 2023, our certification was renewed, and we are proud to share that our B Lab Impact Assessment score rose from 86.1 to 92.5 with this renewal. The B Lab certification process uses credible, comprehensive, transparent, and independent standards to measure social and environmental performance. Details of these assessments can be found on our #link("https://www.bcorporation.net/en-us/find-a-b-corp/company/rstudio/")[B Lab company page];.
 
-As a PBC, Posit publishes a report at least once every two years describing the public benefit we have created and how we seek to provide public benefits in the future. This is the fourth of these reports. The first report for 2019 #link("https://posit.co/wp-content/uploads/2022/11/RStudio-Benefit-Corporation-2019-Annual-Report.pdf")[may be found here];. The second report for 2020 #link("https://posit.co/wp-content/uploads/2022/11/RStudio-Benefit-Corporation-2020-Annual-Report.pdf")[may be found here];, and our 2021 report #link("https://posit.co/wp-content/uploads/2022/09/RStudio-BenefitCorporation-2021-Annual-Report.pdf")[may be found here];.
-
 To fulfill its beneficial purposes, Posit intends to remain an independent company over the long term. With the support of our customers, employees, and the community, we remain excited to contribute useful solutions to the important problems of knowledge they face.
 
 #place(right, dy: 3em)[
@@ -357,8 +374,7 @@ Together, Posit’s open-source software and commercial software form a virtuous
 
 Posit’s approach is not typical. Traditionally, scientific and technical computing companies create exclusively proprietary software. While it can provide a robust foundation for investing in product development, proprietary software can also create excessive dependency that is not good for data science practitioners and the community. In contrast, Posit provides core productivity tools, packages, protocols, and file formats as open-source software so customers aren’t overly dependent on a single software vendor. Additionally, while our commercial products enhance the development and use of our open-source software, they are not fundamentally required for those without the need or the ability to pay for them.
 
-As of May 2024, Posit is spending \~38% of its engineering resources on open-source software development, and is leading contributions to over #highlight()[\[xx\]]
-open-source projects. Posit-led projects targeted a broad range of areas including the RStudio IDE; infrastructure libraries for R and Python; numerous packages and tools to streamline data manipulation, exploration and visualization, modeling, and machine learning; and integration with external data sources. Posit also sponsors or contributes to many open-source and community projects led by others, including NumFOCUS, the R Consortium, the Python Software Foundation, DuckDB, Pandoc, pyodide, and ProseMirror, as well as dozens of smaller projects via the Open Source Collective or directly on Github. Additional information about our products and company contributions for the past two years can be found in our #link("https://posit.co/blog/2023-posit-year-in-review/")["Year In Review" blog posts];.
+As of May 2024, Posit is spending \~38% of its engineering resources on open-source software development, and is leading contributions to over 350 open-source projects. Posit-led projects targeted a broad range of areas including the RStudio IDE; infrastructure libraries for R and Python; numerous packages and tools to streamline data manipulation, exploration and visualization, modeling, and machine learning; and integration with external data sources. Posit also sponsors or contributes to many open-source and community projects led by others, including NumFOCUS, the R Consortium, the Python Software Foundation, DuckDB, Pandoc, pyodide, and ProseMirror, as well as dozens of smaller projects via the Open Source Collective or directly on Github. Additional information about our products and company contributions for the past two years can be found in our #link("https://posit.co/blog/2023-posit-year-in-review/")["Year In Review" blog posts];.
 
 #colbreak()
 Today, millions of people download and use Posit open-source products in their daily lives. Additionally, more than 10,000 customers that purchase our professional products help us sustain and grow our mission. It is inspiring to help so many people participate in global economies that increasingly reward data literacy, and know that our tools help produce insights essential to navigating our complex world.
@@ -672,7 +688,6 @@ In our initial assessment, we received high marks for incorporating as a benefit
 <summary-of-score-improvements-since-2019>
 The B Lab’s Impact assessment standards have evolved since 2019 (we are now on version 6 of the assessment). New questions were added, and thresholds for performance were raised in other cases. Of the scored questions we responded to in our most recent assessment, 38 were unchanged from 2019, 71 were modified from 2019 wording, and 22 were brand new questions. On the unchanged or modified questions, we have gained points in the areas listed below.
 
-#block[
 #figure(
   align(center)[#table(
     columns: (25%, 35%, 40%),
@@ -691,7 +706,6 @@ The B Lab’s Impact assessment standards have evolved since 2019 (we are now on
   , kind: table
   )
 
-]
 #v(1em)
 #col-2()[
 == Community
