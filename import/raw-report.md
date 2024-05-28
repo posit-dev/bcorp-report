@@ -30,15 +30,6 @@ measure social and environmental performance. Details of these
 assessments can be found on our [[B Lab company
 page]{.underline}](https://www.bcorporation.net/en-us/find-a-b-corp/company/rstudio/).
 
-As a PBC, Posit publishes a report at least once every two years
-describing the public benefit we have created and how we seek to provide
-public benefits in the future. This is the fourth of these reports. The
-first report for 2019 [[may be found
-here]{.underline}](https://posit.co/wp-content/uploads/2022/11/RStudio-Benefit-Corporation-2019-Annual-Report.pdf).
-The second report for 2020 [[may be found
-here]{.underline}](https://posit.co/wp-content/uploads/2022/11/RStudio-Benefit-Corporation-2020-Annual-Report.pdf),
-and our 2021 report may be found here.
-
 To fulfill its beneficial purposes, Posit intends to remain an
 independent company over the long term. With the support of our
 customers, employees, and the community, we remain excited to contribute
@@ -88,18 +79,18 @@ pay for them.
 
 As of May 2024, Posit is spending \~38% of its engineering resources on
 open-source software development, and is leading contributions to over
-[\[xx\]]{.mark} open-source projects. Posit-led projects targeted a
-broad range of areas including the RStudio IDE; infrastructure libraries
-for R and Python; numerous packages and tools to streamline data
-manipulation, exploration and visualization, modeling, and machine
-learning; and integration with external data sources. Posit also
-sponsors or contributes to many open-source and community projects led
-by others, including NumFOCUS, the R Consortium, the Python Software
-Foundation, DuckDB, Pandoc, pyodide, and ProseMirror, as well as dozens
-of smaller projects via the Open Source Collective or directly on
-Github. Additional information about our products and company
-contributions for the past two years can be found in our [\"Year In
-Review\'\' blog posts]{.underline}.
+350 open-source projects. Posit-led projects targeted a broad range of
+areas including the RStudio IDE; infrastructure libraries for R and
+Python; numerous packages and tools to streamline data manipulation,
+exploration and visualization, modeling, and machine learning; and
+integration with external data sources. Posit also sponsors or
+contributes to many open-source and community projects led by others,
+including NumFOCUS, the R Consortium, the Python Software Foundation,
+DuckDB, Pandoc, pyodide, and ProseMirror, as well as dozens of smaller
+projects via the Open Source Collective or directly on Github.
+Additional information about our products and company contributions for
+the past two years can be found in our [\"Year In Review\'\' blog
+posts]{.underline}.
 
 Today, millions of people download and use Posit open-source products in
 their daily lives. Additionally, more than 10,000 customers that
@@ -413,8 +404,8 @@ open-source packages as of May 2024.
 R-lib is a large collection of R packages that make it easier to build,
 find, and use effective tools for data analysis.
 
-There are currently [111]{.mark} R-lib packages. Popular packages
-include [[devtools]{.underline}](https://devtools.r-lib.org/),
+There are currently 114 R-lib packages. Popular packages include
+[[devtools]{.underline}](https://devtools.r-lib.org/),
 [[testthat]{.underline}](https://testthat.r-lib.org/),
 [[roxygen2]{.underline}](https://roxygen2.r-lib.org/),
 [[pkgdown]{.underline}](https://pkgdown.r-lib.org/) and
