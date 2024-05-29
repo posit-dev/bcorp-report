@@ -202,10 +202,6 @@ account for every install and usage in the world.
 
 
 
-<div class="page-banner"
-image_paths="(&quot;assets/images/quarto-logo-dark.svg&quot;,)"
-image_height="50%">
-
 ### Quarto
 
 In July 2022, [Posit
@@ -235,12 +231,6 @@ Quarto products as of May 2024.
 
 ![](pbc-report_files/figure-commonmark/quarto-1.png)
 
-</div>
-
-<div class="page-banner"
-image_paths="(&quot;assets/images/shiny-logo.png&quot;,)"
-image_height="50%">
-
 ### Shiny
 
 Shiny has been a mainstay in the R community since its launch in 2012,
@@ -269,12 +259,7 @@ Shiny Server products as of May 2024.
 
 ![](pbc-report_files/figure-commonmark/shiny-2.png)
 
-</div>
-
 
-
-<div class="page-banner"
-image_paths="(&quot;assets/images/hexes/gt.svg&quot;,)">
 
 ### gt / Great Tables
 
@@ -297,11 +282,6 @@ Tables open-source packages.
 
 ![](pbc-report_files/figure-commonmark/gt-2.png)
 
-</div>
-
-<div class="page-banner"
-image_paths="(&quot;assets/images/hexes/vetiver.svg&quot;,)">
-
 ### Vetiver
 
 [Vetiver](https://vetiver.posit.co/) solves the issues around
@@ -314,10 +294,6 @@ documentation by extracting some information about the generated model.
 ![](pbc-report_files/figure-commonmark/vetiver-1.png)
 
 ![](pbc-report_files/figure-commonmark/vetiver-2.png)
-
-</div>
-
-<div class="page-banner">
 
 ### Posit Public Package Manager
 
@@ -350,11 +326,6 @@ capabilities, webR can improve performance and lower app hosting costs.
 There is 1 FTE Posit employee developing webR open-source products as of
 May 2024.
 
-</div>
-
-<div class="page-banner"
-image_paths="(&quot;assets/images/hexes/plotnine.png&quot;,)">
-
 ### Plotnine
 
 [Plotnine](https://plotnine.org/) is an implementation of the grammar of
@@ -364,11 +335,6 @@ custom (and otherwise complex) plots are easy to reason about and build
 incrementally, while the simple plots remain simple to create.
 
 ![](pbc-report_files/figure-commonmark/plotnine-1.png)
-
-</div>
-
-<div class="page-banner"
-image_paths="(&quot;assets/images/hexes/siuba.svg&quot;,)">
 
 ### Siuba
 
@@ -380,11 +346,6 @@ mutate and summarize. Siuba supports several backends including pandas,
 many” freedom for your analytics code.
 
 ![](pbc-report_files/figure-commonmark/siuba-1.png)
-
-</div>
-
-<div class="page-banner"
-image_paths="(&quot;assets/images/hexes/RStudio.svg&quot;,)">
 
 ### RStudio Integrated Development Environment
 
@@ -402,11 +363,6 @@ desktop and server products as of May 2024.
 
 ![](pbc-report_files/figure-commonmark/rstudio-1.png)
 
-</div>
-
-<div class="page-banner"
-image_paths="(&quot;assets/images/hexes/tidyverse.svg&quot;, )">
-
 ### Tidyverse
 
 The [tidyverse](https://www.tidyverse.org/) is an opinionated collection
@@ -420,11 +376,6 @@ There are 9 FTE Posit employees developing Tidyverse and related
 open-source products as of May 2024.
 
 ![](pbc-report_files/figure-commonmark/tidyverse-1.png)
-
-</div>
-
-<div class="page-banner"
-image_paths="(&quot;assets/images/hexes/tidymodels.svg&quot;, )">
 
 ### Tidymodels
 
@@ -440,11 +391,6 @@ There are 3 FTE Posit employees developing Tidymodels and related
 open-source products as of May 2024.
 
 ![](pbc-report_files/figure-commonmark/tidymodels-1.png)
-
-</div>
-
-<div class="page-banner"
-image_paths="(&quot;assets/images/hexes/sparklyr.svg&quot;, &quot;assets/images/hexes/reticulate.svg&quot;, &quot;assets/images/hexes/tensorflow.svg&quot;)">
 
 ### Connectivity Packages
 
@@ -464,11 +410,6 @@ open-source packages as of May 2024.
 
 ![](pbc-report_files/figure-commonmark/connectivity-1.png)
 
-</div>
-
-<div class="page-banner"
-image_paths="(&quot;assets/images/hexes/devtools.svg&quot;,&quot;assets/images/hexes/usethis.svg&quot;, &quot;assets/images/hexes/roxygen2.svg&quot;, &quot;assets/images/hexes/testthat.svg&quot;, &quot;assets/images/hexes/pkgdown.svg&quot;)">
-
 ### R Infrastructure Tools (r-lib)
 
 R-lib is a large collection of R packages that make it easier to build,
@@ -482,12 +423,6 @@ There are currently 114 R-lib packages. Popular packages include
 [usethis](https://usethis.r-lib.org/).
 
 ![](pbc-report_files/figure-commonmark/rlibs-1.png)
-
-</div>
-
-<div class="page-banner" fill="posit_colors.blue"
-image_paths="(&quot;assets/images/BLab_B_Impact_Assessment-white.png&quot;,)"
-image_height="75%">
 
 ## B Lab® Impact Assessment Results
 
@@ -512,8 +447,6 @@ security of our employees, and for educating and serving customers. We
 identified formal goal setting, career development, diversity, equity &
 inclusion, civic engagement & giving, and air & climate as areas for
 improvement.
-
-</div>
 
 ### Summary of Score Improvements Since 2019
 
