@@ -1,6 +1,8 @@
 ---
 title: "Posit Benefit Corporation"
 subtitle: 2024 Annual Report
+fig-width: 7
+fig-height: 3
 format: 
   typst:
     font-paths: assets/fonts
@@ -11,10 +13,11 @@ format:
     filters: 
       - layout.lua
       - mark.lua
-    fig-width: 7
-    fig-height: 3
   html: 
     shift-heading-level-by: 1
+    minimal: true
+    filters:
+      - ignore-layout.lua
 shortcodes:
   - colbreak.lua
 keep-typ: true
