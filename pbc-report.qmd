@@ -13,13 +13,16 @@ format:
     filters: 
       - layout.lua
       - mark.lua
+  gfm: 
+    shift-heading-level-by: 1
+    fig-dpi: 300
   html: 
     shift-heading-level-by: 1
     minimal: true
-    filters:
-      - ignore-layout.lua
 shortcodes:
   - colbreak.lua
+filters:
+  - ignore-layout.lua
 keep-typ: true
 execute:
   echo: false
