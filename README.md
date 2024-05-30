@@ -1,25 +1,6 @@
--   `import/` has an example of getting the content out of Google Docs and into `.md`
--   `pbc-report.qmd` has `.md` content plus some editing to handle a few style changes (e.g. switching page themes)
--   Most styling happens in a Typst template: `typst-template.typ`
+# Posit's Benefit Corporation Annual Report
 
-## Updating from Google Docs
+This repository holds the source for the PDF version of Posit's Benefit Corporation Annual Report found at <https://posit.co/about/pbc-report/>.
 
-1.  Clean Git status
+The report content lives in `pbc-report.qmd` and is produced using `format: typst` with the custom template partials in `typst-template.typ` and `typst-show.typ`.
 
-2.  Run `import/initial-import.R`. Commit changes to `raw-report.md`.
-
-3.  Generate patch:
-
-    ``` bash
-    git format-patch HEAD^ --stdout > patch
-    ```
-    
-    Edit header to point at `pbc-report.qmd`
-
-4.  Apply patch:
-    
-    ``` bash
-    git apply --3way -C1 --recount patch
-    ```
-
-5.  Resolve conflicts and merge.
