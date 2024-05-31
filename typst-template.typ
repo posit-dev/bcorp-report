@@ -23,7 +23,7 @@
     content
   }
 
-#let col-2(content)={
+#let two_columns(content)={
     columns(2, gutter: 3em, content)
 } 
 

@@ -11,7 +11,6 @@ format:
       - typst-template.typ
       - typst-show.typ
     filters: 
-      - layout.lua
       - mark.lua
   gfm: 
     shift-heading-level-by: 1
@@ -22,7 +21,7 @@ format:
 shortcodes:
   - colbreak.lua
 filters:
-  - ignore-layout.lua
+  - typst-divs
 keep-typ: true
 execute:
   echo: false
@@ -87,7 +86,7 @@ singlepltfunc <- function(df, package) {
 
 ```
 
-::: {.page-blue}
+::: {.typst_page_blue}
 
 ```{=typst}
 #counter(page).update(1)
@@ -95,7 +94,7 @@ singlepltfunc <- function(df, package) {
 
 # A Message from our CEO 
 
-::: {.cols-2}
+::: {.typst_two_columns}
 
 Posit aims to create free and open-source software for data science,
 scientific research, and technical communication in a sustainable way,
@@ -135,22 +134,23 @@ customers, employees, and the community, we remain excited to contribute
 useful solutions to the important problems of knowledge they face.
 
 ```{=typst}
-#place(right, dy: 3em)[
+#set place(right)
 ```
+
+:::: {.typst_place dy="3em"}
 
 *J.J. Allaire* \
 CEO, Posit PBC
 
-```{=typst}
-]
-```
-::: 
+::::
+
+:::
 
 :::
 
 # Introduction 
 
-::: {.cols-2}
+::: {.typst_two_columns}
 
 Posit's mission is to create free and open-source software for data
 science, scientific research, and technical communication. We do this to
@@ -230,7 +230,7 @@ produce insights essential to navigating our complex world.
 
 # Posit's Charter and Statement of Public Benefit
 
-::: {.cols-2}
+::: {.typst_two_columns}
 
 ## Posit's Charter
 
@@ -274,7 +274,7 @@ research, and technical communication:
 
 ## Our primary obligations as a PBC and Certified B Corporation
 
-::: {.cols-2}
+::: {.typst_two_columns}
 
 ### Public Benefit Corporation
 
@@ -302,7 +302,7 @@ research, and technical communication:
 
 # Posit's Open Source Development Projects
 
-::: {.cols-2}
+::: {.typst_two_columns}
 
 Before the company re-branded in 2022, Posit (then RStudio) was often
 thought of as an "R company" in the data community because of its
@@ -339,11 +339,11 @@ account for every install and usage in the world.
 
 {{< pagebreak >}}
 
-::: {.page-banner image_paths='("assets/images/quarto-logo-dark.svg",)' image_height="50%"}
+::: {.typst_page_banner image_paths='("assets/images/quarto-logo-dark.svg",)' image_height="50%"}
 
 ## Quarto
 
-::: {.cols-2}
+::: {.typst_two_columns}
 
 In July 2022, [Posit
 announced](https://posit.co/blog/announcing-quarto-a-new-scientific-and-technical-publishing-system/)
@@ -409,11 +409,11 @@ quarto_by_version %>%
 
 ::: 
 
-::: {.page-banner image_paths='("assets/images/shiny-logo.png",)' image_height="50%"}
+::: {.typst_page_banner image_paths='("assets/images/shiny-logo.png",)' image_height="50%"}
 
 ## Shiny
 
-::: {.cols-2}
+::: {.typst_two_columns}
 
 Shiny has been a mainstay in the R community since its launch in 2012,
 providing a web application framework that makes it easy to tell data
@@ -454,11 +454,11 @@ singlepltfunc(rdf, "shiny") + ggtitle("Shiny for R")
 
 {{< pagebreak >}}
 
-::: {.page-banner image_paths='("assets/images/hexes/gt.svg",)'}
+::: {.typst_page_banner image_paths='("assets/images/hexes/gt.svg",)'}
 
 ## gt / Great Tables
 
-::: {.cols-2}
+::: {.typst_two_columns}
 
 When presenting an analysis, a table can often convey the results more
 concisely than the most beautiful and interactive of charts. However,
@@ -487,11 +487,11 @@ singlepltfunc(rdf, "gt")
 
 :::
 
-::: {.page-banner image_paths='("assets/images/hexes/vetiver.svg",)'}
+::: {.typst_page_banner image_paths='("assets/images/hexes/vetiver.svg",)'}
 
 ## Vetiver
 
-::: {.cols-2}
+::: {.typst_two_columns}
 
 [Vetiver](https://vetiver.posit.co/) solves the issues
 around versioning, sharing, deploying and monitoring predictive models
@@ -510,12 +510,12 @@ singlepltfunc(rdf, "vetiver") + ggtitle("vetiver for R")
 
 :::
 
-::: {.page-banner}
+::: {.typst_page_banner}
 
 
 ## Posit Public Package Manager
 
-::: {.cols-2}
+::: {.typst_two_columns}
 
 WIth the ubiquity of open source software in our daily lives, one area
 that most people don't think about is 'How do you distribute that
@@ -544,7 +544,7 @@ million downloads per month in Q1 2024.
 
 ## webR
 
-::: {.cols-2}
+::: {.typst_two_columns}
 
 [WebR](https://docs.r-wasm.org/webr/latest/) has the
 ambitious goal of bringing the R language to the browser, removing the
@@ -563,11 +563,11 @@ May 2024.
 
 :::
 
-::: {.page-banner image_paths='("assets/images/hexes/plotnine.png",)'}
+::: {.typst_page_banner image_paths='("assets/images/hexes/plotnine.png",)'}
 
 ## Plotnine
 
-::: {.cols-2}
+::: {.typst_two_columns}
 
 [Plotnine](https://plotnine.org/) is an implementation of
 the grammar of graphics in Python, heavily influenced by ggplot2 in R.
@@ -586,11 +586,11 @@ singlepltfunc(pydf, "plotnine")
 
 :::
 
-::: {.page-banner image_paths='("assets/images/hexes/siuba.svg",)'}
+::: {.typst_page_banner image_paths='("assets/images/hexes/siuba.svg",)'}
 
 ## Siuba
 
-::: {.cols-2}
+::: {.typst_two_columns}
 
 [Siuba](https://siuba.org/) is a port of dplyr and other R
 libraries. It's aim is to make data science faster through a consistent
@@ -609,11 +609,11 @@ singlepltfunc(pydf, "siuba")
 
 :::
 
-::: {.page-banner image_paths='("assets/images/hexes/RStudio.svg",)'}
+::: {.typst_page_banner image_paths='("assets/images/hexes/RStudio.svg",)'}
 
 ## RStudio Integrated Development Environment
 
-::: {.cols-2}
+::: {.typst_two_columns}
 
 [RStudio](https://posit.co/products/open-source/rstudio/)
 is a multi-language IDE designed for Data Science with R and Python. It
@@ -638,11 +638,11 @@ singlepltfunc(rstudiodf, "RStudio")
 
 :::
 
-::: {.page-banner image_paths='("assets/images/hexes/tidyverse.svg", )'}
+::: {.typst_page_banner image_paths='("assets/images/hexes/tidyverse.svg", )'}
 
 ## Tidyverse
 
-::: {.cols-2}
+::: {.typst_two_columns}
 
 The [tidyverse](https://www.tidyverse.org/) is an
 opinionated collection of R packages designed for data science. All
@@ -671,11 +671,11 @@ singlepltfunc(tidyvdf, "Tidyverse")
 
 :::
 
-::: {.page-banner image_paths='("assets/images/hexes/tidymodels.svg", )'}
+::: {.typst_page_banner image_paths='("assets/images/hexes/tidymodels.svg", )'}
 
 ## Tidymodels
 
-::: {.cols-2}
+::: {.typst_two_columns}
 
 [Tidymodels](https://www.tidymodels.org/) is a cohesive
 collection of packages that perform tasks relevant to statistical
@@ -705,11 +705,11 @@ singlepltfunc(tidymdf, "Tidymodels")
 
 :::
 
-::: {.page-banner image_paths='("assets/images/hexes/sparklyr.svg", "assets/images/hexes/reticulate.svg", "assets/images/hexes/tensorflow.svg")'}
+::: {.typst_page_banner image_paths='("assets/images/hexes/sparklyr.svg", "assets/images/hexes/reticulate.svg", "assets/images/hexes/tensorflow.svg")'}
 
 ## Connectivity Packages 
 
-::: {.cols-2}
+::: {.typst_two_columns}
 
 Posit increases the efficiency of customers by making open-source
 packages that connect data scientists to spreadsheets, databases,
@@ -741,11 +741,11 @@ singlepltfunc(rcondf, "R Connectivity")
 
 :::
 
-::: {.page-banner image_paths='("assets/images/hexes/devtools.svg","assets/images/hexes/usethis.svg", "assets/images/hexes/roxygen2.svg", "assets/images/hexes/testthat.svg", "assets/images/hexes/pkgdown.svg")'}
+::: {.typst_page_banner image_paths='("assets/images/hexes/devtools.svg","assets/images/hexes/usethis.svg", "assets/images/hexes/roxygen2.svg", "assets/images/hexes/testthat.svg", "assets/images/hexes/pkgdown.svg")'}
 
 ## R Infrastructure Tools (r-lib)
 
-::: {.cols-2}
+::: {.typst_two_columns}
 
 R-lib is a large collection of R packages that make it easier to build,
 find, and use effective tools for data analysis.
@@ -781,11 +781,11 @@ singlepltfunc(rlibdf, "R-Lib")
 
 ::: 
 
-::: {.page-banner fill="posit_colors.blue" image_paths='("assets/images/BLab_B_Impact_Assessment-white.png",)' image_height="75%"}
+::: {.typst_page_banner fill="posit_colors.blue" image_paths='("assets/images/BLab_B_Impact_Assessment-white.png",)' image_height="75%"}
 
 #  B Lab® Impact Assessment Results
 
-::: {.cols-2}
+::: {.typst_two_columns}
 
 The BLab Impact Assessment is composed of questions in five Impact
 Areas: Governance, Workers, Community, Environment, and Customers.
@@ -885,7 +885,7 @@ gained points in the areas listed below.
 #v(1em)
 ```
 
-::: {.cols-2}
+::: {.typst_two_columns}
 
 ## Community
 
