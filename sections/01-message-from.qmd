@@ -1,0 +1,48 @@
+
+Posit aims to create free and open-source software for data science,
+scientific research, and technical communication in a sustainable way,
+because it benefits everyone when the essential tools to produce and
+consume knowledge are available to all, regardless of economic means.
+
+We believe corporations should fulfill a purposeful benefit to the
+public and be run for the benefit of all stakeholders including
+employees, customers, and the larger community.
+
+As a Delaware Public Benefit Corporation (PBC) and a Certified B
+Corporation®, Posit's open-source mission and commitment to a beneficial
+public purpose are codified in our charter, requiring our corporate
+decisions to balance the interests of the community, customers,
+employees, and shareholders.
+
+B Corps^TM^ meet the highest verified standards of social and
+environmental performance, transparency, and accountability. Posit
+measures its public benefit by utilizing the non-profit B Lab®'s "Impact
+Assessment", a rigorous assessment of a company's impact on its workers,
+customers, community, and environment.
+
+{{< colbreak >}}
+
+In 2019, Posit (then RStudio) met the B Corporation certification
+requirements set by the B Lab. In 2023, our certification was renewed,
+and we are proud to share that our B Lab Impact Assessment score rose
+from 86.1 to 92.5 with this renewal. The B Lab certification process
+uses credible, comprehensive, transparent, and independent standards to
+measure social and environmental performance. Details of these
+assessments can be found on our [B Lab company
+page](https://www.bcorporation.net/en-us/find-a-b-corp/company/rstudio/).
+
+To fulfill its beneficial purposes, Posit intends to remain an
+independent company over the long term. With the support of our
+customers, employees, and the community, we remain excited to contribute
+useful solutions to the important problems of knowledge they face.
+
+```{=typst}
+#place(right, dy: 3em)[
+```
+
+*J.J. Allaire* \
+CEO, Posit PBC
+
+```{=typst}
+]
+```

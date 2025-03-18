@@ -1,0 +1,537 @@
+```{r}
+#| label: setup
+#| include: false
+library(ggplot2)
+library(tidyverse)
+library(here)
+library(thematic)
+library(ragg)
+library(showtext)
+
+posit_colors <- list(
+  blue = "#447099",
+  grey = "#404041",
+  orange = "#EE6331",
+  dark_blue_2 = "#213D4F",
+  dark_blue_3 = "#17212B",
+  light_blue_1 = "#D1DBE5",
+  light_blue_2 = "#A2B8CB"
+)
+
+thematic_on(bg = "white", fg = posit_colors$grey, accent = posit_colors$blue,
+  font = "Open Sans")
+
+pydf <- read.csv(here("data", "pypi_stats.csv"), col.names = c("date", "downloads", "pkg"))
+rdf <- read.csv(here("data","rpkgs.csv"), col.names = c("date", "downloads", "pkg"))
+tidyvdf <- read.csv(here("data","tidyverse_pkgs.csv"), col.names = c("date", "downloads", "pkg"))
+tidymdf <- read.csv(here("data", "tidymodels_pkgs.csv"), col.names = c("date", "downloads", "pkg"))
+rlibdf <- read.csv(here("data","rlib_pkgs.csv"), col.names = c("date", "downloads", "pkg"))
+rcondf <- read.csv(here("data","rcon_pkgs.csv"), col.names = c("date", "downloads", "pkg"))
+
+rstudiodf <- read.csv(here("data","rstudio_os_dls.csv"), col.names = c("date", "downloads"))
+rstudiodf$pkg <- "RStudio"
+
+quarto_rstudio_dls <- read.csv(here("data", "quarto_rstudio_dls.csv"), col.names = c("date", "downloads"))
+quarto_rstudio_dls$pkg <- "quarto"
+
+quarto_gh_dls <- read.csv(here("data", "quarto_gh_downloads.csv"), col.names = c("date", "name", "downloads"))
+quarto_gh_dls$date <- as.character(as.Date(quarto_gh_dls$date))
+
+singlepltfunc <- function(df, package) { 
+  return(
+    df %>% 
+    filter(pkg == package) %>%
+    ggplot(aes(x=as.Date(date), y=cumsum(as.numeric(downloads)))) + 
+    geom_line(color = posit_colors$blue, linewidth = 0.75) +  
+    scale_x_date(labels=scales::label_date_short()) + 
+    scale_y_continuous(
+      labels = scales::label_number(scale_cut = scales::cut_short_scale())
+    ) +
+    xlab("") + 
+    ylab("Cumulative Downloads") + 
+    ggtitle(package)+
+    theme(panel.background = element_rect(fill = "#EDF0F5"),
+      plot.margin = margin(5.5, 8.5, 5.5, 5.5))
+  )
+}
+
+```
+
+::: {.cols-2}
+
+Before the company re-branded in 2022, Posit (then RStudio) was often
+thought of as an "R company" in the data community because of its
+dedication to developing and maintaining some of the most used R
+libraries in the world. However, Posit has always been better described
+as a *scientific software* company. Supporting Python (via the
+[reticulate](https://github.com/rstudio/reticulate)
+package, RStudio language support), working with relational databases
+and data platforms such as Apache Spark (a cross-platform data frame
+compatibility via [feather/Apache
+Arrow](https://github.com/apache/arrow)), and much more
+mean that we've never been solely an "R company".
+
+{{< colbreak >}}
+
+Since the 2021 PBC report, Posit has released several new packages in
+the Python and R ecosystems and continues to maintain and grow the
+libraries previously developed. The following subsections highlight
+selected Posit software projects of interest to the broad data science
+community. Where metrics are published, please note these represent a
+*lower bound* on the actual number, as it is difficult-to-impossible to
+account for every install and usage in the world.
+
+:::
+
+```{=typst}
+#place(bottom, dy: 1.25in,
+  align(center, 
+    image("assets/images/2-0616.jpg", 
+      width: 100% + 2.5in, fit: "cover")
+  )
+)
+```
+
+{{< pagebreak >}}
+
+::: {.page-banner image_paths='("assets/images/quarto-logo-dark.svg",)' image_height="50%"}
+
+## Quarto
+
+::: {.cols-2}
+
+In July 2022, [Posit
+announced](https://posit.co/blog/announcing-quarto-a-new-scientific-and-technical-publishing-system/)
+the [Quarto](https://quarto.org/) project, an open-source
+scientific and technical publishing system as a successor to the [R
+Markdown](https://rmarkdown.rstudio.com/) library. While
+Quarto incorporates the lessons learned from over 10 years of developing
+R Markdown into an entirely new project, it's likely still quite
+familiar to users of R Markdown as they share two core dependencies:
+Knitr and Pandoc. In fact, despite the fact that Quarto does some things
+differently, most existing R Markdown documents can be rendered
+unmodified using Quarto.
+
+{{< colbreak >}}
+
+Quarto allows users to choose from multiple computational engines
+(Knitr, Jupyter, and Observable), which makes it easy to use Quarto with
+R, Python, Julia, JavaScript and many other languages. It also allows
+users to author documents as plain text markdown or Jupyter Notebooks,
+and publish to numerous outputs such as HTML, PDF, MS Word, ePub and
+more. Finally, the community has already extended Quarto , as shown by
+the
+[quartodoc](https://machow.github.io/quartodoc/get-started/overview.html)
+project for developing API documentation.
+
+There are 5 full time equivalent (FTE) employees developing open-source
+Quarto products as of May 2024.
+
+:::
+ 
+```{r}
+#| label: quarto
+quarto_rstudio_by_version <- quarto_rstudio_dls %>% 
+  summarise(downloads = sum(downloads)) %>%
+  mutate(minor_version = "0.9")
+
+quarto_by_version <- quarto_gh_dls %>% 
+  filter(!str_detect(name, "changelog"), !str_detect(name, "checksums")) %>%
+  mutate(
+    version = str_extract(name, "[01]\\.[0-9]\\.[0-9]+"),
+    minor_version = str_extract(version, "[01]\\.[0-9]")
+  ) %>% 
+  bind_rows(quarto_rstudio_by_version) %>%
+  group_by(minor_version) %>%
+  summarise(
+    total = sum(downloads),
+    min_date = min(as.Date(date)),
+    max_date = max(as.Date(date))
+  ) %>%
+  mutate(minor_version = if_else(minor_version == 1.5, "1.5\nPre-release", minor_version))
+
+quarto_by_version %>%
+  ggplot(aes(minor_version, cumsum(total))) +
+    geom_line(aes(group = 1), color = posit_colors$blue, linewidth = 0.75) + 
+    scale_y_continuous(
+      labels = scales::label_number(scale_cut = scales::cut_short_scale())
+    ) +
+    xlab("Minor Version") +
+    ylab("Cumulative Downloads") +
+    ggtitle("Quarto")+
+    theme(panel.background = element_rect(fill = "#EDF0F5"))
+```
+
+::: 
+
+::: {.page-banner image_paths='("assets/images/shiny-logo.png",)' image_height="50%"}
+
+## Shiny
+
+::: {.cols-2}
+
+Shiny has been a mainstay in the R community since its launch in 2012,
+providing a web application framework that makes it easy to tell data
+stories in interactive point-and-click web applications. In April 2023,
+Posit released the Python version of Shiny, bringing the same great
+reactive programming model and modular design to the PyData ecosystem.
+
+{{< colbreak >}}
+
+Shiny applications can be shared with others via an open-source [Shiny
+Server](https://posit.co/products/open-source/shinyserver/),
+the hosted [shinyapps.io](http://shinyapps.io) service, or
+with [Posit
+Connect](https://posit.co/products/enterprise/connect/).
+Shiny and related packages include shiny
+([Python](https://shiny.posit.co/py/),
+[R](https://shiny.posit.co/r/getstarted)),
+[bslib](https://rstudio.github.io/bslib/),
+[shinytest](https://rstudio.github.io/shinytest/),
+[shinyloadtest](https://rstudio.github.io/shinyloadtest/),
+[shinydashboard](https://rstudio.github.io/shinydashboard/),
+[leaflet](https://rstudio.github.io/leaflet/), and
+[crosstalk](https://rstudio.github.io/crosstalk/).
+
+There are 5 FTE Posit employees developing the open-source Shiny and
+Shiny Server products as of May 2024.
+
+:::
+
+```{r}
+#| label: shiny
+#| fig-height: 2.75
+singlepltfunc(pydf, "shiny") + ggtitle("Shiny for Python")
+singlepltfunc(rdf, "shiny") + ggtitle("Shiny for R")
+```
+
+::: 
+
+{{< pagebreak >}}
+
+::: {.page-banner image_paths='("assets/images/hexes/gt.svg",)'}
+
+## gt / Great Tables
+
+::: {.cols-2}
+
+When presenting an analysis, a table can often convey the results more
+concisely than the most beautiful and interactive of charts. However,
+the experience of creating and displaying tables in R and Python has
+been mixed, especially when you want to display something beyond a plain
+data frame representation.
+
+{{< colbreak >}}
+
+To that end, the [gt](https://gt.rstudio.com/) and [Great
+Tables](https://posit-dev.github.io/great-tables/articles/intro.html)
+packages have defined a "grammar of tables" to solve this problem (in R
+and Python, respectively), analogous to the "grammar of graphics" for
+specifying charts.
+
+As of May 2024, there is 1 FTE Posit employee developing gt / Great
+Tables open-source packages.
+
+:::
+
+```{r}
+#| label: gt
+singlepltfunc(pydf, "great_tables")
+singlepltfunc(rdf, "gt")
+```
+
+:::
+
+::: {.page-banner image_paths='("assets/images/hexes/vetiver.svg",)'}
+
+## Vetiver
+
+::: {.cols-2}
+
+[Vetiver](https://vetiver.posit.co/) solves the issues
+around versioning, sharing, deploying and monitoring predictive models
+served via APIs. Available for both R and Python, vetiver is extensible
+via generics that support many common types of models. {{< colbreak >}} Vetiver also
+provides the "model cards" functionality, which can help to generate
+documentation by extracting some information about the generated model.
+
+::: 
+
+```{r}
+#| label: vetiver
+singlepltfunc(pydf, "vetiver") + ggtitle("vetiver for Python")
+singlepltfunc(rdf, "vetiver") + ggtitle("vetiver for R")
+```
+
+:::
+
+::: {.page-banner}
+
+
+## Posit Public Package Manager
+
+::: {.cols-2}
+
+WIth the ubiquity of open source software in our daily lives, one area
+that most people don't think about is 'How do you distribute that
+software quickly and securely to the end user?'. To that end, Posit
+created [Posit Package
+Manager](https://posit.co/products/enterprise/package-manager/),
+which gives companies a means for providing curated repositories,
+repository snapshots for better reproducibility, the ability to air-gap
+the repository for enhanced security and much more.
+
+{{< colbreak >}}
+
+As part of our commitment to improving the quality and availability of
+open source software for all, Posit hosts a public instance of Posit
+Package Manager called [Posit Public Package
+Manager](https://packagemanager.posit.co/client/#/) that
+mirrors CRAN, PyPI and Bioconductor. This mirror served nearly 40
+million downloads per month in Q1 2024.
+
+:::
+
+```{=typst}
+#v(6em)
+#place(right, dy: -3em, image("assets/images/hexes/webr.svg", height: 5em))
+```
+
+## webR
+
+::: {.cols-2}
+
+[WebR](https://docs.r-wasm.org/webr/latest/) has the
+ambitious goal of bringing the R language to the browser, removing the
+need for a backend server for computation. It also allows for
+computation to be done on the client machine, supporting use cases that
+are infeasible or undesirable for using server-side processing (such as
+not wanting to send personal data over the internet). {{< colbreak  >}}
+Also, by making
+the most of the user's device capabilities, webR can improve performance
+and lower app hosting costs.
+
+There is 1 FTE Posit employee developing webR open-source products as of
+May 2024.
+
+:::
+
+:::
+
+::: {.page-banner image_paths='("assets/images/hexes/plotnine.png",)'}
+
+## Plotnine
+
+::: {.cols-2}
+
+[Plotnine](https://plotnine.org/) is an implementation of
+the grammar of graphics in Python, heavily influenced by ggplot2 in R.
+Built upon the ubiquitous
+[matplotlib](https://matplotlib.org/) plotting library, {{< colbreak >}}
+custom (and otherwise complex) plots are easy to reason about and build
+incrementally, while the simple plots remain simple to create.
+
+:::
+
+```{r}
+#| label: plotnine
+singlepltfunc(pydf, "plotnine")
+```
+
+
+:::
+
+::: {.page-banner image_paths='("assets/images/hexes/siuba.svg",)'}
+
+## Siuba
+
+::: {.cols-2}
+
+[Siuba](https://siuba.org/) is a port of dplyr and other R
+libraries. It's aim is to make data science faster through a consistent
+interface of verbs for working with real-world data: filter, arrange,
+select, mutate and summarize. {{< colbreak >}} 
+Siuba supports several backends including
+pandas, [DuckDB](https://duckdb.org/) and SQL, providing a
+"write once, run many" freedom for your analytics code.
+
+::: 
+
+```{r}
+#| label: siuba
+singlepltfunc(pydf, "siuba")
+```
+
+:::
+
+::: {.page-banner image_paths='("assets/images/hexes/RStudio.svg",)'}
+
+## RStudio Integrated Development Environment
+
+::: {.cols-2}
+
+[RStudio](https://posit.co/products/open-source/rstudio/)
+is a multi-language IDE designed for Data Science with R and Python. It
+augments the standard code console with an editor that can display
+Notebooks, launch apps, highlight code syntax, spot code errors, and
+directly execute code. Built into the IDE are tools for debugging,
+plotting, browsing files, and managing project histories and workspaces.
+Together these tools make data scientists and developers much more
+efficient.
+
+{{< colbreak >}} 
+
+There are 5 FTE Posit employees developing the RStudio IDE open-source
+desktop and server products as of May 2024.
+
+:::
+
+```{r}
+#| label: rstudio
+singlepltfunc(rstudiodf, "RStudio")
+```
+
+:::
+
+::: {.page-banner image_paths='("assets/images/hexes/tidyverse.svg", )'}
+
+## Tidyverse
+
+::: {.cols-2}
+
+The [tidyverse](https://www.tidyverse.org/) is an
+opinionated collection of R packages designed for data science. All
+packages share an underlying design philosophy, grammar and data
+structures. 
+
+The tidyverse consists of nine core packages (including ggplot2, tidyr
+and readr) and 31 packages overall.
+
+{{< colbreak >}}
+
+There are 9 FTE Posit employees developing Tidyverse and related
+open-source products as of May 2024.
+
+:::
+
+```{r}
+#| label: tidyverse
+tidyvdf %>% 
+  group_by(date) %>% 
+  summarise(downloads = sum(downloads)) -> tidyvdf
+tidyvdf$pkg <- "Tidyverse"
+  
+singlepltfunc(tidyvdf, "Tidyverse")
+```
+
+:::
+
+::: {.page-banner image_paths='("assets/images/hexes/tidymodels.svg", )'}
+
+## Tidymodels
+
+::: {.cols-2}
+
+[Tidymodels](https://www.tidymodels.org/) is a cohesive
+collection of packages that perform tasks relevant to statistical
+modeling and machine learning. Tidymodels packages share a common syntax
+and design philosophy, and are designed to work seamlessly with
+Tidyverse packages.
+
+{{< colbreak >}}
+
+There are currently 42 tidymodels packages on CRAN. Popular tidymodels
+packages include parsnip, rsample, recipes, tune and yardstick.
+
+There are 3 FTE Posit employees developing Tidymodels and related
+open-source products as of May 2024.
+
+:::
+
+```{r}
+#| label: tidymodels
+tidymdf %>% 
+  group_by(date) %>% 
+  summarise(downloads = sum(downloads)) -> tidymdf
+tidymdf$pkg <- "Tidymodels"
+  
+singlepltfunc(tidymdf, "Tidymodels")
+```
+
+:::
+
+::: {.page-banner image_paths='("assets/images/hexes/sparklyr.svg", "assets/images/hexes/reticulate.svg", "assets/images/hexes/tensorflow.svg")'}
+
+## Connectivity Packages 
+
+::: {.cols-2}
+
+Posit increases the efficiency of customers by making open-source
+packages that connect data scientists to spreadsheets, databases,
+distributed storage frameworks for big data, machine learning platforms,
+and the programming environments of other languages, like python.
+
+{{< colbreak >}}
+
+Connectivity packages include:
+[sparklyr](https://spark.posit.co/), [tensorflow for R](https://tensorflow.rstudio.com/),
+[keras](https://keras.posit.co/),
+[odbc](https://solutions.posit.co/connections/db/r-packages/odbc/),
+and [reticulate](https://rstudio.github.io/reticulate/).
+
+There are 3 FTE Posit employees creating connectivity-related
+open-source packages as of May 2024.
+
+:::
+
+```{r}
+#| label: connectivity
+rcondf %>% 
+  group_by(date) %>% 
+  summarise(downloads = sum(downloads)) -> rcondf
+rcondf$pkg <- "R Connectivity"
+  
+singlepltfunc(rcondf, "R Connectivity")
+```
+
+:::
+
+::: {.page-banner image_paths='("assets/images/hexes/devtools.svg","assets/images/hexes/usethis.svg", "assets/images/hexes/roxygen2.svg", "assets/images/hexes/testthat.svg", "assets/images/hexes/pkgdown.svg")'}
+
+## R Infrastructure Tools (r-lib)
+
+::: {.cols-2}
+
+R-lib is a large collection of R packages that make it easier to build,
+find, and use effective tools for data analysis.
+
+```{r}
+#| include: false
+#| eval: false
+repos_json <- gh::gh("/orgs/{org}/repos", org = "r-lib", .limit = Inf)
+names <- sapply(repos_json, "[[", "name")
+length(intersect(names, rownames(available.packages())))
+```
+
+{{< colbreak >}}
+
+There are currently 114 R-lib packages. Popular packages
+include [devtools](https://devtools.r-lib.org/),
+[testthat](https://testthat.r-lib.org/),
+[roxygen2](https://roxygen2.r-lib.org/),
+[pkgdown](https://pkgdown.r-lib.org/) and
+[usethis](https://usethis.r-lib.org/).
+
+:::
+
+```{r}
+#| label: rlibs
+rlibdf %>% 
+  group_by(date) %>% 
+  summarise(downloads = sum(downloads)) -> rlibdf
+rlibdf$pkg <- "R-Lib"
+  
+singlepltfunc(rlibdf, "R-Lib")
+```
+
+::: 

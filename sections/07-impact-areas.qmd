@@ -1,0 +1,97 @@
+## Community
+
+### Civic Engagement and Giving
+
+In addition to the open-source software we make freely available, and
+the open source data science package development produced by Posit
+engineers, Posit recognizes the importance of contributing financially
+to other valuable open-source and community initiatives. To date, Posit
+has given over \$1.9M to projects led by others. Current commitments
+include contributing to NumFOCUS, the R Consortium, the R Foundation,
+DuckDB, the Eclipse Foundation, and the authors and maintainers of
+several other open-source projects.
+
+Posit's financial support also extends beyond the world of open source
+data science. Since 2020, Posit and its employees have given over \$60k
+to over 135 nonprofits. Our donations reach a range of community-based
+causes, including organizations dedicated to racial equality, equal
+justice, LGBTQ+ support, and access to education. Alongside our
+donations to open source software development, this pool of charitable
+contributions contributes to the important work many are doing to
+increase the accessibility of data science for all. Our scoring in this
+area of the B Lab assessment has increased by 39.5% since 2019.
+
+### Diversity, Equity, and Inclusion
+
+Since our initial B Lab assessment in 2019, Posit has continued to focus
+on increasing the strength of our team by utilizing talent practices
+that encourage diverse people to apply, join, and thrive at Posit.
+Specific changes made in recent years include the formation of a
+diversity, equity, inclusion, and accessibility council (DEIA Council),
+as well as the sponsoring of employee resource groups (ERG's). We report
+our progress on our diversity metrics, as defined in the B Lab
+Assessment, in each quarter's board meeting. We also pay close attention
+to issues of equity in compensation, hiring and interviewing, and
+employee experience. Our efforts to date have yielded increases in the
+percentages of women and those with minority racial or ethnic identities
+in both management and the employee population as a whole -- and our
+recent assessment results reflect these gains.
+
+## Customers
+
+We have made meaningful improvements in our care for customers in the
+past few years -- particularly in our standards for managing customer
+data and privacy. Since 2019, we have formalized our approach to data
+privacy and compliance -- we now conduct thorough internal and external
+audits and train all employees on the essentials of guarding customer
+data. These changes have increased our assessment performance by 28%
+since 2019.
+
+## Environment
+
+We are happy to share that our assessment scores for Air and Climate
+impacts have improved by 75% since 2019. In November 2020, Posit
+achieved carbon neutrality by purchasing carbon offsets that counter the
+environmental impact of business travel (primarily for our annual
+conference and internal meetings). As a remote-first organization, we do
+not generate meaningful greenhouse gas emissions outside of air travel.
+By offsetting this impact through the funding of reforestation work in
+both South America and closer to home in Massachusetts, we hope to
+neutralize Posit's potential damage to our planet.
+
+## Governance
+
+A company's positive governance impact is measured by the extent to
+which the company is accountable to stakeholders, and the extent to
+which its decision-making is transparent to all constituents. In 2019,
+RStudio scored 16.1 points out of a possible 21.9+ points in the
+Governance Impact Area, including 10 points awarded for the specific
+legal structures we have established as a Benefit Corporation that
+preserve our mission and consider our stakeholders regardless of company
+ownership.
+
+In our latest assessment, our governance score improved by 37% via
+improvements in ethics and transparency areas, including anti-corruption
+and code of ethics training for employees, and more rigorous financial
+controls and financial transparency with employees. Looking ahead, we
+plan to incorporate more social and community benefit metrics in our
+corporate reporting, including board meeting updates, so that all of our
+stakeholders are aware of our ongoing progress and can help support our
+success.
+
+## Workers
+
+We have made significant strides in our Worker assessment category since
+2019, with scores increasing by 50% or more in areas such as career
+development, engagement and satisfaction, and financial security for our
+employees. {{< colbreak >}} Investments in employee career development include in-house
+management training programs, tooling and education to support
+constructive feedback, and documentation of job levels, pay ranges, and
+career paths within our major functions. In 2021, we initiated an annual
+organizational health survey, which allows us to collect and respond to
+employee feedback. We have also augmented our benefits to include a
+"lifestyle savings account" (LSA) funded by Posit that each individual
+can choose to apply to home office, professional development, wellness,
+or financial health expenses as they see fit. All together, we are
+working to continuously improve the value offered to our workers as our
+company grows.
