@@ -9,11 +9,11 @@ format:
     font-paths: assets/fonts
     mainfont: Open Sans
     template-partials:
-      - typst-template.typ
-      - typst-show.typ
+      - typst/typst-template.typ
+      - typst/typst-show.typ
     filters: 
-      - layout.lua
-      - mark.lua
+      - typst/layout.lua
+      - typst/mark.lua
   gfm: 
     shift-heading-level-by: 1
     fig-dpi: 300
@@ -21,9 +21,9 @@ format:
     shift-heading-level-by: 1
     minimal: true
 shortcodes:
-  - colbreak.lua
+  - typst/colbreak.lua
 filters:
-  - ignore-layout.lua
+  - typst/ignore-layout.lua
 keep-typ: true
 execute:
   echo: false
