@@ -1,0 +1,67 @@
+::: {.cols-2}
+
+## Posit's Charter
+
+We want Posit to serve a meaningful public purpose, and we run the
+company for the benefit of our customers, employees, and the community
+at large. That's why we're organized as a Public Benefit Corporation
+(PBC).
+
+What makes a PBC different from other types of corporations?
+
+> *"A 'public benefit corporation' is a for-profit corporation organized
+> under and subject to the requirements of this chapter that is intended
+> to produce a public benefit or public benefits and to operate in a
+> responsible and sustainable manner."* 
+> --- [Delaware Public Benefit Corporations
+> Law](https://delcode.delaware.gov/title8/c001/sc15/)
+
+As a PBC and Certified B Corporation, we must meet the highest verified
+standards of social and environmental performance, transparency, and
+accountability. Our directors and officers have a fiduciary
+responsibility to address social, economic, and environmental needs
+while still overseeing our business goals.
+
+{{< colbreak >}}
+
+## Posit's Statement of Public Benefit
+
+Creation of free and open source software for data science, scientific
+research, and technical communication:
+
+> 1\) To enhance the production and consumption of knowledge by
+> everyone, regardless of economic means.
+>
+> 2\) To facilitate collaboration and reproducible research, both of
+> which are critical for ensuring the integrity and efficacy of
+> scientific work.
+
+:::
+
+{{< pagebreak >}}
+
+## Our primary obligations as a PBC and Certified B Corporation
+
+::: {.cols-2}
+
+### Public Benefit Corporation
+
+*How we built our company charter*
+
+-   The board of directors shall manage or direct the business and affairs of the public benefit corporation in a manner that balances the pecuniary interests of the stockholders, the best interests of those materially affected by the corporation's conduct, and the specific public benefit or public benefits identified in its certificate of incorporation.
+
+-   A public benefit corporation shall no less than biennially provide its stockholders with a statement as to the corporation's promotion of the public benefit or public benefits identified in the certificate of incorporation and of the best interests of those materially affected by the corporation's conduct.
+
+{{< colbreak >}}
+
+### Certified B Corp
+
+*How we hold ourselves accountable to our charter*
+
+-   Demonstrate high social and environmental performance by achieving a B Lab Impact Assessment score of 80 or above and passing the risk review.
+
+-   Make a legal commitment by changing our corporate governance structure to be accountable to all stakeholders, not just shareholders, and achieve benefit corporation status if available in our jurisdiction.
+
+-   Exhibit transparency by allowing information about our performance measured against B Lab's standards to be publicly available on our B Corp profile on B Lab's website.
+
+:::
