@@ -23,10 +23,10 @@
 
 // Some quarto-specific definitions.
 
-#show raw.where(block: true): block.with(
-    fill: luma(230), 
-    width: 100%, 
-    inset: 8pt, 
+#show raw.where(block: true): set block(
+    fill: luma(230),
+    width: 100%,
+    inset: 8pt,
     radius: 2pt
   )
 
@@ -142,7 +142,7 @@
       new_title))
 
   block_with_new_content(old_callout,
-    new_title_block +
+    block(below: 0pt, new_title_block) +
     old_callout.body.children.at(1))
 }
 
@@ -162,10 +162,13 @@
         fill: background_color, 
         width: 100%, 
         inset: 8pt)[#text(icon_color, weight: 900)[#icon] #title]) +
-      block(
-        inset: 1pt, 
-        width: 100%, 
-        block(fill: white, width: 100%, inset: 8pt, body)))
+      if(body != []){
+        block(
+          inset: 1pt, 
+          width: 100%, 
+          block(fill: white, width: 100%, inset: 8pt, body))
+      }
+    )
 }
 
 #let posit_colors = (
@@ -330,13 +333,13 @@
   doc
 }
 
+
 #show: doc => posit(
   title: [Posit Benefit Corporation],
   subtitle: [2024 Annual Report],
   font: ("Open Sans",),
   doc,
 )
-
 
 #page_blue()[
 #counter(page).update(1)
@@ -692,24 +695,20 @@ In our initial assessment, we received high marks for incorporating as a benefit
 <summary-of-score-improvements-since-2019>
 The B Lab’s Impact assessment standards have evolved since 2019 (we are now on version 6 of the assessment). New questions were added, and thresholds for performance were raised in other cases. Of the scored questions we responded to in our most recent assessment, 38 were unchanged from 2019, 71 were modified from 2019 wording, and 22 were brand new questions. On the unchanged or modified questions, we have gained points in the areas listed below.
 
-#figure(
-  align(center)[#table(
-    columns: (25%, 35%, 40%),
-    align: (left,left,left,),
-    table.header(table.cell(align: left)[#strong[Impact Area];], table.cell(align: left)[#strong[Topic];], table.cell(align: left)[#strong[% Achievement Gain since 2019];],),
-    table.hline(),
-    table.cell(align: left, rowspan: 2)[Community], table.cell(align: left)[Civic Engagement & Giving], table.cell(align: left)[39%],
-    table.cell(align: left)[Diversity, Equity, & Inclusion], table.cell(align: left)[60%],
-    table.cell(align: left)[Customers], table.cell(align: left)[Customer Stewardship], table.cell(align: left)[28%],
-    table.cell(align: left)[Environment], table.cell(align: left)[Air & Climate], table.cell(align: left)[75%],
-    table.cell(align: left)[Governance], table.cell(align: left)[Ethics & Transparency], table.cell(align: left)[37%],
-    table.cell(align: left, rowspan: 3)[Workers], table.cell(align: left)[Career Development], table.cell(align: left)[62%],
-    table.cell(align: left)[Engagement & Satisfaction], table.cell(align: left)[50%],
-    table.cell(align: left)[Financial Security], table.cell(align: left)[58%],
-  )]
-  , kind: table
-  )
-
+#table(
+  columns: (25%, 35%, 40%),
+  align: (left,left,left,),
+  table.header(table.cell(align: left)[#strong[Impact Area];], table.cell(align: left)[#strong[Topic];], table.cell(align: left)[#strong[% Achievement Gain since 2019];],),
+  table.hline(),
+  table.cell(align: left, rowspan: 2)[Community], table.cell(align: left)[Civic Engagement & Giving], table.cell(align: left)[39%],
+  table.cell(align: left)[Diversity, Equity, & Inclusion], table.cell(align: left)[60%],
+  table.cell(align: left)[Customers], table.cell(align: left)[Customer Stewardship], table.cell(align: left)[28%],
+  table.cell(align: left)[Environment], table.cell(align: left)[Air & Climate], table.cell(align: left)[75%],
+  table.cell(align: left)[Governance], table.cell(align: left)[Ethics & Transparency], table.cell(align: left)[37%],
+  table.cell(align: left, rowspan: 3)[Workers], table.cell(align: left)[Career Development], table.cell(align: left)[62%],
+  table.cell(align: left)[Engagement & Satisfaction], table.cell(align: left)[50%],
+  table.cell(align: left)[Financial Security], table.cell(align: left)[58%],
+)
 #v(1em)
 #col-2()[
 == Community
@@ -752,6 +751,7 @@ We have made significant strides in our Worker assessment category since 2019, w
 #back_page(repo: "https://github.com/posit-dev/bcorp-report/")[
   
 ]
+
 
 
 
