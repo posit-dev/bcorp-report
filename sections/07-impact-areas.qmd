@@ -12,8 +12,8 @@ DuckDB, the Eclipse Foundation, and the authors and maintainers of
 several other open-source projects.
 
 Posit's financial support also extends beyond the world of open source
-data science. Since 2020, Posit and its employees have given over \$60k
-to over 135 nonprofits. Our donations reach a range of community-based
+data science. Since 2020, Posit and its employees have given over \$70k
+to over 140 nonprofits. Our donations reach a range of community-based
 causes, including organizations dedicated to racial equality, equal
 justice, LGBTQ+ support, and access to education. Alongside our
 donations to open source software development, this pool of charitable
