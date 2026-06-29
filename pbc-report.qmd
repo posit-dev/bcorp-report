@@ -81,26 +81,7 @@ keep-typ: true
 
 ::: 
 
-{{< include sections/06-score-improvements.qmd >}}
-
-```{=typst}
-#v(1em)
-```
-
-::: {.cols-2}
-
 {{< include sections/07-impact-areas.qmd >}}
-
-:::
-
-```{=typst}
-#place(bottom, dy: 2.25in,
-  align(center, 
-    image("assets/images/BACKCOVER-2-POSIT24 Seattle_Nick Klein Photography-401.jpg", 
-      width: 100% + 2.5in, fit: "cover")
-  )
-)
-```
 
 ```{=typst}
 #back_page(repo: "https://github.com/posit-dev/bcorp-report/")[

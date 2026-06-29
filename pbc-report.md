@@ -61,16 +61,15 @@ tools over the web.
 
 Together, Posit’s open-source software and commercial software form a
 virtuous cycle. In most companies, a “customer” is someone who pays you.
-For us, the definition of a customer must include the open source
-community, with whom we exchange the currencies of attention, respect,
-and love. When we deliver value to our open source users, they will
-likely bring our software into their professional environments, which
-opens up the possibility of commercial partnerships. To keep this cycle
-flowing, our open source developers must know and care about the
-integrations with proprietary solutions that matter to our enterprise
-customers. It also means that Posit’s commercial teams consistently
-provide value to individuals who may never directly spend a dollar with
-us.
+For us, a “customer” must include the open source community, with whom
+we exchange the currencies of attention, respect, and love. When we
+deliver value to our open source users, they will likely bring our
+software into their professional environments, which opens up the
+possibility of commercial partnerships. To keep this cycle flowing, our
+open source developers must know and care about the integrations with
+proprietary solutions that matter to our enterprise customers. It also
+means that Posit’s commercial teams consistently provide value to
+individuals who may never directly spend a dollar with us.
 
 Posit’s approach is not typical. Traditionally, scientific and technical
 computing companies create exclusively proprietary software. While it
@@ -97,7 +96,7 @@ DuckDB, Pandoc, pyodide, and ProseMirror, as well as dozens of smaller
 projects via the Open Source Collective or directly on Github.
 Additional information about our products and company contributions can
 be found in our [“Year In Review” blog
-posts](https://posit.co/blog/?post_tag=year-in-review).
+posts](https://posit.co/blog/?search=year%2520in%2520review&post_tag=year-in-review).
 
 Today, millions of people download and use Posit open-source products in
 their daily lives. Additionally, more than 10,000 customers that
@@ -182,26 +181,28 @@ research, and technical communication:
 
 
 
-## Posit’s Open Source Development Projects
+## Free and Open Source Software and Tools
 
-Before the company re-branded in 2022, Posit (then RStudio) was often
-thought of as an “R company” in the data community because of its
-dedication to developing and maintaining some of the most used R
-libraries in the world. However, Posit has always been better described
-as a *scientific software* company. Supporting Python (via the
+In 2022 and earlier, when Posit was called RStudio, we were often
+thought of as an “R company” because of our dedication to developing and
+maintaining some of the most used R packages in the world. But Posit has
+always been better described as a *scientific software* company:
+supporting Python (via the
 [reticulate](https://github.com/rstudio/reticulate) package, RStudio
 language support), working with relational databases and data platforms
 such as Apache Spark (a cross-platform data frame compatibility via
 [feather/Apache Arrow](https://github.com/apache/arrow)), and much more
 mean that we’ve never been solely an “R company”.
 
-Since the 2024 PBC report, Posit has released several new packages in
-the Python and R ecosystems and continues to maintain and grow the
-libraries previously developed. The following subsections highlight
-selected Posit software projects of interest to the broad data science
-community. Where metrics are published, please note these represent a
-*lower bound* on the actual number, as it is difficult-to-impossible to
-account for every install and usage in the world.
+More recently, we have developed explicitly cross-language tools like
+Quarto and Positron, and developed Python packages like Great Tables,
+chatlas, and orbital.
+
+The following subsections highlight selected Posit software projects of
+interest to the broader data science community. Where metrics are
+published, please note these represent a *lower bound* on the actual
+number, as it is difficult-to-impossible to account for every install
+and usage in the world.
 
 
 
@@ -224,10 +225,7 @@ Quarto allows users to choose from multiple computational engines
 R, Python, Julia, JavaScript and many other languages. It also allows
 users to author documents as plain text markdown or Jupyter Notebooks,
 and publish to numerous outputs such as HTML, PDF, MS Word, ePub and
-more. Finally, the community has already extended Quarto , as shown by
-the
-[quartodoc](https://machow.github.io/quartodoc/get-started/overview.html)
-project for developing API documentation.
+more, and for the community to develop its own extensions.
 
 There are 4 full time equivalent (FTE) employees developing open-source
 Quarto products as of May 2025.
@@ -243,7 +241,7 @@ Posit released the Python version of Shiny, bringing the same great
 reactive programming model and modular design to the PyData ecosystem.  
 More recently, the [Shiny
 Express](https://shiny.posit.co/py/docs/express-in-depth.html) syntax
-was introduced. It offers a steamlined syntax that makes it easier for
+was introduced, offering streamlined syntax that makes it easier for
 Python developers to get started with Shiny.
 
 New packages (see [AI and LLM Enablement](#ai-and-llm-enablement)) also
@@ -282,33 +280,33 @@ provide others.
 
 #### Packages to enable LLMs in data science
 
-- [Ellmer](https://ellmer.tidyverse.org/) makes it easy to use large
+- [ellmer](https://ellmer.tidyverse.org/) makes it easy to use large
   language models (LLM) from R. It supports a variety of LLM providers
   and implements a rich set of features including streaming outputs,
   tool/function calling and structured data extraction.
-- [Chatlas](https://posit.co/blog/announcing-chatlas/) is a flexible
+- [chatlas](https://posit.co/blog/announcing-chatlas/) is a flexible
   Python interface to many LLM providers (playing a similar role to
   ellmer). It supports tool use, function calling, and streaming
   responses.
-- [Ragnar](https://ragnar.tidyverse.org) brings Retrieval-Augmented
+- [ragnar](https://ragnar.tidyverse.org) brings Retrieval-Augmented
   Generation (RAG) to R. Helps users index their own data and get LLM
   responses with grounded answers.
-- [Querychat](https://github.com/posit-dev/querychat) adds an
+- [querychat](https://github.com/posit-dev/querychat) adds an
   SQL-powered LLM to Shiny apps. It lets users explore data with natural
   language. Querychat works in both R and Python.
 
 #### Selection of packages that assist during development
 
-- [ShinyAssistant](https://shiny.posit.co/blog/posts/shiny-assistant/)
+- [Shiny Assistant](https://shiny.posit.co/blog/posts/shiny-assistant/)
   helps prototype Shiny apps using a simple chat interface leveraging
   LLMs to generate entire applications.
-- [Gander](https://posit.co/blog/introducing-gander/) is a coding
+- [gander](https://posit.co/blog/introducing-gander/) is a coding
   assistant that understands R environments and shares context like
   column names and types to improve help quality.
-- [Chores](https://posit.co/blog/introducing-chores/) connects Ellmer to
+- [chores](https://posit.co/blog/introducing-chores/) connects Ellmer to
   your source editor in RStudio and Positron. It automates repetitive
   programming tasks.
-- [Mall](https://posit.co/blog/mall-ai-powered-text-analysis/) enables
+- [mall](https://posit.co/blog/mall-ai-powered-text-analysis/) enables
   LLM powered sentiment analysis, text summarization, text
   classification, information extraction and text translation. Mall is
   available for both R and Python.
@@ -385,7 +383,7 @@ package](https://orbital.tidymodels.org/articles/orbital.html), it now
 also supports Python. In Python, orbital converts scikit-learn models
 into SQL, so they can run directly in a database like Snowflake—no
 Python environment needed.  
-The performance gains this approach has provided is quite signficant.
+The performance gains this approach has provided is quite significant.
 
 ### webR
 
@@ -416,7 +414,7 @@ open-source products as of May 2025.
 
 ### Tidymodels
 
-[Tidymodels](https://www.tidymodels.org/) is a cohesive collection of
+[tidymodels](https://www.tidymodels.org/) is a cohesive collection of
 packages that perform tasks relevant to statistical modeling and machine
 learning. Tidymodels packages share a common syntax and design
 philosophy, and are designed to work seamlessly with Tidyverse packages.
@@ -476,16 +474,6 @@ There are 5 FTE Posit employees developing the RStudio IDE open-source
 desktop and server products as of May 2025.
 
 ![](images/generate-plots_files/figure-typst/rstudio-1.svg)
-
-## Additional Posit Free-to-Use Solutions
-
-In addition to open-source contributions, Posit develops free-to-use
-tools that help data scientists write and share code. Some, like
-Positron, are source-available. Others, like Public Package Manager, are
-free hosted services.
-
-Together, they extend our ecosystem, making high-quality tools
-accessible to all.
 
 
 
@@ -548,53 +536,38 @@ As part of our commitment to improving the quality and availability of
 open source software for all, Posit hosts a public instance of Posit
 Package Manager called [Posit Public Package
 Manager](https://packagemanager.posit.co/client/#/) that mirrors CRAN,
-PyPI and Bioconductor. This mirror served over 46 million downloads per
-month in Q1 2025.
+PyPI and Bioconductor. This mirror serves over 46 million downloads per
+month (as of Q1 2025).
 
 ## B Lab® Impact Assessment Results
 
-The BLab Impact Assessment is composed of questions in five Impact
-Areas: Governance, Workers, Community, Environment, and Customers.
-Posit’s assessment results are available to the public
+The B Lab’s Version 1.6 Impact Assessment is composed of questions in
+five Impact Areas: Governance, Workers, Community, Environment, and
+Customers. Posit’s assessment results are available to the public
 [here](https://www.bcorporation.net/en-us/find-a-b-corp/company/rstudio/).
 We completed our first Impact Assessment in 2019 and earned an overall
-score of **86.1.** We are proud to report that our latest score from our
-recertification process in 2023, is **92.5**. To put this in context,
-the threshold for B Lab certification is a score of 80 or higher, and
-the median score for ordinary businesses who take the assessment is
-50.9. Posit seeks to continually improve our internal governance,
-increase our workforce diversity and employee development efforts,
-expand our stewardship of the environment, deepen our engagement in our
-communities, and better serve our customers so that our public benefit
-will continue to improve each year.
+score of **86.1.** We completed our first recertification in 2023 and
+earned a score of **92.5**. To put this in context, the threshold for B
+Lab certification is a score of 80 or higher, and the median score for
+ordinary businesses who take the assessment is 50.9. Posit seeks to
+continually improve our internal governance, increase our workforce
+diversity and employee development efforts, offset our carbon emissions,
+deepen our engagement in our communities, and better serve our customers
+so that our public benefit will continue to improve each year.
 
-In our initial assessment, we received high marks for incorporating as a
-benefit corporation, the health, wellness, safety, and financial
-security of our employees, and for educating and serving customers. We
-identified formal goal setting, career development, diversity, equity &
-inclusion, civic engagement & giving, and air & climate as areas for
-improvement.
+In our initial assessments, we received high marks for incorporating as
+a benefit corporation, the health, wellness, safety, and financial
+security of our employees, and for educating and serving customers.
 
-### Summary of Score Improvements Since 2019
+### Summary of 2023 Score
 
-The B Lab’s Impact assessment standards have evolved since 2019 (we are
-now on version 6 of the assessment). New questions were added, and
-thresholds for performance were raised in other cases. Of the scored
-questions we responded to in our most recent assessment, 38 were
-unchanged from 2019, 71 were modified from 2019 wording, and 22 were
-brand new questions. On the unchanged or modified questions, we have
-gained points in the areas listed below.
-
-| **Impact Area** | **Topic** | **% Achievement Gain since 2019** |
-|:---|:---|:---|
-| Community | Civic Engagement & Giving | 39% |
-|  | Diversity, Equity, & Inclusion | 60% |
-| Customers | Customer Stewardship | 28% |
-| Environment | Air & Climate | 75% |
-| Governance | Ethics & Transparency | 37% |
-| Workers | Career Development | 62% |
-|  | Engagement & Satisfaction | 50% |
-|  | Financial Security | 58% |
+| Impact Area | Score |
+|:------------|------:|
+| Governance  |  17.7 |
+| Workers     |  32.5 |
+| Community   |  15.4 |
+| Environment |   4.4 |
+| Customers   |  22.4 |
 
 ### Community
 
@@ -604,14 +577,14 @@ In addition to the open-source software we make freely available, and
 the open source data science package development produced by Posit
 engineers, Posit recognizes the importance of contributing financially
 to other valuable open-source and community initiatives. To date, Posit
-has given over \$1.9M to projects led by others. Current commitments
+has given over \$3.3M to projects led by others. Current commitments
 include contributing to NumFOCUS, the R Consortium, the R Foundation,
 DuckDB, the Eclipse Foundation, and the authors and maintainers of
 several other open-source projects.
 
 Posit’s financial support also extends beyond the world of open source
-data science. Since 2020, Posit and its employees have given over \$70k
-to over 140 nonprofits. Our donations reach a range of community-based
+data science. Since 2020, Posit and its employees have given over \$107k
+to over 220 nonprofits. Our donations reach a range of community-based
 causes, including organizations dedicated to racial equality, equal
 justice, LGBTQ+ support, and access to education. Alongside our
 donations to open source software development, this pool of charitable
@@ -621,19 +594,13 @@ area of the B Lab assessment has increased by 39.5% since 2019.
 
 #### Diversity, Equity, and Inclusion
 
-Since our initial B Lab assessment in 2019, Posit has continued to focus
-on increasing the strength of our team by utilizing talent practices
-that encourage diverse people to apply, join, and thrive at Posit.
-Specific changes made in recent years include the formation of a
-diversity, equity, inclusion, and accessibility council (DEIA Council),
-as well as the sponsoring of employee resource groups (ERG’s). We report
-our progress on our diversity metrics, as defined in the B Lab
-Assessment, in each quarter’s board meeting. We also pay close attention
-to issues of equity in compensation, hiring and interviewing, and
-employee experience. Our efforts to date have yielded increases in the
-percentages of women and those with minority racial or ethnic identities
-in both management and the employee population as a whole – and our
-recent assessment results reflect these gains.
+Posit continues to focus on increasing the strength of our team by
+utilizing talent practices that encourage diverse people to apply, join,
+and thrive at Posit. Specific changes made in recent years include the
+formation of a diversity, equity, inclusion, and accessibility council
+(DEIA Council), as well as the sponsoring of employee resource groups
+(ERGs). We also pay close attention to issues of equity in compensation,
+hiring and interviewing, and employee experience.
 
 ### Customers
 
@@ -642,50 +609,28 @@ past few years – particularly in our standards for managing customer
 data and privacy. Since 2019, we have formalized our approach to data
 privacy and compliance – we now conduct thorough internal and external
 audits and train all employees on the essentials of guarding customer
-data. These changes have increased our assessment performance by 28%
-since 2019.
-
-### Environment
-
-We are happy to share that our assessment scores for Air and Climate
-impacts have improved by 75% since 2019. In November 2020, Posit
-achieved carbon neutrality by purchasing carbon offsets that counter the
-environmental impact of business travel (primarily for our annual
-conference and internal meetings). As a remote-first organization, we do
-not generate meaningful greenhouse gas emissions outside of air travel.
-By offsetting this impact through the funding of reforestation work in
-both South America and closer to home in Massachusetts, we hope to
-neutralize Posit’s potential damage to our planet.
+data.
 
 ### Governance
 
 A company’s positive governance impact is measured by the extent to
 which the company is accountable to stakeholders, and the extent to
-which its decision-making is transparent to all constituents. In 2019,
-RStudio scored 16.1 points out of a possible 21.9+ points in the
-Governance Impact Area, including 10 points awarded for the specific
-legal structures we have established as a Benefit Corporation that
-preserve our mission and consider our stakeholders regardless of company
-ownership.
+which its decision-making is transparent to all constituents.
 
-In our latest assessment, our governance score improved by 37% via
-improvements in ethics and transparency areas, including anti-corruption
-and code of ethics training for employees, and more rigorous financial
-controls and financial transparency with employees. Looking ahead, we
-plan to incorporate more social and community benefit metrics in our
-corporate reporting, including board meeting updates, so that all of our
-stakeholders are aware of our ongoing progress and can help support our
-success.
+We’ve made improvements in ethics and transparency areas, including
+anti-corruption and code of ethics training for employees, and more
+rigorous financial controls and financial transparency with employees.
+Looking ahead, we plan to incorporate more social and community benefit
+metrics in our corporate reporting, including board meeting updates, so
+that all of our stakeholders are aware of our ongoing progress and can
+help support our success.
 
 ### Workers
 
-We have made significant strides in our Worker assessment category since
-2019, with scores increasing by 50% or more in areas such as career
-development, engagement and satisfaction, and financial security for our
-employees. Investments in employee career development include in-house
-management training programs, tooling and education to support
-constructive feedback, and documentation of job levels, pay ranges, and
-career paths within our major functions. In 2021, we initiated an annual
+Investments in employee career development include in-house management
+training programs, tooling and education to support constructive
+feedback, and documentation of job levels, pay ranges, and career paths
+within our major functions. In 2021, we initiated an annual
 organizational health survey, which allows us to collect and respond to
 employee feedback. We have also augmented our benefits to include a
 “lifestyle savings account” (LSA) funded by Posit that each individual
@@ -693,3 +638,17 @@ can choose to apply to home office, professional development, wellness,
 or financial health expenses as they see fit. All together, we are
 working to continuously improve the value offered to our workers as our
 company grows.
+
+### Environment
+
+As a remote-first organization, we do not generate meaningful greenhouse
+gas emissions. However, for the emissions we do generate from cloud
+computing, business travel, and our Boston headquarters we purchase
+carbon offsets to achieve carbon neutrality. We first achieved carbon
+neutrality in 2020 and have since maintained our neutrality by
+purchasing carbon offsets for years 2021 - 2025. Below is a breakdown of
+our scope 2 and scope 3 greenhouse gas emissions from the past three
+years. We track our emissions so that we can purchase an equal amount of
+carbon offsets.
+
+![](images/generate-plots_files/figure-typst/emissions-1.svg)

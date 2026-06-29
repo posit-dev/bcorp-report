@@ -262,7 +262,7 @@ documentation by extracting information about the generated model.
 models inside your database.  Originally an [R package](https://orbital.tidymodels.org/articles/orbital.html), 
 it now also supports Python.  In Python, orbital converts scikit-learn models into 
 SQL, so they can run directly in a database like Snowflake—no Python environment needed.  
-The performance gains this approach has provided is quite signficant.    
+The performance gains this approach has provided is quite significant.    
 
 {{< colbreak >}}
 

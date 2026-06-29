@@ -333,11 +333,19 @@
     leading: 0.8em
   )
   
+  // Booktabs-style tables: bold header, horizontal rules only above and
+  // below the header row and below the final row (no interior or vertical
+  // lines). The stroke function draws the top rule and the header rule; the
+  // show rule wraps the table to add the closing rule below the last row.
   set table(
     align: left,
     inset: 7pt,
-    stroke: (x: none, y: 0.5pt)
+    stroke: (x, y) => (
+      top: if y == 0 { 1pt } else if y == 1 { 0.5pt } else { 0pt },
+    ),
   )
+  show table.cell.where(y: 0): strong
+  show table: it => block(stroke: (bottom: 1pt), it)
 
   if title != none {
     title_page(title, subtitle)
@@ -648,7 +656,7 @@ image_paths:("assets/images/hexes/orbital.png","assets/images/hexes/webr.svg"),
 == Orbital
 <orbital>
 #link("https://github.com/posit-dev/orbital")[Orbital] lets you run machine learning models inside your database. Originally an #link("https://orbital.tidymodels.org/articles/orbital.html")[R package], it now also supports Python. In Python, orbital converts scikit-learn models into SQL, so they can run directly in a database like Snowflake---no Python environment needed. \
-The performance gains this approach has provided is quite signficant.
+The performance gains this approach has provided is quite significant.
 
 #colbreak()
 == webR
@@ -796,71 +804,62 @@ image_height:75%,
 = B Lab® Impact Assessment Results
 <b-lab-impact-assessment-results>
 #col-2()[
-The BLab Impact Assessment is composed of questions in five Impact Areas: Governance, Workers, Community, Environment, and Customers. Posit's assessment results are available to the public #link("https://www.bcorporation.net/en-us/find-a-b-corp/company/rstudio/")[here]. We completed our first Impact Assessment in 2019 and earned an overall score of #strong[86.1.] We are proud to report that our latest score from our recertification process in 2023, is #strong[92.5]. To put this in context, the threshold for B Lab certification is a score of 80 or higher, and the median score for ordinary businesses who take the assessment is 50.9. Posit seeks to continually improve our internal governance, increase our workforce diversity and employee development efforts, expand our stewardship of the environment, deepen our engagement in our communities, and better serve our customers so that our public benefit will continue to improve each year.
+The B Lab's Version 1.6 Impact Assessment is composed of questions in five Impact Areas: Governance, Workers, Community, Environment, and Customers. Posit's assessment results are available to the public #link("https://www.bcorporation.net/en-us/find-a-b-corp/company/rstudio/")[here]. We completed our first Impact Assessment in 2019 and earned an overall score of #strong[86.1.] We completed our first recertification in 2023 and earned a score of #strong[92.5]. To put this in context, the threshold for B Lab certification is a score of 80 or higher, and the median score for ordinary businesses who take the assessment is 50.9. Posit seeks to continually improve our internal governance, increase our workforce diversity and employee development efforts, offset our carbon emissions, deepen our engagement in our communities, and better serve our customers so that our public benefit will continue to improve each year.
 
 #colbreak()
-In our initial assessment, we received high marks for incorporating as a benefit corporation, the health, wellness, safety, and financial security of our employees, and for educating and serving customers. We identified formal goal setting, career development, diversity, equity & inclusion, civic engagement & giving, and air & climate as areas for improvement.
+In our initial assessments, we received high marks for incorporating as a benefit corporation, the health, wellness, safety, and financial security of our employees, and for educating and serving customers.
 
+== Summary of 2023 Score
+<summary-of-2023-score>
+#table(
+  columns: 2,
+  align: (left,right,),
+  table.header([Impact Area], [Score],),
+  table.hline(),
+  [Governance], [17.7],
+  [Workers], [32.5],
+  [Community], [15.4],
+  [Environment], [4.4],
+  [Customers], [22.4],
+)
 ]
 ])
 
-== Summary of Score Improvements Since 2019
-<summary-of-score-improvements-since-2019>
-The B Lab's Impact assessment standards have evolved since 2019 (we are now on version 6 of the assessment). New questions were added, and thresholds for performance were raised in other cases. Of the scored questions we responded to in our most recent assessment, 38 were unchanged from 2019, 71 were modified from 2019 wording, and 22 were brand new questions. On the unchanged or modified questions, we have gained points in the areas listed below.
-
-#table(
-  columns: (25%, 35%, 40%),
-  align: (left,left,left,),
-  table.header(table.cell(align: left)[#strong[Impact Area]], table.cell(align: left)[#strong[Topic]], table.cell(align: left)[#strong[% Achievement Gain since 2019]],),
-  table.hline(),
-  table.cell(align: left, rowspan: 2)[Community], table.cell(align: left)[Civic Engagement & Giving], table.cell(align: left)[39%],
-  table.cell(align: left)[Diversity, Equity, & Inclusion], table.cell(align: left)[60%],
-  table.cell(align: left)[Customers], table.cell(align: left)[Customer Stewardship], table.cell(align: left)[28%],
-  table.cell(align: left)[Environment], table.cell(align: left)[Air & Climate], table.cell(align: left)[75%],
-  table.cell(align: left)[Governance], table.cell(align: left)[Ethics & Transparency], table.cell(align: left)[37%],
-  table.cell(align: left, rowspan: 3)[Workers], table.cell(align: left)[Career Development], table.cell(align: left)[62%],
-  table.cell(align: left)[Engagement & Satisfaction], table.cell(align: left)[50%],
-  table.cell(align: left)[Financial Security], table.cell(align: left)[58%],
-)
-#v(1em)
 #col-2()[
 == Community
 <community>
 === Civic Engagement and Giving
 <civic-engagement-and-giving>
-In addition to the open-source software we make freely available, and the open source data science package development produced by Posit engineers, Posit recognizes the importance of contributing financially to other valuable open-source and community initiatives. To date, Posit has given over \$1.9M to projects led by others. Current commitments include contributing to NumFOCUS, the R Consortium, the R Foundation, DuckDB, the Eclipse Foundation, and the authors and maintainers of several other open-source projects.
+In addition to the open-source software we make freely available, and the open source data science package development produced by Posit engineers, Posit recognizes the importance of contributing financially to other valuable open-source and community initiatives. To date, Posit has given over \$3.3M to projects led by others. Current commitments include contributing to NumFOCUS, the R Consortium, the R Foundation, DuckDB, the Eclipse Foundation, and the authors and maintainers of several other open-source projects.
 
-Posit's financial support also extends beyond the world of open source data science. Since 2020, Posit and its employees have given over \$70k to over 140 nonprofits. Our donations reach a range of community-based causes, including organizations dedicated to racial equality, equal justice, LGBTQ+ support, and access to education. Alongside our donations to open source software development, this pool of charitable contributions contributes to the important work many are doing to increase the accessibility of data science for all. Our scoring in this area of the B Lab assessment has increased by 39.5% since 2019.
+Posit's financial support also extends beyond the world of open source data science. Since 2020, Posit and its employees have given over \$107k to over 220 nonprofits. Our donations reach a range of community-based causes, including organizations dedicated to racial equality, equal justice, LGBTQ+ support, and access to education. Alongside our donations to open source software development, this pool of charitable contributions contributes to the important work many are doing to increase the accessibility of data science for all. Our scoring in this area of the B Lab assessment has increased by 39.5% since 2019.
 
 === Diversity, Equity, and Inclusion
 <diversity-equity-and-inclusion>
-Since our initial B Lab assessment in 2019, Posit has continued to focus on increasing the strength of our team by utilizing talent practices that encourage diverse people to apply, join, and thrive at Posit. Specific changes made in recent years include the formation of a diversity, equity, inclusion, and accessibility council (DEIA Council), as well as the sponsoring of employee resource groups (ERG's). We report our progress on our diversity metrics, as defined in the B Lab Assessment, in each quarter's board meeting. We also pay close attention to issues of equity in compensation, hiring and interviewing, and employee experience. Our efforts to date have yielded increases in the percentages of women and those with minority racial or ethnic identities in both management and the employee population as a whole -- and our recent assessment results reflect these gains.
+Posit continues to focus on increasing the strength of our team by utilizing talent practices that encourage diverse people to apply, join, and thrive at Posit. Specific changes made in recent years include the formation of a diversity, equity, inclusion, and accessibility council (DEIA Council), as well as the sponsoring of employee resource groups (ERGs). We also pay close attention to issues of equity in compensation, hiring and interviewing, and employee experience.
 
 == Customers
 <customers>
-We have made meaningful improvements in our care for customers in the past few years -- particularly in our standards for managing customer data and privacy. Since 2019, we have formalized our approach to data privacy and compliance -- we now conduct thorough internal and external audits and train all employees on the essentials of guarding customer data. These changes have increased our assessment performance by 28% since 2019.
-
-== Environment
-<environment>
-We are happy to share that our assessment scores for Air and Climate impacts have improved by 75% since 2019. In November 2020, Posit achieved carbon neutrality by purchasing carbon offsets that counter the environmental impact of business travel (primarily for our annual conference and internal meetings). As a remote-first organization, we do not generate meaningful greenhouse gas emissions outside of air travel. By offsetting this impact through the funding of reforestation work in both South America and closer to home in Massachusetts, we hope to neutralize Posit's potential damage to our planet.
+We have made meaningful improvements in our care for customers in the past few years -- particularly in our standards for managing customer data and privacy. Since 2019, we have formalized our approach to data privacy and compliance -- we now conduct thorough internal and external audits and train all employees on the essentials of guarding customer data.
 
 == Governance
 <governance>
-A company's positive governance impact is measured by the extent to which the company is accountable to stakeholders, and the extent to which its decision-making is transparent to all constituents. In 2019, RStudio scored 16.1 points out of a possible 21.9+ points in the Governance Impact Area, including 10 points awarded for the specific legal structures we have established as a Benefit Corporation that preserve our mission and consider our stakeholders regardless of company ownership.
+A company's positive governance impact is measured by the extent to which the company is accountable to stakeholders, and the extent to which its decision-making is transparent to all constituents.
 
-In our latest assessment, our governance score improved by 37% via improvements in ethics and transparency areas, including anti-corruption and code of ethics training for employees, and more rigorous financial controls and financial transparency with employees. Looking ahead, we plan to incorporate more social and community benefit metrics in our corporate reporting, including board meeting updates, so that all of our stakeholders are aware of our ongoing progress and can help support our success.
+We've made improvements in ethics and transparency areas, including anti-corruption and code of ethics training for employees, and more rigorous financial controls and financial transparency with employees. Looking ahead, we plan to incorporate more social and community benefit metrics in our corporate reporting, including board meeting updates, so that all of our stakeholders are aware of our ongoing progress and can help support our success.
 
 == Workers
 <workers>
-We have made significant strides in our Worker assessment category since 2019, with scores increasing by 50% or more in areas such as career development, engagement and satisfaction, and financial security for our employees. #colbreak() Investments in employee career development include in-house management training programs, tooling and education to support constructive feedback, and documentation of job levels, pay ranges, and career paths within our major functions. In 2021, we initiated an annual organizational health survey, which allows us to collect and respond to employee feedback. We have also augmented our benefits to include a "lifestyle savings account" (LSA) funded by Posit that each individual can choose to apply to home office, professional development, wellness, or financial health expenses as they see fit. All together, we are working to continuously improve the value offered to our workers as our company grows.
+Investments in employee career development include in-house management training programs, tooling and education to support constructive feedback, and documentation of job levels, pay ranges, and career paths within our major functions. In 2021, we initiated an annual organizational health survey, which allows us to collect and respond to employee feedback. We have also augmented our benefits to include a "lifestyle savings account" (LSA) funded by Posit that each individual can choose to apply to home office, professional development, wellness, or financial health expenses as they see fit. All together, we are working to continuously improve the value offered to our workers as our company grows.
+
+#colbreak()
+== Environment
+<environment>
+As a remote-first organization, we do not generate meaningful greenhouse gas emissions. However, for the emissions we do generate from cloud computing, business travel, and our Boston headquarters we purchase carbon offsets to achieve carbon neutrality. We first achieved carbon neutrality in 2020 and have since maintained our neutrality by purchasing carbon offsets for years 2021 - 2025. Below is a breakdown of our scope 2 and scope 3 greenhouse gas emissions from the past three years. We track our emissions so that we can purchase an equal amount of carbon offsets.
 
 ]
-#place(bottom, dy: 2.25in,
-  align(center, 
-    image("assets/images/BACKCOVER-2-POSIT24 Seattle_Nick Klein Photography-401.jpg", 
-      width: 100% + 2.5in, fit: "cover")
-  )
-)
+#box(image("images/generate-plots_files/figure-typst/emissions-1.svg"))
+
 #back_page(repo: "https://github.com/posit-dev/bcorp-report/")[
   
 ]
