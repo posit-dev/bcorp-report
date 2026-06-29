@@ -23,7 +23,7 @@ The following subsections highlight
 selected Posit software projects of interest to the broader data science
 community. Where metrics are published, please note these represent a
 *lower bound* on the actual number, as it is difficult-to-impossible to
-account for every install and usage in the world.
+account for every install and usage in the world.^[Metrics updated June 2026]
 
 :::
 

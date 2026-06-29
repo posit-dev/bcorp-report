@@ -504,7 +504,7 @@ In 2022 and earlier, when Posit was called RStudio, we were often thought of as 
 #colbreak()
 More recently, we have developed explicitly cross-language tools like Quarto and Positron, and developed Python packages like Great Tables, chatlas, and orbital.
 
-The following subsections highlight selected Posit software projects of interest to the broader data science community. Where metrics are published, please note these represent a #emph[lower bound] on the actual number, as it is difficult-to-impossible to account for every install and usage in the world.
+The following subsections highlight selected Posit software projects of interest to the broader data science community. Where metrics are published, please note these represent a #emph[lower bound] on the actual number, as it is difficult-to-impossible to account for every install and usage in the world.#footnote[Metrics updated June 2026]
 
 ]
 #place(bottom, dy: 1.25in,
