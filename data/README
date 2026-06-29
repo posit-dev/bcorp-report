@@ -1,5 +1,0 @@
-Code and data files required for plots in report.
-
-Get and clean raw data with `get-downloads.R`
-
-The file `downloads.csv` comes from internal tracking of downloads.
