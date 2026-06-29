@@ -96,7 +96,7 @@ DuckDB, Pandoc, pyodide, and ProseMirror, as well as dozens of smaller
 projects via the Open Source Collective or directly on Github.
 Additional information about our products and company contributions can
 be found in our [“Year In Review” blog
-posts](https://posit.co/blog/?search=year%2520in%2520review&post_tag=year-in-review).
+posts](https://posit.co/blog?categories%5B71%5D=71&search_api_fulltext=%22year%20in%20review%22).
 
 Today, millions of people download and use Posit open-source products in
 their daily lives. Additionally, more than 10,000 customers that
