@@ -61,6 +61,8 @@ growth_plot <- function(data, y = downloads) {
 }
 ```
 
+## Open source packages
+
 ```{r}
 #| label: quarto
 quarto |> 
@@ -152,3 +154,61 @@ r |>
   growth_plot() + 
   ggtitle("R Libs")
 ```
+
+## Carbon Offsets
+
+```{r}
+#| fig-height: 3
+#| label: emissions
+emissions <- tribble(
+  ~emission_source,                 ~`2023`, ~`2024`, ~`2025`,
+  "SaaS Software & Cloud Computing", 321.80,  300.34,  325.60,
+  "Business Travel",                  13.91,   51.65,  168.97,
+  "Shared Office Commuting",          17.70,   17.70,   17.70,
+  "Boston Office Electricity",         3.97,    4.32,    3.80
+  ) |> 
+  pivot_longer(
+    cols = -emission_source, 
+    names_to = "year", 
+    values_to = "emissions"
+  ) |> 
+  mutate(
+    emission_source = factor(
+      emission_source, 
+      levels = rev(c(
+        "SaaS Software & Cloud Computing",
+        "Business Travel",
+        "Shared Office Commuting",
+        "Boston Office Electricity"
+      ))
+    )
+  )
+
+# Luminance-stepped, color-blind-safe palette for the stacked bars
+emission_colors <- c(
+  "SaaS Software & Cloud Computing" = "#D1DBE5",  # light-blue-1
+  "Business Travel"                 = "#94BDBF",  # light teal
+  "Shared Office Commuting"         = "#EE6331",  # orange
+  "Boston Office Electricity"       = "#707073"   # light-gray-3
+)
+
+emissions  |>
+  ggplot(aes(year, emissions, fill = emission_source)) +
+  geom_col() +
+  xlab("") + ylab("CO₂e (metric tons)") +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.05))) +
+  scale_fill_manual(
+    name = "Source",
+    values = emission_colors,
+    labels = scales::label_wrap(18)
+  ) +
+  theme(
+    legend.key.spacing.y = unit(6, "pt"),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    panel.background = element_rect(fill = "#EDF0F5"),
+    plot.margin = margin(5.5, 8.5, 5.5, 5.5)
+  )
+```
+
+

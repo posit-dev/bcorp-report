@@ -123,11 +123,19 @@
     leading: 0.8em
   )
   
+  // Booktabs-style tables: bold header, horizontal rules only above and
+  // below the header row and below the final row (no interior or vertical
+  // lines). The stroke function draws the top rule and the header rule; the
+  // show rule wraps the table to add the closing rule below the last row.
   set table(
     align: left,
     inset: 7pt,
-    stroke: (x: none, y: 0.5pt)
+    stroke: (x, y) => (
+      top: if y == 0 { 1pt } else if y == 1 { 0.5pt } else { 0pt },
+    ),
   )
+  show table.cell.where(y: 0): strong
+  show table: it => block(stroke: (bottom: 1pt), it)
 
   if title != none {
     title_page(title, subtitle)
