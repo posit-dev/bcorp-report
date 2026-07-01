@@ -36,7 +36,9 @@ renv::restore()
 ```
 ### Update data
 
-Script for data extraction is in `data/get_downloads.R`. 
+Data extraction scripts live in `data/`, one per output CSV
+(`get_python_package_downloads.R`, `get_r_package_downloads.R`,
+`get_rstudio_os_downloads.R`, `get_quarto_downloads.R`). See `data/README.md`.
 
 ### Update plots
 
