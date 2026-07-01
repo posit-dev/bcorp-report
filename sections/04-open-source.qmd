@@ -13,11 +13,11 @@ compatibility via [feather/Apache
 Arrow](https://github.com/apache/arrow)), and much more
 mean that we've never been solely an "R company".
 
-{{< colbreak >}}
-
 More recently, we have built explicitly cross-language tools like Quarto
 and Positron, along with Python packages like Great Tables, chatlas, and
 orbital.
+
+{{< colbreak >}}
 
 Our recent work shares three themes. We are investing in AI, building
 tools that help data scientists use language models safely. We are
@@ -54,14 +54,14 @@ and usage in the world.^[Metrics updated June 2026]
 
 In July 2022, [Posit announced](https://posit.co/blog/announcing-quarto-a-new-scientific-and-technical-publishing-system/) [Quarto](https://quarto.org/), an open-source publishing system for scientific and technical documents, and the successor to [R Markdown](https://rmarkdown.rstudio.com/). Quarto draws on more than ten years of R Markdown development, but it is a new, language-agnostic project rather than an R library. R Markdown users will find it familiar, and most of their existing documents render unmodified.
 
-{{< colbreak >}}
-
 Quarto allows users to choose from multiple computational engines
 (Knitr, Jupyter, and Observable), which makes it easy to use Quarto with
 R, Python, Julia, JavaScript and many other languages. It also allows
 users to author documents as plain text markdown or Jupyter Notebooks,
 and publish to numerous outputs such as HTML, PDF, MS Word, ePub and
 more, and for the community to develop its own extensions.
+
+{{< colbreak >}}
 
 Quarto is being rewritten, with critical components moved to
 Rust. The next major version,
@@ -95,14 +95,12 @@ a Python version of Shiny with the same reactive programming model, and the newe
 [Shiny Express](https://shiny.posit.co/py/docs/express-in-depth.html)
 syntax makes it easier for Python developers to get started.
 
-{{< colbreak >}}
-
 New packages (see [AI and LLM Enablement](#ai-and-llm-enablement)) also highlight Shiny as a strong platform for building LLM-powered apps.
 
 Shiny applications can be shared with others via the open-source [Shiny
 Server](https://posit.co/products/open-source/shinyserver/),
 [Posit Connect Cloud](https://connect.posit.cloud/), or [Posit
-Connect](https://posit.co/products/enterprise/connect/).
+Connect](https://posit.co/products/enterprise/connect/). {{< colbreak >}}
 Shiny and related packages include shiny
 ([Python](https://shiny.posit.co/py/),
 [R](https://shiny.posit.co/r/getstarted)),
@@ -147,6 +145,8 @@ Posit's Open Source teams are building tools to help data scientists responsibly
 use LLMs in their analysis, apply them during development, 
 and incorporate LLM capabilities in the solutions they provide others.
 
+{{< colbreak >}}
+
 ### Packages to enable LLMs in data science {.unlisted}
 
 - [ellmer](https://ellmer.tidyverse.org/) makes it easy to use large language models (LLMs) from R. It supports a variety of LLM providers and implements a rich set of features including streaming outputs, tool/function calling and structured data extraction.
@@ -164,6 +164,8 @@ and incorporate LLM capabilities in the solutions they provide others.
 - [chores](https://posit.co/blog/introducing-chores/) connects ellmer to your source editor in RStudio and Positron. It automates repetitive programming tasks.
 - [btw](https://posit-dev.github.io/btw/) describes your R session to an LLM, including your data, packages, and documentation, so it can give more relevant help.
 - [mcptools](https://posit-dev.github.io/mcptools/) implements the Model Context Protocol in R, letting AI tools such as Claude run code in your R session.
+
+{{< colbreak >}}
 
 LLMs are also built into RStudio and Positron as coding assistants.
 Behind them is Posit AI, a shared service and harness developed over the
@@ -483,11 +485,11 @@ Positron is built on [Code OSS](https://github.com/microsoft/vscode) and support
 compatible extensions (.vsix files). Building on Code OSS gives Positron a capable text
 editor and access to thousands of community extensions.
 
-{{< colbreak >}}
-
 Additional languages typically used in package development are supported via existing third party 
 extensions. These don’t make use of the full Positron data science experience including an interactive 
 console, plots, and similar. Some examples include Rust, Javascript/Typescript, C/C++, or Lua.
+
+{{< colbreak >}}
 
 Positron™ is licensed under the [Elastic License 2.0](https://github.com/posit-dev/positron?tab=License-1-ov-file#readme), 
 a source-available license. [Read more](https://positron.posit.co/licensing.html) about what 
@@ -498,7 +500,7 @@ general-purpose editor like VS Code.
 
 Positron has added several notable features since its first stable
 release. A native [Notebook Editor](https://positron.posit.co/positron-notebook-editor.html)
-brings the IDE's tools to Jupyter notebooks. [Posit AI](https://positron.posit.co/assistant-getting-started.html)
+brings the IDE's tools to Jupyter notebooks. [Posit Assistant](https://positron.posit.co/assistant-getting-started.html)
 adds AI assistance throughout the IDE, including inside notebooks. A new
 Packages pane shows what is installed, attached, and out of date.
 
