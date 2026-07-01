@@ -811,7 +811,7 @@ image_paths:("assets/images/hexes/package-manager.svg",),
 With the ubiquity of open source software in our daily lives, one area that most people don't think about is 'How do you distribute that software quickly and securely to the end user?'. To that end, Posit created #link("https://posit.co/products/enterprise/package-manager/")[Posit Package Manager], which gives companies a means for providing curated repositories, repository snapshots for better reproducibility, the ability to air-gap the repository for enhanced security and much more.
 
 #colbreak()
-As part of our commitment to improving the quality and availability of open source software for all, Posit hosts a public instance of Posit Package Manager called #link("https://packagemanager.posit.co/client/#/")[Posit Public Package Manager] that mirrors CRAN, PyPI and Bioconductor. This mirror serves over 46 million downloads per month (as of Q1 2026).
+As part of our commitment to improving the quality and availability of open source software for all, Posit hosts a public instance of Posit Package Manager called #link("https://packagemanager.posit.co/client/#/")[Posit Public Package Manager] that mirrors CRAN, PyPI, Bioconductor and OpenVSX. This mirror serves over 74 million downloads per month (as of Q2 2026).
 
 ]
 ])
