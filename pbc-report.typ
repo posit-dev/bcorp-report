@@ -509,14 +509,6 @@ Our recent work shares three themes. We are investing in AI, building tools that
 The following subsections highlight selected Posit software projects of interest to the broader data science community. Where metrics are published, please note these represent a #emph[lower bound] on the actual number, as it is difficult-to-impossible to account for every install and usage in the world.#footnote[Metrics updated June 2026]
 
 ]
-#place(bottom, dy: 1.25in,
-  align(center, 
-    box(
-      image("assets/images/INTERNAL-1-POSIT24 Seattle_Nick Klein Photography-86.jpg", fit: "cover"), 
-      width: 100% + 2.5in, clip: true, inset: (top: -1in)
-    )
-  )
-)
 #pagebreak()
 #page_banner(
 image_paths:("assets/images/quarto-logo-dark.svg",),
