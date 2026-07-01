@@ -1,0 +1,63 @@
+```{r}
+library(here)
+library(tidyverse)
+```
+
+```{r}
+source(here("data", "read_rstudio_downloads.R"))
+
+rstudio_dls <- read_rstudio_downloads()
+
+## Just keep open-source/desktop rstudio dls.
+desktop <- rstudio_dls |>
+  filter(type %in% c( "desktop"), date > ymd("2022-06-02")) 
+  
+desktop_daily <- desktop |> 
+  group_by(date) |> 
+  summarise(internal_metrics = sum(downloads))
+```
+
+
+```{r}
+desktop_warehouse <- fs::dir_ls(here("data", "desktop-downloads"), glob = "*.csv") |>
+  lapply(read_csv, show_col_types = FALSE) |>
+  dplyr::bind_rows()
+  mutate(filename = filename |> str_to_lower())
+
+desktop_warehouse_daily <- desktop_warehouse |> 
+  group_by(date) |> 
+  summarise(warehouse = sum(downloads))
+```
+
+```{r}
+joined <- desktop_daily |> 
+  full_join(desktop_warehouse_daily, by = c("date")) 
+joined |> pivot_longer(cols = c(internal_metrics, warehouse), names_to = "source", values_to = "downloads") |>
+  ggplot(aes(x = date, y = downloads, color = source)) +
+  geom_line() +
+  scale_y_continuous(labels = scales::comma) +
+  labs(title = "RStudio Desktop Downloads: Internal Metrics vs Warehouse",
+       x = "Date",
+       y = "Downloads",
+       color = "Source") +
+  theme_minimal()
+```
+
+Close enough match for me.
+
+```{r}
+server <- rstudio_dls |>
+  filter(type %in% c("RS-os"), date > ymd("2022-06-02"))
+ 
+server |> filter(date > ymd("2025-01-01"), date < ymd("2025-02-01")) |>
+  group_by(filename, date) |> 
+  summarise(downloads = sum(downloads)) |> 
+  write_csv(here("data", "server_downloads_january_2025.csv"))
+  
+server <- server |> 
+  group_by(date) |>
+  summarise(internal_metrics = sum(downloads))
+
+ggplot(server, aes(x = date, y = internal_metrics)) +
+  geom_line()
+```

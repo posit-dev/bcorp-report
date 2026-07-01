@@ -1,6 +1,18 @@
 library(here)
 library(tidyverse)
 
+# Read the per-month warehouse download exports from data/<dir>/ and bind them
+# into one tibble (columns: date, filename, downloads). These are produced by
+# helpers/desktop_downloads_job.R (and, later, the equivalent server job) from
+# the data warehouse, and replace the internal downloads.csv feed from
+# mid-2025 onward. Rows are not re-classified: each export folder is a single
+# product (e.g. desktop-downloads/ is RStudio Desktop).
+read_warehouse_downloads <- function(dir) {
+  fs::dir_ls(here("data", dir), glob = "*.csv") |>
+    map(read_csv, show_col_types = FALSE) |>
+    list_rbind()
+}
+
 # Read and classify the internal RStudio/Quarto downloads feed.
 #
 # Reads `data/downloads.csv` (an unheaded export of the RStudio metrics feed,
