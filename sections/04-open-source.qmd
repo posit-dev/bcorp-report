@@ -13,17 +13,23 @@ compatibility via [feather/Apache
 Arrow](https://github.com/apache/arrow)), and much more
 mean that we've never been solely an "R company".
 
+More recently, we have built explicitly cross-language tools like Quarto
+and Positron, along with Python packages like Great Tables, chatlas, and
+orbital.
+
 {{< colbreak >}}
 
-More recently, we have developed explicitly cross-language tools like 
-Quarto and Positron, and developed Python packages like Great Tables,
-chatlas, and orbital.
+Our recent work shares three themes. We are investing in AI, building
+tools that help data scientists use language models safely. We are
+rewriting performance-critical components in Rust, so our tools run
+faster and scale better. And we are supporting production use, with
+features like multithreading and built-in monitoring.
 
-The following subsections highlight
-selected Posit software projects of interest to the broader data science
-community. Where metrics are published, please note these represent a
-*lower bound* on the actual number, as it is difficult-to-impossible to
-account for every install and usage in the world.^[Metrics updated June 2026]
+The following subsections highlight selected Posit software projects of
+interest to the broader data science community. Where metrics are
+published, please note these represent a *lower bound* on the actual
+number, as it is difficult-to-impossible to account for every install
+and usage in the world.^[Metrics updated June 2026]
 
 :::
 
@@ -46,19 +52,7 @@ account for every install and usage in the world.^[Metrics updated June 2026]
 
 ::: {.cols-2}
 
-In July 2022, [Posit
-announced](https://posit.co/blog/announcing-quarto-a-new-scientific-and-technical-publishing-system/)
-the [Quarto](https://quarto.org/) project, an open-source
-scientific and technical publishing system as a successor to the [R
-Markdown](https://rmarkdown.rstudio.com/) library. While
-Quarto incorporates the lessons learned from over 10 years of developing
-R Markdown into an entirely new project, it's likely still quite
-familiar to users of R Markdown as they share two core dependencies:
-Knitr and Pandoc. In fact, despite the fact that Quarto does some things
-differently, most existing R Markdown documents can be rendered
-unmodified using Quarto.
-
-{{< colbreak >}}
+In July 2022, [Posit announced](https://posit.co/blog/announcing-quarto-a-new-scientific-and-technical-publishing-system/) [Quarto](https://quarto.org/), an open-source publishing system for scientific and technical documents, and the successor to [R Markdown](https://rmarkdown.rstudio.com/). Quarto draws on more than ten years of R Markdown development, but it is a new, language-agnostic project rather than an R library. R Markdown users will find it familiar, and most of their existing documents render unmodified.
 
 Quarto allows users to choose from multiple computational engines
 (Knitr, Jupyter, and Observable), which makes it easy to use Quarto with
@@ -67,8 +61,20 @@ users to author documents as plain text markdown or Jupyter Notebooks,
 and publish to numerous outputs such as HTML, PDF, MS Word, ePub and
 more, and for the community to develop its own extensions.
 
-There are 4 full time equivalent (FTE) employees developing open-source
-Quarto products as of May 2025.
+{{< colbreak >}}
+
+Quarto is being rewritten, with critical components moved to
+Rust. The next major version,
+[Quarto 2](https://quarto.org/docs/blog/posts/2026-04-06-whats-next-quarto-2/),
+is developed openly at [quarto-dev/q2](https://github.com/quarto-dev/q2).
+These Rust components improve performance and report syntax errors more
+clearly, preserving source locations so problems are easier to fix. The
+team is also exploring real-time collaboration, enabling authors to write
+documents together. Posit expects to make a version publicly available
+later this year.
+
+There are 5 full time equivalent (FTE) employees developing open-source
+Quarto products as of May 2026.
 
 :::
  
@@ -84,23 +90,17 @@ Quarto products as of May 2025.
 
 Shiny has been a mainstay in the R community since its launch in 2012,
 providing a web application framework that makes it easy to tell data
-stories in interactive point-and-click web applications. In April 2023,
-Posit released the Python version of Shiny, bringing the same great
-reactive programming model and modular design to the PyData ecosystem.  
-More recently, the [Shiny Express](https://shiny.posit.co/py/docs/express-in-depth.html) 
-syntax was introduced, offering streamlined syntax that makes it easier 
-for Python developers to get started with Shiny.
+stories in interactive, point-and-click apps. In April 2023, Posit released 
+a Python version of Shiny with the same reactive programming model, and the newer
+[Shiny Express](https://shiny.posit.co/py/docs/express-in-depth.html)
+syntax makes it easier for Python developers to get started.
 
-{{< colbreak >}}
+New packages (see [AI and LLM Enablement](#ai-and-llm-enablement)) also highlight Shiny as a strong platform for building LLM-powered apps.
 
-New packages (see [AI and LLM Enablement](#ai-and-llm-enablement)) also highlight Shiny as a strong 
-platform for building chat-based and other LLM-powered apps.
-
-Shiny applications can be shared with others via an open-source [Shiny
+Shiny applications can be shared with others via the open-source [Shiny
 Server](https://posit.co/products/open-source/shinyserver/),
-the hosted [shinyapps.io](http://shinyapps.io) service,
-with [Posit Connect Cloud](https://connect.posit.cloud/) or [Posit
-Connect](https://posit.co/products/enterprise/connect/).
+[Posit Connect Cloud](https://connect.posit.cloud/), or [Posit
+Connect](https://posit.co/products/enterprise/connect/). {{< colbreak >}}
 Shiny and related packages include shiny
 ([Python](https://shiny.posit.co/py/),
 [R](https://shiny.posit.co/r/getstarted)),
@@ -108,11 +108,22 @@ Shiny and related packages include shiny
 [shinytest](https://rstudio.github.io/shinytest/),
 [shinyloadtest](https://rstudio.github.io/shinyloadtest/),
 [shinydashboard](https://rstudio.github.io/shinydashboard/),
-[leaflet](https://rstudio.github.io/leaflet/), and
-[crosstalk](https://rstudio.github.io/crosstalk/).
+[leaflet](https://rstudio.github.io/leaflet/), 
+[crosstalk](https://rstudio.github.io/crosstalk/),
+[brand.yml](https://posit-dev.github.io/brand-yml/),
+[shinychat](https://posit-dev.github.io/shinychat/), and
+[querychat](https://github.com/posit-dev/querychat).
+
+Shiny also continues to mature for production use. Recent releases added
+[OpenTelemetry](https://shiny.posit.co/r/articles/improve/opentelemetry/)
+support, so teams can monitor live apps and trace their performance. The
+async framework [mirai](https://mirai.r-lib.org/) and the shared-memory
+package [mori](https://opensource.posit.co/software/mori/) keep improving
+as well, helping Shiny scale to more concurrent users with less memory
+overhead.
 
 There are 5 FTE Posit employees developing the open-source Shiny and
-Shiny Server products as of May 2025.
+Shiny Server products as of May 2026.
 
 :::
 
@@ -131,30 +142,41 @@ Shiny Server products as of May 2025.
 
 Large language models (LLMs) are changing how data scientists work. 
 Posit's Open Source teams are building tools to help data scientists responsibly
-use LLMs in their analysis, leverage them during development, 
+use LLMs in their analysis, apply them during development, 
 and incorporate LLM capabilities in the solutions they provide others.
+
+{{< colbreak >}}
 
 ### Packages to enable LLMs in data science {.unlisted}
 
-- [ellmer](https://ellmer.tidyverse.org/) makes it easy to use large language models (LLM) from R. It supports a  variety of LLM providers and implements a rich set of features including streaming outputs, tool/function calling and structured data extraction.
+- [ellmer](https://ellmer.tidyverse.org/) makes it easy to use large language models (LLMs) from R. It supports a variety of LLM providers and implements a rich set of features including streaming outputs, tool/function calling and structured data extraction.
 - [chatlas](https://posit.co/blog/announcing-chatlas/) is a flexible Python interface to many LLM providers (playing a similar role to ellmer). It supports tool use, function calling, and streaming responses.
-- [ragnar](https://ragnar.tidyverse.org) brings Retrieval-Augmented Generation (RAG) to R. Helps users index their own data and get LLM responses with grounded answers.
-- [querychat](https://github.com/posit-dev/querychat) adds an SQL-powered LLM to Shiny apps. It lets users explore data with natural language. Querychat works in both R and Python.
+- [ragnar](https://ragnar.tidyverse.org/) (R) and [raghilda](https://github.com/posit-dev/raghilda) (Python) bring Retrieval-Augmented Generation (RAG) to data science. They help users index their own data so an LLM can answer with grounded results.
+- [querychat](https://github.com/posit-dev/querychat) adds an SQL-powered LLM to Shiny apps. It lets users explore data with natural language. It works in both R and Python.
+- [mall](https://posit.co/blog/mall-ai-powered-text-analysis/) enables LLM powered sentiment analysis, text summarization, text classification, information extraction and text translation. It is available for both R and Python.
+- [vitals](https://vitals.tidyverse.org/) evaluates LLM products built with ellmer, measuring their accuracy, cost, and speed. In one evaluation, it found that AI agents often ignore information shown in plots when it contradicts expectations.
 
 {{< colbreak >}}
 
 ### Selection of packages that assist during development {.unlisted}
 
-- [Shiny Assistant](https://shiny.posit.co/blog/posts/shiny-assistant/) helps prototype Shiny apps using a simple chat interface leveraging LLMs to generate entire applications.
 - [gander](https://posit.co/blog/introducing-gander/) is a coding assistant that understands R environments and shares context like column names and types to improve help quality.
-- [chores](https://posit.co/blog/introducing-chores/) connects Ellmer to your source editor in RStudio and Positron. It automates repetitive programming tasks.
-- [mall](https://posit.co/blog/mall-ai-powered-text-analysis/) enables LLM powered sentiment analysis, text summarization, text classification, information extraction and text translation.   Mall is available for both R and Python.
+- [chores](https://posit.co/blog/introducing-chores/) connects ellmer to your source editor in RStudio and Positron. It automates repetitive programming tasks.
+- [btw](https://posit-dev.github.io/btw/) describes your R session to an LLM, including your data, packages, and documentation, so it can give more relevant help.
+- [mcptools](https://posit-dev.github.io/mcptools/) implements the Model Context Protocol in R, letting AI tools such as Claude run code in your R session.
 
-LLMs are also integrated as coding assistants into RStudio and Positron.
-Positron is Posit's new IDE described in the [Positron](#positron) section below.
+{{< colbreak >}}
 
-As of May 2025, 4 FTE Posit employees are working  
-on open-source tools related to LLMs.
+LLMs are also built into RStudio and Positron as coding assistants.
+Behind them is Posit AI, a shared service and harness developed over the
+past year by the AI team. Language models are non-deterministic and can
+hallucinate, so much of Posit's work goes into making them safe to rely
+on, through careful evaluation, verification, and keeping data scientists
+in the loop.
+
+As of May 2026, 7 FTE Posit employees work directly on AI and LLM tools,
+with further AI development spread across many individual open source
+product teams.
 
 :::
 
@@ -180,7 +202,7 @@ packages have defined a "grammar of tables" to solve this problem (in R
 and Python, respectively), analogous to the "grammar of graphics" for
 specifying charts.
 
-As of May 2025, there is 1 FTE Posit employee developing gt / Great
+As of May 2026, there is 1 FTE Posit employee developing gt / Great
 Tables open-source packages.
 
 :::
@@ -198,7 +220,7 @@ Tables open-source packages.
 
 [Plotnine](https://plotnine.org/) is an implementation of
 the grammar of graphics in Python, heavily influenced by ggplot2 in R.
-Built upon the ubiquitous
+Built on the
 [matplotlib](https://matplotlib.org/) plotting library, {{< colbreak >}}
 custom (and otherwise complex) plots are easy to reason about and build
 incrementally, while the simple plots remain simple to create.
@@ -216,7 +238,7 @@ incrementally, while the simple plots remain simple to create.
 ::: {.cols-2}
 
 Pins (for [R](https://pins.rstudio.com/) and [python](https://rstudio.github.io/pins-python/))
-publish data, models, and other objects, making them easy to share across projects and with other. 
+publish data, models, and other objects, making them easy to share across projects and with others.
 Users can pin objects to a variety of pin boards, including folders (to share on a networked 
 drive or with services like DropBox), Posit Connect, Amazon S3, and Google Cloud Storage. 
 
@@ -232,26 +254,6 @@ re-run analyses on historical data, and undo mistakes.
 
 :::
 
-::: {.page-banner image_paths='("assets/images/hexes/vetiver.svg",)'}
-
-## Vetiver
-
-::: {.cols-2}
-
-[Vetiver](https://vetiver.posit.co/) solves the issues
-around versioning, sharing, deploying and monitoring predictive models
-served via APIs. Available for both R and Python, vetiver is extensible
-via generics that support many common types of models. {{< colbreak >}} Vetiver also
-provides the "model cards" functionality, which can help to generate
-documentation by extracting information about the generated model.
-
-::: 
-
-![](images/generate-plots_files/figure-typst/vetiver-1.svg)
-![](images/generate-plots_files/figure-typst/vetiver-2.svg)
-
-:::
-
 ::: {.page-banner image_paths='("assets/images/hexes/orbital.png","assets/images/hexes/webr.svg")'}
 
 ::: {.cols-2}
@@ -261,7 +263,7 @@ documentation by extracting information about the generated model.
 [Orbital](https://github.com/posit-dev/orbital) lets you run machine learning 
 models inside your database.  Originally an [R package](https://orbital.tidymodels.org/articles/orbital.html), 
 it now also supports Python.  In Python, orbital converts scikit-learn models into 
-SQL, so they can run directly in a database like Snowflake—no Python environment needed.  
+SQL, so they can run directly in a database like Snowflake, with no Python environment needed.  
 The performance gains this approach has provided is quite significant.    
 
 {{< colbreak >}}
@@ -278,8 +280,12 @@ Also, by making
 the most of the user's device capabilities, webR can improve performance
 and lower app hosting costs.
 
-There is 1 FTE Posit employee developing enterprise focused open-source 
-products like orbital as of May 2025.
+webR now powers Shinylive and other interactive, in-browser R tools, and
+has been used in a [pilot](https://posit.co/blog/webr-fda-pilot) for
+submitting R-based analyses to the FDA.
+
+There is 1 FTE Posit employee developing enterprise focused open-source
+products like orbital as of May 2026.
 
 :::
 
@@ -301,8 +307,13 @@ and readr) and 31 packages overall.
 
 {{< colbreak >}}
 
-There are 9 FTE Posit employees developing Tidyverse and related
-open-source products as of May 2025.
+Recent work includes a major [ggplot2](https://ggplot2.tidyverse.org/)
+overhaul in version 4.0.0, which moved the package to the S7 object
+system and added new theming controls. [purrr](https://purrr.tidyverse.org/)
+also gained parallel processing, built on mirai.
+
+There are 6 FTE Posit employees developing Tidyverse and related
+open-source products as of May 2026.
 
 :::
 
@@ -316,10 +327,10 @@ open-source products as of May 2025.
 
 ::: {.cols-2}
 
-[tidymodels](https://www.tidymodels.org/) is a cohesive
+[tidymodels](https://www.tidymodels.org/) is a
 collection of packages that perform tasks relevant to statistical
 modeling and machine learning. Tidymodels packages share a common syntax
-and design philosophy, and are designed to work seamlessly with
+and design philosophy, and are designed to work well with
 Tidyverse packages.
 
 {{< colbreak >}}
@@ -327,8 +338,12 @@ Tidyverse packages.
 There are currently 42 tidymodels packages on CRAN. Popular tidymodels
 packages include parsnip, rsample, recipes, tune and yardstick.
 
-There are 3 FTE Posit employees developing Tidymodels and related
-open-source products as of May 2025.
+Recent work includes a parallel-processing overhaul in
+[tune](https://tune.tidymodels.org/) 2.0.0 and new support for sparse
+data across modeling workflows.
+
+There are 4 FTE Posit employees developing Tidymodels and related
+open-source products as of May 2026.
 
 :::
 
@@ -336,16 +351,45 @@ open-source products as of May 2025.
 
 :::
 
-::: {.page-banner image_paths='("assets/images/hexes/sparklyr.svg", "assets/images/hexes/reticulate.svg", "assets/images/hexes/tensorflow.svg")'}
+::: {.page-banner image_paths='("assets/images/hexes/ggsql.png",)'}
 
-## Connectivity Packages 
+## SQL Enablement
 
 ::: {.cols-2}
 
-Posit increases the efficiency of customers by making open-source
-packages that connect data scientists to spreadsheets, databases,
-distributed storage frameworks for big data, machine learning platforms,
-and the programming environments of other languages, like python.
+Posit's open source ecosystem has long supported R and Python, along
+with some support for Julia. SQL now joins that list. SQL is one of the
+most common languages for working with data, so supporting it well
+matters to a large community of data scientists.
+
+The first major piece is [ggsql](https://ggsql.org/), which brings the
+grammar of graphics to SQL. People can build plots directly in their
+queries, without needing R or Python. ggsql runs in Quarto, Jupyter,
+Positron, and other tools.
+
+{{< colbreak >}}
+
+Support for SQL is also growing across Posit's other tools. Both
+[Positron](https://positron.posit.co/) and [Quarto](https://quarto.org/)
+are improving how they work with SQL.
+
+Together, these efforts will help bring SQL alongside R and Python in the Posit
+open source ecosystem.
+
+:::
+
+:::
+
+::: {.page-banner image_paths='("assets/images/hexes/sparklyr.svg", "assets/images/hexes/reticulate.svg", "assets/images/hexes/tensorflow.svg")'}
+
+## Connectivity Packages
+
+::: {.cols-2}
+
+Posit makes open-source packages that connect data scientists to
+spreadsheets, databases, distributed storage frameworks for big data,
+machine learning platforms, and the programming environments of other
+languages, such as Python.
 
 {{< colbreak >}}
 
@@ -355,8 +399,8 @@ Connectivity packages include:
 [odbc](https://solutions.posit.co/connections/db/r-packages/odbc/),
 and [reticulate](https://rstudio.github.io/reticulate/).
 
-There are 3 FTE Posit employees creating connectivity-related
-open-source packages as of May 2025.
+There are 2 FTE Posit employees creating connectivity-related
+open-source packages as of May 2026.
 
 :::
 
@@ -395,7 +439,7 @@ include [devtools](https://devtools.r-lib.org/),
 ::: {.cols-2}
 
 [RStudio](https://posit.co/products/open-source/rstudio/)
-is a multi-language IDE designed for Data Science with R and Python. It
+is a multi-language IDE designed for data science with R and Python. It
 augments the standard code console with an editor that can display
 Notebooks, launch apps, highlight code syntax, spot code errors, and
 directly execute code. Built into the IDE are tools for debugging,
@@ -406,7 +450,7 @@ efficient.
 {{< colbreak >}} 
 
 There are 5 FTE Posit employees developing the RStudio IDE open-source
-desktop and server products as of May 2025.
+desktop and server products as of May 2026.
 
 :::
 
@@ -422,40 +466,49 @@ desktop and server products as of May 2025.
 
 ::: {.cols-2}
 
-[Positron](https://positron.posit.co//)
-is a new multi-language IDE designed for Data Science.  Positron has first-class, built-in 
+[Positron](https://positron.posit.co/)
+is a multi-language IDE designed for data science. Positron has first-class, built-in
 support for R and Python via an integrated console, with extensibility options for other 
 languages. This native support includes specialized views and panes throughout 
 Positron such as a [Data Explorer](https://positron.posit.co/data-explorer.html), 
 [Connections Pane](https://positron.posit.co/connections-pane.html), Variables Pane, 
-access to AI/LLM driven data assistants and more.
+access to Posit AI, and more.
 
-Positron separates the language interpreter from the IDE itself, which makes it more robust 
-during development—if R or Python encounters an error, the IDE remains unaffected. This
-architecture also allows a user to switch between different versions of their preferred language 
-without needing to reload the entire IDE.
+Positron separates the language interpreter from the IDE. If R or Python
+crashes, the IDE keeps running. This design also lets users switch
+between language versions without reloading the IDE. The R side is
+powered by [Ark](https://github.com/posit-dev/ark), an open source R
+kernel, and Positron ships with [Air](https://posit-dev.github.io/air/),
+a fast R formatter. Both are written in Rust.
 
-Positron is built on [Code OSS](https://github.com/microsoft/vscode) and supports VS Code 
-compatible extensions (.vsix files), providing extensibility of capabilities beyond the core 
-IDE itself. By building on Code OSS, Positron gets rich text editor capabilities and access 
-to 1,000s of community extensions out of the box. 
-
-{{< colbreak >}}
+Positron is built on [Code OSS](https://github.com/microsoft/vscode) and supports VS Code
+compatible extensions (.vsix files). Building on Code OSS gives Positron a capable text
+editor and access to thousands of community extensions.
 
 Additional languages typically used in package development are supported via existing third party 
 extensions. These don’t make use of the full Positron data science experience including an interactive 
 console, plots, and similar. Some examples include Rust, Javascript/Typescript, C/C++, or Lua.
 
+{{< colbreak >}}
+
 Positron™ is licensed under the [Elastic License 2.0](https://github.com/posit-dev/positron?tab=License-1-ov-file#readme), 
 a source-available license. [Read more](https://positron.posit.co/licensing.html) about what 
 this license means and our decision to use it.
 
-Positron is deeply focused on native data science workflows; it provides a batteries-included 
-and cohesive experience beyond that of a general-purpose IDE or text editor such as VS Code.
+Positron is built specifically for data science, not as a
+general-purpose editor like VS Code.
 
-A beta version is currently available for Windows and macOS, with a full release planned for August 2025.
+Positron has added several notable features since its first stable
+release. A native [Notebook Editor](https://positron.posit.co/positron-notebook-editor.html)
+brings the IDE's tools to Jupyter notebooks. [Posit Assistant](https://positron.posit.co/assistant-getting-started.html)
+adds AI assistance throughout the IDE, including inside notebooks. A new
+Packages pane shows what is installed, attached, and out of date.
 
-There are 14 FTE Posit employees developing Positron as of May 2025.
+Positron reached a stable desktop release in August 2025 and now ships
+monthly updates, most recently version 2026.06. It runs on Windows,
+macOS, and Linux.
+
+There are 16 FTE Posit employees developing Positron as of May 2026.
 
 :::
 
@@ -483,8 +536,8 @@ As part of our commitment to improving the quality and availability of
 open source software for all, Posit hosts a public instance of Posit
 Package Manager called [Posit Public Package
 Manager](https://packagemanager.posit.co/client/#/) that
-mirrors CRAN, PyPI and Bioconductor. This mirror serves over 46
-million downloads per month (as of Q1 2025).
+mirrors CRAN, PyPI, Bioconductor and OpenVSX. This mirror serves over 74
+million downloads per month (as of Q2 2026).
 
 :::
 

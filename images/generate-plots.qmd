@@ -75,7 +75,7 @@ quarto |>
 
 ```{r}
 #| label: shiny
-#| fig-height: 2.4
+#| fig-height: 2
 python |> 
   filter(package == "shiny") |> 
   growth_plot() + ggtitle("Shiny for Python")
