@@ -615,6 +615,18 @@ As of May 2026, there is 1 FTE Posit employee developing gt / Great Tables open-
 ])
 
 #page_banner(
+image_paths:("assets/images/hexes/great-docs.png",),
+image_height:50%,
+[
+== Great Docs
+<great-docs>
+#col-2()[
+#link("https://opensource.posit.co/blog/2026-04-15_great-docs-introduction/")[Great Docs], introduced in April 2026, builds documentation sites for Python packages. It finds a package's public API and generates a full site with Quarto, #colbreak() using opinionated defaults that need no configuration to start. Great Docs grew out of #link("https://github.com/machow/quartodoc")[quartodoc], Posit's earlier API reference tool.
+
+]
+])
+
+#page_banner(
 image_paths:("assets/images/hexes/plotnine.png",),
 [
 == Plotnine
@@ -851,7 +863,7 @@ In our initial assessments, we received high marks for incorporating as a benefi
 <community>
 === Civic Engagement and Giving
 <civic-engagement-and-giving>
-In addition to the open-source software we make freely available, and the open source data science package development produced by Posit engineers, Posit recognizes the importance of contributing financially to other valuable open-source and community initiatives. To date, Posit has given over \$3.3M to projects led by others. Current commitments include contributing to NumFOCUS, the R Consortium, the R Foundation, DuckDB, the Eclipse Foundation, and the authors and maintainers of several other open-source projects.
+In addition to the open-source software we make freely available, and the open source data science package development produced by Posit engineers, Posit recognizes the importance of contributing financially to other valuable open-source and community initiatives. To date, Posit has given over \$3.3M to projects led by others. Current commitments include contributing to NumFOCUS, the R Consortium, the R Foundation, DuckDB, the Eclipse Foundation, and the authors and maintainers of several other open-source projects. In June 2026, Posit also joined the #link("https://opensource.posit.co/blog/2026-06-25_posit-joins-jupyter-foundation/")[Jupyter Foundation] as a general member. Posit's tools build on the Jupyter ecosystem, and membership helps fund its core infrastructure, release engineering, and community events.
 
 Posit's financial support also extends beyond the world of open source data science. Since 2020, Posit and its employees have given over \$107k to over 220 nonprofits. Our donations reach a range of community-based causes, including organizations dedicated to racial equality, equal justice, LGBTQ+ support, and access to education. Alongside our donations to open source software development, this pool of charitable contributions contributes to the important work many are doing to increase the accessibility of data science for all. Our scoring in this area of the B Lab assessment has increased by 39.5% since 2019.
 

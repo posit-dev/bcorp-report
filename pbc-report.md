@@ -368,6 +368,16 @@ Tables open-source packages.
 
 ![](plots/gt-1.png) ![](plots/gt-2.png)
 
+### Great Docs
+
+[Great
+Docs](https://opensource.posit.co/blog/2026-04-15_great-docs-introduction/),
+introduced in April 2026, builds documentation sites for Python
+packages. It finds a package’s public API and generates a full site with
+Quarto, using opinionated defaults that need no configuration to start.
+Great Docs grew out of [quartodoc](https://github.com/machow/quartodoc),
+Posit’s earlier API reference tool.
+
 ### Plotnine
 
 [Plotnine](https://plotnine.org/) is an implementation of the grammar of
@@ -638,7 +648,12 @@ to other valuable open-source and community initiatives. To date, Posit
 has given over \$3.3M to projects led by others. Current commitments
 include contributing to NumFOCUS, the R Consortium, the R Foundation,
 DuckDB, the Eclipse Foundation, and the authors and maintainers of
-several other open-source projects.
+several other open-source projects. In June 2026, Posit also joined the
+[Jupyter
+Foundation](https://opensource.posit.co/blog/2026-06-25_posit-joins-jupyter-foundation/)
+as a general member. Posit’s tools build on the Jupyter ecosystem, and
+membership helps fund its core infrastructure, release engineering, and
+community events.
 
 Posit’s financial support also extends beyond the world of open source
 data science. Since 2020, Posit and its employees have given over \$107k
