@@ -212,6 +212,24 @@ Tables open-source packages.
 
 :::
 
+::: {.page-banner image_paths='("assets/images/hexes/great-docs.png",)' image_height="50%"}
+
+## Great Docs
+
+::: {.cols-2}
+
+[Great Docs](https://opensource.posit.co/blog/2026-04-15_great-docs-introduction/),
+introduced in April 2026, builds documentation sites for Python packages.
+It finds a package's public API and generates a full site with Quarto,
+{{< colbreak >}} using
+opinionated defaults that need no configuration to
+start. Great Docs grew out of [quartodoc](https://github.com/machow/quartodoc),
+Posit's earlier API reference tool.
+
+:::
+
+:::
+
 ::: {.page-banner image_paths='("assets/images/hexes/plotnine.png",)'}
 
 ## Plotnine
