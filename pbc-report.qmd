@@ -51,7 +51,7 @@ keep-typ: true
 ```{=typst}
 #place(bottom, dy: 1.25in,
   align(center, 
-    image("assets/images/INTERNAL-2-POSIT24 Seattle_Nick Klein Photography-341.jpg", 
+    image("assets/images/42142_Posit_ATL_2025.jpg", 
       width: 100% + 2.5in, fit: "cover")
   )
 )

@@ -29,9 +29,20 @@ The following subsections highlight selected Posit software projects of
 interest to the broader data science community. Where metrics are
 published, please note these represent a *lower bound* on the actual
 number, as it is difficult-to-impossible to account for every install
-and usage in the world.^[Metrics updated June 2026]
+and usage in the world. Metrics reflect data as of June 2026.
 
 :::
+
+```{=typst}
+#place(bottom, dy: 2in,
+  align(center, 
+    box(
+      image("assets/images/42276_Posit_ATL_2025 (1).jpg"), 
+      width: 100% + 2.5in, clip: true, inset: (bottom: -1in)
+    )
+  )
+)
+```
 
 {{< pagebreak >}}
 

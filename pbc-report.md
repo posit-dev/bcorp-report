@@ -208,7 +208,7 @@ The following subsections highlight selected Posit software projects of
 interest to the broader data science community. Where metrics are
 published, please note these represent a *lower bound* on the actual
 number, as it is difficult-to-impossible to account for every install
-and usage in the world.[^1]
+and usage in the world. Metrics reflect data as of June 2026.
 
 
 
@@ -713,5 +713,3 @@ years. We track our emissions so that we can purchase an equal amount of
 carbon offsets.
 
 ![](images/generate-plots_files/figure-typst/emissions-1.svg)
-
-[^1]: Metrics updated June 2026

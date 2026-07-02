@@ -240,7 +240,7 @@
 //   Custom title page
 #let title_page(title, subtitle)={
     page(margin: 0in,
-        background: image("assets/images/COVER-1-POSIT24 Seattle_Nick Klein Photography-927.jpg", height: 100%, fit: "cover"))[
+        background: image("assets/images/COVER1-43403_Posit_ATL_2025-crop.png", height: 100%, fit: "cover"))[
         #set text(fill: white)
 
         #place(center + horizon, dy: -2.5in)[
@@ -253,7 +253,7 @@
         ]
         #place(center + bottom, dy: -40pt)[
           #block(height: 40pt)[
-            #image("assets/images/Posit-PBC-lockup-white.svg")
+            #image("assets/images/Posit-Bcorp-lockup-white.svg")
           ]
         ]
     ]
@@ -267,7 +267,7 @@
       #show par: set block(spacing: 0.5em)
       #place(bottom + center)[
         #block(height: 56pt)[
-                  #image("assets/images/Posit-PBC-lockup-white.svg")
+                  #image("assets/images/Posit-Bcorp-lockup-white.svg")
                 ]
         
         The open source data science company
@@ -439,7 +439,7 @@ Today, millions of people download and use Posit open-source products in their d
 ]
 #place(bottom, dy: 1.25in,
   align(center, 
-    image("assets/images/INTERNAL-2-POSIT24 Seattle_Nick Klein Photography-341.jpg", 
+    image("assets/images/42142_Posit_ATL_2025.jpg", 
       width: 100% + 2.5in, fit: "cover")
   )
 )
@@ -506,9 +506,17 @@ More recently, we have built explicitly cross-language tools like Quarto and Pos
 #colbreak()
 Our recent work shares three themes. We are investing in AI, building tools that help data scientists use language models safely. We are rewriting performance-critical components in Rust, so our tools run faster and scale better. And we are supporting production use, with features like multithreading and built-in monitoring.
 
-The following subsections highlight selected Posit software projects of interest to the broader data science community. Where metrics are published, please note these represent a #emph[lower bound] on the actual number, as it is difficult-to-impossible to account for every install and usage in the world.#footnote[Metrics updated June 2026]
+The following subsections highlight selected Posit software projects of interest to the broader data science community. Where metrics are published, please note these represent a #emph[lower bound] on the actual number, as it is difficult-to-impossible to account for every install and usage in the world. Metrics reflect data as of June 2026.
 
 ]
+#place(bottom, dy: 2in,
+  align(center, 
+    box(
+      image("assets/images/42276_Posit_ATL_2025 (1).jpg"), 
+      width: 100% + 2.5in, clip: true, inset: (bottom: -1in)
+    )
+  )
+)
 #pagebreak()
 #page_banner(
 image_paths:("assets/images/quarto-logo-dark.svg",),

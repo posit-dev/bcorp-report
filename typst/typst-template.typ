@@ -30,7 +30,7 @@
 //   Custom title page
 #let title_page(title, subtitle)={
     page(margin: 0in,
-        background: image("assets/images/COVER-1-POSIT24 Seattle_Nick Klein Photography-927.jpg", height: 100%, fit: "cover"))[
+        background: image("assets/images/COVER1-43403_Posit_ATL_2025-crop.png", height: 100%, fit: "cover"))[
         #set text(fill: white)
 
         #place(center + horizon, dy: -2.5in)[
