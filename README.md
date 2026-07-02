@@ -42,12 +42,16 @@ Data extraction scripts live in `data/`, one per output CSV
 
 ### Update plots
 
-Plots are included in the report from `images/plots/generate-plots_files/figure-typst`.
+Plots are written to the top-level `plots/` directory, one `.svg` (used by the
+Typst/PDF build) and one `.png` (used by the HTML/web build) per figure, sharing
+the same basename (e.g. `plots/quarto-1.svg` and `plots/quarto-1.png`). The
+report references them with extensionless paths (e.g. `![](plots/quarto-1)`), and
+Quarto picks the right extension per format.
 
-Re-render `images/generate-plots.qmd` to update the plots in the report:
+Re-render `data/generate-plots.qmd` to update the plots in the report:
 
 ```{.bash}
-quarto render images/generate-plots.qmd
+quarto render data/generate-plots.qmd
 ```
 
 

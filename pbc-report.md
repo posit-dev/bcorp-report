@@ -244,7 +244,7 @@ year.
 There are 5 full time equivalent (FTE) employees developing open-source
 Quarto products as of May 2026.
 
-![](images/generate-plots_files/figure-typst/quarto-1.svg)
+![](plots/quarto-1.png)
 
 ### Shiny
 
@@ -286,8 +286,7 @@ less memory overhead.
 There are 5 FTE Posit employees developing the open-source Shiny and
 Shiny Server products as of May 2026.
 
-![](images/generate-plots_files/figure-typst/shiny-1.svg)
-![](images/generate-plots_files/figure-typst/shiny-2.svg)
+![](plots/shiny-1.png) ![](plots/shiny-2.png)
 
 
 
@@ -367,8 +366,7 @@ specifying charts.
 As of May 2026, there is 1 FTE Posit employee developing gt / Great
 Tables open-source packages.
 
-![](images/generate-plots_files/figure-typst/gt-1.svg)
-![](images/generate-plots_files/figure-typst/gt-2.svg)
+![](plots/gt-1.png) ![](plots/gt-2.png)
 
 ### Plotnine
 
@@ -378,7 +376,7 @@ graphics in Python, heavily influenced by ggplot2 in R. Built on the
 otherwise complex) plots are easy to reason about and build
 incrementally, while the simple plots remain simple to create.
 
-![](images/generate-plots_files/figure-typst/plotnine-1.svg)
+![](plots/plotnine-1.png)
 
 ### Pins
 
@@ -392,8 +390,7 @@ Posit Connect, Amazon S3, and Google Cloud Storage.
 Pins can be automatically versioned, making it straightforward to track
 changes, re-run analyses on historical data, and undo mistakes.
 
-![](images/generate-plots_files/figure-typst/pins-1.svg)
-![](images/generate-plots_files/figure-typst/pins-2.svg)
+![](plots/pins-1.png) ![](plots/pins-2.png)
 
 ### Orbital
 
@@ -440,7 +437,7 @@ built on mirai.
 There are 6 FTE Posit employees developing Tidyverse and related
 open-source products as of May 2026.
 
-![](images/generate-plots_files/figure-typst/tidyverse-1.svg)
+![](plots/tidyverse-1.png)
 
 ### Tidymodels
 
@@ -459,7 +456,7 @@ data across modeling workflows.
 There are 4 FTE Posit employees developing Tidymodels and related
 open-source products as of May 2026.
 
-![](images/generate-plots_files/figure-typst/tidymodels-1.svg)
+![](plots/tidymodels-1.png)
 
 ### SQL Enablement
 
@@ -496,7 +493,7 @@ Connectivity packages include: [sparklyr](https://spark.posit.co/),
 There are 2 FTE Posit employees creating connectivity-related
 open-source packages as of May 2026.
 
-![](images/generate-plots_files/figure-typst/connectivity-1.svg)
+![](plots/connectivity-1.png)
 
 ### R Infrastructure Tools (r-lib)
 
@@ -510,7 +507,7 @@ There are currently 114 R-lib packages. Popular packages include
 [pkgdown](https://pkgdown.r-lib.org/) and
 [usethis](https://usethis.r-lib.org/).
 
-![](images/generate-plots_files/figure-typst/rlibs-1.svg)
+![](plots/rlibs-1.png)
 
 ### RStudio Integrated Development Environment
 
@@ -526,7 +523,7 @@ efficient.
 There are 5 FTE Posit employees developing the RStudio IDE open-source
 desktop and server products as of May 2026.
 
-![](images/generate-plots_files/figure-typst/rstudio-1.svg)
+![](plots/rstudio-1.png)
 
 
 
@@ -712,4 +709,4 @@ our scope 2 and scope 3 greenhouse gas emissions from the past three
 years. We track our emissions so that we can purchase an equal amount of
 carbon offsets.
 
-![](images/generate-plots_files/figure-typst/emissions-1.svg)
+![](plots/emissions-1.png)

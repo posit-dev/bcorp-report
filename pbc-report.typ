@@ -535,7 +535,7 @@ Quarto is being rewritten, with critical components moved to Rust. The next majo
 There are 5 full time equivalent (FTE) employees developing open-source Quarto products as of May 2026.
 
 ]
-#box(image("images/generate-plots_files/figure-typst/quarto-1.svg"))
+#box(image("plots/quarto-1.svg"))
 
 ])
 
@@ -557,7 +557,7 @@ Shiny also continues to mature for production use. Recent releases added #link("
 There are 5 FTE Posit employees developing the open-source Shiny and Shiny Server products as of May 2026.
 
 ]
-#box(image("images/generate-plots_files/figure-typst/shiny-1.svg")) #box(image("images/generate-plots_files/figure-typst/shiny-2.svg"))
+#box(image("plots/shiny-1.svg")) #box(image("plots/shiny-2.svg"))
 
 ])
 
@@ -610,7 +610,7 @@ To that end, the #link("https://gt.rstudio.com/")[gt] and #link("https://posit-d
 As of May 2026, there is 1 FTE Posit employee developing gt / Great Tables open-source packages.
 
 ]
-#box(image("images/generate-plots_files/figure-typst/gt-1.svg")) #box(image("images/generate-plots_files/figure-typst/gt-2.svg"))
+#box(image("plots/gt-1.svg")) #box(image("plots/gt-2.svg"))
 
 ])
 
@@ -623,7 +623,7 @@ image_paths:("assets/images/hexes/plotnine.png",),
 #link("https://plotnine.org/")[Plotnine] is an implementation of the grammar of graphics in Python, heavily influenced by ggplot2 in R. Built on the #link("https://matplotlib.org/")[matplotlib] plotting library, #colbreak() custom (and otherwise complex) plots are easy to reason about and build incrementally, while the simple plots remain simple to create.
 
 ]
-#box(image("images/generate-plots_files/figure-typst/plotnine-1.svg"))
+#box(image("plots/plotnine-1.svg"))
 
 ])
 
@@ -639,7 +639,7 @@ Pins (for #link("https://pins.rstudio.com/")[R] and #link("https://rstudio.githu
 Pins can be automatically versioned, making it straightforward to track changes, re-run analyses on historical data, and undo mistakes.
 
 ]
-#box(image("images/generate-plots_files/figure-typst/pins-1.svg")) #box(image("images/generate-plots_files/figure-typst/pins-2.svg"))
+#box(image("plots/pins-1.svg")) #box(image("plots/pins-2.svg"))
 
 ])
 
@@ -680,7 +680,7 @@ Recent work includes a major #link("https://ggplot2.tidyverse.org/")[ggplot2] ov
 There are 6 FTE Posit employees developing Tidyverse and related open-source products as of May 2026.
 
 ]
-#box(image("images/generate-plots_files/figure-typst/tidyverse-1.svg"))
+#box(image("plots/tidyverse-1.svg"))
 
 ])
 
@@ -700,7 +700,7 @@ Recent work includes a parallel-processing overhaul in #link("https://tune.tidym
 There are 4 FTE Posit employees developing Tidymodels and related open-source products as of May 2026.
 
 ]
-#box(image("images/generate-plots_files/figure-typst/tidymodels-1.svg"))
+#box(image("plots/tidymodels-1.svg"))
 
 ])
 
@@ -736,7 +736,7 @@ Connectivity packages include: #link("https://spark.posit.co/")[sparklyr], #link
 There are 2 FTE Posit employees creating connectivity-related open-source packages as of May 2026.
 
 ]
-#box(image("images/generate-plots_files/figure-typst/connectivity-1.svg"))
+#box(image("plots/connectivity-1.svg"))
 
 ])
 
@@ -752,7 +752,7 @@ R-lib is a large collection of R packages that make it easier to build, find, an
 There are currently 114 R-lib packages. Popular packages include #link("https://devtools.r-lib.org/")[devtools], #link("https://testthat.r-lib.org/")[testthat], #link("https://roxygen2.r-lib.org/")[roxygen2], #link("https://pkgdown.r-lib.org/")[pkgdown] and #link("https://usethis.r-lib.org/")[usethis].
 
 ]
-#box(image("images/generate-plots_files/figure-typst/rlibs-1.svg"))
+#box(image("plots/rlibs-1.svg"))
 
 ])
 
@@ -768,7 +768,7 @@ image_paths:("assets/images/hexes/RStudio.svg",),
 There are 5 FTE Posit employees developing the RStudio IDE open-source desktop and server products as of May 2026.
 
 ]
-#box(image("images/generate-plots_files/figure-typst/rstudio-1.svg"))
+#box(image("plots/rstudio-1.svg"))
 
 ])
 
@@ -878,7 +878,7 @@ Investments in employee career development include in-house management training 
 As a remote-first organization, we do not generate meaningful greenhouse gas emissions. However, for the emissions we do generate from cloud computing, business travel, and our Boston headquarters we purchase carbon offsets to achieve carbon neutrality. We first achieved carbon neutrality in 2020 and have since maintained our neutrality by purchasing carbon offsets for years 2021 - 2025. Below is a breakdown of our scope 2 and scope 3 greenhouse gas emissions from the past three years. We track our emissions so that we can purchase an equal amount of carbon offsets.
 
 ]
-#box(image("images/generate-plots_files/figure-typst/emissions-1.svg"))
+#box(image("plots/emissions-1.svg"))
 
 #back_page(repo: "https://github.com/posit-dev/bcorp-report/")[
   

@@ -86,4 +86,4 @@ so that we can purchase an equal amount of carbon offsets.
 
 :::
 
-![](images/generate-plots_files/figure-typst/emissions-1.svg)
+![](plots/emissions-1)

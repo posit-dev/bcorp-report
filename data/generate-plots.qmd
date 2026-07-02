@@ -1,0 +1,219 @@
+---
+title: "Generate Plots"
+format:
+  html:
+    fig-format: png
+  markdown:
+    fig-format: svg
+fig-width: 7
+fig-height: 3
+fig-dpi: 192
+knitr:
+  opts_chunk:
+    fig.path: "../plots/"
+---
+
+```{r}
+#| label: setup
+#| include: false
+library(here)
+library(ggplot2)
+library(tidyverse)
+library(thematic)
+library(ragg)
+library(showtext)
+
+posit_colors <- list(
+  blue = "#447099",
+  grey = "#404041",
+  orange = "#EE6331",
+  dark_blue_2 = "#213D4F",
+  dark_blue_3 = "#17212B",
+  light_blue_1 = "#D1DBE5",
+  light_blue_2 = "#A2B8CB"
+)
+
+thematic_on(
+  bg = "white",
+  fg = posit_colors$grey,
+  accent = posit_colors$blue,
+  font = "Open Sans"
+)
+
+python <- read_csv(here("data", "python_package_downloads.csv"))
+r <- read_csv(here("data", "r_package_downloads.csv"))
+rstudio <- read_csv(here("data", "rstudio_os_downloads.csv"))
+quarto <- read_csv(here("data", "quarto_downloads.csv"), col_types = cols(major_minor = col_character()))
+
+plot_defaults <- list(
+  scale_y_continuous(
+    labels = scales::label_number(scale_cut = scales::cut_short_scale())
+  ),
+  xlab(""),
+  ylab("Cumulative Downloads"),
+  theme(
+    panel.background = element_rect(fill = "#EDF0F5"),
+    plot.margin = margin(5.5, 8.5, 5.5, 5.5)
+  )
+)
+
+growth_plot <- function(data, y = downloads) {
+  data |>
+    ggplot(aes(x = date, y = cumsum(as.numeric(downloads)))) +
+    geom_line(color = posit_colors$blue, linewidth = 0.75) +
+    scale_x_date(labels = scales::label_date_short()) +
+    plot_defaults
+}
+```
+
+## Open source packages
+
+```{r}
+#| label: quarto
+quarto |> 
+  mutate(major_minor = if_else(major_minor == "1.10", "1.10\nPre-release", as.character(major_minor)),
+  major_minor = factor(major_minor, levels =major_minor)) |> 
+  ggplot(aes(major_minor, cumsum(downloads))) +
+  geom_line(aes(group = 1), color = posit_colors$blue, linewidth = 0.75) +  
+  plot_defaults
+```
+
+```{r}
+#| label: shiny
+#| fig-height: 2
+python |> 
+  filter(package == "shiny") |> 
+  growth_plot() + ggtitle("Shiny for Python")
+r |> filter(package == "shiny") |> growth_plot() + ggtitle("Shiny for R")
+```
+
+```{r}
+#| label: gt
+python |> filter(package == "great-tables") |> growth_plot() + ggtitle("great_tables")
+r |> filter(package == "gt") |> growth_plot() + ggtitle("gt")
+```
+
+```{r}
+#| label: vetiver
+python |> filter(package == "vetiver") |> growth_plot() + ggtitle("vetiver for Python")
+r |> filter(package == "vetiver", year(date) > 2021) |> growth_plot() + ggtitle("vetiver for R")
+```
+
+```{r}
+#| label: plotnine
+python |> filter(package == "plotnine") |> growth_plot() + ggtitle("Plotnine")
+```
+
+```{r}
+#| label: siuba
+python |> filter(package == "siuba") |> growth_plot() + ggtitle("Siuba")
+```
+
+```{r}
+#| label: pins
+python |> filter(package == "pins") |> growth_plot() + ggtitle("pins for Python")
+r |> filter(package == "pins", year(date) > 2021) |> growth_plot() + ggtitle("pins for R")
+```
+
+```{r}
+#| label: rstudio
+rstudio |> growth_plot() + ggtitle("RStudio")
+```
+
+```{r}
+#| label: tidyverse
+r |> 
+  filter(project == "tidyverse") |> 
+  group_by(date) |> 
+  summarise(downloads = sum(downloads)) |> 
+  growth_plot() + 
+  ggtitle("Tidyverse")
+```
+
+```{r}
+#| label: tidymodels
+r |> 
+  filter(project == "tidymodels") |> 
+  group_by(date) |> 
+  summarise(downloads = sum(downloads)) |> 
+  growth_plot() + 
+  ggtitle("Tidymodels")
+```
+
+```{r}
+#| label: connectivity
+r |> 
+  filter(project == "connectivity") |> 
+  group_by(date) |> 
+  summarise(downloads = sum(downloads)) |> 
+  growth_plot() + 
+  ggtitle("R Connectivity")
+```
+
+```{r}
+#| label: rlibs
+r |> 
+  filter(project == "r-lib") |> 
+  group_by(date) |> 
+  summarise(downloads = sum(downloads)) |> 
+  growth_plot() + 
+  ggtitle("R Libs")
+```
+
+## Carbon Offsets
+
+```{r}
+#| fig-height: 3
+#| label: emissions
+emissions <- tribble(
+  ~emission_source,                 ~`2023`, ~`2024`, ~`2025`,
+  "SaaS Software & Cloud Computing", 321.80,  300.34,  325.60,
+  "Business Travel",                  13.91,   51.65,  168.97,
+  "Shared Office Commuting",          17.70,   17.70,   17.70,
+  "Boston Office Electricity",         3.97,    4.32,    3.80
+  ) |> 
+  pivot_longer(
+    cols = -emission_source, 
+    names_to = "year", 
+    values_to = "emissions"
+  ) |> 
+  mutate(
+    emission_source = factor(
+      emission_source, 
+      levels = rev(c(
+        "SaaS Software & Cloud Computing",
+        "Business Travel",
+        "Shared Office Commuting",
+        "Boston Office Electricity"
+      ))
+    )
+  )
+
+# Luminance-stepped, color-blind-safe palette for the stacked bars
+emission_colors <- c(
+  "SaaS Software & Cloud Computing" = "#D1DBE5",  # light-blue-1
+  "Business Travel"                 = "#94BDBF",  # light teal
+  "Shared Office Commuting"         = "#EE6331",  # orange
+  "Boston Office Electricity"       = "#707073"   # light-gray-3
+)
+
+emissions  |>
+  ggplot(aes(year, emissions, fill = emission_source)) +
+  geom_col() +
+  xlab("") + ylab("CO₂e (metric tons)") +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.05))) +
+  scale_fill_manual(
+    name = "Source",
+    values = emission_colors,
+    labels = scales::label_wrap(18)
+  ) +
+  theme(
+    legend.key.spacing.y = unit(6, "pt"),
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank(),
+    panel.background = element_rect(fill = "#EDF0F5"),
+    plot.margin = margin(5.5, 8.5, 5.5, 5.5)
+  )
+```
+
+

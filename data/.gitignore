@@ -2,3 +2,10 @@ downloads.csv
 .env
 desktop-downloads/
 server-downloads/
+
+# Quarto render byproducts from generate-plots.qmd (figures go to /plots)
+generate-plots_files/
+generate-plots.html
+generate-plots.md
+generate-plots.typ
+generate-plots.pdf

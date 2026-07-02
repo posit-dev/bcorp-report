@@ -78,7 +78,7 @@ Quarto products as of May 2026.
 
 :::
  
-![](images/generate-plots_files/figure-typst/quarto-1.svg)
+![](plots/quarto-1)
 
 ::: 
 
@@ -127,8 +127,8 @@ Shiny Server products as of May 2026.
 
 :::
 
-![](images/generate-plots_files/figure-typst/shiny-1.svg)
-![](images/generate-plots_files/figure-typst/shiny-2.svg)
+![](plots/shiny-1)
+![](plots/shiny-2)
 
 ::: 
 
@@ -207,8 +207,8 @@ Tables open-source packages.
 
 :::
 
-![](images/generate-plots_files/figure-typst/gt-1.svg)
-![](images/generate-plots_files/figure-typst/gt-2.svg)
+![](plots/gt-1)
+![](plots/gt-2)
 
 :::
 
@@ -227,7 +227,7 @@ incrementally, while the simple plots remain simple to create.
 
 :::
 
-![](images/generate-plots_files/figure-typst/plotnine-1.svg)
+![](plots/plotnine-1)
 
 :::
 
@@ -249,8 +249,8 @@ re-run analyses on historical data, and undo mistakes.
 
 ::: 
 
-![](images/generate-plots_files/figure-typst/pins-1.svg)
-![](images/generate-plots_files/figure-typst/pins-2.svg)
+![](plots/pins-1)
+![](plots/pins-2)
 
 :::
 
@@ -317,7 +317,7 @@ open-source products as of May 2026.
 
 :::
 
-![](images/generate-plots_files/figure-typst/tidyverse-1.svg)
+![](plots/tidyverse-1)
 
 :::
 
@@ -347,7 +347,7 @@ open-source products as of May 2026.
 
 :::
 
-![](images/generate-plots_files/figure-typst/tidymodels-1.svg)
+![](plots/tidymodels-1)
 
 :::
 
@@ -404,7 +404,7 @@ open-source packages as of May 2026.
 
 :::
 
-![](images/generate-plots_files/figure-typst/connectivity-1.svg)
+![](plots/connectivity-1)
 
 :::
 
@@ -428,7 +428,7 @@ include [devtools](https://devtools.r-lib.org/),
 
 :::
 
-![](images/generate-plots_files/figure-typst/rlibs-1.svg)
+![](plots/rlibs-1)
 
 ::: 
 
@@ -454,7 +454,7 @@ desktop and server products as of May 2026.
 
 :::
 
-![](images/generate-plots_files/figure-typst/rstudio-1.svg)
+![](plots/rstudio-1)
 
 :::
 

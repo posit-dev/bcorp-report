@@ -101,14 +101,14 @@ President &amp; CEO, Posit PBC</p>
 <p>Quarto allows users to choose from multiple computational engines (Knitr, Jupyter, and Observable), which makes it easy to use Quarto with R, Python, Julia, JavaScript and many other languages. It also allows users to author documents as plain text markdown or Jupyter Notebooks, and publish to numerous outputs such as HTML, PDF, MS Word, ePub and more, and for the community to develop its own extensions.</p>
 <p>Quarto is being rewritten, with critical components moved to Rust. The next major version, <a href="https://quarto.org/docs/blog/posts/2026-04-06-whats-next-quarto-2/">Quarto 2</a>, is developed openly at <a href="https://github.com/quarto-dev/q2">quarto-dev/q2</a>. These Rust components improve performance and report syntax errors more clearly, preserving source locations so problems are easier to fix. The team is also exploring real-time collaboration, enabling authors to write documents together. Posit expects to make a version publicly available later this year.</p>
 <p>There are 5 full time equivalent (FTE) employees developing open-source Quarto products as of May 2026.</p>
-<p><img src="images/generate-plots_files/figure-typst/quarto-1.svg"></p>
+<p><img src="plots/quarto-1.png"></p>
 <h3 id="shiny">Shiny</h3>
 <p>Shiny has been a mainstay in the R community since its launch in 2012, providing a web application framework that makes it easy to tell data stories in interactive, point-and-click apps. In April 2023, Posit released a Python version of Shiny with the same reactive programming model, and the newer <a href="https://shiny.posit.co/py/docs/express-in-depth.html">Shiny Express</a> syntax makes it easier for Python developers to get started.</p>
 <p>New packages (see <a href="#ai-and-llm-enablement">AI and LLM Enablement</a>) also highlight Shiny as a strong platform for building LLM-powered apps.</p>
 <p>Shiny applications can be shared with others via the open-source <a href="https://posit.co/products/open-source/shinyserver/">Shiny Server</a>, <a href="https://connect.posit.cloud/">Posit Connect Cloud</a>, or <a href="https://posit.co/products/enterprise/connect/">Posit Connect</a>. Shiny and related packages include shiny (<a href="https://shiny.posit.co/py/">Python</a>, <a href="https://shiny.posit.co/r/getstarted">R</a>), <a href="https://rstudio.github.io/bslib/">bslib</a>, <a href="https://rstudio.github.io/shinytest/">shinytest</a>, <a href="https://rstudio.github.io/shinyloadtest/">shinyloadtest</a>, <a href="https://rstudio.github.io/shinydashboard/">shinydashboard</a>, <a href="https://rstudio.github.io/leaflet/">leaflet</a>, <a href="https://rstudio.github.io/crosstalk/">crosstalk</a>, <a href="https://posit-dev.github.io/brand-yml/">brand.yml</a>, <a href="https://posit-dev.github.io/shinychat/">shinychat</a>, and <a href="https://github.com/posit-dev/querychat">querychat</a>.</p>
 <p>Shiny also continues to mature for production use. Recent releases added <a href="https://shiny.posit.co/r/articles/improve/opentelemetry/">OpenTelemetry</a> support, so teams can monitor live apps and trace their performance. The async framework <a href="https://mirai.r-lib.org/">mirai</a> and the shared-memory package <a href="https://opensource.posit.co/software/mori/">mori</a> keep improving as well, helping Shiny scale to more concurrent users with less memory overhead.</p>
 <p>There are 5 FTE Posit employees developing the open-source Shiny and Shiny Server products as of May 2026.</p>
-<p><img src="images/generate-plots_files/figure-typst/shiny-1.svg"> <img src="images/generate-plots_files/figure-typst/shiny-2.svg"></p>
+<p><img src="plots/shiny-1.png"> <img src="plots/shiny-2.png"></p>
 <div style="page-break-after: always;"></div>
 <h3 id="ai-and-llm-enablement">AI and LLM Enablement</h3>
 <p>Large language models (LLMs) are changing how data scientists work. Posit’s Open Source teams are building tools to help data scientists responsibly use LLMs in their analysis, apply them during development, and incorporate LLM capabilities in the solutions they provide others.</p>
@@ -134,14 +134,14 @@ President &amp; CEO, Posit PBC</p>
 <p>When presenting an analysis, a table can often convey the results more concisely than the most beautiful and interactive of charts. However, the experience of creating and displaying tables in R and Python has been mixed, especially when you want to display something beyond a plain data frame representation.</p>
 <p>To that end, the <a href="https://gt.rstudio.com/">gt</a> and <a href="https://posit-dev.github.io/great-tables/articles/intro.html">Great Tables</a> packages have defined a “grammar of tables” to solve this problem (in R and Python, respectively), analogous to the “grammar of graphics” for specifying charts.</p>
 <p>As of May 2026, there is 1 FTE Posit employee developing gt / Great Tables open-source packages.</p>
-<p><img src="images/generate-plots_files/figure-typst/gt-1.svg"> <img src="images/generate-plots_files/figure-typst/gt-2.svg"></p>
+<p><img src="plots/gt-1.png"> <img src="plots/gt-2.png"></p>
 <h3 id="plotnine">Plotnine</h3>
 <p><a href="https://plotnine.org/">Plotnine</a> is an implementation of the grammar of graphics in Python, heavily influenced by ggplot2 in R. Built on the <a href="https://matplotlib.org/">matplotlib</a> plotting library, custom (and otherwise complex) plots are easy to reason about and build incrementally, while the simple plots remain simple to create.</p>
-<p><img src="images/generate-plots_files/figure-typst/plotnine-1.svg"></p>
+<p><img src="plots/plotnine-1.png"></p>
 <h3 id="pins">Pins</h3>
 <p>Pins (for <a href="https://pins.rstudio.com/">R</a> and <a href="https://rstudio.github.io/pins-python/">python</a>) publish data, models, and other objects, making them easy to share across projects and with others. Users can pin objects to a variety of pin boards, including folders (to share on a networked drive or with services like DropBox), Posit Connect, Amazon S3, and Google Cloud Storage.</p>
 <p>Pins can be automatically versioned, making it straightforward to track changes, re-run analyses on historical data, and undo mistakes.</p>
-<p><img src="images/generate-plots_files/figure-typst/pins-1.svg"> <img src="images/generate-plots_files/figure-typst/pins-2.svg"></p>
+<p><img src="plots/pins-1.png"> <img src="plots/pins-2.png"></p>
 <h3 id="orbital">Orbital</h3>
 <p><a href="https://github.com/posit-dev/orbital">Orbital</a> lets you run machine learning models inside your database. Originally an <a href="https://orbital.tidymodels.org/articles/orbital.html">R package</a>, it now also supports Python. In Python, orbital converts scikit-learn models into SQL, so they can run directly in a database like Snowflake, with no Python environment needed.<br>
 The performance gains this approach has provided is quite significant.</p>
@@ -154,13 +154,13 @@ The performance gains this approach has provided is quite significant.</p>
 <p>The tidyverse consists of nine core packages (including ggplot2, tidyr and readr) and 31 packages overall.</p>
 <p>Recent work includes a major <a href="https://ggplot2.tidyverse.org/">ggplot2</a> overhaul in version 4.0.0, which moved the package to the S7 object system and added new theming controls. <a href="https://purrr.tidyverse.org/">purrr</a> also gained parallel processing, built on mirai.</p>
 <p>There are 6 FTE Posit employees developing Tidyverse and related open-source products as of May 2026.</p>
-<p><img src="images/generate-plots_files/figure-typst/tidyverse-1.svg"></p>
+<p><img src="plots/tidyverse-1.png"></p>
 <h3 id="tidymodels">Tidymodels</h3>
 <p><a href="https://www.tidymodels.org/">tidymodels</a> is a collection of packages that perform tasks relevant to statistical modeling and machine learning. Tidymodels packages share a common syntax and design philosophy, and are designed to work well with Tidyverse packages.</p>
 <p>There are currently 42 tidymodels packages on CRAN. Popular tidymodels packages include parsnip, rsample, recipes, tune and yardstick.</p>
 <p>Recent work includes a parallel-processing overhaul in <a href="https://tune.tidymodels.org/">tune</a> 2.0.0 and new support for sparse data across modeling workflows.</p>
 <p>There are 4 FTE Posit employees developing Tidymodels and related open-source products as of May 2026.</p>
-<p><img src="images/generate-plots_files/figure-typst/tidymodels-1.svg"></p>
+<p><img src="plots/tidymodels-1.png"></p>
 <h3 id="sql-enablement">SQL Enablement</h3>
 <p>Posit’s open source ecosystem has long supported R and Python, along with some support for Julia. SQL now joins that list. SQL is one of the most common languages for working with data, so supporting it well matters to a large community of data scientists.</p>
 <p>The first major piece is <a href="https://ggsql.org/">ggsql</a>, which brings the grammar of graphics to SQL. People can build plots directly in their queries, without needing R or Python. ggsql runs in Quarto, Jupyter, Positron, and other tools.</p>
@@ -170,15 +170,15 @@ The performance gains this approach has provided is quite significant.</p>
 <p>Posit makes open-source packages that connect data scientists to spreadsheets, databases, distributed storage frameworks for big data, machine learning platforms, and the programming environments of other languages, such as Python.</p>
 <p>Connectivity packages include: <a href="https://spark.posit.co/">sparklyr</a>, <a href="https://tensorflow.rstudio.com/">tensorflow for R</a>, <a href="https://keras.posit.co/">keras</a>, <a href="https://solutions.posit.co/connections/db/r-packages/odbc/">odbc</a>, and <a href="https://rstudio.github.io/reticulate/">reticulate</a>.</p>
 <p>There are 2 FTE Posit employees creating connectivity-related open-source packages as of May 2026.</p>
-<p><img src="images/generate-plots_files/figure-typst/connectivity-1.svg"></p>
+<p><img src="plots/connectivity-1.png"></p>
 <h3 id="r-infrastructure-tools-r-lib">R Infrastructure Tools (r-lib)</h3>
 <p>R-lib is a large collection of R packages that make it easier to build, find, and use effective tools for data analysis.</p>
 <p>There are currently 114 R-lib packages. Popular packages include <a href="https://devtools.r-lib.org/">devtools</a>, <a href="https://testthat.r-lib.org/">testthat</a>, <a href="https://roxygen2.r-lib.org/">roxygen2</a>, <a href="https://pkgdown.r-lib.org/">pkgdown</a> and <a href="https://usethis.r-lib.org/">usethis</a>.</p>
-<p><img src="images/generate-plots_files/figure-typst/rlibs-1.svg"></p>
+<p><img src="plots/rlibs-1.png"></p>
 <h3 id="rstudio-integrated-development-environment">RStudio Integrated Development Environment</h3>
 <p><a href="https://posit.co/products/open-source/rstudio/">RStudio</a> is a multi-language IDE designed for data science with R and Python. It augments the standard code console with an editor that can display Notebooks, launch apps, highlight code syntax, spot code errors, and directly execute code. Built into the IDE are tools for debugging, plotting, browsing files, and managing project histories and workspaces. Together these tools make data scientists and developers much more efficient.</p>
 <p>There are 5 FTE Posit employees developing the RStudio IDE open-source desktop and server products as of May 2026.</p>
-<p><img src="images/generate-plots_files/figure-typst/rstudio-1.svg"></p>
+<p><img src="plots/rstudio-1.png"></p>
 <div style="page-break-after: always;"></div>
 <h3 id="positron">Positron</h3>
 <p><a href="https://positron.posit.co/">Positron</a> is a multi-language IDE designed for data science. Positron has first-class, built-in support for R and Python via an integrated console, with extensibility options for other languages. This native support includes specialized views and panes throughout Positron such as a <a href="https://positron.posit.co/data-explorer.html">Data Explorer</a>, <a href="https://positron.posit.co/connections-pane.html">Connections Pane</a>, Variables Pane, access to Posit AI, and more.</p>
@@ -242,7 +242,7 @@ The performance gains this approach has provided is quite significant.</p>
 <p>Investments in employee career development include in-house management training programs, tooling and education to support constructive feedback, and documentation of job levels, pay ranges, and career paths within our major functions. In 2021, we initiated an annual organizational health survey, which allows us to collect and respond to employee feedback. We have also augmented our benefits to include a “lifestyle savings account” (LSA) funded by Posit that each individual can choose to apply to home office, professional development, wellness, or financial health expenses as they see fit. All together, we are working to continuously improve the value offered to our workers as our company grows.</p>
 <h3 id="environment">Environment</h3>
 <p>As a remote-first organization, we do not generate meaningful greenhouse gas emissions. However, for the emissions we do generate from cloud computing, business travel, and our Boston headquarters we purchase carbon offsets to achieve carbon neutrality. We first achieved carbon neutrality in 2020 and have since maintained our neutrality by purchasing carbon offsets for years 2021 - 2025. Below is a breakdown of our scope 2 and scope 3 greenhouse gas emissions from the past three years. We track our emissions so that we can purchase an equal amount of carbon offsets.</p>
-<p><img src="images/generate-plots_files/figure-typst/emissions-1.svg"></p>
+<p><img src="plots/emissions-1.png"></p>
 
 
 

@@ -7,3 +7,6 @@
 data/downloads.csv.gz
 sections/*.html
 sections/*_files/
+pbc-report_files/
+
+/.luarc.json
