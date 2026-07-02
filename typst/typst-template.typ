@@ -43,7 +43,7 @@
         ]
         #place(center + bottom, dy: -40pt)[
           #block(height: 40pt)[
-            #image("assets/images/Posit-PBC-lockup-white.svg")
+            #image("assets/images/Posit-Bcorp-lockup-white.svg")
           ]
         ]
     ]
@@ -57,7 +57,7 @@
       #show par: set block(spacing: 0.5em)
       #place(bottom + center)[
         #block(height: 56pt)[
-                  #image("assets/images/Posit-PBC-lockup-white.svg")
+                  #image("assets/images/Posit-Bcorp-lockup-white.svg")
                 ]
         
         The open source data science company
