@@ -774,13 +774,13 @@ There are 5 FTE Posit employees developing the RStudio IDE open-source desktop a
 
 #pagebreak()
 #page_banner(
-image_paths:("assets/images/hexes/positron.png",),
+image_paths:("assets/images/hexes/positron.svg",),
 image_height:50%,
 [
 == Positron
 <positron>
 #col-2()[
-#link("https://positron.posit.co/")[Positron] is a multi-language IDE designed for data science. Positron has first-class, built-in support for R and Python via an integrated console, with extensibility options for other languages. This native support includes specialized views and panes throughout Positron such as a #link("https://positron.posit.co/data-explorer.html")[Data Explorer], #link("https://positron.posit.co/connections-pane.html")[Connections Pane], Variables Pane, access to Posit AI, and more.
+#link("https://positron.posit.co/")[Positron#super[®]] is a multi-language IDE designed for data science. Positron has first-class, built-in support for R and Python via an integrated console, with extensibility options for other languages. This native support includes specialized views and panes throughout Positron such as a #link("https://positron.posit.co/data-explorer.html")[Data Explorer], #link("https://positron.posit.co/connections-pane.html")[Connections Pane], Variables Pane, access to Posit AI, and more.
 
 Positron separates the language interpreter from the IDE. If R or Python crashes, the IDE keeps running. This design also lets users switch between language versions without reloading the IDE. The R side is powered by #link("https://github.com/posit-dev/ark")[Ark], an open source R kernel, and Positron ships with #link("https://posit-dev.github.io/air/")[Air], a fast R formatter. Both are written in Rust.
 
@@ -789,7 +789,7 @@ Positron is built on #link("https://github.com/microsoft/vscode")[Code OSS] and 
 Additional languages typically used in package development are supported via existing third party extensions. These don't make use of the full Positron data science experience including an interactive console, plots, and similar. Some examples include Rust, Javascript/Typescript, C/C++, or Lua.
 
 #colbreak()
-Positron™ is licensed under the #link("https://github.com/posit-dev/positron?tab=License-1-ov-file#readme")[Elastic License 2.0], a source-available license. #link("https://positron.posit.co/licensing.html")[Read more] about what this license means and our decision to use it.
+Positron is licensed under the #link("https://github.com/posit-dev/positron?tab=License-1-ov-file#readme")[Elastic License 2.0], a source-available license. #link("https://positron.posit.co/licensing.html")[Read more] about what this license means and our decision to use it.
 
 Positron is built specifically for data science, not as a general-purpose editor like VS Code.
 
@@ -804,6 +804,7 @@ There are 16 FTE Posit employees developing Positron as of May 2026.
 
 #page_banner(
 image_paths:("assets/images/hexes/package-manager.svg",),
+image_height:75%,
 [
 == Posit Public Package Manager
 <posit-public-package-manager>

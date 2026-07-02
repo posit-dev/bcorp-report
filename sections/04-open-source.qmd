@@ -460,13 +460,13 @@ desktop and server products as of May 2026.
 
 {{< pagebreak >}}
 
-::: {.page-banner image_paths='("assets/images/hexes/positron.png",)' image_height="50%"}
+::: {.page-banner image_paths='("assets/images/hexes/positron.svg",)' image_height="50%"}
 
 ## Positron
 
 ::: {.cols-2}
 
-[Positron](https://positron.posit.co/)
+[Positron^®^](https://positron.posit.co/)
 is a multi-language IDE designed for data science. Positron has first-class, built-in
 support for R and Python via an integrated console, with extensibility options for other 
 languages. This native support includes specialized views and panes throughout 
@@ -491,7 +491,7 @@ console, plots, and similar. Some examples include Rust, Javascript/Typescript, 
 
 {{< colbreak >}}
 
-Positron™ is licensed under the [Elastic License 2.0](https://github.com/posit-dev/positron?tab=License-1-ov-file#readme), 
+Positron is licensed under the [Elastic License 2.0](https://github.com/posit-dev/positron?tab=License-1-ov-file#readme), 
 a source-available license. [Read more](https://positron.posit.co/licensing.html) about what 
 this license means and our decision to use it.
 
@@ -514,7 +514,7 @@ There are 16 FTE Posit employees developing Positron as of May 2026.
 
 :::
 
-::: {.page-banner image_paths='("assets/images/hexes/package-manager.svg",)'}
+::: {.page-banner image_paths='("assets/images/hexes/package-manager.svg",)' image_height="75%"}
 
 
 ## Posit Public Package Manager

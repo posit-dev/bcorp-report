@@ -529,11 +529,11 @@ desktop and server products as of May 2026.
 
 ### Positron
 
-[Positron](https://positron.posit.co/) is a multi-language IDE designed
-for data science. Positron has first-class, built-in support for R and
-Python via an integrated console, with extensibility options for other
-languages. This native support includes specialized views and panes
-throughout Positron such as a [Data
+[Positron<sup>®</sup>](https://positron.posit.co/) is a multi-language
+IDE designed for data science. Positron has first-class, built-in
+support for R and Python via an integrated console, with extensibility
+options for other languages. This native support includes specialized
+views and panes throughout Positron such as a [Data
 Explorer](https://positron.posit.co/data-explorer.html), [Connections
 Pane](https://positron.posit.co/connections-pane.html), Variables Pane,
 access to Posit AI, and more.
@@ -556,7 +556,7 @@ Positron data science experience including an interactive console,
 plots, and similar. Some examples include Rust, Javascript/Typescript,
 C/C++, or Lua.
 
-Positron™ is licensed under the [Elastic License
+Positron is licensed under the [Elastic License
 2.0](https://github.com/posit-dev/positron?tab=License-1-ov-file#readme),
 a source-available license. [Read
 more](https://positron.posit.co/licensing.html) about what this license
