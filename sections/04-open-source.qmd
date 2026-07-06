@@ -37,7 +37,7 @@ and usage in the world. Metrics reflect data as of June 2026.
 #place(bottom, dy: 2in,
   align(center, 
     box(
-      image("assets/images/42276_Posit_ATL_2025 (1).jpg"), 
+      image("assets/images/42276_Posit_ATL_2025.jpg"), 
       width: 100% + 2.5in, clip: true, inset: (bottom: -1in)
     )
   )
@@ -227,6 +227,19 @@ start. Great Docs grew out of [quartodoc](https://github.com/machow/quartodoc),
 Posit's earlier API reference tool.
 
 :::
+
+```{=typst}
+#place(bottom, dy: 1.25in,
+  align(center, 
+    box(
+      image("assets/images/43288_Posit_ATL_2025.jpg"), 
+      width: 100% + 2.5in, clip: true
+    )
+  )
+)
+```
+
+
 
 :::
 

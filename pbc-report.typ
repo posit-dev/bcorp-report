@@ -512,7 +512,7 @@ The following subsections highlight selected Posit software projects of interest
 #place(bottom, dy: 2in,
   align(center, 
     box(
-      image("assets/images/42276_Posit_ATL_2025 (1).jpg"), 
+      image("assets/images/42276_Posit_ATL_2025.jpg"), 
       width: 100% + 2.5in, clip: true, inset: (bottom: -1in)
     )
   )
@@ -624,6 +624,14 @@ image_height:50%,
 #link("https://opensource.posit.co/blog/2026-04-15_great-docs-introduction/")[Great Docs], introduced in April 2026, builds documentation sites for Python packages. It finds a package's public API and generates a full site with Quarto, #colbreak() using opinionated defaults that need no configuration to start. Great Docs grew out of #link("https://github.com/machow/quartodoc")[quartodoc], Posit's earlier API reference tool.
 
 ]
+#place(bottom, dy: 1.25in,
+  align(center, 
+    box(
+      image("assets/images/43288_Posit_ATL_2025.jpg"), 
+      width: 100% + 2.5in, clip: true
+    )
+  )
+)
 ])
 
 #page_banner(
