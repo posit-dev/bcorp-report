@@ -589,7 +589,7 @@ Large language models (LLMs) are changing how data scientists work. Posit's Open
 - #link("https://posit-dev.github.io/mcptools/")[mcptools] implements the Model Context Protocol in R, letting AI tools such as Claude run code in your R session.
 
 #colbreak()
-LLMs are also built into RStudio and Positron as coding assistants. Behind them is Posit AI, a shared service and harness developed over the past year by the AI team. Language models are non-deterministic and can hallucinate, so much of Posit's work goes into making them safe to rely on, through careful evaluation, verification, and keeping data scientists in the loop.
+LLMs are also built into RStudio and Positron through #link("https://assistant.posit.co")[Posit Assistant], a coding assistant for data science. Behind it is #link("https://posit.ai")[Posit AI], a shared service and harness developed over the past year by the AI team. Language models are non-deterministic and can hallucinate, so much of Posit's work goes into making them safe to rely on, through careful evaluation, verification, and keeping data scientists in the loop.
 
 As of May 2026, 7 FTE Posit employees work directly on AI and LLM tools, with further AI development spread across many individual open source product teams.
 
@@ -648,43 +648,6 @@ image_paths:("assets/images/hexes/plotnine.png",),
 ])
 
 #page_banner(
-image_paths:("assets/images/hexes/pins.svg",),
-[
-== Pins
-<pins>
-#col-2()[
-Pins (for #link("https://pins.rstudio.com/")[R] and #link("https://rstudio.github.io/pins-python/")[python]) publish data, models, and other objects, making them easy to share across projects and with others. Users can pin objects to a variety of pin boards, including folders (to share on a networked drive or with services like DropBox), Posit Connect, Amazon S3, and Google Cloud Storage.
-
-#colbreak()
-Pins can be automatically versioned, making it straightforward to track changes, re-run analyses on historical data, and undo mistakes.
-
-]
-#box(image("plots/pins-1.svg")) #box(image("plots/pins-2.svg"))
-
-])
-
-#page_banner(
-image_paths:("assets/images/hexes/orbital.png","assets/images/hexes/webr.svg"),
-[
-#col-2()[
-== Orbital
-<orbital>
-#link("https://github.com/posit-dev/orbital")[Orbital] lets you run machine learning models inside your database. Originally an #link("https://orbital.tidymodels.org/articles/orbital.html")[R package], it now also supports Python. In Python, orbital converts scikit-learn models into SQL, so they can run directly in a database like Snowflake, with no Python environment needed. \
-The performance gains this approach has provided is quite significant.
-
-#colbreak()
-== webR
-<webr>
-#link("https://docs.r-wasm.org/webr/latest/")[WebR] has the ambitious goal of bringing the R language to the browser, removing the need for a backend server for computation. It also allows for computation to be done on the client machine, supporting use cases that are infeasible or undesirable for using server-side processing (such as not wanting to send personal data over the internet). Also, by making the most of the user's device capabilities, webR can improve performance and lower app hosting costs.
-
-webR now powers Shinylive and other interactive, in-browser R tools, and has been used in a #link("https://posit.co/blog/webr-fda-pilot")[pilot] for submitting R-based analyses to the FDA.
-
-There is 1 FTE Posit employee developing enterprise focused open-source products like orbital as of May 2026.
-
-]
-])
-
-#page_banner(
 image_paths:("assets/images/hexes/tidyverse.svg", ),
 [
 == Tidyverse
@@ -725,16 +688,19 @@ There are 4 FTE Posit employees developing Tidymodels and related open-source pr
 ])
 
 #page_banner(
-image_paths:("assets/images/hexes/ggsql.png",),
+image_paths:("assets/images/hexes/ggsql.png","assets/images/hexes/orbital.png",),
 [
 == SQL Enablement
 <sql-enablement>
 #col-2()[
 Posit's open source ecosystem has long supported R and Python, along with some support for Julia. SQL now joins that list. SQL is one of the most common languages for working with data, so supporting it well matters to a large community of data scientists.
 
-The first major piece is #link("https://ggsql.org/")[ggsql], which brings the grammar of graphics to SQL. People can build plots directly in their queries, without needing R or Python. ggsql runs in Quarto, Jupyter, Positron, and other tools.
+The #link("https://ggsql.org/")[ggsql] project brings the grammar of graphics to SQL. People can build plots directly in their queries, without needing R or Python. ggsql runs in Quarto, Jupyter, Positron, and other tools.
 
 #colbreak()
+#link("https://github.com/posit-dev/orbital")[Orbital] lets you run machine learning models inside your database. Originally an #link("https://orbital.tidymodels.org/articles/orbital.html")[R package], it now also supports #link("https://posit-dev.github.io/orbital/")[Python]. In Python, orbital converts scikit-learn models into SQL, so they can run directly in a database like Snowflake, with no Python environment needed. \
+The performance gains this approach has provided is quite significant.
+
 Support for SQL is also growing across Posit's other tools. Both #link("https://positron.posit.co/")[Positron] and #link("https://quarto.org/")[Quarto] are improving how they work with SQL.
 
 Together, these efforts will help bring SQL alongside R and Python in the Posit open source ecosystem.
@@ -813,7 +779,7 @@ Positron is licensed under the #link("https://github.com/posit-dev/positron?tab=
 
 Positron is built specifically for data science, not as a general-purpose editor like VS Code.
 
-Positron has added several notable features since its first stable release. A native #link("https://positron.posit.co/positron-notebook-editor.html")[Notebook Editor] brings the IDE's tools to Jupyter notebooks. #link("https://positron.posit.co/assistant-getting-started.html")[Posit Assistant] adds AI assistance throughout the IDE, including inside notebooks. A new Packages pane shows what is installed, attached, and out of date.
+Positron has added several notable features since its first stable release. A native #link("https://positron.posit.co/positron-notebook-editor.html")[Notebook Editor] brings the IDE's tools to Jupyter notebooks. #link("https://assistant.posit.co")[Posit Assistant] adds AI assistance throughout the IDE, including inside notebooks. A new Packages pane shows what is installed, attached, and out of date.
 
 Positron reached a stable desktop release in August 2025 and now ships monthly updates, most recently version 2026.06. It runs on Windows, macOS, and Linux.
 
@@ -871,7 +837,7 @@ In our initial assessments, we received high marks for incorporating as a benefi
 <community>
 === Civic Engagement and Giving
 <civic-engagement-and-giving>
-In addition to the open-source software we make freely available, and the open source data science package development produced by Posit engineers, Posit recognizes the importance of contributing financially to other valuable open-source and community initiatives. To date, Posit has given over \$3.3M to projects led by others. Current commitments include contributing to NumFOCUS, the R Consortium, the R Foundation, DuckDB, the Eclipse Foundation, and the authors and maintainers of several other open-source projects. In June 2026, Posit also joined the #link("https://opensource.posit.co/blog/2026-06-25_posit-joins-jupyter-foundation/")[Jupyter Foundation] as a general member. Posit's tools build on the Jupyter ecosystem, and membership helps fund its core infrastructure, release engineering, and community events.
+In addition to the open-source software we make freely available, and the open source data science package development produced by Posit engineers, Posit recognizes the importance of contributing financially to other valuable open-source and community initiatives. In December 2024, we joined the #link("https://posit.co/blog/posit-pledge-to-support-open-source")[Open Source Pledge], committing to invest at least \$2,000 per developer each year in open source, a floor we've comfortably exceeded. To date, Posit has given over \$3.3M to projects led by others. Current commitments include contributing to NumFOCUS, the R Consortium, the R Foundation, DuckDB, the Eclipse Foundation, and the authors and maintainers of several other open-source projects. In June 2026, Posit joined the #link("https://opensource.posit.co/blog/2026-06-25_posit-joins-jupyter-foundation/")[Jupyter Foundation], helping fund the core infrastructure, release engineering, and community events its ecosystem depends on.
 
 Posit's financial support also extends beyond the world of open source data science. Since 2020, Posit and its employees have given over \$107k to over 220 nonprofits. Our donations reach a range of community-based causes, including organizations dedicated to racial equality, equal justice, LGBTQ+ support, and access to education. Alongside our donations to open source software development, this pool of charitable contributions contributes to the important work many are doing to increase the accessibility of data science for all. Our scoring in this area of the B Lab assessment has increased by 39.5% since 2019.
 
@@ -891,9 +857,8 @@ We've made improvements in ethics and transparency areas, including anti-corrupt
 
 == Workers
 <workers>
-Investments in employee career development include in-house management training programs, tooling and education to support constructive feedback, and documentation of job levels, pay ranges, and career paths within our major functions. In 2021, we initiated an annual organizational health survey, which allows us to collect and respond to employee feedback. We have also augmented our benefits to include a "lifestyle savings account" (LSA) funded by Posit that each individual can choose to apply to home office, professional development, wellness, or financial health expenses as they see fit. All together, we are working to continuously improve the value offered to our workers as our company grows.
+Investments in employee career development include in-house management training programs, tooling and education to support constructive feedback, and documentation of job levels, pay ranges, and career paths within our major functions. In 2021, we initiated an annual organizational health survey, which allows us to collect and respond to employee feedback. We have also augmented our benefits to include a "lifestyle savings account" (LSA) funded by Posit that each individual can choose to apply to home office, professional development, wellness, or financial health expenses as they see fit. #colbreak() All together, we are working to continuously improve the value offered to our workers as our company grows.
 
-#colbreak()
 == Environment
 <environment>
 As a remote-first organization, we do not generate meaningful greenhouse gas emissions. However, for the emissions we do generate from cloud computing, business travel, and our Boston headquarters we purchase carbon offsets to achieve carbon neutrality. We first achieved carbon neutrality in 2020 and have since maintained our neutrality by purchasing carbon offsets for years 2021 - 2025. Below is a breakdown of our scope 2 and scope 3 greenhouse gas emissions from the past three years. We track our emissions so that we can purchase an equal amount of carbon offsets. We direct our purchases of carbon offsets towards Nature-Based Removals like reforestation and Technology-Based Removals like Direct Air Capture.
