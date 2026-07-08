@@ -7,8 +7,13 @@
 In addition to the open-source software we make freely available, and
 the open source data science package development produced by Posit
 engineers, Posit recognizes the importance of contributing financially
-to other valuable open-source and community initiatives. To date, Posit
-has given over \$3.3M to projects led by others. Current commitments
+to other valuable open-source and community initiatives. In December
+2024, we formalized this commitment by joining the
+[Open Source Pledge](https://posit.co/blog/posit-pledge-to-support-open-source),
+pledging to invest at least \$2,000 per developer each year in the wider
+open-source ecosystem -- a floor we've cleared several times over. To
+date, Posit has given over \$3.3M to projects led by others. Current
+commitments
 include contributing to NumFOCUS, the R Consortium, the R Foundation,
 DuckDB, the Eclipse Foundation, and the authors and maintainers of
 several other open-source projects. In June 2026, Posit also joined the
