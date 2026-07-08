@@ -387,7 +387,7 @@
 
 #show: doc => posit(
   title: [Posit Benefit Corporation],
-  subtitle: [DRAFT 2026 Annual Report],
+  subtitle: [2026 Annual Report],
   font: ("Open Sans",),
   doc,
 )
