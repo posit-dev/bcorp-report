@@ -167,9 +167,10 @@ and incorporate LLM capabilities in the solutions they provide others.
 
 {{< colbreak >}}
 
-LLMs are also built into RStudio and Positron as coding assistants.
-Behind them is Posit AI, a shared service and harness developed over the
-past year by the AI team. Language models are non-deterministic and can
+LLMs are also built into RStudio and Positron through
+[Posit Assistant](https://assistant.posit.co), a coding assistant for
+data science. Behind it is [Posit AI](https://posit.ai), a shared service
+and harness developed over the past year by the AI team. Language models are non-deterministic and can
 hallucinate, so much of Posit's work goes into making them safe to rely
 on, through careful evaluation, verification, and keeping data scientists
 in the loop.
@@ -531,7 +532,7 @@ general-purpose editor like VS Code.
 
 Positron has added several notable features since its first stable
 release. A native [Notebook Editor](https://positron.posit.co/positron-notebook-editor.html)
-brings the IDE's tools to Jupyter notebooks. [Posit Assistant](https://positron.posit.co/assistant-getting-started.html)
+brings the IDE's tools to Jupyter notebooks. [Posit Assistant](https://assistant.posit.co)
 adds AI assistance throughout the IDE, including inside notebooks. A new
 Packages pane shows what is installed, attached, and out of date.
 
