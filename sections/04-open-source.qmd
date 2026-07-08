@@ -271,7 +271,7 @@ incrementally, while the simple plots remain simple to create.
 
 [Orbital](https://github.com/posit-dev/orbital) lets you run machine learning 
 models inside your database.  Originally an [R package](https://orbital.tidymodels.org/articles/orbital.html), 
-it now also supports Python.  In Python, orbital converts scikit-learn models into 
+it now also supports [Python](https://posit-dev.github.io/orbital/).  In Python, orbital converts scikit-learn models into
 SQL, so they can run directly in a database like Snowflake, with no Python environment needed.  
 The performance gains this approach has provided is quite significant.    
 
