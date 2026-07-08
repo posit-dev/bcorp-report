@@ -263,29 +263,6 @@ incrementally, while the simple plots remain simple to create.
 
 :::
 
-::: {.page-banner image_paths='("assets/images/hexes/pins.svg",)'}
-
-## Pins
-
-::: {.cols-2}
-
-Pins (for [R](https://pins.rstudio.com/) and [python](https://rstudio.github.io/pins-python/))
-publish data, models, and other objects, making them easy to share across projects and with others.
-Users can pin objects to a variety of pin boards, including folders (to share on a networked 
-drive or with services like DropBox), Posit Connect, Amazon S3, and Google Cloud Storage. 
-
-{{< colbreak >}}
-
-Pins can be automatically versioned, making it straightforward to track changes, 
-re-run analyses on historical data, and undo mistakes.
-
-::: 
-
-![](plots/pins-1)
-![](plots/pins-2)
-
-:::
-
 ::: {.page-banner image_paths='("assets/images/hexes/orbital.png","assets/images/hexes/webr.svg")'}
 
 ::: {.cols-2}
