@@ -8,19 +8,18 @@ In addition to the open-source software we make freely available, and
 the open source data science package development produced by Posit
 engineers, Posit recognizes the importance of contributing financially
 to other valuable open-source and community initiatives. In December
-2024, we formalized this commitment by joining the
+2024, we joined the
 [Open Source Pledge](https://posit.co/blog/posit-pledge-to-support-open-source),
-pledging to invest at least \$2,000 per developer each year in the wider
-open-source ecosystem -- a floor we've cleared several times over. To
+committing to invest at least \$2,000 per developer each year in open
+source, a floor we've comfortably exceeded. To
 date, Posit has given over \$3.3M to projects led by others. Current
 commitments
 include contributing to NumFOCUS, the R Consortium, the R Foundation,
 DuckDB, the Eclipse Foundation, and the authors and maintainers of
-several other open-source projects. In June 2026, Posit also joined the
-[Jupyter Foundation](https://opensource.posit.co/blog/2026-06-25_posit-joins-jupyter-foundation/)
-as a general member.
-Posit's tools build on the Jupyter ecosystem, and membership helps fund
-its core infrastructure, release engineering, and community events.
+several other open-source projects. In June 2026, Posit joined the
+[Jupyter Foundation](https://opensource.posit.co/blog/2026-06-25_posit-joins-jupyter-foundation/),
+helping fund the core infrastructure, release engineering, and community
+events its ecosystem depends on.
 
 Posit's financial support also extends beyond the world of open source
 data science. Since 2020, Posit and its employees have given over \$107k
@@ -76,11 +75,9 @@ organizational health survey, which allows us to collect and respond to
 employee feedback. We have also augmented our benefits to include a
 "lifestyle savings account" (LSA) funded by Posit that each individual
 can choose to apply to home office, professional development, wellness,
-or financial health expenses as they see fit. All together, we are
+or financial health expenses as they see fit. {{< colbreak >}} All together, we are
 working to continuously improve the value offered to our workers as our
 company grows.
-
-{{< colbreak >}}
 
 ## Environment
 
