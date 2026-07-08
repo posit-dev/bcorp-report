@@ -263,42 +263,6 @@ incrementally, while the simple plots remain simple to create.
 
 :::
 
-::: {.page-banner image_paths='("assets/images/hexes/orbital.png","assets/images/hexes/webr.svg")'}
-
-::: {.cols-2}
-
-## Orbital
-
-[Orbital](https://github.com/posit-dev/orbital) lets you run machine learning 
-models inside your database.  Originally an [R package](https://orbital.tidymodels.org/articles/orbital.html), 
-it now also supports [Python](https://posit-dev.github.io/orbital/).  In Python, orbital converts scikit-learn models into
-SQL, so they can run directly in a database like Snowflake, with no Python environment needed.  
-The performance gains this approach has provided is quite significant.    
-
-{{< colbreak >}}
-
-## webR
-
-[WebR](https://docs.r-wasm.org/webr/latest/) has the
-ambitious goal of bringing the R language to the browser, removing the
-need for a backend server for computation. It also allows for
-computation to be done on the client machine, supporting use cases that
-are infeasible or undesirable for using server-side processing (such as
-not wanting to send personal data over the internet). 
-Also, by making
-the most of the user's device capabilities, webR can improve performance
-and lower app hosting costs.
-
-webR now powers Shinylive and other interactive, in-browser R tools, and
-has been used in a [pilot](https://posit.co/blog/webr-fda-pilot) for
-submitting R-based analyses to the FDA.
-
-There is 1 FTE Posit employee developing enterprise focused open-source
-products like orbital as of May 2026.
-
-:::
-
-:::
 
 ::: {.page-banner image_paths='("assets/images/hexes/tidyverse.svg", )'}
 
@@ -360,7 +324,7 @@ open-source products as of May 2026.
 
 :::
 
-::: {.page-banner image_paths='("assets/images/hexes/ggsql.png",)'}
+::: {.page-banner image_paths='("assets/images/hexes/ggsql.png","assets/images/hexes/orbital.png",)'}
 
 ## SQL Enablement
 
@@ -371,12 +335,18 @@ with some support for Julia. SQL now joins that list. SQL is one of the
 most common languages for working with data, so supporting it well
 matters to a large community of data scientists.
 
-The first major piece is [ggsql](https://ggsql.org/), which brings the
+The [ggsql](https://ggsql.org/) project brings the
 grammar of graphics to SQL. People can build plots directly in their
 queries, without needing R or Python. ggsql runs in Quarto, Jupyter,
 Positron, and other tools.
 
 {{< colbreak >}}
+
+[Orbital](https://github.com/posit-dev/orbital) lets you run
+machine learning models inside your database.  Originally an [R package](https://orbital.tidymodels.org/articles/orbital.html), 
+it now also supports [Python](https://posit-dev.github.io/orbital/).  In Python, orbital converts scikit-learn models into
+SQL, so they can run directly in a database like Snowflake, with no Python environment needed.  
+The performance gains this approach has provided is quite significant.    
 
 Support for SQL is also growing across Posit's other tools. Both
 [Positron](https://positron.posit.co/) and [Quarto](https://quarto.org/)
