@@ -722,6 +722,8 @@ neutrality in 2020 and have since maintained our neutrality by
 purchasing carbon offsets for years 2021 - 2025. Below is a breakdown of
 our scope 2 and scope 3 greenhouse gas emissions from the past three
 years. We track our emissions so that we can purchase an equal amount of
-carbon offsets.
+carbon offsets. We direct our purchases of carbon offsets towards
+Nature-Based Removals like reforestation and Technology-Based Removals
+like Direct Air Capture.
 
 ![](plots/emissions-1.png)

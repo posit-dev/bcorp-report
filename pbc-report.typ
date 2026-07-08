@@ -896,7 +896,7 @@ Investments in employee career development include in-house management training 
 #colbreak()
 == Environment
 <environment>
-As a remote-first organization, we do not generate meaningful greenhouse gas emissions. However, for the emissions we do generate from cloud computing, business travel, and our Boston headquarters we purchase carbon offsets to achieve carbon neutrality. We first achieved carbon neutrality in 2020 and have since maintained our neutrality by purchasing carbon offsets for years 2021 - 2025. Below is a breakdown of our scope 2 and scope 3 greenhouse gas emissions from the past three years. We track our emissions so that we can purchase an equal amount of carbon offsets.
+As a remote-first organization, we do not generate meaningful greenhouse gas emissions. However, for the emissions we do generate from cloud computing, business travel, and our Boston headquarters we purchase carbon offsets to achieve carbon neutrality. We first achieved carbon neutrality in 2020 and have since maintained our neutrality by purchasing carbon offsets for years 2021 - 2025. Below is a breakdown of our scope 2 and scope 3 greenhouse gas emissions from the past three years. We track our emissions so that we can purchase an equal amount of carbon offsets. We direct our purchases of carbon offsets towards Nature-Based Removals like reforestation and Technology-Based Removals like Direct Air Capture.
 
 ]
 #box(image("plots/emissions-1.svg"))
