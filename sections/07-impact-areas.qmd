@@ -21,6 +21,8 @@ several other open-source projects. In June 2026, Posit joined the
 helping fund the core infrastructure, release engineering, and community
 events its ecosystem depends on.
 
+{{< colbreak >}} 
+
 Posit's financial support also extends beyond the world of open source
 data science. Since 2020, Posit and its employees have given over \$107k
 to over 220 nonprofits. Our donations reach a range of community-based
@@ -41,6 +43,8 @@ as well as the sponsoring of employee resource groups (ERGs). We also pay
 close attention to issues of equity in compensation, hiring and interviewing, and
 employee experience. 
 
+{{< colbreak >}} 
+
 ## Customers
 
 We have made meaningful improvements in our care for customers in the
@@ -49,6 +53,7 @@ data and privacy. Since 2019, we have formalized our approach to data
 privacy and compliance -- we now conduct thorough internal and external
 audits and train all employees on the essentials of guarding customer
 data. 
+
 
 ## Governance
 
@@ -65,6 +70,8 @@ corporate reporting, including board meeting updates, so that all of our
 stakeholders are aware of our ongoing progress and can help support our
 success.
 
+{{< colbreak >}} 
+
 ## Workers
 
 Investments in employee career development include in-house
@@ -75,9 +82,11 @@ organizational health survey, which allows us to collect and respond to
 employee feedback. We have also augmented our benefits to include a
 "lifestyle savings account" (LSA) funded by Posit that each individual
 can choose to apply to home office, professional development, wellness,
-or financial health expenses as they see fit. {{< colbreak >}} All together, we are
+or financial health expenses as they see fit. All together, we are
 working to continuously improve the value offered to our workers as our
 company grows.
+
+{{< colbreak >}} 
 
 ## Environment
 
@@ -86,7 +95,7 @@ not generate meaningful greenhouse gas emissions. However, for the emissions
 we do generate from cloud computing, business travel, and our Boston headquarters 
 we purchase carbon offsets to achieve carbon neutrality. We first achieved 
 carbon neutrality in 2020 and have since maintained our neutrality by purchasing 
-carbon offsets for years 2021 - 2025. Below is a breakdown of our scope 2 and 
+carbon offsets for years 2021 - 2025. {{< colbreak >}}  Below is a breakdown of our scope 2 and 
 scope 3 greenhouse gas emissions from the past three years. We track our emissions 
 so that we can purchase an equal amount of carbon offsets. We direct our purchases of 
 carbon offsets towards Nature-Based Removals like reforestation and Technology-Based Removals like Direct Air Capture.

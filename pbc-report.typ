@@ -839,12 +839,14 @@ In our initial assessments, we received high marks for incorporating as a benefi
 <civic-engagement-and-giving>
 In addition to the open-source software we make freely available, and the open source data science package development produced by Posit engineers, Posit recognizes the importance of contributing financially to other valuable open-source and community initiatives. In December 2024, we joined the #link("https://posit.co/blog/posit-pledge-to-support-open-source")[Open Source Pledge], committing to invest at least \$2,000 per developer each year in open source, a floor we've comfortably exceeded. To date, Posit has given over \$3.3M to projects led by others. Current commitments include contributing to NumFOCUS, the R Consortium, the R Foundation, DuckDB, the Eclipse Foundation, and the authors and maintainers of several other open-source projects. In June 2026, Posit joined the #link("https://opensource.posit.co/blog/2026-06-25_posit-joins-jupyter-foundation/")[Jupyter Foundation], helping fund the core infrastructure, release engineering, and community events its ecosystem depends on.
 
+#colbreak()
 Posit's financial support also extends beyond the world of open source data science. Since 2020, Posit and its employees have given over \$107k to over 220 nonprofits. Our donations reach a range of community-based causes, including organizations dedicated to racial equality, equal justice, LGBTQ+ support, and access to education. Alongside our donations to open source software development, this pool of charitable contributions contributes to the important work many are doing to increase the accessibility of data science for all. Our scoring in this area of the B Lab assessment has increased by 39.5% since 2019.
 
 === Diversity, Equity, and Inclusion
 <diversity-equity-and-inclusion>
 Posit continues to focus on increasing the strength of our team by utilizing talent practices that encourage diverse people to apply, join, and thrive at Posit. Specific changes made in recent years include the formation of a diversity, equity, inclusion, and accessibility council (DEIA Council), as well as the sponsoring of employee resource groups (ERGs). We also pay close attention to issues of equity in compensation, hiring and interviewing, and employee experience.
 
+#colbreak()
 == Customers
 <customers>
 We have made meaningful improvements in our care for customers in the past few years -- particularly in our standards for managing customer data and privacy. Since 2019, we have formalized our approach to data privacy and compliance -- we now conduct thorough internal and external audits and train all employees on the essentials of guarding customer data.
@@ -855,13 +857,15 @@ A company's positive governance impact is measured by the extent to which the co
 
 We've made improvements in ethics and transparency areas, including anti-corruption and code of ethics training for employees, and more rigorous financial controls and financial transparency with employees. Looking ahead, we plan to incorporate more social and community benefit metrics in our corporate reporting, including board meeting updates, so that all of our stakeholders are aware of our ongoing progress and can help support our success.
 
+#colbreak()
 == Workers
 <workers>
-Investments in employee career development include in-house management training programs, tooling and education to support constructive feedback, and documentation of job levels, pay ranges, and career paths within our major functions. In 2021, we initiated an annual organizational health survey, which allows us to collect and respond to employee feedback. We have also augmented our benefits to include a "lifestyle savings account" (LSA) funded by Posit that each individual can choose to apply to home office, professional development, wellness, or financial health expenses as they see fit. #colbreak() All together, we are working to continuously improve the value offered to our workers as our company grows.
+Investments in employee career development include in-house management training programs, tooling and education to support constructive feedback, and documentation of job levels, pay ranges, and career paths within our major functions. In 2021, we initiated an annual organizational health survey, which allows us to collect and respond to employee feedback. We have also augmented our benefits to include a "lifestyle savings account" (LSA) funded by Posit that each individual can choose to apply to home office, professional development, wellness, or financial health expenses as they see fit. All together, we are working to continuously improve the value offered to our workers as our company grows.
 
+#colbreak()
 == Environment
 <environment>
-As a remote-first organization, we do not generate meaningful greenhouse gas emissions. However, for the emissions we do generate from cloud computing, business travel, and our Boston headquarters we purchase carbon offsets to achieve carbon neutrality. We first achieved carbon neutrality in 2020 and have since maintained our neutrality by purchasing carbon offsets for years 2021 - 2025. Below is a breakdown of our scope 2 and scope 3 greenhouse gas emissions from the past three years. We track our emissions so that we can purchase an equal amount of carbon offsets. We direct our purchases of carbon offsets towards Nature-Based Removals like reforestation and Technology-Based Removals like Direct Air Capture.
+As a remote-first organization, we do not generate meaningful greenhouse gas emissions. However, for the emissions we do generate from cloud computing, business travel, and our Boston headquarters we purchase carbon offsets to achieve carbon neutrality. We first achieved carbon neutrality in 2020 and have since maintained our neutrality by purchasing carbon offsets for years 2021 - 2025. #colbreak() Below is a breakdown of our scope 2 and scope 3 greenhouse gas emissions from the past three years. We track our emissions so that we can purchase an equal amount of carbon offsets. We direct our purchases of carbon offsets towards Nature-Based Removals like reforestation and Technology-Based Removals like Direct Air Capture.
 
 ]
 #box(image("plots/emissions-1.svg"))
